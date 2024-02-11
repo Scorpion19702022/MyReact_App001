@@ -44,3 +44,15 @@
 	--color-dark07: #111210;
 	--color-dark08: #000000;
 }
+
+.wrapper_nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 10%;
+	min-height: 100vh;
+	padding: 3em 2em;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--color-dark07);
+}

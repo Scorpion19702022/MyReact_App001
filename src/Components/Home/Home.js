@@ -4,7 +4,7 @@ import styles from './Home.module.css'
 
 const Home = () => {
 	return (
-		<div className={styles.wrraper_home}>
+		<div className={styles.wrapper_home}>
 			<h1>HOME</h1>
 		</div>
 	)
