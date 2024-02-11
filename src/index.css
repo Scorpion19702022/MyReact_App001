@@ -10,5 +10,6 @@ code {
 }
 
 .active {
-	color: white;
+	color: #99c5ff;
+	border-bottom: 0.04em solid #99c5ff;
 }
