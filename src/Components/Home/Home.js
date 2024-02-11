@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import styles from './Home.module.css'
 
@@ -7,17 +7,21 @@ const Home = () => {
 		count: 5,
 	})
 
-	const interval = setInterval(() => {
-		setCount({
-			count: count.count - 1,
-		})
-		if (count.count <= 0) {
+	useEffect(() => {
+		let interval = setInterval(() => {
 			setCount({
-				count: null,
+				count: count.count - 1,
 			})
-			clearInterval(interval)
+		}, 1000)
+		return () => {
+			if (count.count <= 0) {
+				clearInterval(interval)
+				setCount({
+					count: '',
+				})
+			}
 		}
-	}, 1000)
+	}, [count.count])
 
 	return (
 		<div className={styles.wrapper_home}>
