@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--color-yellow01: #fef8e5;
+	--color-yellow02: #fee599;
+	--color-yellow03: #fdd14d;
+	--color-yellow04: #fdbe02;
+	--color-yellow05: #ca9801;
+	--color-yellow06: #7e5f01;
+	--color-yellow07: #322600;
+	--color-purple01: #f6e6ee;
+	--color-purple02: #db9dbe;
+	--color-purple03: #c0548e;
+	--color-purple04: #a50b5e;
+	--color-purple05: #84084b;
+	--color-purple06: #630638;
+	--color-purple07: #31031c;
+	--color-green01: #e5fae5;
+	--color-green02: #99eb99;
+	--color-green03: #4cdc4c;
+	--color-green04: #00cd00;
+	--color-green05: #00a400;
+	--color-green06: #007b00;
+	--color-green07: #003d00;
+	--color-blue01: #e5f0ff;
+	--color-blue02: #99c5ff;
+	--color-blue03: #66a9ff;
+	--color-blue04: #0070ff;
+	--color-blue05: #0059cc;
+	--color-blue06: #00387f;
+	--color-blue07: #00214c;
+	--color-dark01: #ebebea;
+	--color-dark02: #b0b1ae;
+	--color-dark03: #757672;
+	--color-dark04: #3b3c36;
+	--color-dark05: #2f302b;
+	--color-dark06: #232420;
+	--color-dark07: #111210;
+	--color-dark08: #000000;
+}
