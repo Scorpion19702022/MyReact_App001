@@ -5,11 +5,13 @@ import styles from './Home.module.css'
 const Home = () => {
 	const [count, setCount] = useState({
 		count: 5,
+		text: '',
 	})
 
 	useEffect(() => {
 		let interval = setInterval(() => {
 			setCount({
+				...count,
 				count: count.count - 1,
 			})
 		}, 1000)
@@ -18,10 +20,11 @@ const Home = () => {
 				clearInterval(interval)
 				setCount({
 					count: '',
+					text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aperiam praesentium veniam laudantium obcaecati, reiciendis placeat consequatur! Labore illo laudantium eaque laborum assumenda a nemo debitis voluptas ut atque delectus esse beatae quaerat tenetur, praesentium libero incidunt tempora placeat. Eos dolorum alias ut ducimus itaque dolore tenetur culpa accusantium placeat, earum quod fugit, magnam eveniet aliquam. Impedit quo tempore quisquam odit ullam, unde magnam ipsum eos beatae consequatur voluptatem deserunt?',
 				})
 			}
 		}
-	}, [count.count])
+	}, [count])
 
 	return (
 		<div className={styles.wrapper_home}>
@@ -31,6 +34,15 @@ const Home = () => {
 			</div>
 			<div className={styles.boxHome_action}>
 				<h1 className={styles.home_count}>{count.count}</h1>
+				{/* <div className={styles.homeView_text}>
+					{count.count <= 0 ? <p className={styles.home_text}>{count.text}</p> : null}
+				</div> */}
+
+				{count.count <= 0 && (
+					<div className={styles.homeView_text}>
+						<p className={styles.home_text}>{count.text}</p>
+					</div>
+				)}
 			</div>
 		</div>
 	)
