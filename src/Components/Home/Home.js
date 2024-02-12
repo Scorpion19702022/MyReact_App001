@@ -6,6 +6,7 @@ const Home = () => {
 	const [count, setCount] = useState({
 		count: 5,
 		text: '',
+		styles: null,
 	})
 
 	useEffect(() => {
@@ -21,6 +22,7 @@ const Home = () => {
 				setCount({
 					count: '',
 					text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aperiam praesentium veniam laudantium obcaecati, reiciendis placeat consequatur! Labore illo laudantium eaque laborum assumenda a nemo debitis voluptas ut atque delectus esse beatae quaerat tenetur, praesentium libero incidunt tempora placeat. Eos dolorum alias ut ducimus itaque dolore tenetur culpa accusantium placeat, earum quod fugit, magnam eveniet aliquam. Impedit quo tempore quisquam odit ullam, unde magnam ipsum eos beatae consequatur voluptatem deserunt?',
+					styles: styles.home_text,
 				})
 			}
 		}
@@ -35,11 +37,7 @@ const Home = () => {
 			<div className={styles.boxHome_action}>
 				<h1 className={styles.home_count}>{count.count}</h1>
 
-				{count.count <= 0 && (
-					<div className={styles.homeView_text}>
-						<p className={styles.home_text}>{count.text}</p>
-					</div>
-				)}
+				<p className={count.styles}>{count.text}</p>
 			</div>
 		</div>
 	)

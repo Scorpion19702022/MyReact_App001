@@ -84,14 +84,10 @@
 	color: var(--color-blue03);
 }
 
-.homeView_text {
-	padding: 2em;
-	background-color: var(--color-dark04);
-}
-
 .home_text {
-	color: var(--color-blue02);
 	font-size: 1.2em;
-	/* padding: 2em; */
+	padding: 2em;
 	text-align: center;
+	color: var(--color-blue02);
+	background-color: var(--color-dark04);
 }
