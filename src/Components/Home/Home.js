@@ -22,7 +22,7 @@ const Home = () => {
 				})
 			}
 		}
-	}, [count])
+	}, [count.count])
 
 	return (
 		<div className={styles.wrapper_home}>
@@ -33,9 +33,11 @@ const Home = () => {
 			<div className={styles.boxHome_action}>
 				<h1 className={styles.home_count}>{count.count}</h1>
 
-				<div className={count.count === 0 ? styles.homeView_text : null}>
-					<p className={styles.home_text}>{count.text}</p>
-				</div>
+				{count.count <= 0 && (
+					<div className={styles.homeView_text}>
+						<p className={styles.home_text}>{count.text}</p>
+					</div>
+				)}
 			</div>
 		</div>
 	)
