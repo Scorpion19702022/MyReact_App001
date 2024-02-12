@@ -70,13 +70,14 @@
 
 .boxHome_action {
 	width: 80%;
-	height: 600px;
+	height: 300px;
 	padding: 4em;
 	background-color: var(--color-dark05);
 	border: 0.04em solid var(--color-dark04);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 }
 
 .home_count {
@@ -89,5 +90,6 @@
 	padding: 2em;
 	text-align: center;
 	color: var(--color-blue02);
-	background-color: var(--color-dark04);
+	border: var(--color-blue02);
+	box-shadow: 0.2em 0.2em 1em var(--color-blue02);
 }
