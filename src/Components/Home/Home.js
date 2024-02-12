@@ -5,11 +5,13 @@ import styles from './Home.module.css'
 const Home = () => {
 	const [count, setCount] = useState({
 		count: 5,
+		text: '',
 	})
 
 	useEffect(() => {
 		let interval = setInterval(() => {
 			setCount({
+				...count,
 				count: count.count - 1,
 			})
 		}, 1000)
@@ -22,7 +24,7 @@ const Home = () => {
 				})
 			}
 		}
-	}, [count.count])
+	}, [count])
 
 	return (
 		<div className={styles.wrapper_home}>
