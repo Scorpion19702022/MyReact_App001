@@ -98,4 +98,5 @@
 	font-size: 4em;
 	margin-top: 3em;
 	color: var(--color-blue03);
+	text-shadow: 0.07em 0.07em 0.3em var(--color-dark07);
 }
