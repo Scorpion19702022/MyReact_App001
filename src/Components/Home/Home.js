@@ -9,6 +9,8 @@ const Home = () => {
 		styles: null,
 	})
 
+	const [result, setResult] = useState('')
+
 	useEffect(() => {
 		let interval = setInterval(() => {
 			setCount({
@@ -28,6 +30,10 @@ const Home = () => {
 		}
 	}, [count])
 
+	setTimeout(() => {
+		setResult('zadanie wykonane')
+	}, 7000)
+
 	return (
 		<div className={styles.wrapper_home}>
 			<div className={styles.boxHome_heading}>
@@ -39,6 +45,7 @@ const Home = () => {
 
 				<p className={count.styles}>{count.text}</p>
 			</div>
+			<h2 className={styles.result}>{result.toUpperCase()}</h2>
 		</div>
 	)
 }

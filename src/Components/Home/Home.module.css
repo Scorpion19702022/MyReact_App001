@@ -93,3 +93,9 @@
 	border: var(--color-blue02);
 	box-shadow: 0.2em 0.2em 1em var(--color-blue02);
 }
+
+.result {
+	font-size: 4em;
+	margin-top: 3em;
+	color: var(--color-blue03);
+}
