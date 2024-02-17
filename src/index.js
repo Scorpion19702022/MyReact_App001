@@ -3,17 +3,11 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import App from './App/App'
 import reportWebVitals from './reportWebVitals'
-import { AddFunctionsTask01Provider } from './Components/Task01/Context/Task01Context'
-import Task01 from './Components/Task01/Task01'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
 	<React.StrictMode>
-		<App>
-			<AddFunctionsTask01Provider>
-				<Task01></Task01>
-			</AddFunctionsTask01Provider>
-		</App>
+		<App />
 	</React.StrictMode>
 )
 
