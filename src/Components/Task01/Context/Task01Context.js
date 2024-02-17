@@ -9,7 +9,6 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 
 	const handleClickAddTextInTask01a = e => {
 		setTextTask01a(e.target.value)
-		setTextTask01a('')
 		setChangeState(!changeState)
 	}
 
