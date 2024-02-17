@@ -66,7 +66,7 @@
 
 .box_task01_a1 {
 	width: 40%;
-	height: 300px;
+	height: 340px;
 	background-color: var(--color-purple06);
 	display: flex;
 	flex-direction: column;
@@ -79,6 +79,11 @@
 .heading_task01_a1 {
 	margin-bottom: 1em;
 	color: var(--color-yellow03);
+}
+
+.heading_task01_a1:nth-child(2) {
+	font-size: 1em;
+	color: var(--color-yellow05);
 }
 
 .inputs_task01_a1 {
@@ -129,6 +134,10 @@
 
 .result_task01_a1_span {
 	color: var(--color-yellow03);
+}
+
+.task01_length {
+	color: var(--color-blue03);
 }
 
 .task01_success {
