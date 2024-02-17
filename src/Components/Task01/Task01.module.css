@@ -44,5 +44,15 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: var(--color-purple06);
+	background-color: var(--color-purple05);
+}
+
+.heading_page {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 0.6em;
+	border-bottom: 0.04em solid var(--color-yellow05);
+	color: var(--color-yellow04);
+	box-shadow: 0.4em 0em 1em var(--color-yellow05);
 }
