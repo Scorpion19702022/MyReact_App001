@@ -126,3 +126,19 @@
 	font-size: 1.4em;
 	color: var(--color-yellow06);
 }
+
+.result_task01_a1_span {
+	color: var(--color-yellow03);
+}
+
+.task01_success {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--color-purple02);
+	font-size: 1.2em;
+	margin-top: 1em;
+	padding: 0.4em;
+	background-color: var(--color-purple07);
+}
