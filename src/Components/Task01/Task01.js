@@ -9,7 +9,7 @@ const Task01 = () => {
 				<div className={styles.box_task01_a1}>
 					<h2 className={styles.heading_task01_a1}>Wyloguj literę</h2>
 					<div className={styles.inputs_task01_a1}>
-						<input type='text' />
+						<input className={styles.input_task01_a1} type='text' />
 						<button className={styles.btn_task01_a1}></button>
 					</div>
 					<h3 className={styles.result_task01_a1}>Twój wpis:</h3>
