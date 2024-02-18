@@ -12,15 +12,18 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 	const handleClickAddTextInTask01a = () => {
 		if (textTask01a.length <= 20) {
 			setTextView(textTask01a)
+			setChangeState(!changeState)
 		}
 		if (textTask01a !== '' || textView !== '') {
 			setTextTask01a('')
-			setChangeState(!changeState)
 		}
 	}
 
 	const handleChange = e => {
-		setTextTask01a(e.target.value)
+		if (textTask01a.length <= 20) {
+			setTextTask01a(e.target.value)
+			setChangeState(false)
+		}
 	}
 
 	return (
