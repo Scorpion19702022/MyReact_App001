@@ -10,8 +10,12 @@ const SecondTask01 = () => {
 				<button className={styles.btn_second_task01_reset}>reset</button>
 			</div>
 			<div className={styles.box_results_task01}>
-				<h4 className={styles.heading_result_click}>Liczba kliknięć:</h4>
-				<h4 className={styles.heading_result}>Wynik:</h4>
+				<h4 className={styles.heading_result_click}>
+					Liczba kliknięć: <span className={styles.span_result_click_task01}></span>{' '}
+				</h4>
+				<h4 className={styles.heading_result}>
+					Wynik: <span className={styles.span_result_task01}></span>{' '}
+				</h4>
 			</div>
 		</div>
 	)
