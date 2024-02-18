@@ -233,3 +233,9 @@
 	font-size: 1.4em;
 	color: var(--color-yellow03);
 }
+
+.success_result_task01 {
+	font-size: 1.6em;
+	color: var(--color-blue03);
+	margin-top: 0.6em;
+}

@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 
 const Task01Context = createContext()
 
@@ -35,8 +35,17 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 	const [results, setResults] = useState({
 		count: 0,
 		resultsClick: 0,
-		textSuccess: '',
 	})
+
+	const [success, setSuccess] = useState('')
+
+	useEffect(() => {
+		if (results.resultsClick !== 0) {
+			setSuccess('zadanie wykonane')
+		} else {
+			setSuccess('')
+		}
+	}, [results.resultsClick])
 
 	const handleCalculate = (type, number) => {
 		if (type === 'sub' && results.count > -10) {
@@ -50,11 +59,6 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 				...results,
 				count: results.count + +number,
 				resultsClick: results.resultsClick + 1,
-			})
-		} else if (results.resultsClick !== 0) {
-			setResults({
-				...results,
-				textSuccess: 'zadanie wykoane poprawnie',
 			})
 		}
 	}
@@ -79,6 +83,7 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 				results,
 				handleCalculate,
 				handleDeleteResults,
+				success,
 			}}
 		>
 			{children}

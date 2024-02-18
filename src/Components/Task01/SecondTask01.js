@@ -3,7 +3,7 @@ import styles from './Task01.module.css'
 import Task01Context from './Context/Task01Context'
 
 const SecondTask01 = () => {
-	const { results, handleCalculate, handleDeleteResults } = useContext(Task01Context)
+	const { results, handleCalculate, handleDeleteResults, success } = useContext(Task01Context)
 
 	return (
 		<div className={styles.wrapper_second_task01}>
@@ -26,6 +26,7 @@ const SecondTask01 = () => {
 				<h4 className={styles.heading_result}>
 					Wynik: <span className={styles.span_result_task01}>({results.count})</span>{' '}
 				</h4>
+				<h2 className={styles.success_result_task01}>{success}</h2>
 			</div>
 		</div>
 	)
