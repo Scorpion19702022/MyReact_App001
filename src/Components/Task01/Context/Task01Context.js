@@ -38,15 +38,15 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 	})
 
 	const handleCalculate = (type, number) => {
-		if (type === 'sub') {
+		if (type === 'sub' && results.count > -10) {
 			setResults({
 				...results,
-				count: +(results.count - number),
+				count: results.count - +number,
 			})
-		} else if (type === 'add') {
+		} else if (type === 'add' && results.count < 10) {
 			setResults({
 				...results,
-				count: +(results.count + number),
+				count: results.count + +number,
 			})
 		}
 	}
