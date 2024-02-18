@@ -32,15 +32,38 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 
 	// ===================== SecondTask01 ========================
 
-	const [results, setResults] = useState(0)
+	const [results, setResults] = useState({
+		count: 0,
+		results: 0,
+	})
 
-	const [amountClick, setAmountClick] = useState([])
+	const handleCalculate = (type, number) => {
+		if (type === 'sub') {
+			setResults({
+				...results,
+				count: +(results.count - number),
+			})
+		} else if (type === 'add') {
+			setResults({
+				...results,
+				count: +(results.count + number),
+			})
+		}
+	}
 
 	// ===========================================================
 
 	return (
 		<Task01Context.Provider
-			value={{ textTask01a, changeState, handleClickAddTextInTask01a, handleChange, textView, results, amountClick }}
+			value={{
+				textTask01a,
+				changeState,
+				handleClickAddTextInTask01a,
+				handleChange,
+				textView,
+				results,
+				handleCalculate,
+			}}
 		>
 			{children}
 		</Task01Context.Provider>
