@@ -218,3 +218,18 @@
 	background-color: var(--color-purple04);
 	color: var(--color-purple02);
 }
+
+.box_results_task01 {
+	margin-top: 2em;
+}
+
+.heading_result_click {
+	font-size: 1.8em;
+	color: var(--color-yellow05);
+	padding: 0.4em 0em;
+}
+
+.heading_result {
+	font-size: 1.4em;
+	color: var(--color-yellow03);
+}
