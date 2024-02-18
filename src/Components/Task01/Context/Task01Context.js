@@ -3,6 +3,8 @@ import { createContext, useState } from 'react'
 const Task01Context = createContext()
 
 export const AddFunctionsTask01Provider = ({ children }) => {
+	// =================== FirstTask01 ============================
+
 	const [textTask01a, setTextTask01a] = useState('')
 
 	const [textView, setTextView] = useState('')
@@ -26,8 +28,18 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 		}
 	}
 
+	// ===========================================================
+
+	// ===================== SecondTask01 ========================
+
+	const test = 'second'
+
+	// ===========================================================
+
 	return (
-		<Task01Context.Provider value={{ textTask01a, changeState, handleClickAddTextInTask01a, handleChange, textView }}>
+		<Task01Context.Provider
+			value={{ textTask01a, changeState, handleClickAddTextInTask01a, handleChange, textView, test }}
+		>
 			{children}
 		</Task01Context.Provider>
 	)
