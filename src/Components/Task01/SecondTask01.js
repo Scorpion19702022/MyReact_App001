@@ -3,9 +3,7 @@ import styles from './Task01.module.css'
 import Task01Context from './Context/Task01Context'
 
 const SecondTask01 = () => {
-	const { results, handleCalculate } = useContext(Task01Context)
-
-	console.log(results.count)
+	const { results, handleCalculate, handleDeleteResults } = useContext(Task01Context)
 
 	return (
 		<div className={styles.wrapper_second_task01}>
@@ -14,14 +12,16 @@ const SecondTask01 = () => {
 				<button className={styles.btn_second_task01_sub} onClick={() => handleCalculate('sub', '1')}>
 					-1
 				</button>
-				<button className={styles.btn_second_task01_reset}>reset</button>
+				<button className={styles.btn_second_task01_reset} onClick={handleDeleteResults}>
+					reset
+				</button>
 				<button className={styles.btn_second_task01_add} onClick={() => handleCalculate('add', '1')}>
 					+1
 				</button>
 			</div>
 			<div className={styles.box_results_task01}>
 				<h4 className={styles.heading_result_click}>
-					Liczba kliknięć: <span className={styles.span_result_click_task01}>()</span>{' '}
+					Liczba kliknięć: <span className={styles.span_result_click_task01}>({results.resultsClick})</span>{' '}
 				</h4>
 				<h4 className={styles.heading_result}>
 					Wynik: <span className={styles.span_result_task01}>({results.count})</span>{' '}

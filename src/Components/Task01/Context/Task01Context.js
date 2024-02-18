@@ -34,7 +34,8 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 
 	const [results, setResults] = useState({
 		count: 0,
-		results: 0,
+		resultsClick: 0,
+		textSuccess: '',
 	})
 
 	const handleCalculate = (type, number) => {
@@ -42,13 +43,27 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 			setResults({
 				...results,
 				count: results.count - +number,
+				resultsClick: results.resultsClick + 1,
 			})
 		} else if (type === 'add' && results.count < 10) {
 			setResults({
 				...results,
 				count: results.count + +number,
+				resultsClick: results.resultsClick + 1,
+			})
+		} else if (results.resultsClick !== 0) {
+			setResults({
+				...results,
+				textSuccess: 'zadanie wykoane poprawnie',
 			})
 		}
+	}
+
+	const handleDeleteResults = () => {
+		setResults({
+			count: 0,
+			resultsClick: 0,
+		})
 	}
 
 	// ===========================================================
@@ -63,6 +78,7 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 				textView,
 				results,
 				handleCalculate,
+				handleDeleteResults,
 			}}
 		>
 			{children}
