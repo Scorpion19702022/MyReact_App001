@@ -1,6 +1,10 @@
+import { useContext } from 'react'
 import styles from './Task01.module.css'
+import Task01Context from './Context/Task01Context'
 
 const SecondTask01 = () => {
+	const { results, amountClick } = useContext(Task01Context)
+
 	return (
 		<div className={styles.wrapper_second_task01}>
 			<h1 className={styles.heading_second_task01}>Sprawdż ilość kliknięć</h1>
@@ -11,10 +15,10 @@ const SecondTask01 = () => {
 			</div>
 			<div className={styles.box_results_task01}>
 				<h4 className={styles.heading_result_click}>
-					Liczba kliknięć: <span className={styles.span_result_click_task01}></span>{' '}
+					Liczba kliknięć: <span className={styles.span_result_click_task01}>({amountClick.length})</span>{' '}
 				</h4>
 				<h4 className={styles.heading_result}>
-					Wynik: <span className={styles.span_result_task01}></span>{' '}
+					Wynik: <span className={styles.span_result_task01}>({results})</span>{' '}
 				</h4>
 			</div>
 		</div>
