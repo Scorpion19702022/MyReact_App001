@@ -19,7 +19,7 @@ const FirstTask01 = () => {
 						{!changeState ? 'zobacz' : 'usuń'}
 					</button>
 				</div>
-				{textTask01a.length > 20 ? <h4 className={styles.task01_length}>wpisałeś za dużo zaków</h4> : null}
+				{textTask01a.length >= 20 ? <h4 className={styles.task01_length}>wpisałeś za dużo zaków</h4> : null}
 				<h3 className={styles.result_task01_a1}>
 					Twój wpis: <span className={styles.result_task01_a1_span}>{textView}</span>
 				</h3>
