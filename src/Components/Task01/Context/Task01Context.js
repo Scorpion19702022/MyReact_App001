@@ -48,13 +48,13 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 	}, [results.resultsClick])
 
 	const handleCalculate = (type, number) => {
-		if (type === 'sub' && results.count > -10) {
+		if (type === 'sub' && results.count > -100) {
 			setResults({
 				...results,
 				count: results.count - +number,
 				resultsClick: results.resultsClick + 1,
 			})
-		} else if (type === 'add' && results.count < 10) {
+		} else if (type === 'add' && results.count < 100) {
 			setResults({
 				...results,
 				count: results.count + +number,

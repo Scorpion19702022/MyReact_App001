@@ -9,6 +9,9 @@ const SecondTask01 = () => {
 		<div className={styles.wrapper_second_task01}>
 			<h1 className={styles.heading_second_task01}>Sprawdż ilość kliknięć</h1>
 			<div className={styles.btns_second_task01}>
+				<button className={styles.btn_second_task01_sub} onClick={() => handleCalculate('sub', '10')}>
+					-10
+				</button>
 				<button className={styles.btn_second_task01_sub} onClick={() => handleCalculate('sub', '1')}>
 					-1
 				</button>
@@ -17,6 +20,9 @@ const SecondTask01 = () => {
 				</button>
 				<button className={styles.btn_second_task01_add} onClick={() => handleCalculate('add', '1')}>
 					+1
+				</button>
+				<button className={styles.btn_second_task01_add} onClick={() => handleCalculate('add', '10')}>
+					+10
 				</button>
 			</div>
 			<div className={styles.box_results_task01}>
