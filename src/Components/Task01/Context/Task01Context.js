@@ -86,7 +86,6 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 				count: results.count + +number,
 				resultsClick: results.resultsClick + 1,
 			})
-		}
 	}
 
 	const handleDeleteResults = () => {
