@@ -50,9 +50,9 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 	}, [results.resultsClick])
 
 	useEffect(() => {
-		if (results.count === 100) {
+		if (results.count >= 100) {
 			setLimitCount('osiągnąłeś maksymalna wartość')
-		} else if (results.count === -100) {
+		} else if (results.count <= -100) {
 			setLimitCount('osiągnąłeś minimalną wartość')
 		} else {
 			setLimitCount('')
@@ -60,13 +60,13 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 	}, [results.count])
 
 	const handleCalculate = (type, number) => {
-		if (type === 'sub' && results.count > -100) {
+		if (type === 'sub' && results.count >= -100) {
 			setResults({
 				...results,
 				count: results.count - +number,
 				resultsClick: results.resultsClick + 1,
 			})
-		} else if (type === 'add' && results.count < 100) {
+		} else if (type === 'add' && results.count <= 100) {
 			setResults({
 				...results,
 				count: results.count + +number,

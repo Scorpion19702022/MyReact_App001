@@ -177,9 +177,15 @@
 	box-shadow: 0.08em 0.08em 1em var(--color-yellow04);
 }
 
+.infoLimit {
+	font-size: 1.4em;
+	color: var(--color-purple03);
+	margin: 0.4em 0em;
+}
+
 .heading_second_task01 {
 	color: var(--color-yellow04);
-	margin-bottom: 2em;
+	margin-bottom: 0.8em;
 }
 
 .btns_second_task01 {
