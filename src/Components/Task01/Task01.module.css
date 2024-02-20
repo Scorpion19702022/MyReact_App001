@@ -230,7 +230,7 @@
 }
 
 .box_results_task01 {
-	margin-top: 0.8em;
+	margin-top: 0.2em;
 }
 
 .heading_result_click {
@@ -241,11 +241,16 @@
 
 .heading_result {
 	font-size: 1.4em;
+	margin-bottom: 0.4em;
 	color: var(--color-yellow03);
+}
+
+.box_success {
+	margin: 0.4em 0em;
+	height: 70%;
 }
 
 .success_result_task01 {
 	font-size: 1.6em;
 	color: var(--color-blue03);
-	margin-top: 0.6em;
 }

@@ -35,7 +35,9 @@ const SecondTask01 = () => {
 				<h4 className={styles.heading_result}>
 					Wynik: <span className={styles.span_result_task01}>({results.count})</span>{' '}
 				</h4>
-				<h2 className={styles.success_result_task01}>{success}</h2>
+				<div className={styles.box_success}>
+					<h2 className={styles.success_result_task01}>{success}</h2>
+				</div>
 			</div>
 		</div>
 	)
