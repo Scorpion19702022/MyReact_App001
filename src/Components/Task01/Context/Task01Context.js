@@ -50,6 +50,20 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 	}, [results.resultsClick])
 
 	useEffect(() => {
+		if (results.count > 100) {
+			setResults({
+				...results,
+				count: 100,
+			})
+		} else if (results.count < -100) {
+			setResults({
+				...results,
+				count: -100,
+			})
+		}
+	}, [results])
+
+	useEffect(() => {
 		if (results.count >= 100) {
 			setLimitCount('osiągnąłeś maksymalna wartość')
 		} else if (results.count <= -100) {
