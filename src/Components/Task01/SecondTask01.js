@@ -8,7 +8,9 @@ const SecondTask01 = () => {
 	return (
 		<div className={styles.wrapper_second_task01}>
 			<h1 className={styles.heading_second_task01}>Sprawdż ilość kliknięć</h1>
-			<h3 className={styles.limitCount}>{limitCount}</h3>
+			<div className={styles.box_info_limit}>
+				<h3 className={styles.infoLimit}>{limitCount}</h3>
+			</div>
 			<div className={styles.btns_second_task01}>
 				<button className={styles.btn_second_task01_sub} onClick={() => handleCalculate('sub', '10')}>
 					-10
