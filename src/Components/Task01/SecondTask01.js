@@ -3,11 +3,12 @@ import styles from './Task01.module.css'
 import Task01Context from './Context/Task01Context'
 
 const SecondTask01 = () => {
-	const { results, handleCalculate, handleDeleteResults, success } = useContext(Task01Context)
+	const { results, handleCalculate, handleDeleteResults, success, limitCount } = useContext(Task01Context)
 
 	return (
 		<div className={styles.wrapper_second_task01}>
 			<h1 className={styles.heading_second_task01}>Sprawdż ilość kliknięć</h1>
+			<h3>{limitCount}</h3>
 			<div className={styles.btns_second_task01}>
 				<button className={styles.btn_second_task01_sub} onClick={() => handleCalculate('sub', '10')}>
 					-10

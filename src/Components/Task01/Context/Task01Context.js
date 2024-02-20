@@ -39,6 +39,8 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 
 	const [success, setSuccess] = useState('')
 
+	const [limitCount, setLimitCount] = useState('')
+
 	useEffect(() => {
 		if (results.resultsClick !== 0) {
 			setSuccess('zadanie wykonane')
@@ -46,6 +48,16 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 			setSuccess('')
 		}
 	}, [results.resultsClick])
+
+	useEffect(() => {
+		if (results.count === 100) {
+			setLimitCount('osiągnąłeś maksymalna wartość')
+		} else if (results.count === -100) {
+			setLimitCount('osiągnąłeś minimalną wartość')
+		} else {
+			setLimitCount('')
+		}
+	}, [results.count])
 
 	const handleCalculate = (type, number) => {
 		if (type === 'sub' && results.count > -100) {
@@ -84,6 +96,7 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 				handleCalculate,
 				handleDeleteResults,
 				success,
+				limitCount,
 			}}
 		>
 			{children}
