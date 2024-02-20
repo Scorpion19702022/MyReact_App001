@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react'
+import { useContext } from 'react'
 import styles from './Task01.module.css'
 import Task01Context from './Context/Task01Context'
 
@@ -6,8 +6,6 @@ const FirstTask01 = () => {
 	const { handleClickAddTextInTask01a, handleChange, textTask01a, textView, changeState } = useContext(Task01Context)
 
 	console.log(textTask01a.length)
-
-	const [stateButton, setStateButton] = useState('')
 
 	return (
 		<div className={styles.box_task01_a}>
@@ -20,7 +18,7 @@ const FirstTask01 = () => {
 						className={!changeState ? styles.btn_task01_a1 : styles.btn_task01_a1_sub}
 						onClick={handleClickAddTextInTask01a}
 					>
-						{stateButton}
+						{!changeState ? 'dodaj' : 'usuń'}
 					</button>
 				</div>
 				{textTask01a.length >= 20 ? <h4 className={styles.task01_length}>wpisałeś za dużo zaków</h4> : null}
