@@ -275,3 +275,61 @@
 	font-size: 1.8em;
 	color: var(--color-yellow04);
 }
+
+.box_check {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 2em;
+}
+
+.label_input,
+.label_checks {
+	display: flex;
+	flex-direction: column;
+	margin: 0em 1em;
+}
+
+.label_input {
+	width: 50%;
+}
+
+.label_check {
+	margin-bottom: 0.4em;
+	font-size: 1.2em;
+	font-weight: 100;
+	color: var(--color-yellow02);
+}
+
+.label_checks {
+	align-items: center;
+}
+
+.input_check {
+	background-color: var(--color-yellow02);
+	border: none;
+	padding: 0.4em 0.2em;
+}
+
+.input_check_alone {
+	width: 26px;
+	height: 26px;
+}
+
+.btns_check {
+	align-self: flex-end;
+	margin-left: 2em;
+}
+
+.btn_check {
+	padding: 0.5em 2em;
+	color: var(--color-purple02);
+	background-color: var(--color-purple04);
+	border: 0.04em solid var(--color-purple06);
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.btn_check:hover {
+	background-color: var(--color-purple07);
+}

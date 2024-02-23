@@ -13,7 +13,7 @@ const Task01check = () => {
 					<p className={styles.check_error}></p>
 				</div>
 				<div className={styles.label_checks}>
-					<label className={styles.label_check}>Masz 18 lat</label>
+					<label className={styles.label_check}>Masz 18 lat?</label>
 					<input className={styles.input_check_alone} type='checkbox' />
 				</div>
 				<div className={styles.btns_check}>
