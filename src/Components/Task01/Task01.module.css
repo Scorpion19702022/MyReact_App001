@@ -270,3 +270,8 @@
 	border: 0.04em solid var(--color-yellow04);
 	box-shadow: 0.08em 0.08em 1em var(--color-yellow04);
 }
+
+.heading_check {
+	font-size: 1.8em;
+	color: var(--color-yellow04);
+}
