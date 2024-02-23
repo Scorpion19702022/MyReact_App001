@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import styles from './Task01.module.css'
+import Task01Context from './Context/Task01Context'
 
 const Task01check = () => {
+	const { checkName, handleChangeCheckName } = useContext(Task01Context)
+
+	console.log(checkName)
+
 	return (
 		<div className={styles.wrapper_checkbox}>
 			<h1 className={styles.heading_check}>Test z zastosowaiem checkboxa</h1>
 			<div className={styles.box_check}>
 				<div className={styles.label_input}>
 					<label className={styles.label_check}>podaj swoje imię</label>
-					<input className={styles.input_check} type='text' />
+					<input className={styles.input_check} type='text' value={checkName} onChange={handleChangeCheckName} />
 					<p className={styles.check_error}></p>
 				</div>
 				<div className={styles.label_checks}>

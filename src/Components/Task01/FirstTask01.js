@@ -5,7 +5,7 @@ import Task01Context from './Context/Task01Context'
 const FirstTask01 = () => {
 	const { handleClickAddTextInTask01a, handleChange, textTask01a, textView, changeState } = useContext(Task01Context)
 
-	console.log(textTask01a.length)
+	// console.log(textTask01a.length)
 
 	return (
 		<div className={styles.box_task01_a}>

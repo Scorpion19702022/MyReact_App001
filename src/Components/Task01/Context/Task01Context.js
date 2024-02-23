@@ -97,6 +97,15 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 	}
 
 	// ===========================================================
+	// ===================== CheckBox Task01 =====================
+
+	const [checkName, setCheckName] = useState('')
+
+	const handleChangeCheckName = e => {
+		setCheckName(e.target.value)
+	}
+
+	// ===========================================================
 
 	return (
 		<Task01Context.Provider
@@ -111,6 +120,8 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 				handleDeleteResults,
 				success,
 				limitCount,
+				checkName,
+				handleChangeCheckName,
 			}}
 		>
 			{children}
