@@ -4,6 +4,7 @@ import { AddFunctionsTask01Provider } from './Context/Task01Context'
 import SecondTask01 from './SecondTask01'
 
 import styles from './Task01.module.css'
+import Task01check from './Task01check'
 
 const Task01 = () => {
 	return (
@@ -13,6 +14,7 @@ const Task01 = () => {
 				<AddFunctionsTask01Provider>
 					<FirstTask01 />
 					<SecondTask01 />
+					<Task01check />
 				</AddFunctionsTask01Provider>
 			</div>
 		</div>
