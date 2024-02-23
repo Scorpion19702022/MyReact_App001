@@ -4,7 +4,8 @@ import styles from './Task01.module.css'
 import Task01Context from './Context/Task01Context'
 
 const Task01check = () => {
-	const { checkName, handleChangeCheckName, check, handleClickCheckInfo, infoCheck } = useContext(Task01Context)
+	const { checkName, handleChangeCheckName, check, handleClickCheckInfo, infoCheck, handleChangeCheck } =
+		useContext(Task01Context)
 
 	console.log(checkName)
 	console.log(check)
@@ -19,7 +20,7 @@ const Task01check = () => {
 				</div>
 				<div className={styles.label_checks}>
 					<label className={styles.label_check}>Masz 18 lat?</label>
-					<input className={styles.input_check_alone} type='checkbox' value={check} />
+					<input className={styles.input_check_alone} type='checkbox' value={check} onChange={handleChangeCheck} />
 				</div>
 				<div className={styles.btns_check}>
 					<button className={styles.btn_check} onClick={() => handleClickCheckInfo()}>
