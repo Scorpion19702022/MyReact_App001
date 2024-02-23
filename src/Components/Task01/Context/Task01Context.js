@@ -101,8 +101,19 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 
 	const [checkName, setCheckName] = useState('')
 
+	const [check, setCheck] = useState(false)
+
+	const [infoCheck, setInfoCheck] = useState('')
+
 	const handleChangeCheckName = e => {
 		setCheckName(e.target.value)
+	}
+
+	const handleClickCheckInfo = () => {
+		setCheck(!check)
+		if (checkName !== '' && check) {
+			setInfoCheck(`${checkName} nie masz jeszcze 18 lat`)
+		}
 	}
 
 	// ===========================================================
@@ -122,6 +133,9 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 				limitCount,
 				checkName,
 				handleChangeCheckName,
+				check,
+				handleClickCheckInfo,
+				infoCheck,
 			}}
 		>
 			{children}
