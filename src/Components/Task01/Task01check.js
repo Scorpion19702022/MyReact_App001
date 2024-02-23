@@ -7,8 +7,8 @@ const Task01check = () => {
 	const { checkName, handleChangeCheckName, check, handleClickCheckInfo, infoCheck, handleChangeCheck } =
 		useContext(Task01Context)
 
-	console.log(checkName)
-	console.log(check)
+	// console.log(checkName)
+	// console.log(check)
 
 	return (
 		<div className={styles.wrapper_checkbox}>
