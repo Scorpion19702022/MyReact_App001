@@ -119,10 +119,12 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 
 	const handleClickCheckInfo = () => {
 		setCheck(!check)
-		if (checkName !== '' && !check) {
+		if (checkName !== '' && check) {
 			setInfoCheck(`${checkName} nie masz jeszcze 18 lat`)
-		} else if (checkName !== '' && check) {
+		} else if (checkName !== '' && !check) {
 			setInfoCheck(`${checkName} masz już 18 lat`)
+		} else {
+			setInfoCheck('podaj swoje imię')
 		}
 	}
 

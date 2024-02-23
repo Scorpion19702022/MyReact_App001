@@ -16,7 +16,6 @@ const Task01check = () => {
 				<div className={styles.label_input}>
 					<label className={styles.label_check}>podaj swoje imię</label>
 					<input className={styles.input_check} type='text' value={checkName} onChange={handleChangeCheckName} />
-					<p className={styles.check_error}></p>
 				</div>
 				<div className={styles.label_checks}>
 					<label className={styles.label_check}>Masz 18 lat?</label>
