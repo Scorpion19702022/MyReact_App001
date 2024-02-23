@@ -109,10 +109,20 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 		setCheckName(e.target.value)
 	}
 
+	// useEffect(() => {
+	// 	if (checkName !== '' && check) {
+	// 		setInfoCheck(`${checkName} nie masz jeszcze 18 lat`)
+	// 	} else if (checkName !== '' && !check) {
+	// 		setInfoCheck(`${checkName} masz już 18 lat`)
+	// 	}
+	// }, [checkName, check])
+
 	const handleClickCheckInfo = () => {
 		setCheck(!check)
-		if (checkName !== '' && check) {
+		if (checkName !== '' && !check) {
 			setInfoCheck(`${checkName} nie masz jeszcze 18 lat`)
+		} else if (checkName !== '' && check) {
+			setInfoCheck(`${checkName} masz już 18 lat`)
 		}
 	}
 
