@@ -146,6 +146,18 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 		shoppingCart: 0,
 	})
 
+	const handleChangeProduct = method => {
+		if (method === 'sub') {
+			setProductShop({
+				shoppingCart: productShop.shoppingCart - 1,
+			})
+		} else if (method === 'add') {
+			setProductShop({
+				shoppingCart: productShop.shoppingCart + 1,
+			})
+		}
+	}
+
 	// ===========================================================
 
 	return (
@@ -170,6 +182,7 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 				stateBtnCheck,
 				checkSuccess,
 				productShop,
+				handleChangeProduct,
 			}}
 		>
 			{children}
