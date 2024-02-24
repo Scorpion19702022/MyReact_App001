@@ -107,6 +107,8 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 
 	const [stateBtnCheck, setStateBtnCheck] = useState(false)
 
+	const [checkSuccess, setCheckSuccess] = useState('')
+
 	const handleChangeCheckName = e => {
 		setCheckName(e.target.value)
 	}
@@ -115,30 +117,25 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 		setCheck(!check)
 	}
 
-	// useEffect(() => {
-	// 	if (checkName !== '' && check) {
-	// 		setInfoCheck(`${checkName} nie masz jeszcze 18 lat`)
-	// 	} else if (checkName !== '' && !check) {
-	// 		setInfoCheck(`${checkName} masz już 18 lat`)
-	// 	}
-	// }, [checkName, check])
-
 	const handleClickCheckInfo = () => {
 		setStateBtnCheck(!stateBtnCheck)
 
 		if (checkName !== '' && !check) {
 			setInfoCheck(`${checkName} nie masz jeszcze 18 lat`)
 			setCheckName('')
+			setCheckSuccess('test zakończony sukcesem')
 		} else if (checkName !== '' && check) {
 			setInfoCheck(`${checkName} masz już 18 lat`)
 			setCheckName('')
+			setCheckSuccess('test zakończony sukcesem')
 		} else if (checkName === '') {
 			setInfoCheck('podaj swoje imię')
+			setCheckSuccess('')
 		}
 
 		if (stateBtnCheck) {
 			setInfoCheck('')
-			setCheck(false)
+			setCheckSuccess('')
 		}
 	}
 
@@ -164,6 +161,7 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 				infoCheck,
 				handleChangeCheck,
 				stateBtnCheck,
+				checkSuccess,
 			}}
 		>
 			{children}

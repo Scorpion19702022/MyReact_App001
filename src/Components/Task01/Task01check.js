@@ -4,8 +4,16 @@ import styles from './Task01.module.css'
 import Task01Context from './Context/Task01Context'
 
 const Task01check = () => {
-	const { checkName, handleChangeCheckName, check, handleClickCheckInfo, infoCheck, handleChangeCheck, stateBtnCheck } =
-		useContext(Task01Context)
+	const {
+		checkName,
+		handleChangeCheckName,
+		check,
+		handleClickCheckInfo,
+		infoCheck,
+		handleChangeCheck,
+		stateBtnCheck,
+		checkSuccess,
+	} = useContext(Task01Context)
 
 	// console.log(checkName)
 	// console.log(check)
@@ -31,7 +39,7 @@ const Task01check = () => {
 			<div className={styles.check_results}>
 				<h2 className={styles.check_result}>{infoCheck}</h2>
 			</div>
-			<p className={styles.task_check_success}></p>
+			<p className={styles.task_check_success}>{checkSuccess}</p>
 		</div>
 	)
 }
