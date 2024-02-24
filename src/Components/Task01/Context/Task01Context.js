@@ -149,10 +149,12 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 	const handleChangeProduct = method => {
 		if (method === 'sub') {
 			setProductShop({
+				...productShop,
 				shoppingCart: productShop.shoppingCart - 1,
 			})
 		} else if (method === 'add') {
 			setProductShop({
+				...productShop,
 				shoppingCart: productShop.shoppingCart + 1,
 			})
 		}

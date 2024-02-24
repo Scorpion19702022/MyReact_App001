@@ -5,6 +5,8 @@ import Task01Context from './Context/Task01Context'
 const Task01bin = () => {
 	const { productShop, handleChangeProduct } = useContext(Task01Context)
 
+	console.log(productShop.available)
+
 	return (
 		<div className={styles.wrapper_bin}>
 			<h1 className={styles.heading_bin}>Koszyk</h1>
@@ -17,7 +19,11 @@ const Task01bin = () => {
 					-
 				</button>
 				<span className={styles.btn_state}>{productShop.shoppingCart}</span>
-				<button onClick={() => handleChangeProduct('add')} className={styles.btn_bin_add}>
+				<button
+					disabled={productShop.shoppingCart === productShop.available ? true : false}
+					onClick={() => handleChangeProduct('add')}
+					className={styles.btn_bin_add}
+				>
 					+
 				</button>
 			</div>
