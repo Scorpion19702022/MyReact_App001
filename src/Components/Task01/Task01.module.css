@@ -369,6 +369,11 @@
 	color: var(--color-yellow04);
 }
 
+.bin_available {
+	margin-top: 1em;
+	color: var(--color-yellow02);
+}
+
 .btns_bin {
 	width: 100%;
 	margin: 2em 0em;
