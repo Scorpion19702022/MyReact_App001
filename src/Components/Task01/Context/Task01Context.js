@@ -158,6 +158,7 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 				handleClickCheckInfo,
 				infoCheck,
 				handleChangeCheck,
+				stateBtnCheck,
 			}}
 		>
 			{children}

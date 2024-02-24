@@ -4,7 +4,7 @@ import styles from './Task01.module.css'
 import Task01Context from './Context/Task01Context'
 
 const Task01check = () => {
-	const { checkName, handleChangeCheckName, check, handleClickCheckInfo, infoCheck, handleChangeCheck } =
+	const { checkName, handleChangeCheckName, check, handleClickCheckInfo, infoCheck, handleChangeCheck, stateBtnCheck } =
 		useContext(Task01Context)
 
 	// console.log(checkName)
@@ -24,7 +24,7 @@ const Task01check = () => {
 				</div>
 				<div className={styles.btns_check}>
 					<button className={styles.btn_check} onClick={() => handleClickCheckInfo()}>
-						sprawdź
+						{!stateBtnCheck ? 'sprawdź' : 'wyczyść'}
 					</button>
 				</div>
 			</div>
