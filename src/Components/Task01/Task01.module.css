@@ -333,3 +333,17 @@
 .btn_check:hover {
 	background-color: var(--color-purple07);
 }
+
+.check_results {
+	margin: 1em 0em;
+}
+
+.check_result {
+	font-size: 1.8em;
+	color: var(--color-yellow04);
+}
+
+.task_check_success {
+	font-size: 1.2em;
+	color: var(--color-blue04);
+}
