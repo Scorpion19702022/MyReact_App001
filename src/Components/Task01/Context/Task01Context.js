@@ -127,11 +127,13 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 		setStateBtnCheck(!stateBtnCheck)
 
 		if (checkName !== '' && !check) {
-			return setInfoCheck(`${checkName} nie masz jeszcze 18 lat`)
+			setInfoCheck(`${checkName} nie masz jeszcze 18 lat`)
+			setCheckName('')
 		} else if (checkName !== '' && check) {
-			return setInfoCheck(`${checkName} masz już 18 lat`)
+			setInfoCheck(`${checkName} masz już 18 lat`)
+			setCheckName('')
 		} else if (checkName === '') {
-			return setInfoCheck('podaj swoje imię')
+			setInfoCheck('podaj swoje imię')
 		}
 	}
 
