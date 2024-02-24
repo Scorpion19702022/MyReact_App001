@@ -5,6 +5,7 @@ import SecondTask01 from './SecondTask01'
 
 import styles from './Task01.module.css'
 import Task01check from './Task01check'
+import Task01bin from './Task01bin'
 
 const Task01 = () => {
 	return (
@@ -15,6 +16,7 @@ const Task01 = () => {
 					<FirstTask01 />
 					<SecondTask01 />
 					<Task01check />
+					<Task01bin />
 				</AddFunctionsTask01Provider>
 			</div>
 		</div>
