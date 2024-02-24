@@ -135,6 +135,11 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 		} else if (checkName === '') {
 			setInfoCheck('podaj swoje imię')
 		}
+
+		if (stateBtnCheck) {
+			setInfoCheck('')
+			setCheck(false)
+		}
 	}
 
 	// ===========================================================
