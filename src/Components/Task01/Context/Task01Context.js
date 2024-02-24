@@ -139,6 +139,13 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 		}
 	}
 
+	// ===================== CheckBox Task01 =====================
+
+	const [productShop, setProductShop] = useState({
+		available: 9,
+		shoppingCart: 0,
+	})
+
 	// ===========================================================
 
 	return (
@@ -162,6 +169,7 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 				handleChangeCheck,
 				stateBtnCheck,
 				checkSuccess,
+				productShop,
 			}}
 		>
 			{children}
