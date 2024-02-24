@@ -399,3 +399,9 @@
 	font-weight: bold;
 	color: var(--color-yellow04);
 }
+
+.btn_bin_subtraction:disabled,
+.btn_bin_add:disabled {
+	background-color: var(--color-purple05);
+	border: 0.04em solid var(--color-purple07);
+}

@@ -9,7 +9,7 @@ const Task01bin = () => {
 		<div className={styles.wrapper_bin}>
 			<h1 className={styles.heading_bin}>Koszyk</h1>
 			<div className={styles.btns_bin}>
-				<button disabled className={styles.btn_bin_subtraction}>
+				<button disabled={productShop.shoppingCart === 0 ? true : false} className={styles.btn_bin_subtraction}>
 					-
 				</button>
 				<span className={styles.btn_state}>{productShop.shoppingCart}</span>
