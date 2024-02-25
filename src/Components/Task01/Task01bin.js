@@ -42,7 +42,7 @@ const Task01bin = () => {
 					<label className={styles.label_add_magazin}>Dodaj produkty do magazynu</label>
 					<input className={styles.input_add_magazin} type='number' min='0' />
 				</div>
-				<div className={styles.btn_box_add_magazine}>
+				<div className={styles.btn_box_add_magazin}>
 					<button className={styles.btn_add_magazin}>Dodaj</button>
 				</div>
 			</div>

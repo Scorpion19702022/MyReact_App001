@@ -448,3 +448,40 @@
 	align-items: center;
 	margin: 1em 0em;
 }
+
+.box_add_input {
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+}
+
+.label_add_magazin {
+	color: var(--color-yellow02);
+	font-weight: 100;
+	margin-bottom: 0.2em;
+}
+
+.input_add_magazin {
+	width: 80%;
+	padding: 0.4em 1em;
+	background-color: var(--color-purple03);
+	border: none;
+}
+.btn_box_add_magazin {
+	display: flex;
+	flex-direction: column;
+	align-self: flex-end;
+}
+
+.btn_add_magazin {
+	padding: 0.4em 1em;
+	background-color: var(--color-purple04);
+	color: var(--color-purple02);
+	border: 0.04em solid var(--color-purple07);
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.btn_add_magazin:hover {
+	background-color: var(--color-purple07);
+}
