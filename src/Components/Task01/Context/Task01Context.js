@@ -148,7 +148,7 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 
 	const [isInShop, setIsInShop] = useState(productShop.available)
 
-	const [magazineState, setMagazineState] = useState('')
+	const [magazinState, setMagazinState] = useState('')
 
 	const handleChangeProduct = method => {
 		if (method === 'sub') {
@@ -166,17 +166,14 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 		}
 	}
 
-	useEffect(() => {
-		if (isInShop === 0) {
-			setMagazineState('brak produktu na stanie')
-		}
-	}, [isInShop])
-
 	const handleBuy = () => {
 		setProductShop({
 			available: productShop.available - productShop.shoppingCart,
 			shoppingCart: 0,
 		})
+		if (isInShop === 0) {
+			setMagazinState('brak produktu na stanie')
+		}
 	}
 
 	// ===========================================================
@@ -206,7 +203,7 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 				handleChangeProduct,
 				isInShop,
 				handleBuy,
-				magazineState,
+				magazinState,
 			}}
 		>
 			{children}

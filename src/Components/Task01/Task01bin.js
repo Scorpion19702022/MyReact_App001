@@ -3,7 +3,7 @@ import styles from './Task01.module.css'
 import Task01Context from './Context/Task01Context'
 
 const Task01bin = () => {
-	const { productShop, handleChangeProduct, isInShop, handleBuy, magazineState } = useContext(Task01Context)
+	const { productShop, handleChangeProduct, isInShop, handleBuy, magazinState } = useContext(Task01Context)
 
 	console.log(productShop.available)
 
@@ -34,7 +34,7 @@ const Task01bin = () => {
 					kup
 				</button>
 			</div>
-			<h2 className={styles.bin_state_magazine}>{magazineState}</h2>
+			<h2 className={styles.bin_state_magazine}>{magazinState}</h2>
 		</div>
 	)
 }
