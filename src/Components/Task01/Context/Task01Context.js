@@ -168,6 +168,10 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 		}
 	}
 
+	useEffect(() => {
+		setIsInShop(isInShop - productShop.shoppingCart)
+	}, [])
+
 	const handleBuy = () => {
 		setProductShop({
 			available: productShop.available - productShop.shoppingCart,

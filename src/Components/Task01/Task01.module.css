@@ -382,6 +382,13 @@
 	align-items: center;
 }
 
+.btns_add_block {
+	width: 50%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
 .btn_bin_subtraction,
 .btn_bin_add {
 	width: 50px;
@@ -409,6 +416,13 @@
 .btn_bin_add:disabled {
 	background-color: var(--color-purple05);
 	border: 0.04em solid var(--color-purple07);
+}
+
+.btn_box_click_buy {
+	width: 50%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 .btn_bin_buy {
