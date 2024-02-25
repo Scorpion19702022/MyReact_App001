@@ -178,8 +178,17 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 		}
 	}
 
-	const handleChangeMagazine = e => {
+	const handleChangeMagazin = e => {
 		setAddMagazinState(e.target.value)
+	}
+
+	const handleClickAddMagazin = () => {
+		setProductShop({
+			...productShop,
+			available: productShop.available + +addMagazinState,
+		})
+
+		setAddMagazinState(0)
 	}
 
 	// ===========================================================
@@ -211,7 +220,8 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 				handleBuy,
 				magazinState,
 				addMagazinState,
-				handleChangeMagazine,
+				handleChangeMagazin,
+				handleClickAddMagazin,
 			}}
 		>
 			{children}
