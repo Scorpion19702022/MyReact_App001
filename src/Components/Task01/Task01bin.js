@@ -35,6 +35,15 @@ const Task01bin = () => {
 				</button>
 			</div>
 			<h2 className={styles.bin_state_magazine}>{magazinState}</h2>
+			<div className={styles.box_add_magazin}>
+				<div className={styles.box_add_input}>
+					<label className={styles.label_add_magazin}>Dodaj produkty do magazynu</label>
+					<input className={styles.input_add_magazin} type='number' />
+				</div>
+				<div className={styles.btn_box_add_magazine}>
+					<button className={styles.btn_add_magazin}>Dodaj</button>
+				</div>
+			</div>
 		</div>
 	)
 }
