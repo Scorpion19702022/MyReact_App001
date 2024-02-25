@@ -410,3 +410,26 @@
 	background-color: var(--color-purple05);
 	border: 0.04em solid var(--color-purple07);
 }
+
+.btn_bin_buy {
+	visibility: visible;
+	width: 120px;
+	height: 50px;
+	font-size: 2em;
+	background-color: var(--color-yellow02);
+	border: 0.04em solid var(--color-purple07);
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.btn_no_bin_buy {
+	visibility: hidden;
+}
+
+.btn_bin_buy:hover {
+	background-color: var(--color-yellow04);
+}
+
+.bin_state_magazine {
+	color: var(--color-yellow05);
+}

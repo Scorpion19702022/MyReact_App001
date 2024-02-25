@@ -3,7 +3,9 @@ import styles from './Task01.module.css'
 import Task01Context from './Context/Task01Context'
 
 const Task01bin = () => {
-	const { productShop, handleChangeProduct, isInShop } = useContext(Task01Context)
+	const { productShop, handleChangeProduct, isInShop, handleBuy, magazineState } = useContext(Task01Context)
+
+	console.log(productShop.available)
 
 	return (
 		<div className={styles.wrapper_bin}>
@@ -25,7 +27,14 @@ const Task01bin = () => {
 				>
 					+
 				</button>
+				<button
+					onClick={handleBuy}
+					className={productShop.shoppingCart !== 0 ? styles.btn_bin_buy : styles.btn_no_bin_buy}
+				>
+					kup
+				</button>
 			</div>
+			<h2 className={styles.bin_state_magazine}>{magazineState}</h2>
 		</div>
 	)
 }
