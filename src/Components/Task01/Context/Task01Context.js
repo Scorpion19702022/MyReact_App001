@@ -182,11 +182,21 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 		setAddMagazinState(e.target.value)
 	}
 
+	// useEffect(() => {
+	// 	if (addMagazinState !== 0) {
+	// 		setProductShop({
+	// 			available: productShop.available + +addMagazinState,
+	// 		})
+	// 	}
+	// }, [addMagazinState])
+
 	const handleClickAddMagazin = () => {
 		setProductShop({
 			...productShop,
 			available: productShop.available + +addMagazinState,
 		})
+
+		setIsInShop(isInShop + +addMagazinState)
 
 		setAddMagazinState(0)
 	}
