@@ -376,7 +376,7 @@
 
 .btns_bin {
 	width: 100%;
-	margin: 2em 0em;
+	margin: 1em 0em;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -430,6 +430,21 @@
 	background-color: var(--color-yellow04);
 }
 
-.bin_state_magazine {
+.box_info_state_magazin {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin: 1em 0em;
+}
+
+.bin_state_magazin {
 	color: var(--color-yellow05);
+}
+
+.box_add_magazin {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 1em 0em;
 }
