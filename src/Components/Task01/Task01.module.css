@@ -485,3 +485,7 @@
 .btn_add_magazin:hover {
 	background-color: var(--color-purple07);
 }
+
+.btn_add_magazin:disabled {
+	background-color: var(--color-purple07);
+}

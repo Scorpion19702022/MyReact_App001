@@ -150,6 +150,8 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 
 	const [magazinState, setMagazinState] = useState('')
 
+	const [addMagazinState, setAddMagazinState] = useState(0)
+
 	const handleChangeProduct = method => {
 		if (method === 'sub') {
 			setProductShop({
@@ -174,6 +176,10 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 		if (isInShop === 0) {
 			setMagazinState('brak produktu na stanie')
 		}
+	}
+
+	const handleChangeMagazine = e => {
+		setAddMagazinState(e.target.value)
 	}
 
 	// ===========================================================
@@ -204,6 +210,8 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 				isInShop,
 				handleBuy,
 				magazinState,
+				addMagazinState,
+				handleChangeMagazine,
 			}}
 		>
 			{children}

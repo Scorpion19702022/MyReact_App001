@@ -3,7 +3,8 @@ import styles from './Task01.module.css'
 import Task01Context from './Context/Task01Context'
 
 const Task01bin = () => {
-	const { productShop, handleChangeProduct, isInShop, handleBuy, magazinState } = useContext(Task01Context)
+	const { productShop, handleChangeProduct, isInShop, handleBuy, magazinState, addMagazinState, handleChangeMagazine } =
+		useContext(Task01Context)
 
 	console.log(productShop.available)
 
@@ -40,10 +41,18 @@ const Task01bin = () => {
 			<div className={styles.box_add_magazin}>
 				<div className={styles.box_add_input}>
 					<label className={styles.label_add_magazin}>Dodaj produkty do magazynu</label>
-					<input className={styles.input_add_magazin} type='number' min='0' />
+					<input
+						onChange={handleChangeMagazine}
+						className={styles.input_add_magazin}
+						type='number'
+						min='0'
+						value={addMagazinState}
+					/>
 				</div>
 				<div className={styles.btn_box_add_magazin}>
-					<button className={styles.btn_add_magazin}>Dodaj</button>
+					<button disabled={addMagazinState !== 0 ? false : true} className={styles.btn_add_magazin}>
+						Dodaj
+					</button>
 				</div>
 			</div>
 		</div>
