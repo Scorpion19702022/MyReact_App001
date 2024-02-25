@@ -57,6 +57,19 @@
 	box-shadow: 0.4em 0em 1em var(--color-yellow05);
 }
 
+.task01_box_theme {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin: 1.2em 0em;
+}
+
+.task01_theme_heading {
+	font-size: 1.6em;
+	color: var(--color-purple02);
+	text-shadow: 0.07em 0.07em 0.3em var(--color-yellow06);
+}
+
 .main_task01 {
 	width: 100%;
 	padding: 0em 4em 0em 7.8em;

@@ -11,6 +11,9 @@ const Task01 = () => {
 	return (
 		<div className={styles.wrapper_task01}>
 			<h1 className={styles.heading_page}>Task01</h1>
+			<div className={styles.task01_box_theme}>
+				<h2 className={styles.task01_theme_heading}>Testy z inputami i checkboxem</h2>
+			</div>
 			<div className={styles.main_task01}>
 				<AddFunctionsTask01Provider>
 					<FirstTask01 />
