@@ -146,17 +146,21 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 		shoppingCart: 0,
 	})
 
+	const [isInShop, setIsInShop] = useState(productShop.available)
+
 	const handleChangeProduct = method => {
 		if (method === 'sub') {
 			setProductShop({
 				...productShop,
 				shoppingCart: productShop.shoppingCart - 1,
 			})
+			setIsInShop(isInShop + 1)
 		} else if (method === 'add') {
 			setProductShop({
 				...productShop,
 				shoppingCart: productShop.shoppingCart + 1,
 			})
+			setIsInShop(isInShop - 1)
 		}
 	}
 
@@ -185,6 +189,7 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 				checkSuccess,
 				productShop,
 				handleChangeProduct,
+				isInShop,
 			}}
 		>
 			{children}
