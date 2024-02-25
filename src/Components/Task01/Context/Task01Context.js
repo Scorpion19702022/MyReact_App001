@@ -143,7 +143,7 @@ export const AddFunctionsTask01Provider = ({ children }) => {
 
 	const [productShop, setProductShop] = useState({
 		available: 9,
-		shoppingCart: 0,
+		shoppingCart: 1,
 	})
 
 	const [isInShop, setIsInShop] = useState(productShop.available)
