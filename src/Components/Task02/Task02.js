@@ -11,7 +11,8 @@ const Task02 = () => {
 			<h1 className={styles.heading_task02}>Task 02</h1>
 			<div className={styles.wrapper_task02_main}>
 				<div className={styles.box_images}>
-					<img src={WomanMan} alt='kobieta i mężczyzna' />
+					<img className={styles.img_theme} src={WomanMan} alt='kobieta i mężczyzna' />
+					<h1 className={styles.topic}>Pani i Pan</h1>
 				</div>
 				<T02list />
 			</div>
