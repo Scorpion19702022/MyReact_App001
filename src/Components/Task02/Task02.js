@@ -12,6 +12,7 @@ const Task02 = () => {
 			<div className={styles.wrapper_task02_main}>
 				<div className={styles.box_images}>
 					<img className={styles.img_theme} src={WomanMan} alt='kobieta i mężczyzna' />
+					<div className={styles.back_topic}></div>
 					<h1 className={styles.topic}>Pani i Pan</h1>
 				</div>
 				<T02list />

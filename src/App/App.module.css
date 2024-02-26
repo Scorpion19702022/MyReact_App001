@@ -57,6 +57,7 @@
 	background-color: var(--color-dark07);
 	border-right: 0.04em solid var(--color-dark03);
 	box-shadow: 0em 0.8em 1em var(--color-dark07);
+	z-index: 100;
 }
 
 .nav {
