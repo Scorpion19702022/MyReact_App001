@@ -61,3 +61,16 @@
 	font-size: 2em;
 	color: var(--color-green03);
 }
+
+.wrapper_task02_main {
+	width: 100%;
+	display: flex;
+	margin: 2em;
+}
+
+.box_images {
+	width: 30%;
+	padding: 2em;
+	display: flex;
+	flex-direction: column;
+}
