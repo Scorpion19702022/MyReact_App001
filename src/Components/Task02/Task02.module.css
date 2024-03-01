@@ -70,7 +70,7 @@
 
 .box_images {
 	position: relative;
-	width: 30%;
+	width: 25%;
 	padding: 2em;
 	display: flex;
 	flex-direction: column;
@@ -79,7 +79,7 @@
 }
 
 .img_theme {
-	width: 87%;
+	width: 100%;
 }
 
 .back_topic {
