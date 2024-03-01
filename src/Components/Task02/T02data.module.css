@@ -74,8 +74,9 @@
 }
 
 .task01_img_people {
-	width: 100px;
+	width: 140px;
 	height: 100px;
+	border: 0.04em solid var(--color-green04);
 	object-fit: cover;
 	margin: 0.6em;
 	object-position: center;
@@ -85,4 +86,26 @@
 	font-size: 1.2em;
 	padding-bottom: 0.2em;
 	color: var(--color-green02);
+}
+
+.btns_people {
+	width: 100%;
+	margin-top: 1em;
+	display: flex;
+	justify-content: space-between;
+}
+
+.btn_people {
+	width: 42%;
+	padding: 0.4em 0.6em;
+	background: none;
+	border: 0.04em solid var(--color-green06);
+	color: var(--color-green02);
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.btn_people:hover {
+	background-color: var(--color-green06);
 }
