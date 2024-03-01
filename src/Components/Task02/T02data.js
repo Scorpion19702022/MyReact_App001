@@ -43,15 +43,22 @@ const T02data = () => {
 	]
 
 	const peopleList = people.map((item, index) => (
-		<div key={index}>
-			<h2>{item.name}</h2>
+		<div key={index} className={styles.people_box_list}>
+			<h2 className={styles.people_name}>{item.name}</h2>
+			<div className={styles.age_people}>
+				<em className={styles.age_people_em}>wiek {item.age}</em>
+			</div>
 			<div className={styles.box_imgs_people}>
 				<img className={styles.task01_img_people} src={item.img} alt='postać' />
 			</div>
+			<p className={styles.people_info}>{item.city}</p>
+			<p className={styles.people_info}>{item.nation}</p>
+			<p className={styles.people_info}>{item.sex}</p>
+			<p className={styles.people_info}>{item.job}</p>
 		</div>
 	))
 
-	return <div>{peopleList}</div>
+	return <div className={styles.people_box}>{peopleList}</div>
 }
 
 export default T02data

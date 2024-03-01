@@ -37,9 +37,11 @@
 	--color-dark08: #000000;
 }
 
-/* .box_imgs_people {
-	width: 700px;
-} */
+.people_box {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
 
 .task01_img_people {
 	width: 100px;
