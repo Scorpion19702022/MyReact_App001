@@ -58,6 +58,19 @@
 .people_name {
 	font-size: 2em;
 	color: var(--color-green03);
+	padding-bottom: 0.2em;
+	border-bottom: 0.04em solid var(--color-green03);
+}
+
+.age_people {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 0.4em;
+}
+
+.age_people_em {
+	color: var(--color-green01);
 }
 
 .task01_img_people {
@@ -66,4 +79,10 @@
 	object-fit: cover;
 	margin: 0.6em;
 	object-position: center;
+}
+
+.people_info {
+	font-size: 1.2em;
+	padding-bottom: 0.2em;
+	color: var(--color-green02);
 }

@@ -46,7 +46,7 @@ const T02data = () => {
 		<div key={index} className={styles.people_box_list}>
 			<h2 className={styles.people_name}>{item.name}</h2>
 			<div className={styles.age_people}>
-				<em className={styles.age_people_em}>wiek {item.age}</em>
+				<em className={styles.age_people_em}>wiek: {item.age}</em>
 			</div>
 			<div className={styles.box_imgs_people}>
 				<img className={styles.task01_img_people} src={item.img} alt='postać' />
@@ -55,6 +55,10 @@ const T02data = () => {
 			<p className={styles.people_info}>{item.nation}</p>
 			<p className={styles.people_info}>{item.sex}</p>
 			<p className={styles.people_info}>{item.job}</p>
+			<div className={styles.btns_people}>
+				<button className={styles.btn_people}>llike</button>
+				<button className={styles.btn_people}>dislike</button>
+			</div>
 		</div>
 	))
 
