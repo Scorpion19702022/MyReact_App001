@@ -82,7 +82,7 @@ const T02data = () => {
 					? styles.people_box_list_like
 					: isDislike(item.id)
 					? styles.people_box_list_dislike
-					: null
+					: styles.people_box_list
 			}
 		>
 			<h2 className={styles.people_name}>{item.name}</h2>
