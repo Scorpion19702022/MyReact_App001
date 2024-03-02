@@ -2,7 +2,7 @@ import React from 'react'
 
 import styles from './Buttons.module.css'
 
-const Buttons = () => {
+const Buttons = ({ selectPeople }) => {
 	return (
 		<div className={styles.wrapper_btns_action}>
 			<button className={styles.btn_show_women}>Pokaż kobiety</button>

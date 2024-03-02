@@ -48,6 +48,12 @@ const T02data = () => {
 	const [like, setLike] = useState([])
 	const [dislike, setDislike] = useState([])
 
+	const [selectWomen, setSelectWomen] = useState(false)
+	const [selectMen, setSelectMen] = useState(false)
+	const [selectAll, setSelectAll] = useState(false)
+
+	const [newPeople, setNewPeople] = useState([...people])
+
 	// const handleViewLike = id => {
 	// 	setLike(prevState => {
 	// 		if (prevState.includes(id)) {
@@ -93,6 +99,16 @@ const T02data = () => {
 			}
 		})
 	}
+
+	// const handleSelec = select => {
+	// 	if (select === 'women') {
+	// 		const women = people.filter(womenItems => womenItems.sex === 'kobieta')
+	// 		setNewPeople(women)
+	// 	} else if (select === 'men') {
+	// 		const men = people.filter(menItems => menItems.sex === 'mężczyzna')
+	// 		setNewPeople(men)
+	// 	}
+	// }
 
 	const isLike = id => like.includes(id)
 
