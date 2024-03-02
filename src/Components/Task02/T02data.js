@@ -100,21 +100,23 @@ const T02data = () => {
 		})
 	}
 
-	// const handleSelec = select => {
-	// 	if (select === 'women') {
-	// 		const women = people.filter(womenItems => womenItems.sex === 'kobieta')
-	// 		setNewPeople(women)
-	// 	} else if (select === 'men') {
-	// 		const men = people.filter(menItems => menItems.sex === 'mężczyzna')
-	// 		setNewPeople(men)
-	// 	}
-	// }
+	const handleSelec = select => {
+		if (select === 'kobieta') {
+			const women = people.filter(womenItems => womenItems.sex === select)
+			setNewPeople(women)
+		} else if (select === 'mężczyzna') {
+			const men = people.filter(menItems => menItems.sex === 'mężczyzna')
+			setNewPeople(men)
+		} else if (select === 'all') {
+			setNewPeople(people)
+		}
+	}
 
 	const isLike = id => like.includes(id)
 
 	const isDislike = index => dislike.includes(index)
 
-	const peopleList = people.map((item, id) => (
+	const peopleList = newPeople.map((item, id) => (
 		<div
 			key={id}
 			className={
@@ -151,7 +153,7 @@ const T02data = () => {
 
 	return (
 		<div className={styles.people_box}>
-			<Buttons />
+			<Buttons selectPeople={handleSelec} />
 			{peopleList}
 		</div>
 	)
