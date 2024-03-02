@@ -42,12 +42,12 @@ const T02data = () => {
 		},
 	]
 
-	const [like, setlike] = useState(false)
+	const [like, setLike] = useState(false)
 	const [dislike, setDislike] = useState(false)
 
 	const handleViewLike = index => {
-		if (index === people) {
-			setlike(!like)
+		if (index) {
+			setLike(!like)
 		}
 	}
 
@@ -56,7 +56,7 @@ const T02data = () => {
 	}
 
 	const peopleList = people.map((item, index) => (
-		<div key={index} className={like ? styles.people_box_list : styles.people_box_list_like}>
+		<div key={index} className={!like ? styles.people_box_list : styles.people_box_list_like}>
 			<h2 className={styles.people_name}>{item.name}</h2>
 			<div className={styles.age_people}>
 				<em className={styles.age_people_em}>wiek: {item.age}</em>
@@ -69,7 +69,7 @@ const T02data = () => {
 			<p className={styles.people_info}>{item.sex}</p>
 			<p className={styles.people_info}>{item.job}</p>
 			<div className={styles.btns_people}>
-				<button className={styles.btn_people} onClick={item => handleViewLike(item)}>
+				<button className={styles.btn_people} onClick={() => handleViewLike(index)}>
 					llike
 				</button>
 				<button className={styles.btn_people} onClick={handleViewDislike}>
