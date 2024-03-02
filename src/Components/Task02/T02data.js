@@ -48,22 +48,48 @@ const T02data = () => {
 	const [like, setLike] = useState([])
 	const [dislike, setDislike] = useState([])
 
+	// const handleViewLike = id => {
+	// 	setLike(prevState => {
+	// 		if (prevState.includes(id)) {
+	// 			return prevState.filter(likeId => likeId !== id)
+	// 		} else {
+	// 			return [...prevState, id]
+	// 		}
+	// 	})
+	// }
+
+	// const handleViewDislike = index => {
+	// 	setDislike(prevState => {
+	// 		if (prevState.includes(index)) {
+	// 			return prevState.filter(disLikeId => disLikeId !== index)
+	// 		} else {
+	// 			return [...prevState, index]
+	// 		}
+	// 	})
+	// }
+
 	const handleViewLike = id => {
 		setLike(prevState => {
+			// Jeśli przycisk like jest już zaznaczony, usuń go
 			if (prevState.includes(id)) {
 				return prevState.filter(likeId => likeId !== id)
 			} else {
+				// Jeśli przycisk like nie jest jeszcze zaznaczony, dodaj go i usuń dislike
+				setDislike(prevDislike => prevDislike.filter(dislikeId => dislikeId !== id))
 				return [...prevState, id]
 			}
 		})
 	}
 
-	const handleviewDislike = index => {
+	const handleViewDislike = id => {
 		setDislike(prevState => {
-			if (prevState.includes(index)) {
-				return prevState.filter(disLikeId => disLikeId !== index)
+			// Jeśli przycisk dislike jest już zaznaczony, usuń go
+			if (prevState.includes(id)) {
+				return prevState.filter(dislikeId => dislikeId !== id)
 			} else {
-				return [...prevState, index]
+				// Jeśli przycisk dislike nie jest jeszcze zaznaczony, dodaj go i usuń like
+				setLike(prevLike => prevLike.filter(likeId => likeId !== id))
+				return [...prevState, id]
 			}
 		})
 	}
@@ -72,19 +98,11 @@ const T02data = () => {
 
 	const isDislike = index => dislike.includes(index)
 
-	// useEffect(() => {
-	// 	if (isLike) {
-	// 		return !isDislike
-	// 	} else {
-	// 		return isDislike
-	// 	}
-	// }, [isLike, isDislike])
-
 	const peopleList = people.map((item, id) => (
 		<div
 			key={id}
 			className={
-				!isLike(item.id && !isDislike(item.id))
+				!isLike(item.id) && !isDislike(item.id)
 					? styles.people_box_list
 					: isLike(item.id)
 					? styles.people_box_list_like
@@ -108,7 +126,7 @@ const T02data = () => {
 				<button className={styles.btn_people} onClick={() => handleViewLike(item.id)}>
 					llike
 				</button>
-				<button className={styles.btn_people} onClick={() => handleviewDislike(item.id)}>
+				<button className={styles.btn_people} onClick={() => handleViewDislike(item.id)}>
 					dislike
 				</button>
 			</div>
