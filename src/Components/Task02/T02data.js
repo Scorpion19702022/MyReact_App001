@@ -73,7 +73,18 @@ const T02data = () => {
 	const isDislike = index => dislike.includes(index)
 
 	const peopleList = people.map((item, id) => (
-		<div key={id} className={!isLike(item.id) ? styles.people_box_list : styles.people_box_list_like}>
+		<div
+			key={id}
+			className={
+				!isLike(item.id) && !isDislike(item.id)
+					? styles.people_box_list
+					: isLike(item.id)
+					? styles.people_box_list_like
+					: isDislike(item.id)
+					? styles.people_box_list_dislike
+					: null
+			}
+		>
 			<h2 className={styles.people_name}>{item.name}</h2>
 			<div className={styles.age_people}>
 				<em className={styles.age_people_em}>wiek: {item.age}</em>
