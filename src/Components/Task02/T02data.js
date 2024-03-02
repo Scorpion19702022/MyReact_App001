@@ -72,11 +72,19 @@ const T02data = () => {
 
 	const isDislike = index => dislike.includes(index)
 
+	// useEffect(() => {
+	// 	if (isLike) {
+	// 		return !isDislike
+	// 	} else {
+	// 		return isDislike
+	// 	}
+	// }, [isLike, isDislike])
+
 	const peopleList = people.map((item, id) => (
 		<div
 			key={id}
 			className={
-				!isLike(item.id) && !isDislike(item.id)
+				!isLike(item.id && !isDislike(item.id))
 					? styles.people_box_list
 					: isLike(item.id)
 					? styles.people_box_list_like
