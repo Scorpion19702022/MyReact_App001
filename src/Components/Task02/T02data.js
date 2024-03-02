@@ -45,22 +45,22 @@ const T02data = () => {
 		},
 	]
 
-	const [like, setLike] = useState(false)
-	const [dislike, setDislike] = useState(false)
+	const [like, setLike] = useState([])
 
-	const handleViewLike = index => {
-		if (people.filter(indexClick => indexClick.id !== index)) {
-			setLike(!like)
-			console.log('klik')
-		}
+	const handleViewLike = id => {
+		setLike(prevState => {
+			if (prevState.includes(id)) {
+				return prevState.filter(likeId => likeId !== id)
+			} else {
+				return [...prevState, id]
+			}
+		})
 	}
 
-	const handleViewDislike = () => {
-		setDislike(!dislike)
-	}
+	const isLike = id => like.includes(id)
 
 	const peopleList = people.map((item, id) => (
-		<div key={id} className={!like ? styles.people_box_list : styles.people_box_list_like}>
+		<div key={id} className={!isLike(item.id) ? styles.people_box_list : styles.people_box_list_like}>
 			<h2 className={styles.people_name}>{item.name}</h2>
 			<div className={styles.age_people}>
 				<em className={styles.age_people_em}>wiek: {item.age}</em>
@@ -76,9 +76,7 @@ const T02data = () => {
 				<button className={styles.btn_people} onClick={() => handleViewLike(item.id)}>
 					llike
 				</button>
-				<button className={styles.btn_people} onClick={handleViewDislike}>
-					dislike
-				</button>
+				<button className={styles.btn_people}>dislike</button>
 			</div>
 		</div>
 	))
