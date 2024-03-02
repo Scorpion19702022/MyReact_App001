@@ -12,6 +12,7 @@ import woman01 from './assets/woman01.jpg'
 // import woman08 from './assets/woman08.jpg'
 
 import man01 from './assets/man01.jpg'
+import Buttons from './Buttons'
 // import man02 from './assets/man02.jpg'
 // import man03 from './assets/man03.jpg'
 // import man04 from './assets/man04.jpg'
@@ -79,7 +80,12 @@ const T02data = () => {
 		</div>
 	))
 
-	return <div className={styles.people_box}>{peopleList}</div>
+	return (
+		<div className={styles.people_box}>
+			<Buttons />
+			{peopleList}
+		</div>
+	)
 }
 
 export default T02data
