@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import styles from './T02data.module.css'
 
@@ -42,8 +42,21 @@ const T02data = () => {
 		},
 	]
 
+	const [like, setlike] = useState(false)
+	const [dislike, setDislike] = useState(false)
+
+	const handleViewLike = index => {
+		if (index === people) {
+			setlike(!like)
+		}
+	}
+
+	const handleViewDislike = () => {
+		setDislike(!dislike)
+	}
+
 	const peopleList = people.map((item, index) => (
-		<div key={index} className={styles.people_box_list}>
+		<div key={index} className={like ? styles.people_box_list : styles.people_box_list_like}>
 			<h2 className={styles.people_name}>{item.name}</h2>
 			<div className={styles.age_people}>
 				<em className={styles.age_people_em}>wiek: {item.age}</em>
@@ -56,8 +69,12 @@ const T02data = () => {
 			<p className={styles.people_info}>{item.sex}</p>
 			<p className={styles.people_info}>{item.job}</p>
 			<div className={styles.btns_people}>
-				<button className={styles.btn_people}>llike</button>
-				<button className={styles.btn_people}>dislike</button>
+				<button className={styles.btn_people} onClick={item => handleViewLike(item)}>
+					llike
+				</button>
+				<button className={styles.btn_people} onClick={handleViewDislike}>
+					dislike
+				</button>
 			</div>
 		</div>
 	))
