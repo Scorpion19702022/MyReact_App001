@@ -24,6 +24,7 @@ import Buttons from './Buttons'
 const T02data = () => {
 	const people = [
 		{
+			id: 0,
 			name: 'Beata',
 			age: 52,
 			nation: 'Polska',
@@ -33,6 +34,7 @@ const T02data = () => {
 			sex: 'kobieta',
 		},
 		{
+			id: 1,
 			name: 'Jacek',
 			age: 53,
 			nation: 'Polska',
@@ -47,8 +49,9 @@ const T02data = () => {
 	const [dislike, setDislike] = useState(false)
 
 	const handleViewLike = index => {
-		if (index) {
+		if (people.filter(indexClick => indexClick.id !== index)) {
 			setLike(!like)
+			console.log('klik')
 		}
 	}
 
@@ -56,8 +59,8 @@ const T02data = () => {
 		setDislike(!dislike)
 	}
 
-	const peopleList = people.map((item, index) => (
-		<div key={index} className={!like ? styles.people_box_list : styles.people_box_list_like}>
+	const peopleList = people.map((item, id) => (
+		<div key={id} className={!like ? styles.people_box_list : styles.people_box_list_like}>
 			<h2 className={styles.people_name}>{item.name}</h2>
 			<div className={styles.age_people}>
 				<em className={styles.age_people_em}>wiek: {item.age}</em>
@@ -70,7 +73,7 @@ const T02data = () => {
 			<p className={styles.people_info}>{item.sex}</p>
 			<p className={styles.people_info}>{item.job}</p>
 			<div className={styles.btns_people}>
-				<button className={styles.btn_people} onClick={() => handleViewLike(index)}>
+				<button className={styles.btn_people} onClick={() => handleViewLike(item.id)}>
 					llike
 				</button>
 				<button className={styles.btn_people} onClick={handleViewDislike}>
