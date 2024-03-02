@@ -70,9 +70,7 @@ const T02data = () => {
 
 	const isLike = id => like.includes(id)
 
-	const isDislike = index => {
-		dislike.includes(index)
-	}
+	const isDislike = index => dislike.includes(index)
 
 	const peopleList = people.map((item, id) => (
 		<div key={id} className={!isLike(item.id) ? styles.people_box_list : styles.people_box_list_like}>
