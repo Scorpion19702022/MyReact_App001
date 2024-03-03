@@ -3,6 +3,9 @@ import React from 'react'
 import styles from './Buttons.module.css'
 
 const Buttons = ({ selectPeople, selectWomen, selectMen, selectAll }) => {
+	let stylesAllView = styles.btn_show_all_active
+	let stylesAllNoView = styles.btn_show_all
+
 	return (
 		<div className={styles.wrapper_btns_action}>
 			<button
@@ -17,10 +20,7 @@ const Buttons = ({ selectPeople, selectWomen, selectMen, selectAll }) => {
 			>
 				Pokaż mężczyzn
 			</button>
-			<button
-				className={!selectAll ? styles.btn_show_all : styles.btn_show_all_active}
-				onClick={() => selectPeople('all')}
-			>
+			<button className={!selectAll ? stylesAllNoView : stylesAllView} onClick={() => selectPeople('all')}>
 				Pokaż wszystkich
 			</button>
 		</div>
