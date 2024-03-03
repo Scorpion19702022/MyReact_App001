@@ -63,3 +63,17 @@
 	background-color: var(--color-green06);
 	color: var(--color-green02);
 }
+
+.btn_show_women_active,
+.btn_show_men_active,
+.btn_show_all_active {
+	width: 20%;
+	padding: 0.4em;
+	background-color: var(--color-green06);
+	color: var(--color-green02);
+	border: 0.04em solid var(--color-green07);
+	margin: 0em 0.2em;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
