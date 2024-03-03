@@ -21,12 +21,16 @@ import Buttons from './Buttons'
 // import man07 from './assets/man07.jpg'
 // import man08 from './assets/man08.jpg'
 
+const oldYear = new Date()
+
+console.log(oldYear.getFullYear())
+
 const T02data = () => {
 	const people = [
 		{
 			id: 0,
 			name: 'Beata',
-			age: 52,
+			age: oldYear.getFullYear() - 1971,
 			nation: 'Polska',
 			city: 'Łódź',
 			job: 'nauczycielka',
@@ -36,7 +40,7 @@ const T02data = () => {
 		{
 			id: 1,
 			name: 'Jacek',
-			age: 53,
+			age: oldYear.getFullYear() - 1970,
 			nation: 'Polska',
 			city: 'Łódź',
 			job: 'grafik/programista',
@@ -131,7 +135,7 @@ const T02data = () => {
 		>
 			<h2 className={styles.people_name}>{item.name}</h2>
 			<div className={styles.age_people}>
-				<em className={styles.age_people_em}>wiek: {item.age}</em>
+				<em className={styles.age_people_em}>wiek: {item.age} rok</em>
 			</div>
 			<div className={styles.box_imgs_people}>
 				<img className={styles.task01_img_people} src={item.img} alt='postać' />
