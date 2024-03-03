@@ -11,10 +11,16 @@ const Buttons = ({ selectPeople, selectWomen, selectMen, selectAll }) => {
 			>
 				Pokaż kobiety
 			</button>
-			<button className={styles.btn_show_men} onClick={() => selectPeople('mężczyzna')}>
+			<button
+				className={!selectMen ? styles.btn_show_men : styles.btn_show_men_active}
+				onClick={() => selectPeople('mężczyzna')}
+			>
 				Pokaż mężczyzn
 			</button>
-			<button className={styles.btn_show_all} onClick={() => selectPeople('all')}>
+			<button
+				className={!selectAll ? styles.btn_show_all : styles.btn_show_all_active}
+				onClick={() => selectPeople('all')}
+			>
 				Pokaż wszystkich
 			</button>
 		</div>

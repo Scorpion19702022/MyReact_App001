@@ -166,7 +166,7 @@ const T02data = () => {
 
 	return (
 		<div className={styles.people_box}>
-			<Buttons selectPeople={handleSelec} selectWomen={selectWomen} />
+			<Buttons selectPeople={handleSelec} selectWomen={selectWomen} selectMen={selectMen} selectAll={selectAll} />
 			{peopleList}
 		</div>
 	)
