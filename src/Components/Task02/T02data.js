@@ -87,6 +87,36 @@ const T02data = () => {
 			img: man03,
 			sex: 'mężczyzna',
 		},
+		{
+			id: 6,
+			name: 'Michał',
+			age: oldYear.getFullYear() - 1983,
+			nation: 'Polska',
+			city: 'Łódź',
+			job: 'grafik',
+			img: man04,
+			sex: 'mężczyzna',
+		},
+		{
+			id: 7,
+			name: 'Dorota',
+			age: oldYear.getFullYear() - 1972,
+			nation: 'Polska',
+			city: 'Łódź',
+			job: 'księgowa',
+			img: woman05,
+			sex: 'kobieta',
+		},
+		{
+			id: 8,
+			name: 'Joanna',
+			age: oldYear.getFullYear() - 1974,
+			nation: 'Polska',
+			city: 'Łódź',
+			job: 'pielęgniarka',
+			img: woman04,
+			sex: 'kobieta',
+		},
 	]
 
 	const [like, setLike] = useState([])
