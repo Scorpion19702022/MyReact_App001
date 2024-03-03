@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import styles from './Buttons.module.css'
 
 const Buttons = ({ selectPeople, selectWomen, selectMen, selectAll }) => {
 	let stylesAllView = styles.btn_show_all_active
 	let stylesAllNoView = styles.btn_show_all
+
+	useEffect(() => {
+		if (selectAll) {
+			return stylesAllView
+		}
+
+		console.log(selectAll)
+	}, [selectAll])
 
 	return (
 		<div className={styles.wrapper_btns_action}>
