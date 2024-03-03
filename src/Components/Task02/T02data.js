@@ -54,7 +54,7 @@ const T02data = () => {
 
 	const [selectWomen, setSelectWomen] = useState(false)
 	const [selectMen, setSelectMen] = useState(false)
-	const [selectAll, setSelectAll] = useState(false)
+	const [selectAll, setSelectAll] = useState(true)
 
 	const [newPeople, setNewPeople] = useState([...people])
 
