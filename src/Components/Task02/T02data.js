@@ -10,6 +10,8 @@ import woman05 from './assets/woman05.jpg'
 import woman06 from './assets/woman06.jpg'
 import woman07 from './assets/woman07.jpg'
 import woman08 from './assets/woman08.jpg'
+import woman09 from './assets/woman09.jpg'
+import woman10 from './assets/woman10.jpg'
 
 import man01 from './assets/man01.jpg'
 import Buttons from './Buttons'
@@ -20,6 +22,8 @@ import man05 from './assets/man05.jpg'
 import man06 from './assets/man06.jpg'
 import man07 from './assets/man07.jpg'
 import man08 from './assets/man08.jpg'
+import man09 from './assets/man09.jpg'
+import man10 from './assets/man10.jpg'
 
 const oldYear = new Date()
 
@@ -116,6 +120,116 @@ const T02data = () => {
 			job: 'pielęgniarka',
 			img: woman04,
 			sex: 'kobieta',
+		},
+		{
+			id: 9,
+			name: 'Artur',
+			age: oldYear.getFullYear() - 1972,
+			nation: 'Polska',
+			city: 'Łódź',
+			job: 'grafik',
+			img: man05,
+			sex: 'mężczyzna',
+		},
+		{
+			id: 10,
+			name: 'Magdalena',
+			age: oldYear.getFullYear() - 1984,
+			nation: 'Polska',
+			city: 'Łódź',
+			job: 'ekspedientka',
+			img: woman06,
+			sex: 'kobieta',
+		},
+		{
+			id: 11,
+			name: 'Agnieszka',
+			age: oldYear.getFullYear() - 1997,
+			nation: 'Polska',
+			city: 'Łódź',
+			job: 'rekruter',
+			img: woman07,
+			sex: 'kobieta',
+		},
+		{
+			id: 12,
+			name: 'Marcin',
+			age: oldYear.getFullYear() - 1995,
+			nation: 'Polska',
+			city: 'Łódź',
+			job: 'programista',
+			img: man06,
+			sex: 'mężczyzna',
+		},
+		{
+			id: 13,
+			name: 'Patryk',
+			age: oldYear.getFullYear() - 1989,
+			nation: 'Polska',
+			city: 'Łódź',
+			job: 'handlowiec',
+			img: man07,
+			sex: 'mężczyzna',
+		},
+		{
+			id: 14,
+			name: 'Ola',
+			age: oldYear.getFullYear() - 1977,
+			nation: 'Polska',
+			city: 'Łódź',
+			job: 'plastyczka',
+			img: woman08,
+			sex: 'kobieta',
+		},
+		{
+			id: 15,
+			name: 'Konrad',
+			age: oldYear.getFullYear() - 1976,
+			nation: 'Polska',
+			city: 'Łódź',
+			job: 'inżynier',
+			img: man08,
+			sex: 'mężczyzna',
+		},
+		{
+			id: 16,
+			name: 'Dagmara',
+			age: oldYear.getFullYear() - 1993,
+			nation: 'Polska',
+			city: 'Łódź',
+			job: 'fryzjerka',
+			img: woman10,
+			sex: 'kobieta',
+		},
+		{
+			id: 17,
+			name: 'Tomek',
+			age: oldYear.getFullYear() - 1973,
+			nation: 'Polska',
+			city: 'Łódź',
+			job: 'handlowiec',
+			img: man09,
+			sex: 'mężczyzna',
+		},
+		{
+			id: 18,
+			name: 'Angelika',
+			age: oldYear.getFullYear() - 1998,
+			nation: 'Polska',
+			city: 'Łódź',
+			job: 'studentka',
+			img: woman09,
+			sex: 'kobieta',
+		},
+		{
+			id: 19,
+			name: 'Rafał',
+			age: oldYear.getFullYear() - 1988,
+			nation: 'Polska',
+			city: 'Łódź',
+			job: 'magazyier',
+			img: man10,
+			sex: 'mężczyzna',
 		},
 	]
 
