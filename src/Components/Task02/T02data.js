@@ -108,11 +108,20 @@ const T02data = () => {
 		if (select === 'kobieta') {
 			const women = people.filter(womenItems => womenItems.sex === select)
 			setNewPeople(women)
+			setSelectWomen(!selectWomen)
+			setSelectMen(false)
+			setSelectAll(false)
 		} else if (select === 'mężczyzna') {
 			const men = people.filter(menItems => menItems.sex === 'mężczyzna')
 			setNewPeople(men)
+			setSelectWomen(false)
+			setSelectMen(!selectMen)
+			setSelectAll(false)
 		} else if (select === 'all') {
 			setNewPeople(people)
+			setSelectWomen(false)
+			setSelectMen(false)
+			setSelectAll(!selectAll)
 		}
 	}
 
