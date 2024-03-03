@@ -39,8 +39,11 @@
 
 .people_box {
 	width: 100%;
+	margin-left: 25em;
+	padding-bottom: 4em;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: flex-end;
 }
 
 .people_box_list {
