@@ -39,13 +39,71 @@
 
 .box_inputs {
 	width: 30%;
-	height: 500px;
+	height: 580px;
 	padding: 2em;
 	margin-top: 2em;
 	display: flex;
 	flex-direction: column;
-	background-color: var(--color-blue06);
+	background-color: var(--color-blue07);
 	border-radius: 12px;
 	border: 0.04em solid var(--color-blue02);
 	box-shadow: 0.4em 0.4em 1em var(--color-blue06);
+}
+
+.label {
+	color: var(--color-blue03);
+	margin: 1.6em 0em 0.1em 0em;
+	font-size: 1.2em;
+}
+
+.input {
+	padding: 0.6em 0.4em;
+	background: none;
+	border: none;
+	color: var(--color-blue01);
+	font-size: 1.8em;
+	border-bottom: 0.04em solid var(--color-blue04);
+}
+
+.box_btns {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin: 1.4em 0em;
+}
+
+.btn {
+	width: 25%;
+	position: relative;
+	background: none;
+	padding: 1em;
+	border: 0.04em solid var(--color-blue04);
+	color: var(--color-blue04);
+	transition: background-color 0.5s, color 0.55s ease-in-out;
+}
+
+.btn:hover {
+	background-color: var(--color-blue04);
+	color: var(--color-blue07);
+}
+
+.btn::before {
+	position: absolute;
+	content: '';
+	width: 150%;
+	height: 140%;
+	background-color: var(--color-blue04);
+	transform: translate(-160%, -35%);
+	filter: blur(3em);
+	transition: all 0.2s ease-in-out;
+}
+
+.btn:hover::before {
+	position: absolute;
+	content: '';
+	width: 150%;
+	height: 140%;
+	background-color: var(--color-blue04);
+	transform: translate(85%, -35%);
+	filter: blur(3em);
 }

@@ -13,8 +13,8 @@ const Task03inputs = () => {
 			<label className={styles.label}>Wpisz swój wzrost:</label>
 			<input className={styles.input} type='number' min={0} />
 			<div className={styles.box_btns}>
-				<button className={styles.btn_check}>Sprawdź</button>
-				<button className={styles.btn_clean}>Wyczyść</button>
+				<button className={styles.btn}>Sprawdź</button>
+				<button className={styles.btn}>Wyczyść</button>
 			</div>
 		</div>
 	)
