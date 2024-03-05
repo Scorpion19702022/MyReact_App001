@@ -11,3 +11,5 @@ export const AddFunctionContent = ({ children }) => {
 
 	return <CalculateContext.Provider value={{ dataWeight, handleChangeWeight }}>{children}</CalculateContext.Provider>
 }
+
+export default CalculateContext

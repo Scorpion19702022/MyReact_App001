@@ -1,9 +1,10 @@
 import React, { useContext } from 'react'
 
 import styles from './Task03inputs.module.css'
+import CalculateContext from './Context/CalculateContext'
 
 const Task03inputs = () => {
-	const { dataWeight, handleChangeWeight } = useContext()
+	const { dataWeight, handleChangeWeight } = useContext(CalculateContext)
 
 	return (
 		<div className={styles.box_inputs}>

@@ -36,3 +36,8 @@
 	--color-dark07: #111210;
 	--color-dark08: #000000;
 }
+
+.box_inputs {
+	width: 50%;
+	background-color: var(--color-blue06);
+}
