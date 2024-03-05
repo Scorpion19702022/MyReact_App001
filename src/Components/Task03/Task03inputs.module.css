@@ -77,14 +77,11 @@
 	position: relative;
 	background: none;
 	padding: 1em;
+	overflow: hidden;
 	border: 0.04em solid var(--color-blue04);
 	color: var(--color-blue04);
-	transition: background-color 0.5s, color 0.55s ease-in-out;
-}
-
-.btn:hover {
-	background-color: var(--color-blue04);
-	color: var(--color-blue07);
+	border-radius: 8px;
+	cursor: pointer;
 }
 
 .btn::before {
@@ -95,7 +92,18 @@
 	background-color: var(--color-blue04);
 	transform: translate(-160%, -35%);
 	filter: blur(3em);
-	transition: all 0.2s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.btn::after {
+	position: absolute;
+	content: '';
+	width: 150%;
+	height: 140%;
+	background-color: var(--color-blue04);
+	transform: translate(75%, -35%);
+	filter: blur(3em);
+	transition: all 0.3s ease-in-out;
 }
 
 .btn:hover::before {
@@ -105,5 +113,15 @@
 	height: 140%;
 	background-color: var(--color-blue04);
 	transform: translate(85%, -35%);
+	filter: blur(3em);
+}
+
+.btn:hover::after {
+	position: absolute;
+	content: '';
+	width: 150%;
+	height: 140%;
+	background-color: var(--color-blue04);
+	transform: translate(-200%, -35%);
 	filter: blur(3em);
 }
