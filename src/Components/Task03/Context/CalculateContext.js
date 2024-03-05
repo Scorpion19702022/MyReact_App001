@@ -1,15 +1,13 @@
-import { createContext } from 'react'
+import { createContext, useState } from 'react'
 
-const Task03calculateContext = createContext()
+const CalculateContext = createContext()
 
-export const AddFunctionContent = ({children}) => {
-    
+export const AddFunctionContent = ({ children }) => {
+	const [dataWeight, setDataWeight] = useState('')
 
+	const handleChangeWeight = e => {
+		setDataWeight(e.target.value)
+	}
 
-
-    return (
-        <Task03calculateContext.Provider value={}>
-            {children}
-        </Task03calculateContext.Provider>
-    )
+	return <CalculateContext.Provider value={{ dataWeight, handleChangeWeight }}>{children}</CalculateContext.Provider>
 }

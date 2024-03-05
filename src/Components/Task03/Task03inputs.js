@@ -1,16 +1,16 @@
 import React, { useContext } from 'react'
 
-import styles from './Task03inputs.module'
+import styles from './Task03inputs.module.css'
 
 const Task03inputs = () => {
-	const {} = useContext()
+	const { dataWeight, handleChangeWeight } = useContext()
 
 	return (
 		<div className={styles.box_inputs}>
-			<label htmlFor=''></label>
-			<input type='text' />
-			<label htmlFor=''></label>
-			<input type='text' />
+			<label></label>
+			<input type='number' value={dataWeight} onChange={handleChangeWeight} />
+			<label></label>
+			<input type='number' />
 			<div className={styles.box_btns}>
 				<button className={styles.btn_check}>Sprawdź</button>
 				<button className={styles.btn_clean}>Wyczyść</button>
