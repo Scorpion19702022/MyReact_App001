@@ -8,10 +8,10 @@ const Task03inputs = () => {
 
 	return (
 		<div className={styles.box_inputs}>
-			<label></label>
-			<input type='number' value={dataWeight} onChange={handleChangeWeight} />
-			<label></label>
-			<input type='number' />
+			<label className={styles.label}>Wpisz swoją wagę:</label>
+			<input className={styles.input} type='number' value={dataWeight} onChange={handleChangeWeight} min={0} />
+			<label className={styles.label}>Wpisz swój wzrost:</label>
+			<input className={styles.input} type='number' min={0} />
 			<div className={styles.box_btns}>
 				<button className={styles.btn_check}>Sprawdź</button>
 				<button className={styles.btn_clean}>Wyczyść</button>
