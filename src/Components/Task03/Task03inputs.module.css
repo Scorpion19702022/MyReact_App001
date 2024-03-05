@@ -69,7 +69,7 @@
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	margin: 1.4em 0em;
+	margin: 1.8em 0em;
 }
 
 .btn {
@@ -82,6 +82,10 @@
 	color: var(--color-blue04);
 	border-radius: 8px;
 	cursor: pointer;
+}
+
+.btn:hover {
+	box-shadow: 0.02em 0.02em 1em var(--color-blue04);
 }
 
 .btn::before {
