@@ -21,14 +21,17 @@ export const AddFunctionContent = ({ children }) => {
 
 	const handleResult = () => {
 		setResult(dataWeight / dataTall)
-		if (result !== 0) {
-			setInfo(result)
+		if (result === 0 || dataWeight === '' || dataTall === '') {
+			setInfo('wypełnij poprawnie wszystkie pola')
+			setResult(null)
 		}
 	}
 
 	const handleClickReset = () => {
 		setDataWeight('')
 		setDataTall('')
+		setResult(null)
+		setInfo('')
 	}
 
 	return (
