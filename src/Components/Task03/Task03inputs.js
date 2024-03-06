@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 
 import styles from './Task03inputs.module.css'
 import CalculateContext from './Context/CalculateContext'
+import Task03info from './Task03info'
 
 const Task03inputs = () => {
 	const { dataWeight, dataTall, handleChangeWeight, handleChangeTall, handleClickReset, handleResult } =
@@ -21,6 +22,7 @@ const Task03inputs = () => {
 					Wyczyść
 				</button>
 			</div>
+			<Task03info />
 		</div>
 	)
 }
