@@ -45,4 +45,19 @@
 	align-items: center;
 	padding: 0.6em;
 	background-color: var(--color-blue06);
+	border-radius: 12px;
+	border: 0.04em solid var(--color-blue03);
+}
+
+.bmi {
+	font-size: 1.6em;
+	color: var(--color-blue02);
+	margin-bottom: 0.4em;
+	font-weight: 100;
+}
+
+.number_bmi {
+	font-size: 1.2em;
+	color: var(--color-blue01);
+	font-weight: bold;
 }
