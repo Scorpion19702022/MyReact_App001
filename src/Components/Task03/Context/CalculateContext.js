@@ -7,7 +7,7 @@ export const AddFunctionContent = ({ children }) => {
 
 	const [dataTall, setDataTall] = useState('')
 
-	const [result, setResult] = useState(0)
+	const [result, setResult] = useState(null)
 
 	const [info, setInfo] = useState('')
 
