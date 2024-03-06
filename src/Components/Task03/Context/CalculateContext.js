@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 
 const CalculateContext = createContext()
 
@@ -19,8 +19,10 @@ export const AddFunctionContent = ({ children }) => {
 		setDataTall(e.target.value)
 	}
 
+	useEffect(() => {}, [])
+
 	const handleResult = () => {
-		setResult(dataWeight / dataTall)
+		setResult((dataWeight / Math.pow(dataTall / 100, 2)).toFixed(0))
 		if (result === 0 || dataWeight === '' || dataTall === '') {
 			setInfo('wypełnij poprawnie wszystkie pola')
 			setResult(null)
