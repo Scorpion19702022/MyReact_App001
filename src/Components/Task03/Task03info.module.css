@@ -61,3 +61,7 @@
 	color: var(--color-blue01);
 	font-weight: bold;
 }
+
+.info_error {
+	color: var(--color-yellow04);
+}

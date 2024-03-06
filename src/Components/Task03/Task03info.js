@@ -12,7 +12,7 @@ const Task03info = () => {
 				Twoje BMI: <span className={styles.number_bmi}>{result}</span>
 			</h4>
 			<div className={styles.box_info}>
-				<p className={styles.info}>{info}</p>
+				<p className={result === null ? styles.info_error : styles.info}>{info}</p>
 			</div>
 		</div>
 	)
