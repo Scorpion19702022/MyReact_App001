@@ -5,11 +5,26 @@ const CalculateContext = createContext()
 export const AddFunctionContent = ({ children }) => {
 	const [dataWeight, setDataWeight] = useState('')
 
+	const [dataTall, setDataTall] = useState('')
+
 	const handleChangeWeight = e => {
 		setDataWeight(e.target.value)
 	}
 
-	return <CalculateContext.Provider value={{ dataWeight, handleChangeWeight }}>{children}</CalculateContext.Provider>
+	const handleChangeTall = e => {
+		setDataTall(e.target.value)
+	}
+
+	const handleClickReset = () => {
+		setDataWeight('')
+		setDataTall('')
+	}
+
+	return (
+		<CalculateContext.Provider value={{ dataWeight, dataTall, handleChangeWeight, handleChangeTall, handleClickReset }}>
+			{children}
+		</CalculateContext.Provider>
+	)
 }
 
 export default CalculateContext
