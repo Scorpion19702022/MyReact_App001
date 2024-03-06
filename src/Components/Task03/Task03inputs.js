@@ -6,8 +6,6 @@ import CalculateContext from './Context/CalculateContext'
 const Task03inputs = () => {
 	const { dataWeight, dataTall, handleChangeWeight, handleChangeTall, handleClickReset } = useContext(CalculateContext)
 
-	console.log(dataTall)
-
 	return (
 		<div className={styles.box_inputs}>
 			<label className={styles.label}>Wpisz swoją wagę:</label>

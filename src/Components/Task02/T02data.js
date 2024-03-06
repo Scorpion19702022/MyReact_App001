@@ -27,8 +27,6 @@ import man10 from './assets/man10.jpg'
 
 const oldYear = new Date()
 
-console.log(oldYear.getFullYear())
-
 const T02data = () => {
 	const people = [
 		{
