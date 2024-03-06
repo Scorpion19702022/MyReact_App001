@@ -4,7 +4,8 @@ import styles from './Task03inputs.module.css'
 import CalculateContext from './Context/CalculateContext'
 
 const Task03inputs = () => {
-	const { dataWeight, dataTall, handleChangeWeight, handleChangeTall, handleClickReset } = useContext(CalculateContext)
+	const { dataWeight, dataTall, handleChangeWeight, handleChangeTall, handleClickReset, handleResult } =
+		useContext(CalculateContext)
 
 	return (
 		<div className={styles.box_inputs}>
@@ -13,7 +14,9 @@ const Task03inputs = () => {
 			<label className={styles.label}>Wpisz swój wzrost:</label>
 			<input className={styles.input} type='number' value={dataTall} min={0} onChange={handleChangeTall} />
 			<div className={styles.box_btns}>
-				<button className={styles.btn}>Sprawdź</button>
+				<button className={styles.btn} onClick={handleResult}>
+					Sprawdź
+				</button>
 				<button className={styles.btn} onClick={handleClickReset}>
 					Wyczyść
 				</button>

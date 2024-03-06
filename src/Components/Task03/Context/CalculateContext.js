@@ -7,6 +7,10 @@ export const AddFunctionContent = ({ children }) => {
 
 	const [dataTall, setDataTall] = useState('')
 
+	const [result, setResult] = useState(0)
+
+	const [info, setInfo] = useState('')
+
 	const handleChangeWeight = e => {
 		setDataWeight(e.target.value)
 	}
@@ -15,13 +19,31 @@ export const AddFunctionContent = ({ children }) => {
 		setDataTall(e.target.value)
 	}
 
+	const handleResult = () => {
+		setResult(dataWeight / dataTall)
+		if (result !== 0) {
+			setInfo(result)
+		}
+	}
+
 	const handleClickReset = () => {
 		setDataWeight('')
 		setDataTall('')
 	}
 
 	return (
-		<CalculateContext.Provider value={{ dataWeight, dataTall, handleChangeWeight, handleChangeTall, handleClickReset }}>
+		<CalculateContext.Provider
+			value={{
+				dataWeight,
+				dataTall,
+				result,
+				info,
+				handleChangeWeight,
+				handleChangeTall,
+				handleClickReset,
+				handleResult,
+			}}
+		>
 			{children}
 		</CalculateContext.Provider>
 	)
