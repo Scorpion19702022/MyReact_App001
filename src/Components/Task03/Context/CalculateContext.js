@@ -1,5 +1,14 @@
 import { createContext, useEffect, useState } from 'react'
 
+import Bmi1 from '../assets/bmi_1.png'
+import Bmi2 from '../assets/bmi_2.png'
+import Bmi3 from '../assets/bmi_3.png'
+import Bmi4 from '../assets/bmi_4.png'
+import Bmi5 from '../assets/bmi_5.png'
+import Bmi6 from '../assets/bmi_6.png'
+import Bmi7 from '../assets/bmi_7.png'
+import Bmi8 from '../assets/bmi_8.png'
+
 const CalculateContext = createContext()
 
 export const AddFunctionContent = ({ children }) => {
@@ -10,6 +19,8 @@ export const AddFunctionContent = ({ children }) => {
 	const [result, setResult] = useState(null)
 
 	const [info, setInfo] = useState('')
+
+	const [photo, setPhoto] = useState(Bmi4)
 
 	const handleChangeWeight = e => {
 		setDataWeight(e.target.value)
@@ -65,6 +76,7 @@ export const AddFunctionContent = ({ children }) => {
 				handleChangeTall,
 				handleClickReset,
 				handleResult,
+				photo,
 			}}
 		>
 			{children}
