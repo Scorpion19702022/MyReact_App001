@@ -37,9 +37,16 @@
 	--color-dark08: #000000;
 }
 
-.wrapper_info {
+.info_main_wrapper {
 	width: 100%;
-	height: 200px;
+	height: 140px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.wrapper_info {
+	width: 80%;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -64,4 +71,15 @@
 
 .info_error {
 	color: var(--color-yellow04);
+}
+
+.box_img {
+	width: 20%;
+	height: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.bmi_img {
+	height: 100%;
 }

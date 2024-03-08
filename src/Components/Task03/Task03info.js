@@ -17,7 +17,7 @@ const Task03info = () => {
 				</div>
 			</div>
 			<div className={styles.box_img}>
-				<img src={photo} alt='' />
+				<img className={styles.bmi_img} src={photo} alt='' />
 			</div>
 		</div>
 	)
