@@ -19,10 +19,18 @@ export const AddFunctionContent = ({ children }) => {
 		setDataTall(e.target.value)
 	}
 
-	useEffect(() => {}, [])
+	useEffect(() => {
+		if (result > 0 && result <= 16) {
+			setInfo('stan wygłodzenia')
+		} else if (result > 16 && result <= 16.99) {
+			setInfo('wychudzenie')
+		} else if (result > 17 && result <= 18.49) {
+			setInfo('niedowaga')
+		}
+	}, [result])
 
 	const handleResult = () => {
-		setResult((dataWeight / Math.pow(dataTall / 100, 2)).toFixed(0))
+		setResult((dataWeight / Math.pow(dataTall / 100, 2)).toFixed(2))
 		if (result === 0 || dataWeight === '' || dataTall === '') {
 			setInfo('wypełnij poprawnie wszystkie pola')
 			setResult(null)
