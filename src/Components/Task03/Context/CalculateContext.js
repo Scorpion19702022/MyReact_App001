@@ -36,18 +36,25 @@ export const AddFunctionContent = ({ children }) => {
 			setPhoto(Bmi1)
 		} else if (result > 16 && result <= 16.99) {
 			setInfo('wychudzenie')
+			setPhoto(Bmi2)
 		} else if (result > 17 && result <= 18.49) {
 			setInfo('niedowaga')
+			setPhoto(Bmi3)
 		} else if (result > 18.5 && result <= 24.99) {
 			setInfo('waga prawidłowa')
+			setPhoto(Bmi4)
 		} else if (result > 25 && result <= 29.99) {
 			setInfo('nadwaga')
+			setPhoto(Bmi5)
 		} else if (result > 30 && result <= 34.99) {
 			setInfo('otyłość I stopnia')
+			setPhoto(Bmi6)
 		} else if (result > 35 && result <= 39.99) {
 			setInfo('otyłość II stopnia')
+			setPhoto(Bmi7)
 		} else if (result > 40) {
 			setInfo('otyłość III stopnia')
+			setPhoto(Bmi8)
 		}
 	}, [result])
 
