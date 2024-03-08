@@ -33,6 +33,7 @@ export const AddFunctionContent = ({ children }) => {
 	useEffect(() => {
 		if (result > 0 && result <= 16) {
 			setInfo('stan wygłodzenia')
+			setPhoto(Bmi1)
 		} else if (result > 16 && result <= 16.99) {
 			setInfo('wychudzenie')
 		} else if (result > 17 && result <= 18.49) {
@@ -63,6 +64,7 @@ export const AddFunctionContent = ({ children }) => {
 		setDataTall('')
 		setResult(null)
 		setInfo('')
+		setPhoto(Bmi4)
 	}
 
 	return (
