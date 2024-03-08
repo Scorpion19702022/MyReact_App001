@@ -70,7 +70,13 @@
 }
 
 .info_error {
+	font-size: 1.2em;
 	color: var(--color-yellow04);
+}
+
+.info {
+	font-size: 1.4em;
+	color: var(--color-blue02);
 }
 
 .box_img {
