@@ -26,6 +26,10 @@ export const AddFunctionContent = ({ children }) => {
 			setInfo('wychudzenie')
 		} else if (result > 17 && result <= 18.49) {
 			setInfo('niedowaga')
+		} else if (result > 18.5 && result <= 24.99) {
+			setInfo('waga prawidłowa')
+		} else if (result > 25 && result <= 29.99) {
+			setInfo('nadwaga')
 		}
 	}, [result])
 
