@@ -30,6 +30,12 @@ export const AddFunctionContent = ({ children }) => {
 			setInfo('waga prawidłowa')
 		} else if (result > 25 && result <= 29.99) {
 			setInfo('nadwaga')
+		} else if (result > 30 && result <= 34.99) {
+			setInfo('otyłość I stopnia')
+		} else if (result > 35 && result <= 39.99) {
+			setInfo('otyłość II stopnia')
+		} else if (result > 40) {
+			setInfo('otyłość III stopnia')
 		}
 	}, [result])
 
