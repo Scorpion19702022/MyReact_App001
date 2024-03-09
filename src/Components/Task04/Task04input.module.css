@@ -44,6 +44,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	border-bottom: 0.04em solid var(--color-purple07);
 }
 
 .heading_input {
