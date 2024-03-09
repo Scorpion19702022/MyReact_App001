@@ -82,3 +82,14 @@
 	font-size: 1.6em;
 	color: var(--color-purple02);
 }
+
+.box_contributions {
+	width: 100%;
+	padding: 2em;
+	display: flex;
+	flex-direction: column;
+}
+
+.contribution_list {
+	width: 100%;
+}

@@ -15,6 +15,16 @@ const Task04result = () => {
 			</div>
 			<div className={styles.box_all_info}>
 				<h3 className={styles.heading_info}>Składki:</h3>
+				<div className={styles.box_contributions}>
+					<ul className={styles.contribution_list}>
+						<li className={styles.contribution}>Składka ZUS: </li>
+						<li className={styles.contribution}>Składka</li>
+						<li className={styles.contribution}>Składka</li>
+						<li className={styles.contribution}>Składka</li>
+						<li className={styles.contribution}>Składka</li>
+					</ul>
+					<p>Skłdki razem:</p>
+				</div>
 			</div>
 		</div>
 	)
