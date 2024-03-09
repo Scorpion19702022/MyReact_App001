@@ -5,7 +5,7 @@ import styles from './Task04input.module.css'
 const Task04input = () => {
 	return (
 		<div className={styles.wrapper_inputs}>
-			<h1 className={styles.heading_input}>Wynagrodzenie minimalne netto wynosi 4242 zł</h1>
+			<h1 className={styles.heading_input}>Wynagrodzenie minimalne brutto na umowę o pracę wynosi 4242 zł</h1>
 			<div className={styles.box_inputs}>
 				<div className={styles.box_input}>
 					<label className={styles.label_input}>Wpisz swoje wynagrodzenie brutto:</label>
