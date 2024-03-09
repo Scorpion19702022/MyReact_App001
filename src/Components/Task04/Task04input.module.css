@@ -130,9 +130,10 @@
 }
 
 .box_errors {
-	height: 100%;
+	height: 20px;
 	display: flex;
 	align-items: center;
+	margin: 1em 0em;
 }
 
 .info_errors {

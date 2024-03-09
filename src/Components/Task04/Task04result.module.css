@@ -44,6 +44,28 @@
 	justify-content: space-between;
 }
 
+.box_result_salary {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.heading_salary {
+	font-size: 1.6em;
+	color: var(--color-purple02);
+	margin-bottom: 0.4em;
+}
+
+.result_salary {
+	font-size: 3em;
+	color: var(--color-yellow03);
+	margin-bottom: 0.4em;
+}
+
+.salary_errors {
+	color: var(--color-yellow04);
+}
+
 .box_all_info {
 	width: 45%;
 	height: 500px;
@@ -54,4 +76,9 @@
 	background-color: var(--color-purple05);
 	border: 0.04em solid var(--color-yellow05);
 	border-radius: 12px;
+}
+
+.heading_info {
+	font-size: 1.6em;
+	color: var(--color-purple02);
 }
