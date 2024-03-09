@@ -3,6 +3,7 @@ import React from 'react'
 import styles from './Task04.module.css'
 import Task04input from './Task04input'
 import { CalculateSalaryCotext } from './Context/SalaryContext'
+import Task04result from './Task04result'
 
 const Task04 = () => {
 	return (
@@ -13,6 +14,7 @@ const Task04 = () => {
 			</div>
 			<CalculateSalaryCotext>
 				<Task04input />
+				<Task04result />
 			</CalculateSalaryCotext>
 		</div>
 	)
