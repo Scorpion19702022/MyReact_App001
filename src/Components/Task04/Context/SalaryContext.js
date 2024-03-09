@@ -4,12 +4,32 @@ const SalaryContext = createContext()
 
 export const CalculateSalaryCotext = ({ children }) => {
 	const [inputValue, setInputValue] = useState('')
+	const [error, setError] = useState('')
 
 	const handleChangeValueInput = e => {
 		setInputValue(e.target.value)
 	}
 
-	return <SalaryContext.Provider value={{ inputValue, handleChangeValueInput }}>{children}</SalaryContext.Provider>
+	const handleClickChangeSalary = () => {
+		if (inputValue === '') {
+			setError('musisz wpisać wartość')
+		} else if (inputValue < 4242) {
+			setError('Twoje zarobki są niższe niż minimalna krajowa i nie można dokonać obliczenia')
+		}
+	}
+
+	const handleClickClear = () => {
+		setInputValue('')
+		setError('')
+	}
+
+	return (
+		<SalaryContext.Provider
+			value={{ inputValue, handleChangeValueInput, error, handleClickChangeSalary, handleClickClear }}
+		>
+			{children}
+		</SalaryContext.Provider>
+	)
 }
 
 export default SalaryContext

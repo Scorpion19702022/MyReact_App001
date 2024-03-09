@@ -4,9 +4,8 @@ import styles from './Task04input.module.css'
 import SalaryContext from './Context/SalaryContext'
 
 const Task04input = () => {
-	const { inputValue, handleChangeValueInput } = useContext(SalaryContext)
-
-	console.log(inputValue)
+	const { inputValue, handleChangeValueInput, error, handleClickChangeSalary, handleClickClear } =
+		useContext(SalaryContext)
 
 	return (
 		<div className={styles.wrapper_inputs}>
@@ -23,9 +22,16 @@ const Task04input = () => {
 					/>
 				</div>
 				<div className={styles.btns_input}>
-					<button className={styles.btn_input}>Sprawdź</button>
-					<button className={styles.btn_input}>Wyczyść</button>
+					<button className={styles.btn_input} onClick={handleClickChangeSalary}>
+						Sprawdź
+					</button>
+					<button className={styles.btn_input} onClick={handleClickClear}>
+						Wyczyść
+					</button>
 				</div>
+			</div>
+			<div className={styles.box_errors}>
+				<p className={styles.info_errors}>{error}</p>
 			</div>
 		</div>
 	)
