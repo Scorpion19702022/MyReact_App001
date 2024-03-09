@@ -127,3 +127,14 @@
 .btn_input:hover {
 	background-color: rgba(202, 188, 0, 0.2);
 }
+
+.box_errors {
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.info_errors {
+	font-size: 1.2em;
+	color: var(--color-yellow04);
+}
