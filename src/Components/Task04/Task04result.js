@@ -22,14 +22,29 @@ const Task04result = () => {
 				<h3 className={styles.heading_info}>Składki:</h3>
 				<div className={styles.box_contributions}>
 					<ul className={styles.contribution_list}>
-						<li className={styles.contribution}>Składka ZUS: {contributions.contrZUS}</li>
-						<li className={styles.contribution}>Składka emerytalna: {contributions.contrPension}</li>
-						<li className={styles.contribution}>Składka rentowa: {contributions.contrDisability}</li>
-						<li className={styles.contribution}>Składka chorobowa: {contributions.contrSikness}</li>
-						<li className={styles.contribution}>Składka zdrowotna: {contributions.contrHealthy}</li>
-						<li className={styles.contribution}>Podatek PIT: {contributions.contrTax}</li>
+						<li className={styles.contribution}>
+							Składka ZUS: <span className={styles.contribution_value}>{contributions.contrZUS}</span>{' '}
+						</li>
+						<li className={styles.contribution}>
+							Składka emerytalna: <span className={styles.contribution_value}>{contributions.contrPension}</span>{' '}
+						</li>
+						<li className={styles.contribution}>
+							Składka rentowa: <span className={styles.contribution_value}>{contributions.contrDisability}</span>{' '}
+						</li>
+						<li className={styles.contribution}>
+							Składka chorobowa: <span className={styles.contribution_value}>{contributions.contrSikness}</span>{' '}
+						</li>
+						<li className={styles.contribution}>
+							Składka zdrowotna: <span className={styles.contribution_value}>{contributions.contrHealthy}</span>{' '}
+						</li>
+						<li className={styles.contribution}>
+							Podatek PIT: <span className={styles.contribution_value}>{contributions.contrTax}</span>{' '}
+							{contributions.contrTax}
+						</li>
 					</ul>
-					<p>Skłdki razem: {sumTax}</p>
+					<p className={styles.sum}>
+						Skłdki razem: <span className={styles.contribution_sum}>{sumTax}</span>{' '}
+					</p>
 				</div>
 			</div>
 		</div>
