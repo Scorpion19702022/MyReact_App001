@@ -104,4 +104,35 @@
 
 .contribution_list {
 	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.contribution {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin: 0.2em 0em;
+	padding-bottom: 0.4em;
+	font-size: 1.4em;
+	color: var(--color-yellow01);
+	border-bottom: 0.04em dotted var(--color-yellow05);
+}
+
+.contribution_value {
+	color: var(--color-yellow03);
+	font-weight: 600;
+}
+
+.sum {
+	font-size: 1.8em;
+	font-weight: bold;
+	margin-top: 2em;
+	color: var(--color-purple02);
+	display: flex;
+	justify-content: space-between;
+}
+
+.contribution_sum {
+	color: var(--color-yellow04);
 }

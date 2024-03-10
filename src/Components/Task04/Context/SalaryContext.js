@@ -75,7 +75,7 @@ export const CalculateSalaryCotext = ({ children }) => {
 				contrPension: (inputValue * contributionPension).toFixed(2),
 				contrDisability: (inputValue * contributionDisability).toFixed(2),
 				contrSikness: (inputValue * contributionSikness).toFixed(2),
-				contrHealthy: (inputValue - contributions.contrZUS) * contributionsHealthy,
+				contrHealthy: ((+inputValue - +contributions.contrZUS) * contributionsHealthy).toFixed(2),
 			})
 		}
 	}

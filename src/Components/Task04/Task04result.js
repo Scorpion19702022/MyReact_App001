@@ -23,27 +23,26 @@ const Task04result = () => {
 				<div className={styles.box_contributions}>
 					<ul className={styles.contribution_list}>
 						<li className={styles.contribution}>
-							Składka ZUS: <span className={styles.contribution_value}>{contributions.contrZUS}</span>{' '}
+							Składka ZUS: <span className={styles.contribution_value}>{contributions.contrZUS} zł</span>{' '}
 						</li>
 						<li className={styles.contribution}>
-							Składka emerytalna: <span className={styles.contribution_value}>{contributions.contrPension}</span>{' '}
+							Składka emerytalna: <span className={styles.contribution_value}>{contributions.contrPension} xł</span>{' '}
 						</li>
 						<li className={styles.contribution}>
-							Składka rentowa: <span className={styles.contribution_value}>{contributions.contrDisability}</span>{' '}
+							Składka rentowa: <span className={styles.contribution_value}>{contributions.contrDisability} zł</span>{' '}
 						</li>
 						<li className={styles.contribution}>
-							Składka chorobowa: <span className={styles.contribution_value}>{contributions.contrSikness}</span>{' '}
+							Składka chorobowa: <span className={styles.contribution_value}>{contributions.contrSikness} zł</span>{' '}
 						</li>
 						<li className={styles.contribution}>
-							Składka zdrowotna: <span className={styles.contribution_value}>{contributions.contrHealthy}</span>{' '}
+							Składka zdrowotna: <span className={styles.contribution_value}>{contributions.contrHealthy} zł</span>{' '}
 						</li>
 						<li className={styles.contribution}>
-							Podatek PIT: <span className={styles.contribution_value}>{contributions.contrTax}</span>{' '}
-							{contributions.contrTax}
+							Podatek PIT: <span className={styles.contribution_value}>{contributions.contrTax} zł</span>{' '}
 						</li>
 					</ul>
 					<p className={styles.sum}>
-						Skłdki razem: <span className={styles.contribution_sum}>{sumTax}</span>{' '}
+						Skłdki razem: <span className={styles.contribution_sum}>{sumTax} zł</span>{' '}
 					</p>
 				</div>
 			</div>
