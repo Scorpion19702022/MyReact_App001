@@ -6,7 +6,7 @@ import SalaryContext from './Context/SalaryContext'
 import Salary from './assets/salary.png'
 
 const Task04result = () => {
-	const { error, salary, contributions } = useContext(SalaryContext)
+	const { error, contributions, finishSalary } = useContext(SalaryContext)
 
 	return (
 		<div className={styles.wrapper_result}>
@@ -15,7 +15,7 @@ const Task04result = () => {
 					<img className={styles.img_salary} src={Salary} alt='' />
 				</div>
 				<h3 className={styles.heading_salary}>Twoje wynagrodzenie netto:</h3>
-				<h1 className={styles.result_salary}>{salary}</h1>
+				<h1 className={styles.result_salary}>{finishSalary}</h1>
 				<p className={styles.salary_errors}>{error}</p>
 			</div>
 			<div className={styles.box_all_info}>
@@ -27,6 +27,7 @@ const Task04result = () => {
 						<li className={styles.contribution}>Składka rentowa: {contributions.contrDisability}</li>
 						<li className={styles.contribution}>Składka chorobowa: {contributions.contrSikness}</li>
 						<li className={styles.contribution}>Składka zdrowotna: {contributions.contrHealthy}</li>
+						<li className={styles.contribution}>Podatek PIT: {contributions.contrTax}</li>
 					</ul>
 					<p>Skłdki razem:</p>
 				</div>
