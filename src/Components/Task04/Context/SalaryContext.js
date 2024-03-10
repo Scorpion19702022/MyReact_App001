@@ -45,6 +45,14 @@ export const CalculateSalaryCotext = ({ children }) => {
 		}
 	}, [contributions, income])
 
+	// useEffect(() => {
+	// 	if (inputValue === '') {
+	// 		setContributions({
+	// 			contrTax: '',
+	// 		})
+	// 	}
+	// }, [inputValue])
+
 	useEffect(() => {
 		if (contributions.contrTax > 0) {
 			setFinishSalary(
@@ -52,12 +60,6 @@ export const CalculateSalaryCotext = ({ children }) => {
 			)
 		}
 	}, [contributions.contrTax])
-
-	useEffect(() => {
-		if (inputValue === '') {
-			setFinishSalary(0)
-		}
-	}, [inputValue])
 
 	const handleClickChangeSalary = () => {
 		if (inputValue === '') {
@@ -83,7 +85,7 @@ export const CalculateSalaryCotext = ({ children }) => {
 		setInputValue('')
 		setError('')
 		setSalary('')
-		// setFinishSalary(0)
+		setFinishSalary(0)
 		setContributions({
 			contrZUS: '',
 			contrPension: '',
