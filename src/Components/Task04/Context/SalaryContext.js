@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 
 const SalaryContext = createContext()
 
@@ -7,7 +7,7 @@ export const CalculateSalaryCotext = ({ children }) => {
 	const [salary, setSalary] = useState('')
 	const [error, setError] = useState('')
 
-	const [contributions, setContributiona] = useState({
+	const [contributions, setContributions] = useState({
 		contrZUS: '',
 		contrPension: '',
 		contrDisability: '',
@@ -15,10 +15,18 @@ export const CalculateSalaryCotext = ({ children }) => {
 	})
 
 	let minSalary = 4242
+	let contributionsZUS = 0.1371
+	let contributionsHealthy = 0.09
 
 	const handleChangeValueInput = e => {
 		setInputValue(e.target.value)
 	}
+
+	useEffect(() => {
+		if (contributions.contrZUS > 0) {
+			setSalary((inputValue - contributions.contrZUS).toFixed(2))
+		}
+	}, [contributions.contrZUS])
 
 	const handleClickChangeSalary = () => {
 		if (inputValue === '') {
@@ -28,12 +36,19 @@ export const CalculateSalaryCotext = ({ children }) => {
 		}
 
 		if (inputValue >= minSalary) {
+			setContributions({
+				contrZUS: (inputValue * contributionsZUS).toFixed(2),
+			})
 		}
 	}
 
 	const handleClickClear = () => {
 		setInputValue('')
 		setError('')
+		setSalary('')
+		setContributions({
+			contrZUS: '',
+		})
 	}
 
 	return (
