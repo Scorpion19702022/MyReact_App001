@@ -6,12 +6,14 @@ export const CalculateSalaryCotext = ({ children }) => {
 	const [inputValue, setInputValue] = useState('')
 	const [salary, setSalary] = useState('')
 	const [error, setError] = useState('')
+	const [income, setIncome] = useState('')
 
 	const [contributions, setContributions] = useState({
 		contrZUS: '',
 		contrPension: '',
 		contrDisability: '',
 		contrSikness: '',
+		contrHealthy: '',
 	})
 
 	let minSalary = 4242
@@ -21,6 +23,7 @@ export const CalculateSalaryCotext = ({ children }) => {
 	let contributionSikness = 0.0245
 
 	let contributionsHealthy = 0.09
+	let costMonth = 250
 
 	const handleChangeValueInput = e => {
 		setInputValue(e.target.value)
@@ -29,6 +32,7 @@ export const CalculateSalaryCotext = ({ children }) => {
 	useEffect(() => {
 		if (contributions.contrZUS > 0) {
 			setSalary((inputValue - contributions.contrZUS).toFixed(2))
+			setIncome((inputValue - contributions.contrZUS - costMonth).toFixed(2))
 		}
 	}, [contributions.contrZUS])
 
@@ -45,9 +49,12 @@ export const CalculateSalaryCotext = ({ children }) => {
 				contrPension: (inputValue * contributionPension).toFixed(2),
 				contrDisability: (inputValue * contributionDisability).toFixed(2),
 				contrSikness: (inputValue * contributionSikness).toFixed(2),
+				contrHealthy: (inputValue - contributions.contrZUS) * contributionsHealthy,
 			})
 		}
 	}
+
+	console.log(income)
 
 	const handleClickClear = () => {
 		setInputValue('')

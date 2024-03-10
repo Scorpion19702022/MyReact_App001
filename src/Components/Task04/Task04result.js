@@ -26,7 +26,7 @@ const Task04result = () => {
 						<li className={styles.contribution}>Składka emerytalna: {contributions.contrPension}</li>
 						<li className={styles.contribution}>Składka rentowa: {contributions.contrDisability}</li>
 						<li className={styles.contribution}>Składka chorobowa: {contributions.contrSikness}</li>
-						<li className={styles.contribution}>Składka</li>
+						<li className={styles.contribution}>Składka zdrowotna: {contributions.contrHealthy}</li>
 					</ul>
 					<p>Skłdki razem:</p>
 				</div>
