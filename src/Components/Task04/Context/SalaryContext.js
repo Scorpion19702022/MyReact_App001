@@ -8,6 +8,7 @@ export const CalculateSalaryCotext = ({ children }) => {
 	const [error, setError] = useState('')
 	const [income, setIncome] = useState('')
 	const [finishSalary, setFinishSalary] = useState(0)
+	const [sumTax, setSumTax] = useState('')
 
 	const [contributions, setContributions] = useState({
 		contrZUS: '',
@@ -16,7 +17,6 @@ export const CalculateSalaryCotext = ({ children }) => {
 		contrSikness: '',
 		contrHealthy: '',
 		contrTax: '',
-		contrAll: '',
 	})
 
 	let minSalary = 4242
@@ -43,13 +43,14 @@ export const CalculateSalaryCotext = ({ children }) => {
 				contrTax: (income * tax - 300).toFixed(0),
 			})
 		}
-	}, [contributions, income])
+	}, [contributions.contrZUS, income])
 
 	useEffect(() => {
 		if (contributions.contrTax > 0) {
 			setFinishSalary(
 				(inputValue - contributions.contrZUS - contributions.contrHealthy - contributions.contrTax).toFixed(2)
 			)
+			setSumTax((+contributions.contrZUS + +contributions.contrHealthy + +contributions.contrTax).toFixed(2))
 		}
 	}, [contributions.contrTax])
 
@@ -61,16 +62,14 @@ export const CalculateSalaryCotext = ({ children }) => {
 				contrTax: '',
 			})
 		}
-	}, [contributions])
+	}, [contributions.contrZUS])
 
 	const handleClickChangeSalary = () => {
 		if (inputValue === '') {
 			setError('musisz wpisać wartość')
 		} else if (inputValue < minSalary) {
 			setError('Twoje zarobki są niższe niż minimalna krajowa i nie można dokonać obliczenia')
-		}
-
-		if (inputValue >= minSalary) {
+		} else if (inputValue >= minSalary) {
 			setContributions({
 				contrZUS: (inputValue * contributionsZUS).toFixed(2),
 				contrPension: (inputValue * contributionPension).toFixed(2),
@@ -80,8 +79,6 @@ export const CalculateSalaryCotext = ({ children }) => {
 			})
 		}
 	}
-
-	console.log(finishSalary)
 
 	const handleClickClear = () => {
 		setInputValue('')
@@ -95,8 +92,8 @@ export const CalculateSalaryCotext = ({ children }) => {
 			contrSikness: '',
 			contrHealthy: '',
 			contrTax: '',
-			contrAll: '',
 		})
+		setSumTax('')
 	}
 
 	return (
@@ -110,6 +107,7 @@ export const CalculateSalaryCotext = ({ children }) => {
 				contributions,
 				salary,
 				finishSalary,
+				sumTax,
 			}}
 		>
 			{children}

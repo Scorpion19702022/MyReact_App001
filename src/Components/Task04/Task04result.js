@@ -6,7 +6,7 @@ import SalaryContext from './Context/SalaryContext'
 import Salary from './assets/salary.png'
 
 const Task04result = () => {
-	const { error, contributions, finishSalary } = useContext(SalaryContext)
+	const { error, contributions, finishSalary, sumTax } = useContext(SalaryContext)
 
 	return (
 		<div className={styles.wrapper_result}>
@@ -29,7 +29,7 @@ const Task04result = () => {
 						<li className={styles.contribution}>Składka zdrowotna: {contributions.contrHealthy}</li>
 						<li className={styles.contribution}>Podatek PIT: {contributions.contrTax}</li>
 					</ul>
-					<p>Skłdki razem: {contributions.contrAll}</p>
+					<p>Skłdki razem: {sumTax}</p>
 				</div>
 			</div>
 		</div>
