@@ -8,6 +8,7 @@ export const CalculateSalaryCotext = ({ children }) => {
 	const [error, setError] = useState('')
 	const [income, setIncome] = useState('')
 	const [finishSalary, setFinishSalary] = useState(0)
+	const [allContributions, setAllContributions] = useState('')
 
 	const [contributions, setContributions] = useState({
 		contrZUS: '',
@@ -52,6 +53,12 @@ export const CalculateSalaryCotext = ({ children }) => {
 		}
 	}, [contributions.contrTax])
 
+	useEffect(() => {
+		if (contributions.contrZUS > 0 && contributions.contrHealthy > 0 && contributions.contrTax > 0) {
+			setAllContributions(contributions.contrZUS + contributions.contrHealthy + contributions.contrTax)
+		}
+	}, [contributions])
+
 	const handleClickChangeSalary = () => {
 		if (inputValue === '') {
 			setError('musisz wpisać wartość')
@@ -68,13 +75,9 @@ export const CalculateSalaryCotext = ({ children }) => {
 				contrHealthy: (inputValue - contributions.contrZUS) * contributionsHealthy,
 			})
 		}
-
-		// if (contributions.contrTax > 0) {
-		// 	setFinishSalary(inputValue - contributions.contrZUS - contributions.contrHealthy - contributions.contrTax)
-		// }
 	}
 
-	console.log(income)
+	console.log(finishSalary)
 
 	const handleClickClear = () => {
 		setInputValue('')
@@ -97,6 +100,7 @@ export const CalculateSalaryCotext = ({ children }) => {
 				contributions,
 				salary,
 				finishSalary,
+				allContributions,
 			}}
 		>
 			{children}
