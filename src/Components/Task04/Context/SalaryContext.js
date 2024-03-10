@@ -14,6 +14,7 @@ export const CalculateSalaryCotext = ({ children }) => {
 		contrDisability: '',
 		contrSikness: '',
 		contrHealthy: '',
+		contrTax: '',
 	})
 
 	let minSalary = 4242
@@ -24,6 +25,8 @@ export const CalculateSalaryCotext = ({ children }) => {
 
 	let contributionsHealthy = 0.09
 	let costMonth = 250
+
+	let tax = 0.12
 
 	const handleChangeValueInput = e => {
 		setInputValue(e.target.value)
