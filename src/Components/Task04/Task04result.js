@@ -23,9 +23,9 @@ const Task04result = () => {
 				<div className={styles.box_contributions}>
 					<ul className={styles.contribution_list}>
 						<li className={styles.contribution}>Składka ZUS: {contributions.contrZUS}</li>
-						<li className={styles.contribution}>Składka</li>
-						<li className={styles.contribution}>Składka</li>
-						<li className={styles.contribution}>Składka</li>
+						<li className={styles.contribution}>Składka emerytalna: {contributions.contrPension}</li>
+						<li className={styles.contribution}>Składka rentowa: {contributions.contrDisability}</li>
+						<li className={styles.contribution}>Składka chorobowa: {contributions.contrSikness}</li>
 						<li className={styles.contribution}>Składka</li>
 					</ul>
 					<p>Skłdki razem:</p>

@@ -16,6 +16,10 @@ export const CalculateSalaryCotext = ({ children }) => {
 
 	let minSalary = 4242
 	let contributionsZUS = 0.1371
+	let contributionPension = 0.0976
+	let contributionDisability = 0.015
+	let contributionSikness = 0.0245
+
 	let contributionsHealthy = 0.09
 
 	const handleChangeValueInput = e => {
@@ -38,6 +42,9 @@ export const CalculateSalaryCotext = ({ children }) => {
 		if (inputValue >= minSalary) {
 			setContributions({
 				contrZUS: (inputValue * contributionsZUS).toFixed(2),
+				contrPension: (inputValue * contributionPension).toFixed(2),
+				contrDisability: (inputValue * contributionDisability).toFixed(2),
+				contrSikness: (inputValue * contributionSikness).toFixed(2),
 			})
 		}
 	}
