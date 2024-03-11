@@ -75,11 +75,3 @@
 	display: flex;
 	flex-wrap: wrap;
 }
-
-.task_01 {
-	width: 30%;
-	height: 400px;
-	background-color: var(--color-blue07);
-	border: 0.04em solid var(--color-yellow05);
-	box-shadow: 0.4em 0.4em 1em var(--color-blue07);
-}
