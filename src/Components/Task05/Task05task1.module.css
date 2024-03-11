@@ -53,3 +53,32 @@
 .task01_heading {
 	color: var(--color-yellow03);
 }
+
+.task01_box_inputs {
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+}
+
+.task01_label {
+	font-size: 1em;
+	color: var(--color-yellow02);
+	margin: 0.8em 0em 0.3em 0em;
+}
+
+.task01_input {
+	padding: 0.2em;
+	/* margin: 0.4em 0em; */
+	font-size: 1.4em;
+	color: var(--color-blue02);
+	background: none;
+	border: none;
+	border-bottom: 0.04em solid var(--color-blue03);
+	outline: none;
+}
+.task01_select {
+	padding: 0.2em;
+	font-size: 1.2em;
+	background-color: var(--color-blue02);
+	outline: none;
+}

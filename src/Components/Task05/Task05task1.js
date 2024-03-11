@@ -12,7 +12,7 @@ const Task05task1 = () => {
 				<label className={styles.task01_label}>Wpisz misato:</label>
 				<input className={styles.task01_input} type='text' />
 				<label className={styles.task01_label}>Byłeś?</label>
-				<select name='' id=''>
+				<select className={styles.task01_select} name='' id=''>
 					<option value='Change'>Wybierz</option>
 					<option value='Yes'>Tak</option>
 					<option value='No'>Nie</option>
