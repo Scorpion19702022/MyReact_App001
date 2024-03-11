@@ -57,3 +57,27 @@
 	border-bottom: 0.04em solid var(--color-yellow05);
 	box-shadow: 0.4em 0em 1em var(--color-blue07);
 }
+
+.heading_task05 {
+	font-size: 1.8em;
+	color: var(--color-yellow03);
+}
+
+.theme_task05 {
+	font-size: 1em;
+	color: var(--color-yellow05);
+}
+
+.box_tasks {
+	width: 100%;
+	margin-top: 2em;
+	padding: 0em 4em;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.task_01 {
+	width: 30%;
+	height: 400px;
+	background-color: var(--color-blue07);
+}
