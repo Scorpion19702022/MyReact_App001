@@ -26,7 +26,7 @@ const Task04result = () => {
 							Składka ZUS: <span className={styles.contribution_value}>{contributions.contrZUS} zł</span>{' '}
 						</li>
 						<li className={styles.contribution}>
-							Składka emerytalna: <span className={styles.contribution_value}>{contributions.contrPension} xł</span>{' '}
+							Składka emerytalna: <span className={styles.contribution_value}>{contributions.contrPension} zł</span>{' '}
 						</li>
 						<li className={styles.contribution}>
 							Składka rentowa: <span className={styles.contribution_value}>{contributions.contrDisability} zł</span>{' '}

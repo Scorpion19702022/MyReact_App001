@@ -27,6 +27,9 @@ const NavLinks = () => {
 						<li className={styles.link}>
 							<NavLink to='./Task04'>Zadanie 04</NavLink>
 						</li>
+						<li className={styles.link}>
+							<NavLink to='./Task05'>Zadanie 05</NavLink>
+						</li>
 					</ul>
 				</nav>
 			</header>
