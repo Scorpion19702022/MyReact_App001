@@ -7,7 +7,7 @@ const Task05 = () => {
 		<div className={styles.wrapper_task05}>
 			<div className={styles.header_task05}>
 				<h1 className={styles.heading_task05}>Task 05</h1>
-				<h4 className={styles.theme_task05}>Test z funkcjami obliczjącymi</h4>
+				<h4 className={styles.theme_task05}>Test z inputami</h4>
 			</div>
 		</div>
 	)

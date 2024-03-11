@@ -46,3 +46,14 @@
 	align-items: center;
 	background-color: var(--color-blue06);
 }
+
+.header_task05 {
+	width: 100%;
+	padding: 1.2em 0em;
+	background-color: var(--color-blue07);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-bottom: 0.04em solid var(--color-yellow05);
+	box-shadow: 0.4em 0em 1em var(--color-blue07);
+}
