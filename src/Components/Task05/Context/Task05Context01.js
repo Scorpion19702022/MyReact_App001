@@ -5,10 +5,16 @@ const Task05Context01 = createContext()
 export const ActionTaskContext01 = ({ children }) => {
 	const [person, setPerson] = useState('')
 
+	const [city, setCity] = useState('')
+
 	const [youWere, setYouWere] = useState('change')
 
 	const handleChangePerson = e => {
 		setPerson(e.target.value)
+	}
+
+	const handleChangeCity = e => {
+		setCity(e.target.value)
 	}
 
 	const handleChangeWere = e => {
@@ -16,7 +22,7 @@ export const ActionTaskContext01 = ({ children }) => {
 	}
 
 	return (
-		<Task05Context01.Provider value={{ person, handleChangePerson, youWere, handleChangeWere }}>
+		<Task05Context01.Provider value={{ person, handleChangePerson, youWere, handleChangeWere, city, handleChangeCity }}>
 			{children}
 		</Task05Context01.Provider>
 	)
