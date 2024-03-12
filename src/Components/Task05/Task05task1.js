@@ -21,6 +21,9 @@ const Task05task1 = () => {
 					<option value='No'>Nie</option>
 				</select>
 			</div>
+			<p>
+				Wynik testowy <span>{youWere === 'Yes' ? 'TAK' : youWere === 'No' ? 'NIE' : null}</span>
+			</p>
 		</div>
 	)
 }
