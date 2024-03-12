@@ -2,6 +2,7 @@ import React from 'react'
 
 import styles from './Task05.module.css'
 import Task05task1 from './Task05task1'
+import { ActionTaskContext01 } from './Context/Task05Context01'
 
 const Task05 = () => {
 	return (
@@ -11,7 +12,9 @@ const Task05 = () => {
 				<h4 className={styles.theme_task05}>Test z inputami</h4>
 			</div>
 			<div className={styles.box_tasks}>
-				<Task05task1 />
+				<ActionTaskContext01>
+					<Task05task1 />
+				</ActionTaskContext01>
 			</div>
 		</div>
 	)
