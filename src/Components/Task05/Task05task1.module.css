@@ -44,7 +44,7 @@
 	margin: 0.8em;
 	background-color: var(--color-blue07);
 	border: 0.04em solid var(--color-yellow05);
-	box-shadow: 2em 2em 1em var(--color-blue07);
+	box-shadow: 0.4em 0.4em 1em var(--color-blue07);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -91,10 +91,66 @@
 }
 
 .task01_btn {
+	position: relative;
 	width: 40%;
 	padding: 0.4em 1em;
 	background: none;
 	border: 0.04em solid var(--color-blue03);
 	color: var(--color-blue02);
 	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.task01_btn::before {
+	position: absolute;
+	content: '';
+	width: 120%;
+	height: 145%;
+	transform: translate(-140%, -27%);
+	background-color: var(--color-blue05);
+	border-radius: 30px;
+	filter: blur(0.4em);
+	transition: all 0.4s ease-in-out;
+	z-index: -1;
+}
+
+.task01_btn::after {
+	position: absolute;
+	content: '';
+	width: 120%;
+	height: 145%;
+	transform: translate(165%, -27%);
+	background-color: var(--color-blue05);
+	border-radius: 30px;
+	filter: blur(0.4em);
+	transition: all 0.4s ease-in-out;
+	z-index: -1;
+}
+
+.task01_btn:hover::before {
+	position: absolute;
+	content: '';
+	width: 120%;
+	height: 145%;
+	transform: translate(60%, -27%);
+	background-color: var(--color-blue05);
+	border-radius: 30px;
+	filter: blur(0.4em);
+}
+
+.task01_btn:hover::after {
+	position: absolute;
+	content: '';
+	width: 120%;
+	height: 145%;
+	transform: translate(-180%, -27%);
+	background-color: var(--color-blue05);
+	border-radius: 30px;
+	filter: blur(0.4em);
+}
+
+.task01_btn:hover {
+	background-color: var(--color-blue06);
 }
