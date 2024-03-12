@@ -4,9 +4,11 @@ import styles from './Task05task1.module.css'
 import Task05Context01 from './Context/Task05Context01'
 
 const Task05task1 = () => {
-	const { person, handleChangePerson } = useContext(Task05Context01)
+	const { person, handleChangePerson, youWere, handleChangeWere } = useContext(Task05Context01)
 
-	console.log(person)
+	// console.log(person)
+
+	console.log(youWere)
 
 	return (
 		<div className={styles.task_01}>
@@ -17,7 +19,7 @@ const Task05task1 = () => {
 				<label className={styles.task01_label}>Wpisz misato:</label>
 				<input className={styles.task01_input} type='text' />
 				<label className={styles.task01_label}>Byłeś?</label>
-				<select className={styles.task01_select} name='' id=''>
+				<select onChange={handleChangeWere} value={youWere} className={styles.task01_select} name='' id=''>
 					<option value='Change'>Wybierz</option>
 					<option value='Yes'>Tak</option>
 					<option value='No'>Nie</option>
