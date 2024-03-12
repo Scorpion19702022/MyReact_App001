@@ -44,7 +44,7 @@
 	margin: 0.8em;
 	background-color: var(--color-blue07);
 	border: 0.04em solid var(--color-yellow05);
-	box-shadow: 0.4em 0.4em 1em var(--color-blue07);
+	box-shadow: 2em 2em 1em var(--color-blue07);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -81,4 +81,20 @@
 	font-size: 1.2em;
 	background-color: var(--color-blue02);
 	outline: none;
+}
+
+.task01_box_btns {
+	width: 70%;
+	margin: 0.8em 0em;
+	display: flex;
+	justify-content: space-between;
+}
+
+.task01_btn {
+	width: 40%;
+	padding: 0.4em 1em;
+	background: none;
+	border: 0.04em solid var(--color-blue03);
+	color: var(--color-blue02);
+	cursor: pointer;
 }

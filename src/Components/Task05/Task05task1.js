@@ -21,9 +21,10 @@ const Task05task1 = () => {
 					<option value='No'>Nie</option>
 				</select>
 			</div>
-			<p>
-				Wynik testowy <span>{youWere === 'Yes' ? 'TAK' : youWere === 'No' ? 'NIE' : null}</span>
-			</p>
+			<div className={styles.task01_box_btns}>
+				<button className={styles.task01_btn}>Sprawdź</button>
+				<button className={styles.task01_btn}>Wyczyść</button>
+			</div>
 		</div>
 	)
 }
