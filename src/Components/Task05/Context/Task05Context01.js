@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 
 const Task05Context01 = createContext()
 
@@ -42,7 +42,7 @@ export const ActionTaskContext01 = ({ children }) => {
 			console.log(person)
 			console.log(city)
 			console.log(visit)
-		} else if (typeVisit === 'change' || person === '' || city === '') {
+		} else if (youWere === 'change' || person === '' || city === '') {
 			setErrorFill('wypełnij poprawnie wszystkie pola')
 		}
 	}
@@ -51,6 +51,8 @@ export const ActionTaskContext01 = ({ children }) => {
 		setPerson('')
 		setCity('')
 		setYouWere('change')
+		setVisit('')
+		setErrorFill('')
 	}
 
 	return (

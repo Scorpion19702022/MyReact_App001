@@ -41,15 +41,7 @@ const Task05task1 = () => {
 				</button>
 			</div>
 			<div className={styles.box_info}>
-				{person !== '' ? (
-					city !== ''
-				) : youWere !== 'change' ? (
-					<p className={styles.info}>
-						Mam na imię {person} i {visit} w mieście {city}
-					</p>
-				) : (
-					<p className={styles.error}>{errorFull}</p>
-				)}
+				<p>{visit}</p>
 			</div>
 		</div>
 	)
