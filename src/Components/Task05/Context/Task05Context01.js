@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react'
+import { createContext, useState } from 'react'
 
 const Task05Context01 = createContext()
 
@@ -9,9 +9,15 @@ export const ActionTaskContext01 = ({ children }) => {
 
 	const [youWere, setYouWere] = useState('change')
 
-	const [visit, setVisit] = useState('')
-
 	const [errorFill, setErrorFill] = useState('')
+
+	const [infoVisit, setInfoVisit] = useState({
+		text01: '',
+		name: '',
+		text02: '',
+		visit: '',
+		city: '',
+	})
 
 	const handleChangePerson = e => {
 		setPerson(e.target.value)
@@ -25,24 +31,25 @@ export const ActionTaskContext01 = ({ children }) => {
 		setYouWere(e.target.value)
 	}
 
-	const handleClickCheck = (e, typeVisit) => {
+	const handleClickCheck = typeVisit => {
 		if (typeVisit === 'Yes') {
-			setPerson(e.target.value)
-			setCity(e.target.value)
-			setVisit('byłem')
-
-			console.log(person)
-			console.log(city)
-			console.log(visit)
+			setInfoVisit({
+				text01: 'Mam na imię',
+				name: person,
+				text02: 'i',
+				visit: 'byłem w mieście',
+				city: city,
+			})
 		} else if (typeVisit === 'No') {
-			setPerson(e.target.value)
-			setCity(e.target.value)
-			setVisit('nie byłem')
-
-			console.log(person)
-			console.log(city)
-			console.log(visit)
-		} else if (youWere === 'change' || person === '' || city === '') {
+			setInfoVisit({
+				text01: 'Mam na imię',
+				name: person,
+				text02: 'i',
+				visit: 'nie byłem w mieście',
+				city: city,
+			})
+		}
+		if (typeVisit === 'change' || person === '' || city === '') {
 			setErrorFill('wypełnij poprawnie wszystkie pola')
 		}
 	}
@@ -51,8 +58,14 @@ export const ActionTaskContext01 = ({ children }) => {
 		setPerson('')
 		setCity('')
 		setYouWere('change')
-		setVisit('')
 		setErrorFill('')
+		setInfoVisit({
+			text01: '',
+			name: '',
+			text02: '',
+			visit: '',
+			city: '',
+		})
 	}
 
 	return (
@@ -65,9 +78,9 @@ export const ActionTaskContext01 = ({ children }) => {
 				city,
 				handleChangeCity,
 				handleClickClean,
-				visit,
 				errorFill,
 				handleClickCheck,
+				infoVisit,
 			}}
 		>
 			{children}

@@ -12,9 +12,9 @@ const Task05task1 = () => {
 		city,
 		handleChangeCity,
 		handleClickClean,
-		visit,
-		errorFull,
+		errorFill,
 		handleClickCheck,
+		infoVisit,
 	} = useContext(Task05Context01)
 
 	return (
@@ -33,7 +33,7 @@ const Task05task1 = () => {
 				</select>
 			</div>
 			<div className={styles.task01_box_btns}>
-				<button className={styles.task01_btn} onClick={e => handleClickCheck(e, youWere)}>
+				<button className={styles.task01_btn} onClick={() => handleClickCheck(youWere)}>
 					Sprawdź
 				</button>
 				<button className={styles.task01_btn} onClick={handleClickClean}>
@@ -41,7 +41,10 @@ const Task05task1 = () => {
 				</button>
 			</div>
 			<div className={styles.box_info}>
-				<p>{visit}</p>
+				<p>
+					{infoVisit.text01} {infoVisit.name} {infoVisit.text02} {infoVisit.visit} {infoVisit.city}
+				</p>
+				<p>{errorFill}</p>
 			</div>
 		</div>
 	)
