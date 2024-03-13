@@ -4,8 +4,18 @@ import styles from './Task05task1.module.css'
 import Task05Context01 from './Context/Task05Context01'
 
 const Task05task1 = () => {
-	const { person, handleChangePerson, youWere, handleChangeWere, city, handleChangeCity, handleClickClean } =
-		useContext(Task05Context01)
+	const {
+		person,
+		handleChangePerson,
+		youWere,
+		handleChangeWere,
+		city,
+		handleChangeCity,
+		handleClickClean,
+		visit,
+		errorFull,
+		handleClickCheck,
+	} = useContext(Task05Context01)
 
 	return (
 		<div className={styles.task_01}>
@@ -23,10 +33,23 @@ const Task05task1 = () => {
 				</select>
 			</div>
 			<div className={styles.task01_box_btns}>
-				<button className={styles.task01_btn}>Sprawdź</button>
+				<button className={styles.task01_btn} onClick={(e, youWere) => handleClickCheck(e.target.value, youWere)}>
+					Sprawdź
+				</button>
 				<button className={styles.task01_btn} onClick={handleClickClean}>
 					Wyczyść
 				</button>
+			</div>
+			<div className={styles.box_info}>
+				{person !== '' ? (
+					city !== ''
+				) : youWere !== 'change' ? (
+					<p className={styles.info}>
+						Mam na imię {person} i {visit} w mieście {city}
+					</p>
+				) : (
+					<p className={styles.error}>{errorFull}</p>
+				)}
 			</div>
 		</div>
 	)

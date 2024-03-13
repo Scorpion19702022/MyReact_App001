@@ -30,10 +30,18 @@ export const ActionTaskContext01 = ({ children }) => {
 			setPerson(e.target.value)
 			setCity(e.target.value)
 			setVisit('byłem')
+
+			console.log(person)
+			console.log(city)
+			console.log(visit)
 		} else if (typeVisit === 'No') {
 			setPerson(e.target.value)
 			setCity(e.target.value)
 			setVisit('nie byłem')
+
+			console.log(person)
+			console.log(city)
+			console.log(visit)
 		} else if (typeVisit === 'change' || person === '' || city === '') {
 			setErrorFill('wypełnij poprawnie wszystkie pola')
 		}
