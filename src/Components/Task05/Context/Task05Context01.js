@@ -37,7 +37,7 @@ export const ActionTaskContext01 = ({ children }) => {
 				text01: 'Mam na imię',
 				name: person,
 				text02: 'i',
-				visit: 'byłem w mieście',
+				visit: 'byłam/em w mieście',
 				city: city,
 			})
 			setErrorFill('')
@@ -46,7 +46,7 @@ export const ActionTaskContext01 = ({ children }) => {
 				text01: 'Mam na imię',
 				name: person,
 				text02: 'i',
-				visit: 'nie byłem w mieście',
+				visit: 'nie byłam/em w mieście',
 				city: city,
 			})
 			setErrorFill('')
