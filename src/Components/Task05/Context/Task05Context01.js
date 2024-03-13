@@ -9,6 +9,10 @@ export const ActionTaskContext01 = ({ children }) => {
 
 	const [youWere, setYouWere] = useState('change')
 
+	const [visit, setVisit] = useState('')
+
+	const [errorFill, setErrorFill] = useState('')
+
 	const handleChangePerson = e => {
 		setPerson(e.target.value)
 	}
@@ -21,6 +25,20 @@ export const ActionTaskContext01 = ({ children }) => {
 		setYouWere(e.target.value)
 	}
 
+	const handleClickCheck = (e, typeVisit) => {
+		if (typeVisit === 'Yes') {
+			setPerson(e.target.value)
+			setCity(e.target.value)
+			setVisit('byłem')
+		} else if (typeVisit === 'No') {
+			setPerson(e.target.value)
+			setCity(e.target.value)
+			setVisit('nie byłem')
+		} else if (typeVisit === 'change' || person === '' || city === '') {
+			setErrorFill('wypełnij poprawnie wszystkie pola')
+		}
+	}
+
 	const handleClickClean = () => {
 		setPerson('')
 		setCity('')
@@ -29,7 +47,18 @@ export const ActionTaskContext01 = ({ children }) => {
 
 	return (
 		<Task05Context01.Provider
-			value={{ person, handleChangePerson, youWere, handleChangeWere, city, handleChangeCity, handleClickClean }}
+			value={{
+				person,
+				handleChangePerson,
+				youWere,
+				handleChangeWere,
+				city,
+				handleChangeCity,
+				handleClickClean,
+				visit,
+				errorFill,
+				handleClickCheck,
+			}}
 		>
 			{children}
 		</Task05Context01.Provider>
