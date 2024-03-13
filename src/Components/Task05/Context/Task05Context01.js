@@ -21,8 +21,16 @@ export const ActionTaskContext01 = ({ children }) => {
 		setYouWere(e.target.value)
 	}
 
+	const handleClickClean = () => {
+		setPerson('')
+		setCity('')
+		setYouWere('change')
+	}
+
 	return (
-		<Task05Context01.Provider value={{ person, handleChangePerson, youWere, handleChangeWere, city, handleChangeCity }}>
+		<Task05Context01.Provider
+			value={{ person, handleChangePerson, youWere, handleChangeWere, city, handleChangeCity, handleClickClean }}
+		>
 			{children}
 		</Task05Context01.Provider>
 	)
