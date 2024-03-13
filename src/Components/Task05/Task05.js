@@ -3,6 +3,7 @@ import React from 'react'
 import styles from './Task05.module.css'
 import Task05task1 from './Task05task1'
 import { ActionTaskContext01 } from './Context/Task05Context01'
+import Task05task2 from './Task05task2'
 
 const Task05 = () => {
 	return (
@@ -16,6 +17,7 @@ const Task05 = () => {
 					<ActionTaskContext01>
 						<Task05task1 />
 					</ActionTaskContext01>
+					<Task05task2 />
 				</div>
 			</div>
 		</div>
