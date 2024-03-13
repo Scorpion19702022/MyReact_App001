@@ -33,7 +33,7 @@ const Task05task1 = () => {
 				</select>
 			</div>
 			<div className={styles.task01_box_btns}>
-				<button className={styles.task01_btn} onClick={(e, youWere) => handleClickCheck(e.target.value, youWere)}>
+				<button className={styles.task01_btn} onClick={e => handleClickCheck(e, youWere)}>
 					Sprawdź
 				</button>
 				<button className={styles.task01_btn} onClick={handleClickClean}>
