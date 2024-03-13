@@ -70,8 +70,11 @@
 
 .box_tasks {
 	width: 100%;
-	margin-top: 2em;
+	margin-top: 1em;
 	padding: 0em 4em;
 	display: flex;
-	flex-wrap: wrap;
+}
+
+.box_task_left {
+	width: 47%;
 }

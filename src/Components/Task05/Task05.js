@@ -12,9 +12,11 @@ const Task05 = () => {
 				<h4 className={styles.theme_task05}>Test z inputami</h4>
 			</div>
 			<div className={styles.box_tasks}>
-				<ActionTaskContext01>
-					<Task05task1 />
-				</ActionTaskContext01>
+				<div className={styles.box_task_left}>
+					<ActionTaskContext01>
+						<Task05task1 />
+					</ActionTaskContext01>
+				</div>
 			</div>
 		</div>
 	)

@@ -38,9 +38,9 @@
 }
 
 .task_01 {
-	width: 47%;
-	height: 400px;
-	padding: 1.6em;
+	width: 100%;
+	height: 380px;
+	padding: 1em;
 	margin: 0.8em;
 	background-color: var(--color-blue07);
 	border: 0.04em solid var(--color-yellow05);

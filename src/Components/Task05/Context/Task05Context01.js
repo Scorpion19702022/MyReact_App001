@@ -40,6 +40,7 @@ export const ActionTaskContext01 = ({ children }) => {
 				visit: 'byłem w mieście',
 				city: city,
 			})
+			setErrorFill('')
 		} else if (typeVisit === 'No') {
 			setInfoVisit({
 				text01: 'Mam na imię',
@@ -48,6 +49,7 @@ export const ActionTaskContext01 = ({ children }) => {
 				visit: 'nie byłem w mieście',
 				city: city,
 			})
+			setErrorFill('')
 		}
 		if (typeVisit === 'change' || person === '' || city === '') {
 			setErrorFill('wypełnij poprawnie wszystkie pola')
