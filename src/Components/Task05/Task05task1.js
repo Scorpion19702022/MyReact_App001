@@ -41,10 +41,10 @@ const Task05task1 = () => {
 				</button>
 			</div>
 			<div className={styles.box_info}>
-				<p>
+				<p className={styles.info}>
 					{infoVisit.text01} {infoVisit.name} {infoVisit.text02} {infoVisit.visit} {infoVisit.city}
 				</p>
-				<p>{errorFill}</p>
+				<p className={styles.error}>{errorFill}</p>
 			</div>
 		</div>
 	)
