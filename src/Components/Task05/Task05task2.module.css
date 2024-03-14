@@ -53,6 +53,8 @@
 .heading_task2 {
 	color: var(--color-yellow03);
 	margin-bottom: 0.6em;
+	padding-bottom: 0.2em;
+	border-bottom: 0.1em solid var(--color-yellow03);
 }
 
 .box_into {
@@ -71,9 +73,68 @@
 	width: 100%;
 	padding: 0.4em 0.2em;
 	font-size: 1.8em;
-	color: var(--color-purple02);
+	color: var(--color-yellow04);
 	background: none;
 	border: none;
 	border-bottom: 0.04em solid var(--color-yellow05);
 	outline: none;
+}
+
+.box_btns {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin: 1em 0em;
+}
+
+.btn {
+	position: relative;
+	width: 18%;
+	padding: 0.8em 1em;
+	margin: 0em 0.6em;
+	background: none;
+	border: 0.04em solid var(--color-blue03);
+	color: var(--color-blue01);
+	cursor: pointer;
+	z-index: 10;
+	overflow: hidden;
+	transition: backgroud-color 0.8s ease-in-out;
+}
+
+.btn::before {
+	position: absolute;
+	content: '';
+	width: 180%;
+	height: 150%;
+	border-radius: 25px;
+	filter: blur(0.4em);
+	background-color: var(--color-blue06);
+	transform: translate(-130%, -38%);
+	z-index: -10;
+	transition: all 0.4s ease-in-out;
+}
+
+.btn:hover::before {
+	transform: translate(46%, -38%);
+}
+
+.btn::after {
+	position: absolute;
+	content: '';
+	width: 180%;
+	height: 150%;
+	border-radius: 25px;
+	filter: blur(0.4em);
+	background-color: var(--color-blue06);
+	transform: translate(27%, -38%);
+	z-index: -10;
+	transition: all 0.4s ease-in-out;
+}
+
+.btn:hover::after {
+	transform: translate(-150%, -38%);
+}
+
+.btn:hover {
+	background-color: rgba(0, 238, 238, 0.1);
 }
