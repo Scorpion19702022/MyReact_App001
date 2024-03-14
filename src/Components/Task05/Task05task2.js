@@ -17,7 +17,7 @@ const Task05task2 = () => {
 			</div>
 			<div className={styles.box_info}>
 				<h1 className={styles.heading_info}>Wynik:</h1>
-				<p className={styles.info}></p>
+				<p className={styles.info}>2</p>
 			</div>
 		</div>
 	)
