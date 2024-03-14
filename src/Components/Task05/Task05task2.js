@@ -5,7 +5,7 @@ import styles from './Task05task2.module.css'
 const Task05task2 = () => {
 	return (
 		<div className={styles.wrapper_task2}>
-			<h2 className={styles.heading_task2}>Oblicz</h2>
+			<h2 className={styles.heading_task2}>Sprawdź ile stopni ℃ to stopni ℉ i odwrotnie</h2>
 		</div>
 	)
 }

@@ -49,3 +49,8 @@
 	flex-direction: column;
 	align-items: center;
 }
+
+.heading_task2 {
+	color: var(--color-yellow03);
+	margin-bottom: 0.6em;
+}
