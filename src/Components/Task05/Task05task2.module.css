@@ -54,3 +54,26 @@
 	color: var(--color-yellow03);
 	margin-bottom: 0.6em;
 }
+
+.box_into {
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1em;
+}
+
+.label {
+	margin-bottom: 0.4em;
+	color: var(--color-yellow02);
+}
+
+.input {
+	width: 100%;
+	padding: 0.4em 0.2em;
+	font-size: 1.8em;
+	color: var(--color-purple02);
+	background: none;
+	border: none;
+	border-bottom: 0.04em solid var(--color-yellow05);
+	outline: none;
+}
