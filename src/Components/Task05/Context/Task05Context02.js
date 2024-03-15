@@ -25,16 +25,16 @@ export const ActionTaskContext02 = ({ children }) => {
 	}
 
 	useEffect(() => {
-		if (!stateButton) {
+		if (!stateButton && celsius === '℃') {
 			setCelsius('℉')
-			setFare('℃')
-			console.log('klik 1')
-		} else if (stateButton) {
+			// setFare('℃')
+			// console.log('klik 1')
+		} else if (stateButton && fare === '℉') {
 			setCelsius('℃')
-			setFare('℉')
-			console.log('klik 2')
+			// setFare('℉')
+			// console.log('klik 2')
 		}
-	}, [stateButton])
+	}, [stateButton, celsius, fare])
 
 	return (
 		<Task05Context02.Provider
