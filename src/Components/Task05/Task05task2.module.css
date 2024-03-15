@@ -76,6 +76,7 @@
 
 .kind_degrees {
 	font-size: 3em;
+	color: var(--color-yellow04);
 }
 
 .input {
