@@ -13,6 +13,7 @@ const Task05task2 = () => {
 		handleClickReset,
 		handleCountDegrees,
 		resultDegrees,
+		countIn,
 	} = useContext(Task05Context02)
 
 	return (
@@ -42,7 +43,7 @@ const Task05task2 = () => {
 			<div className={styles.box_info}>
 				<h1 className={styles.heading_info}>Wynik:</h1>
 				<p className={styles.info}>
-					{intoInput} {celsius} to: {resultDegrees} {fare}
+					{countIn} {celsius} to: {resultDegrees} {fare}
 				</p>
 			</div>
 		</div>
