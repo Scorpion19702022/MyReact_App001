@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 
 const Task05Context02 = createContext()
 
@@ -20,10 +20,10 @@ export const ActionTaskContext02 = ({ children }) => {
 	}
 
 	const handleCountDegrees = typeDegrees => {
-		if (typeDegrees === '℃') {
+		if (typeDegrees === '℃' && intoInput !== '') {
 			setResultDegrees(+intoInput * 1.8 + 32)
 			setCountIn(intoInput)
-		} else if (typeDegrees === '℉') {
+		} else if (typeDegrees === '℉' && intoInput !== '') {
 			setResultDegrees((+intoInput - 32) / 1.8)
 			setCountIn(intoInput)
 		}
@@ -35,12 +35,12 @@ export const ActionTaskContext02 = ({ children }) => {
 			setCelsius('℉')
 			setFare('℃')
 			setResultDegrees((+intoInput - 32) / 1.8)
-			setCountIn(intoInput)
+			// setCountIn(intoInput)
 		} else if (stateButton) {
 			setCelsius('℃')
 			setFare('℉')
 			setResultDegrees(+intoInput * 1.8 + 32)
-			setCountIn(intoInput)
+			// setCountIn(intoInput)
 		}
 	}
 
@@ -50,6 +50,7 @@ export const ActionTaskContext02 = ({ children }) => {
 		setFare('℉')
 		setStateButton(false)
 		setCountIn('')
+		setResultDegrees(null)
 	}
 
 	return (
