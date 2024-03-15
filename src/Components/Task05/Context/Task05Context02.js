@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react'
+import { createContext, useState } from 'react'
 
 const Task05Context02 = createContext()
 
@@ -31,14 +31,8 @@ export const ActionTaskContext02 = ({ children }) => {
 		setIntoInput('')
 		setCelsius('℃')
 		setFare('℉')
+		setStateButton(false)
 	}
-
-	// useEffect(() => {
-	// 	if (intoInput === '') {
-	// 		setCelsius('℃')
-	// 		setFare('℉')
-	// 	}
-	// }, [intoInput])
 
 	return (
 		<Task05Context02.Provider
