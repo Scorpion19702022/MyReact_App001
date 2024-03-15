@@ -69,8 +69,17 @@
 	color: var(--color-yellow02);
 }
 
+.box_input_in {
+	display: flex;
+	justify-content: center;
+}
+
+.kind_degrees {
+	font-size: 3em;
+}
+
 .input {
-	width: 100%;
+	width: 50%;
 	padding: 0.4em 0.2em;
 	font-size: 1.8em;
 	color: var(--color-yellow04);

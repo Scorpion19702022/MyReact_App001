@@ -14,7 +14,11 @@ const Task05task2 = () => {
 				<label className={styles.label}>
 					Konwertuj z {celsius} na {fare}
 				</label>
-				<input className={styles.input} type='number' value={intoInput} onChange={handleChangeInput} />
+				<div className={styles.box_input_in}>
+					{' '}
+					<input className={styles.input} type='number' value={intoInput} onChange={handleChangeInput} />
+					<p className={styles.kind_degrees}>{celsius}</p>
+				</div>
 			</div>
 			<div className={styles.box_btns}>
 				<button className={styles.btn}>Konwertuj</button>
