@@ -14,27 +14,31 @@ export const ActionTaskContext02 = ({ children }) => {
 		setIntoInput(e.target.value)
 	}
 
+	const handleClickChange = () => {
+		setStateButton(!stateButton)
+		if (!stateButton) {
+			setCelsius('℉')
+			setFare('℃')
+			console.log('klik 1')
+		} else if (stateButton) {
+			setCelsius('℃')
+			setFare('℉')
+			console.log('klik 2')
+		}
+	}
+
 	const handleClickReset = () => {
 		setIntoInput('')
 		setCelsius('℃')
 		setFare('℉')
 	}
 
-	const handleClickChange = () => {
-		setStateButton(!stateButton)
-	}
-
-	useEffect(() => {
-		if (!stateButton && celsius === '℃') {
-			setCelsius('℉')
-			// setFare('℃')
-			// console.log('klik 1')
-		} else if (stateButton && fare === '℉') {
-			setCelsius('℃')
-			// setFare('℉')
-			// console.log('klik 2')
-		}
-	}, [stateButton, celsius, fare])
+	// useEffect(() => {
+	// 	if (intoInput === '') {
+	// 		setCelsius('℃')
+	// 		setFare('℉')
+	// 	}
+	// }, [intoInput])
 
 	return (
 		<Task05Context02.Provider
