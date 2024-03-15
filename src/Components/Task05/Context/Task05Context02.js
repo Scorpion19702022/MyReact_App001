@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react'
+import { createContext, useState } from 'react'
 
 const Task05Context02 = createContext()
 
@@ -41,6 +41,10 @@ export const ActionTaskContext02 = ({ children }) => {
 			setFare('℉')
 			setResultDegrees(+intoInput * 1.8 + 32)
 			// setCountIn(intoInput)
+		}
+
+		if (intoInput === '') {
+			setResultDegrees(null)
 		}
 	}
 
