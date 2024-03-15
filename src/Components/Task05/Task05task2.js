@@ -4,8 +4,16 @@ import styles from './Task05task2.module.css'
 import Task05Context02 from './Context/Task05Context02'
 
 const Task05task2 = () => {
-	const { celsius, fare, intoInput, handleChangeInput, handleClickChange, handleClickReset } =
-		useContext(Task05Context02)
+	const {
+		celsius,
+		fare,
+		intoInput,
+		handleChangeInput,
+		handleClickChange,
+		handleClickReset,
+		handleCountDegrees,
+		resultDegrees,
+	} = useContext(Task05Context02)
 
 	return (
 		<div className={styles.wrapper_task2}>
@@ -21,7 +29,9 @@ const Task05task2 = () => {
 				</div>
 			</div>
 			<div className={styles.box_btns}>
-				<button className={styles.btn}>Konwertuj</button>
+				<button className={styles.btn} onClick={() => handleCountDegrees(celsius)}>
+					Konwertuj
+				</button>
 				<button className={styles.btn} onClick={handleClickReset}>
 					Reset
 				</button>
@@ -32,7 +42,7 @@ const Task05task2 = () => {
 			<div className={styles.box_info}>
 				<h1 className={styles.heading_info}>Wynik:</h1>
 				<p className={styles.info}>
-					{intoInput} {celsius} to: {} {fare}
+					{intoInput} {celsius} to: {resultDegrees} {fare}
 				</p>
 			</div>
 		</div>

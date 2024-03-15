@@ -10,8 +10,21 @@ export const ActionTaskContext02 = ({ children }) => {
 
 	const [intoInput, setIntoInput] = useState('')
 
+	// T(F) = T(C) * 1.8 + 32
+	// T(C) = (T(F) - 32) / 1.8
+
+	const [resultDegrees, setResultDegrees] = useState(null)
+
 	const handleChangeInput = e => {
 		setIntoInput(e.target.value)
+	}
+
+	const handleCountDegrees = typeDegrees => {
+		if (typeDegrees === '℃') {
+			console.log('celsius')
+		} else if (typeDegrees === '℉') {
+			console.log('fare')
+		}
 	}
 
 	const handleClickChange = () => {
@@ -19,11 +32,9 @@ export const ActionTaskContext02 = ({ children }) => {
 		if (!stateButton) {
 			setCelsius('℉')
 			setFare('℃')
-			console.log('klik 1')
 		} else if (stateButton) {
 			setCelsius('℃')
 			setFare('℉')
-			console.log('klik 2')
 		}
 	}
 
@@ -36,7 +47,16 @@ export const ActionTaskContext02 = ({ children }) => {
 
 	return (
 		<Task05Context02.Provider
-			value={{ celsius, fare, intoInput, handleChangeInput, handleClickChange, handleClickReset }}
+			value={{
+				celsius,
+				fare,
+				intoInput,
+				handleChangeInput,
+				handleClickChange,
+				handleClickReset,
+				handleCountDegrees,
+				resultDegrees,
+			}}
 		>
 			{children}
 		</Task05Context02.Provider>
