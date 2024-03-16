@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react'
+import { createContext, useState } from 'react'
 
 const Task05Context02 = createContext()
 
@@ -67,18 +67,12 @@ export const ActionTaskContext02 = ({ children }) => {
 		setError(false)
 	}
 
-	useEffect(() => {
-		if (!error) {
-			setTimeout(() => {
-				setError(false)
-				console.log('zamknij')
-			}, 5000)
-		} else {
-			setTimeout(() => {
-				setError(true)
-			}, 5000)
-		}
-	}, [error])
+	if (error) {
+		setTimeout(() => {
+			setError(false)
+			console.log('zamknij')
+		}, 7000)
+	}
 
 	return (
 		<Task05Context02.Provider
