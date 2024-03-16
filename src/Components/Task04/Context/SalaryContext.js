@@ -69,7 +69,7 @@ export const CalculateSalaryCotext = ({ children }) => {
 			setError('musisz wpisać wartość')
 		} else if (inputValue < minSalary) {
 			setError('Twoje zarobki są niższe niż minimalna krajowa i nie można dokonać obliczenia')
-		} else if (inputValue >= minSalary) {
+		} else if (inputValue >= minSalary && inputValue !== '') {
 			setContributions({
 				contrZUS: (inputValue * contributionsZUS).toFixed(2),
 				contrPension: (inputValue * contributionPension).toFixed(2),
@@ -95,6 +95,8 @@ export const CalculateSalaryCotext = ({ children }) => {
 		})
 		setSumTax('')
 	}
+
+	console.log(contributions.contrHealthy)
 
 	return (
 		<SalaryContext.Provider
