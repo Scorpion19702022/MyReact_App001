@@ -188,7 +188,6 @@
 	background-color: var(--color-dark07);
 	z-index: 100;
 	visibility: visible;
-	/* transition: all 0.8s ease-in-out; */
 }
 
 .box_no_view_popup {
@@ -208,7 +207,6 @@
 	background-color: var(--color-dark07);
 	z-index: 100;
 	visibility: hidden;
-	transition: all 0.4s ease-in-out;
 }
 
 .heading_popup {
@@ -225,7 +223,6 @@
 	color: var(--color-yellow03);
 	cursor: pointer;
 	z-index: 10;
-	/* transition: all 0.1s ease-in-out; */
 	overflow: hidden;
 }
 
@@ -238,7 +235,6 @@
 	background-color: var(--color-yellow06);
 	transform: translate(-130%, -32%);
 	border-radius: 25px;
-	/* transition: all 0.2s ease-in-out; */
 	z-index: -10;
 }
 
@@ -251,7 +247,6 @@
 	background-color: var(--color-yellow06);
 	transform: translate(30%, -32%);
 	border-radius: 25px;
-	/* transition: all 0.2s ease-in-out; */
 	z-index: -10;
 }
 

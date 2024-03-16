@@ -67,6 +67,13 @@ export const ActionTaskContext02 = ({ children }) => {
 		setError(false)
 	}
 
+	if (!error) {
+		setTimeout(() => {
+			setError(false)
+			console.log('zamknij')
+		}, 5000)
+	}
+
 	return (
 		<Task05Context02.Provider
 			value={{
