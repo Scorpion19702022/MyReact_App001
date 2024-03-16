@@ -191,20 +191,6 @@
 }
 
 .box_no_view_popup {
-	/* position: absolute;
-	width: 75%;
-	height: 140px;
-	top: 50%;
-	left: 50%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 1em;
-	border: 0.2em solid var(--color-yellow04);
-	box-shadow: 0.4em 0.4em 1.4em var(--color-dark07);
-	transform: translate(-50%, -50%);
-	background-color: var(--color-dark07);
-	z-index: 100; */
 	visibility: hidden;
 }
 

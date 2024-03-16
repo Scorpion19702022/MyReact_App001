@@ -15,6 +15,8 @@ export const ActionTaskContext02 = ({ children }) => {
 	const [countIn, setCountIn] = useState('')
 	const [resultDegrees, setResultDegrees] = useState(null)
 
+	const [error, setError] = useState(false)
+
 	const handleChangeInput = e => {
 		setIntoInput(e.target.value)
 	}
@@ -26,6 +28,10 @@ export const ActionTaskContext02 = ({ children }) => {
 		} else if (typeDegrees === '℉' && intoInput !== '') {
 			setResultDegrees((+intoInput - 32) / 1.8)
 			setCountIn(intoInput)
+		}
+
+		if (intoInput === '') {
+			setError(!error)
 		}
 	}
 
@@ -69,6 +75,7 @@ export const ActionTaskContext02 = ({ children }) => {
 				handleCountDegrees,
 				resultDegrees,
 				countIn,
+				error,
 			}}
 		>
 			{children}
