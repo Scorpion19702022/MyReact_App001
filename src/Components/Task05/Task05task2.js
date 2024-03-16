@@ -15,6 +15,7 @@ const Task05task2 = () => {
 		resultDegrees,
 		countIn,
 		error,
+		handleClosePopup,
 	} = useContext(Task05Context02)
 
 	return (
@@ -49,7 +50,9 @@ const Task05task2 = () => {
 			</div>
 			<div className={error ? styles.box_view_popup : styles.box_no_view_popup}>
 				<h1 className={styles.heading_popup}>Nie podałeś wartości</h1>
-				<button className={styles.btn_popup}>Zamknij</button>
+				<button className={styles.btn_popup} onClick={handleClosePopup}>
+					Zamknij
+				</button>
 			</div>
 		</div>
 	)

@@ -63,6 +63,10 @@ export const ActionTaskContext02 = ({ children }) => {
 		setResultDegrees(null)
 	}
 
+	const handleClosePopup = () => {
+		setError(false)
+	}
+
 	return (
 		<Task05Context02.Provider
 			value={{
@@ -76,6 +80,7 @@ export const ActionTaskContext02 = ({ children }) => {
 				resultDegrees,
 				countIn,
 				error,
+				handleClosePopup,
 			}}
 		>
 			{children}
