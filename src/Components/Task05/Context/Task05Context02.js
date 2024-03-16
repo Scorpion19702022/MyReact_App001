@@ -67,7 +67,7 @@ export const ActionTaskContext02 = ({ children }) => {
 		setError(false)
 	}
 
-	if (!error) {
+	if (error) {
 		setTimeout(() => {
 			setError(false)
 			console.log('zamknij')
