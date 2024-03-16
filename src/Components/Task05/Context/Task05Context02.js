@@ -23,10 +23,10 @@ export const ActionTaskContext02 = ({ children }) => {
 
 	const handleCountDegrees = typeDegrees => {
 		if (typeDegrees === '℃' && intoInput !== '') {
-			setResultDegrees(+intoInput * 1.8 + 32)
+			setResultDegrees((+intoInput * 1.8 + 32).toFixed(2))
 			setCountIn(intoInput)
 		} else if (typeDegrees === '℉' && intoInput !== '') {
-			setResultDegrees((+intoInput - 32) / 1.8)
+			setResultDegrees(((+intoInput - 32) / 1.8).toFixed(2))
 			setCountIn(intoInput)
 		}
 
@@ -40,12 +40,12 @@ export const ActionTaskContext02 = ({ children }) => {
 		if (!stateButton) {
 			setCelsius('℉')
 			setFare('℃')
-			setResultDegrees((+intoInput - 32) / 1.8)
+			setResultDegrees(((+intoInput - 32) / 1.8).toFixed(2))
 			// setCountIn(intoInput)
 		} else if (stateButton) {
 			setCelsius('℃')
 			setFare('℉')
-			setResultDegrees(+intoInput * 1.8 + 32)
+			setResultDegrees((+intoInput * 1.8 + 32).toFixed(2))
 			// setCountIn(intoInput)
 		}
 
