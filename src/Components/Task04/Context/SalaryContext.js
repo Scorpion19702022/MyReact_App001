@@ -59,7 +59,7 @@ export const CalculateSalaryCotext = ({ children }) => {
 			setFinishSalary(0)
 			setContributions({
 				...contributions,
-				contrTax: '',
+				// contrTax: '',
 			})
 		}
 	}, [contributions.contrZUS])
