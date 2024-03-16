@@ -38,6 +38,7 @@
 }
 
 .wrapper_task2 {
+	position: relative;
 	width: 100%;
 	height: 380px;
 	padding: 1em;
@@ -168,4 +169,15 @@
 .info {
 	font-size: 2.4em;
 	color: var(--color-yellow04);
+}
+
+.box_view_popup {
+	width: 75%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 1em;
+	transform: translate(-50%, -50%);
+	background-color: var(--color-dark07);
+	z-index: 100;
 }

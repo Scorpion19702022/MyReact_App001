@@ -46,6 +46,10 @@ const Task05task2 = () => {
 					{countIn} {celsius} to: {resultDegrees} {fare}
 				</p>
 			</div>
+			<div className={styles.box_view_popup}>
+				<h1 className={styles.heading_popup}>Podaj wartość</h1>
+				<button className={styles.btn_popup}>Zamknij</button>
+			</div>
 		</div>
 	)
 }
