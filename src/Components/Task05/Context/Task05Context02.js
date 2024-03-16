@@ -70,7 +70,6 @@ export const ActionTaskContext02 = ({ children }) => {
 	if (error) {
 		setTimeout(() => {
 			setError(false)
-			console.log('zamknij')
 		}, 7000)
 	}
 
