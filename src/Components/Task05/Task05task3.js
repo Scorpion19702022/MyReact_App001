@@ -12,7 +12,7 @@ const Task05task3 = () => {
 					<input className={styles.input} type='text' />
 				</div>
 				<div className={styles.box_selects}>
-					<div className={styles.selects_cities}>
+					<div className={styles.selects}>
 						<label className={styles.label}>Wybierz miejsce:</label>
 						<select className={styles.select} name='City'>
 							<option value='cities'>wybierz miasto</option>
@@ -36,7 +36,7 @@ const Task05task3 = () => {
 							<option value='city19'>Włochy/Sycylia</option>
 						</select>
 					</div>
-					<div className={styles.selects_person}>
+					<div className={styles.selects}>
 						<label className={styles.label}>Wybierz osoby:</label>
 						<select className={styles.select} name='person'>
 							<option value='persons'>Z kim byłeś</option>
