@@ -66,6 +66,10 @@ const Task05task3 = () => {
 					<label className={styles.label}>Twój krótki opis:</label>
 					<textarea className={styles.textarea} name='text'></textarea>
 				</div>
+				<div className={styles.box_btns}>
+					<button className={styles.btn}>Sprawdź</button>
+					<button className={styles.btn}>Wyczyść</button>
+				</div>
 			</div>
 		</div>
 	)

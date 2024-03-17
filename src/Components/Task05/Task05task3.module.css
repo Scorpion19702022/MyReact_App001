@@ -130,3 +130,20 @@
 	padding: 0.8em;
 	border: 0.04em solid var(--color-yellow06);
 }
+
+.box_btns {
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+	margin: 1.2em 0em;
+}
+
+.btn {
+	position: relative;
+	width: 40%;
+	padding: 0.8em;
+	background: none;
+	border: 0.04em solid var(--color-blue04);
+	color: var(--color-blue01);
+	cursor: pointer;
+}
