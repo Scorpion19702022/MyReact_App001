@@ -147,3 +147,12 @@
 	color: var(--color-blue01);
 	cursor: pointer;
 }
+
+.btn::before {
+	position: absolute;
+	content: '';
+	width: 23%;
+	height: 150%;
+	background-color: var(--color-blue06);
+	transform: translate(-130%, -33%);
+}
