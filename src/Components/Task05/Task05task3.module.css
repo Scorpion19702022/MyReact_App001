@@ -146,6 +146,7 @@
 	border: 0.04em solid var(--color-blue04);
 	color: var(--color-blue01);
 	cursor: pointer;
+	overflow: hidden;
 }
 
 .btn::before {
@@ -153,6 +154,29 @@
 	content: '';
 	width: 23%;
 	height: 150%;
+	border-radius: 50%;
+	filter: blur(0.8em);
 	background-color: var(--color-blue06);
-	transform: translate(-130%, -33%);
+	transform: translate(-300%, -80%);
+	transition: transform 0.2s ease-in-out;
+}
+
+.btn:hover::before {
+	transform: translate(300%, 50%);
+}
+
+.btn::after {
+	position: absolute;
+	content: '';
+	width: 23%;
+	height: 150%;
+	border-radius: 50%;
+	filter: blur(0.8em);
+	background-color: var(--color-blue06);
+	transform: translate(200%, 30%);
+	transition: transform 0.3s ease-in-out;
+}
+
+.btn:hover::after {
+	transform: translate(-400%, -80%);
 }
