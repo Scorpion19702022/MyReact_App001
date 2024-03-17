@@ -7,11 +7,13 @@ const Task05task3 = () => {
 		<div className={styles.wrapper_task3_holidays}>
 			<h1 className={styles.heading_holidays}>Moje wakacje!</h1>
 			<div className={styles.box_inputs}>
-				<label className={styles.label}>Podaj imię:</label>
-				<input className={styles.input} type='text' />
+				<div className={styles.inputs}>
+					<label className={styles.label}>Podaj imię:</label>
+					<input className={styles.input} type='text' />
+				</div>
 				<div className={styles.box_selects}>
 					<div className={styles.selects_cities}>
-						<label className={styles.label}>Wybierz miejsce</label>
+						<label className={styles.label}>Wybierz miejsce:</label>
 						<select className={styles.select} name='City'>
 							<option value='cities'>wybierz miasto</option>
 							<option value='city01'>Dźwirzyno</option>
@@ -35,7 +37,7 @@ const Task05task3 = () => {
 						</select>
 					</div>
 					<div className={styles.selects_person}>
-						<label className={styles.label}>Wybierz osoby</label>
+						<label className={styles.label}>Wybierz osoby:</label>
 						<select className={styles.select} name='person'>
 							<option value='persons'>Z kim byłeś</option>
 							<option value='person01'>z Beatą</option>
@@ -43,8 +45,9 @@ const Task05task3 = () => {
 							<option value='person03'>z Aśką</option>
 							<option value='person04'>z Rodzicami</option>
 							<option value='person05'>z Beatą i z Dorotą</option>
-							<option value='person05'>z Dorotą i z Aśką</option>
-							<option value='person05'>z Dorotą i z Rodzicami</option>
+							<option value='person06'>z Dorotą i z Aśką</option>
+							<option value='person07'>z Dorotą i z Rodzicami</option>
+							<option value='person08'>z Beatą i z Dorotą i z Aśką</option>
 						</select>
 					</div>
 				</div>
