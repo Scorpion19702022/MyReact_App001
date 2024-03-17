@@ -3,6 +3,14 @@ import React from 'react'
 import styles from './Task05task3.module.css'
 
 const Task05task3 = () => {
+	const resultsInfo = {
+		name: 'Imię:',
+		city: 'Miejscowość:',
+		person: 'Byłem',
+		rating: 'Ocena pobytu:',
+		text: '',
+	}
+
 	return (
 		<div className={styles.wrapper_task3_holidays}>
 			<h1 className={styles.heading_holidays}>Moje wakacje!</h1>
@@ -70,6 +78,21 @@ const Task05task3 = () => {
 					<button className={styles.btn}>Sprawdź</button>
 					<button className={styles.btn}>Wyczyść</button>
 				</div>
+			</div>
+			<div className={styles.box_results}>
+				<h3 className={styles.info_result}>
+					{resultsInfo.name} <span className={styles.info_span}></span>
+				</h3>
+				<h3 className={styles.info_result}>
+					{resultsInfo.city} <span className={styles.info_span}></span>
+				</h3>
+				<h3 className={styles.info_result}>
+					{resultsInfo.person} <span className={styles.info_span}></span>
+				</h3>
+				<h3 className={styles.info_result}>
+					{resultsInfo.rating} <span className={styles.info_span}></span>
+				</h3>
+				<p className={styles.info_result_text}>{resultsInfo.text}</p>
 			</div>
 		</div>
 	)

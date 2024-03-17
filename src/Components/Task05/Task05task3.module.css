@@ -116,7 +116,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 2em;
+	margin-top: 1em;
 }
 
 .textarea {
@@ -136,6 +136,8 @@
 	display: flex;
 	justify-content: space-between;
 	margin: 1.2em 0em;
+	padding-bottom: 1.2em;
+	border-bottom: 0.04em dotted var(--color-yellow06);
 }
 
 .btn {
@@ -147,6 +149,8 @@
 	color: var(--color-blue01);
 	cursor: pointer;
 	overflow: hidden;
+	transition: all 0.55s ease-in-out;
+	z-index: 10;
 }
 
 .btn::before {
@@ -155,14 +159,15 @@
 	width: 23%;
 	height: 150%;
 	border-radius: 50%;
-	filter: blur(0.8em);
+	filter: blur(0.5em);
 	background-color: var(--color-blue06);
-	transform: translate(-300%, -80%);
-	transition: transform 0.2s ease-in-out;
+	transform: translate(-300%, -33%);
+	transition: transform 0.3s ease-in-out;
+	z-index: -10;
 }
 
 .btn:hover::before {
-	transform: translate(300%, 50%);
+	transform: translate(300%, -33%);
 }
 
 .btn::after {
@@ -171,12 +176,32 @@
 	width: 23%;
 	height: 150%;
 	border-radius: 50%;
-	filter: blur(0.8em);
+	filter: blur(0.5em);
 	background-color: var(--color-blue06);
-	transform: translate(200%, 30%);
+	transform: translate(200%, -33%);
 	transition: transform 0.3s ease-in-out;
+	z-index: -10;
 }
 
 .btn:hover::after {
-	transform: translate(-400%, -80%);
+	transform: translate(-400%, -33%);
+}
+
+.btn:hover {
+	background-color: var(--color-blue06);
+}
+
+.box_results {
+	width: 100%;
+	padding: 2em;
+	display: flex;
+	flex-direction: column;
+}
+
+.info_result {
+	font-size: 1.2em;
+	margin-bottom: 0.2em;
+	padding-bottom: 0.2em;
+	color: var(--color-yellow02);
+	border-bottom: 0.04em dotted var(--color-yellow06);
 }
