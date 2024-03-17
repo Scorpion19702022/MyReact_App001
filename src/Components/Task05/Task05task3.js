@@ -51,6 +51,10 @@ const Task05task3 = () => {
 						</select>
 					</div>
 				</div>
+				<div className={styles.box_text}>
+					<label className={styles.label}>Twój krótki opis</label>
+					<textarea className={styles.textarea} name='text'></textarea>
+				</div>
 			</div>
 		</div>
 	)

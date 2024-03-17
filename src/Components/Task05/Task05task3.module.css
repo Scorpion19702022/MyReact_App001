@@ -109,3 +109,19 @@
 	border: none;
 	color: var(--color-yellow01);
 }
+
+.box_text {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 2em;
+}
+
+.textarea {
+	min-width: 80%;
+	max-width: 80%;
+	min-height: 120px;
+	max-height: 120px;
+	background: none;
+}
