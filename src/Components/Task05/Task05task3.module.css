@@ -99,7 +99,7 @@
 	width: 45%;
 	display: flex;
 	flex-direction: column;
-	margin: 0em 1em;
+	margin: 0.4em 1em;
 }
 
 .select {
@@ -108,6 +108,7 @@
 	background-color: var(--color-blue06);
 	border: none;
 	color: var(--color-yellow01);
+	outline: none;
 }
 
 .box_text {
@@ -121,7 +122,11 @@
 .textarea {
 	min-width: 80%;
 	max-width: 80%;
-	min-height: 120px;
-	max-height: 120px;
+	min-height: 80px;
+	max-height: 80px;
 	background: none;
+	outline: none;
+	color: var(--color-yellow02);
+	padding: 0.8em;
+	border: 0.04em solid var(--color-yellow06);
 }

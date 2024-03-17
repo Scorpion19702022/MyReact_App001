@@ -15,7 +15,7 @@ const Task05task3 = () => {
 					<div className={styles.selects}>
 						<label className={styles.label}>Wybierz miejsce:</label>
 						<select className={styles.select} name='City'>
-							<option value='cities'>wybierz miasto</option>
+							<option value='cities'>Wybierz miasto</option>
 							<option value='city01'>Dźwirzyno</option>
 							<option value='city03'>Ustroie Morskie</option>
 							<option value='city04'>Darłówek</option>
@@ -51,8 +51,19 @@ const Task05task3 = () => {
 						</select>
 					</div>
 				</div>
+				<div className={styles.selects}>
+					<label className={styles.label}>Poziom zadowolenia:</label>
+					<select className={styles.select} name='rating'>
+						<option value='ratings'>Oceń pobyt</option>
+						<option value='rating01'>1</option>
+						<option value='rating02'>2</option>
+						<option value='rating03'>3</option>
+						<option value='rating04'>4</option>
+						<option value='rating05'>5</option>
+					</select>
+				</div>
 				<div className={styles.box_text}>
-					<label className={styles.label}>Twój krótki opis</label>
+					<label className={styles.label}>Twój krótki opis:</label>
 					<textarea className={styles.textarea} name='text'></textarea>
 				</div>
 			</div>
