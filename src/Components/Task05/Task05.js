@@ -5,6 +5,7 @@ import Task05task1 from './Task05task1'
 import { ActionTaskContext01 } from './Context/Task05Context01'
 import Task05task2 from './Task05task2'
 import { ActionTaskContext02 } from './Context/Task05Context02'
+import Task05task3 from './Task05task3'
 
 const Task05 = () => {
 	return (
@@ -21,6 +22,9 @@ const Task05 = () => {
 					<ActionTaskContext02>
 						<Task05task2 />
 					</ActionTaskContext02>
+				</div>
+				<div className={styles.box_task_right}>
+					<Task05task3 />
 				</div>
 			</div>
 		</div>
