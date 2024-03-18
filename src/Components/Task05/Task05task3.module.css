@@ -89,10 +89,19 @@
 	font-size: 1.2em;
 }
 
-.rating_and_date_and_amound {
+.ratings_and_date_and_amound {
 	width: 100%;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
+}
+
+.box_date,
+.box_amound,
+.box_rating {
+	width: 27%;
+	margin: 0.4em 2em;
+	display: flex;
+	flex-direction: column;
 }
 
 .box_selects {

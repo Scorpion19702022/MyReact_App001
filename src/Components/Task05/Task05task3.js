@@ -62,7 +62,7 @@ const Task05task3 = () => {
 						</select>
 					</div>
 				</div>
-				<div className={styles.ratings_and_date_and_amount}>
+				<div className={styles.ratings_and_date_and_amound}>
 					<div className={styles.box_date}>
 						<label className={styles.label}>Data ostatniego pobytu:</label>
 						<input className={styles.date_input} type='date' max={minDate} />
