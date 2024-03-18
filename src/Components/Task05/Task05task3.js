@@ -7,6 +7,8 @@ const Task05task3 = () => {
 		name: 'Imię:',
 		city: 'Miejscowość:',
 		person: 'Byłem',
+		date: 'Data ostatniego pobytu',
+		visits: 'Byłem',
 		rating: 'Ocena pobytu:',
 		text: '',
 	}
@@ -110,6 +112,13 @@ const Task05task3 = () => {
 				<h3 className={styles.info_result}>
 					{resultsInfo.person} <span className={styles.info_span}></span>
 				</h3>
+				<h3 className={styles.info_result}>
+					{resultsInfo.date} <span className={styles.info_span}></span>
+				</h3>
+				<h3 className={styles.info_result}>
+					{resultsInfo.visits} <span className={styles.info_span}></span>
+				</h3>
+
 				<h3 className={styles.info_result}>
 					{resultsInfo.rating} <span className={styles.info_span}></span>
 				</h3>

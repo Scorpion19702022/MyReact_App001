@@ -54,7 +54,7 @@
 	width: 100%;
 	font-size: 1.4em;
 	color: var(--color-yellow05);
-	margin-bottom: 1em;
+	margin-bottom: 0.6em;
 	padding-bottom: 0.4em;
 	text-align: center;
 	border-bottom: 0.04em solid var(--color-yellow06);
@@ -62,7 +62,7 @@
 
 .box_inputs {
 	width: 100%;
-	margin-bottom: 1em;
+	margin-bottom: 0.6em;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -92,16 +92,23 @@
 .ratings_and_date_and_amound {
 	width: 100%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
+	margin: 1em 0em;
 }
 
 .box_date,
 .box_amound,
 .box_rating {
-	width: 27%;
-	margin: 0.4em 2em;
+	width: 28%;
 	display: flex;
 	flex-direction: column;
+}
+
+.date_input {
+	padding: 0.4em;
+	font-size: 1.2em;
+	background-color: var(--color-blue02);
+	border: none;
 }
 
 .box_selects {
@@ -150,7 +157,7 @@
 	width: 80%;
 	display: flex;
 	justify-content: space-between;
-	margin: 1.2em 0em;
+	margin-top: 1.2em;
 	padding-bottom: 1.2em;
 	border-bottom: 0.04em dotted var(--color-yellow06);
 }
