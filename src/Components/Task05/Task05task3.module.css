@@ -144,8 +144,8 @@
 .textarea {
 	min-width: 80%;
 	max-width: 80%;
-	min-height: 80px;
-	max-height: 80px;
+	min-height: 60px;
+	max-height: 60px;
 	background: none;
 	outline: none;
 	color: var(--color-yellow02);
@@ -157,7 +157,7 @@
 	width: 80%;
 	display: flex;
 	justify-content: space-between;
-	margin-top: 1.2em;
+	margin-top: 0.8em;
 	padding-bottom: 1.2em;
 	border-bottom: 0.04em dotted var(--color-yellow06);
 }
@@ -215,7 +215,7 @@
 
 .box_results {
 	width: 100%;
-	padding: 2em;
+	padding: 1.4em;
 	display: flex;
 	flex-direction: column;
 }
@@ -226,4 +226,8 @@
 	padding-bottom: 0.2em;
 	color: var(--color-yellow02);
 	border-bottom: 0.04em dotted var(--color-yellow06);
+}
+
+.info_result_text {
+	color: var(--color-yellow02);
 }

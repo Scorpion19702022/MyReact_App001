@@ -6,11 +6,11 @@ const Task05task3 = () => {
 	const resultsInfo = {
 		name: 'Imię:',
 		city: 'Miejscowość:',
-		person: 'Byłem',
-		date: 'Data ostatniego pobytu',
-		visits: 'Byłem',
+		person: 'Byłem:',
+		date: 'Data ostatniego pobytu:',
+		visits: 'Byłem:',
 		rating: 'Ocena pobytu:',
-		text: '',
+		text: 'Opis pobytu:',
 	}
 
 	let minDate = new Date().toISOString().slice(0, 10)
