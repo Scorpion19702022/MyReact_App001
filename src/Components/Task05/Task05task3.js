@@ -11,6 +11,14 @@ const Task05task3 = () => {
 		text: '',
 	}
 
+	// let minDate = new Date().toISOString().slice(0, 10)
+	let minDate = new Date().toISOString()
+	console.log(minDate)
+
+	let maxDate = minDate.slice(0, 4) * 1 + 1
+	console.log(maxDate)
+	// maxDate = maxDate + "-12-31";
+
 	return (
 		<div className={styles.wrapper_task3_holidays}>
 			<h1 className={styles.heading_holidays}>Moje wakacje!</h1>
