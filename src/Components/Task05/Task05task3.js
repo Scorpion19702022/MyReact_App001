@@ -59,16 +59,22 @@ const Task05task3 = () => {
 						</select>
 					</div>
 				</div>
-				<div className={styles.selects}>
-					<label className={styles.label}>Poziom zadowolenia:</label>
-					<select className={styles.select} name='rating'>
-						<option value='ratings'>Oceń pobyt</option>
-						<option value='rating01'>1</option>
-						<option value='rating02'>2</option>
-						<option value='rating03'>3</option>
-						<option value='rating04'>4</option>
-						<option value='rating05'>5</option>
-					</select>
+				<div className={styles.ratings_and_date_and_amount}>
+					<div className={styles.box_date}>
+						<label className={styles.label}>Data ostatniego pobytu</label>
+						<input className={styles.date_iput} type='date' />
+					</div>
+					<div className={styles.rating}>
+						<label className={styles.label}>Poziom zadowolenia:</label>
+						<select className={styles.select} name='rating'>
+							<option value='ratings'>Oceń pobyt</option>
+							<option value='rating01'>1</option>
+							<option value='rating02'>2</option>
+							<option value='rating03'>3</option>
+							<option value='rating04'>4</option>
+							<option value='rating05'>5</option>
+						</select>
+					</div>
 				</div>
 				<div className={styles.box_text}>
 					<label className={styles.label}>Twój krótki opis:</label>

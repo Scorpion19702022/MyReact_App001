@@ -89,6 +89,12 @@
 	font-size: 1.2em;
 }
 
+.rating_and_date_and_amound {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
 .box_selects {
 	width: 100%;
 	display: flex;
