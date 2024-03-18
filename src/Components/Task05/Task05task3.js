@@ -11,13 +11,8 @@ const Task05task3 = () => {
 		text: '',
 	}
 
-	// let minDate = new Date().toISOString().slice(0, 10)
-	let minDate = new Date().toISOString()
+	let minDate = new Date().toISOString().slice(0, 10)
 	console.log(minDate)
-
-	let maxDate = minDate.slice(0, 4) * 1 + 1
-	console.log(maxDate)
-	// maxDate = maxDate + "-12-31";
 
 	return (
 		<div className={styles.wrapper_task3_holidays}>
@@ -69,10 +64,22 @@ const Task05task3 = () => {
 				</div>
 				<div className={styles.ratings_and_date_and_amount}>
 					<div className={styles.box_date}>
-						<label className={styles.label}>Data ostatniego pobytu</label>
-						<input className={styles.date_iput} type='date' />
+						<label className={styles.label}>Data ostatniego pobytu:</label>
+						<input className={styles.date_input} type='date' max={minDate} />
 					</div>
-					<div className={styles.rating}>
+					<div className={styles.box_amound}>
+						<label className={styles.label}>Ilość wizyt:</label>
+						<select className={styles.select} name='amound'>
+							<option value='amound'>byłem razy</option>
+							<option value='amound01'>1 raz</option>
+							<option value='amound02'>2 razy</option>
+							<option value='amound03'>3 razy</option>
+							<option value='amound04'>4 razy</option>
+							<option value='amound05'>5 razy</option>
+							<option value='amound06'>wiele razy</option>
+						</select>
+					</div>
+					<div className={styles.box_rating}>
 						<label className={styles.label}>Poziom zadowolenia:</label>
 						<select className={styles.select} name='rating'>
 							<option value='ratings'>Oceń pobyt</option>
