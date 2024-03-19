@@ -5,7 +5,7 @@ const Task05Context03 = createContext()
 export const ActionTaskContext03 = ({ children }) => {
 	const [yourName, setYourName] = useState('')
 	const [infoName, setInfoName] = useState('')
-	const [yourCity, setYourCity] = useState()
+	const [yourCity, setYourCity] = useState('wybierz miasto')
 	const [infoCity, setInfoCity] = useState('')
 	const [person, setPerson] = useState('persons')
 	const [infoPerson, setInfoPerson] = useState('')
@@ -44,6 +44,8 @@ export const ActionTaskContext03 = ({ children }) => {
 	const handleCleanInputs = () => {
 		setYourName('')
 		setInfoName('')
+		setYourCity('wybierz miasto')
+		setInfoCity('')
 		setError('')
 	}
 
