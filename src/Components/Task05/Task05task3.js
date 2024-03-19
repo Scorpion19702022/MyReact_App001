@@ -36,31 +36,34 @@ const Task05task3 = () => {
 							<option value='city06'>Władysławowo</option>
 							<option value='city07'>Trójmiasto</option>
 							<option value='city08'>Przechlewo</option>
-							<option value='city09'>Piławki</option>
-							<option value='city10'>Wola</option>
-							<option value='city11'>Borki</option>
-							<option value='city12'>Wawrzkowizna</option>
-							<option value='city13'>Jaworznik i okolice</option>
-							<option value='city14'>Zakopane</option>
-							<option value='city15'>Ustroń</option>
-							<option value='city16'>Szklarska Poręba</option>
-							<option value='city17'>Dżerba</option>
-							<option value='city18'>Costa Brava</option>
-							<option value='city19'>Włochy/Sycylia</option>
+							<option value='city09'>Człuchów</option>
+							<option value='city10'>Parchowo</option>
+							<option value='city11'>Piławki</option>
+							<option value='city12'>Wola</option>
+							<option value='city13'>Borki</option>
+							<option value='city14'>Wawrzkowizna</option>
+							<option value='city15'>Jaworznik i okolice</option>
+							<option value='city16'>Zakopane</option>
+							<option value='city17'>Ustroń</option>
+							<option value='city18'>Szklarska Poręba</option>
+							<option value='city19'>Dżerba</option>
+							<option value='city20'>Costa Brava</option>
+							<option value='city21'>Włochy/Sycylia</option>
 						</select>
 					</div>
 					<div className={styles.selects}>
 						<label className={styles.label}>Wybierz osoby:</label>
 						<select className={styles.select} name='person'>
 							<option value='persons'>Z kim byłeś</option>
-							<option value='person01'>z Beatą</option>
-							<option value='person02'>z Dorotą</option>
-							<option value='person03'>z Aśką</option>
-							<option value='person04'>z Rodzicami</option>
-							<option value='person05'>z Beatą i z Dorotą</option>
-							<option value='person06'>z Dorotą i z Aśką</option>
-							<option value='person07'>z Dorotą i z Rodzicami</option>
-							<option value='person08'>z Beatą i z Dorotą i z Aśką</option>
+							<option value='person01'>sam</option>
+							<option value='person02'>z Beatą</option>
+							<option value='person03'>z Dorotą</option>
+							<option value='person04'>z Aśką</option>
+							<option value='person05'>z Rodzicami</option>
+							<option value='person06'>z Beatą i z Dorotą</option>
+							<option value='person07'>z Dorotą i z Aśką</option>
+							<option value='person08'>z Dorotą i z Rodzicami</option>
+							<option value='person09'>z Beatą i z Dorotą i z Aśką</option>
 						</select>
 					</div>
 				</div>
@@ -96,6 +99,9 @@ const Task05task3 = () => {
 				<div className={styles.box_text}>
 					<label className={styles.label}>Twój krótki opis:</label>
 					<textarea className={styles.textarea} name='text'></textarea>
+				</div>
+				<div className={styles.box_error}>
+					<p className={styles.error}></p>
 				</div>
 				<div className={styles.box_btns}>
 					<button className={styles.btn}>Sprawdź</button>
