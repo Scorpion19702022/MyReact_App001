@@ -15,7 +15,8 @@ export const ActionTaskContext03 = ({ children }) => {
 	const handleClickInfoVacation = () => {
 		if (yourName !== '') {
 			setInfoName(yourName)
-		} else {
+			setError('')
+		} else if (yourName === '') {
 			setError('wypełnij poprawnie wszystkie pola')
 		}
 	}

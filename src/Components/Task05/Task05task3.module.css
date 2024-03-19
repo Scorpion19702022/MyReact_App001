@@ -163,6 +163,11 @@
 	margin: 0.1em 0em;
 }
 
+.error {
+	font-size: 1.2em;
+	color: var(--color-purple02);
+}
+
 .box_btns {
 	width: 80%;
 	display: flex;
@@ -236,6 +241,10 @@
 	padding-bottom: 0.2em;
 	color: var(--color-yellow02);
 	border-bottom: 0.04em dotted var(--color-yellow06);
+}
+
+.info_span {
+	font-weight: 100;
 }
 
 .info_result_text {

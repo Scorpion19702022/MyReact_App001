@@ -18,7 +18,6 @@ const Task05task3 = () => {
 	}
 
 	let minDate = new Date().toISOString().slice(0, 10)
-	console.log(minDate)
 
 	return (
 		<div className={styles.wrapper_task3_holidays}>
