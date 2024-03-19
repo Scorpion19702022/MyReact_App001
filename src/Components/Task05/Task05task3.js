@@ -59,6 +59,10 @@ const Task05task3 = () => {
 	// console.log(yourCity)
 	// console.log(person)
 
+	console.log(yourCity)
+
+	console.log(infoCity)
+
 	// const test1 = Object.values(cityValueMap)
 	// console.log(test1)
 
@@ -76,36 +80,37 @@ const Task05task3 = () => {
 				<div className={styles.box_selects}>
 					<div className={styles.selects}>
 						<label className={styles.label}>Wybierz miejsce:</label>
-						{/* <select className={styles.select} value={yourCity} onChange={handleChangeCity} name='City'>
-							<option value='cities'>Wybierz miasto</option>
-							<option value='city01'>Dźwirzyno</option>
-							<option value='city02'>Ustroie Morskie</option>
-							<option value='city03'>Darłówek</option>
-							<option value='city04'>Łeba</option>
-							<option value='city05'>Władysławowo</option>
-							<option value='city06'>Trójmiasto</option>
-							<option value='city07'>Przechlewo</option>
-							<option value='city08'>Człuchów</option>
-							<option value='city09'>Parchowo</option>
-							<option value='city10'>Piławki</option>
-							<option value='city11'>Wola</option>
-							<option value='city12'>Borki</option>
-							<option value='city13'>Wawrzkowizna</option>
-							<option value='city14'>Jaworznik i okolice</option>
-							<option value='city15'>Zakopane</option>
-							<option value='city16'>Ustroń</option>
-							<option value='city17'>Szklarska Poręba</option>
-							<option value='city18'>Dżerba</option>
-							<option value='city19'>Costa Brava i Pravancja</option>
-							<option value='city20'>Włochy/Sycylia</option>
-						</select> */}
 						<select className={styles.select} value={yourCity} onChange={handleChangeCity} name='City'>
+							<option value={cityValueMap.cities}>Wybierz miasto</option>
+							<option value={cityValueMap.city01}>Dźwirzyno</option>
+							<option value={cityValueMap.city02}>Ustroie Morskie</option>
+							<option value={cityValueMap.city03}>Darłówek</option>
+							<option value={cityValueMap.city04}>Dąbki</option>
+							<option value={cityValueMap.city05}>Łeba</option>
+							<option value={cityValueMap.city06}>Władysławowo</option>
+							<option value={cityValueMap.city07}>Trójmiasto</option>
+							<option value={cityValueMap.city08}>Przechlewo</option>
+							<option value={cityValueMap.city09}>Człuchów</option>
+							<option value={cityValueMap.city10}>Parchowo</option>
+							<option value={cityValueMap.city11}>Piławki</option>
+							<option value={cityValueMap.city12}>Wola</option>
+							<option value={cityValueMap.city13}>Borki</option>
+							<option value={cityValueMap.city14}>Wawrzkowizna</option>
+							<option value={cityValueMap.city15}>Jaworznik i okolice</option>
+							<option value={cityValueMap.city16}>Zakopane</option>
+							<option value={cityValueMap.city17}>Ustroń</option>
+							<option value={cityValueMap.city18}>Szklarska Poręba</option>
+							<option value={cityValueMap.city19}>Dżerba</option>
+							<option value={cityValueMap.city20}>Costa Brava i Pravancja</option>
+							<option value={cityValueMap.city21}>Włochy/Sycylia</option>
+						</select>
+						{/* <select className={styles.select} value={yourCity} onChange={handleChangeCity} name='City'>
 							{Object.entries(cityValueMap).map(([value, cityName]) => (
 								<option key={value} value={value}>
 									{cityName}
 								</option>
 							))}
-						</select>
+						</select> */}
 					</div>
 					<div className={styles.selects}>
 						<label className={styles.label}>Wybierz osoby:</label>
@@ -160,7 +165,7 @@ const Task05task3 = () => {
 					<p className={styles.error}>{error}</p>
 				</div>
 				<div className={styles.box_btns}>
-					<button className={styles.btn} onClick={() => handleClickInfoVacation(yourCity, infoPerson)}>
+					<button className={styles.btn} onClick={() => handleClickInfoVacation(yourCity)}>
 						Sprawdź
 					</button>
 					<button className={styles.btn} onClick={handleCleanInputs}>
