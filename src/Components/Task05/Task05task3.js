@@ -29,10 +29,41 @@ const Task05task3 = () => {
 		text: 'Opis pobytu:',
 	}
 
+	const cityValueMap = {
+		cities: 'wybierz miasto',
+		city01: 'Dżwirzyno',
+		city02: 'Ustronie Morskie',
+		city03: 'Darłówek',
+		city04: 'Dąbki',
+		city05: 'Łeba',
+		city06: 'Władysławowo',
+		city07: 'Trójmiasto',
+		city08: 'Przechlewo',
+		city09: 'Człuchów',
+		city10: 'Parchowo',
+		city11: 'Piławki',
+		city12: 'Wola',
+		city13: 'Borki',
+		city14: 'Wawrzkowizna',
+		city15: 'Jaworznik i okolice',
+		city16: 'Zakopane',
+		city17: 'Ustroń',
+		city18: 'Szklarska Poręba',
+		city19: 'Dżerba',
+		city20: 'Costa Brava i Pravancja',
+		city21: 'Włochy/Sycylia',
+	}
+
 	let minDate = new Date().toISOString().slice(0, 10)
 
-	console.log(yourCity)
-	console.log(person)
+	// console.log(yourCity)
+	// console.log(person)
+
+	// const test1 = Object.values(cityValueMap)
+	// console.log(test1)
+
+	// const test2 = Object.entries(cityValueMap)
+	// console.log(test2)
 
 	return (
 		<div className={styles.wrapper_task3_holidays}>
@@ -45,7 +76,7 @@ const Task05task3 = () => {
 				<div className={styles.box_selects}>
 					<div className={styles.selects}>
 						<label className={styles.label}>Wybierz miejsce:</label>
-						<select className={styles.select} value={yourCity} onChange={handleChangeCity} name='City'>
+						{/* <select className={styles.select} value={yourCity} onChange={handleChangeCity} name='City'>
 							<option value='cities'>Wybierz miasto</option>
 							<option value='city01'>Dźwirzyno</option>
 							<option value='city02'>Ustroie Morskie</option>
@@ -65,8 +96,15 @@ const Task05task3 = () => {
 							<option value='city16'>Ustroń</option>
 							<option value='city17'>Szklarska Poręba</option>
 							<option value='city18'>Dżerba</option>
-							<option value='city19'>Costa Brava</option>
+							<option value='city19'>Costa Brava i Pravancja</option>
 							<option value='city20'>Włochy/Sycylia</option>
+						</select> */}
+						<select className={styles.select} value={yourCity} onChange={handleChangeCity} name='City'>
+							{Object.entries(cityValueMap).map(([value, cityName]) => (
+								<option key={value} value={value}>
+									{cityName}
+								</option>
+							))}
 						</select>
 					</div>
 					<div className={styles.selects}>
