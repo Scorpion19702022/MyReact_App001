@@ -48,25 +48,25 @@ const Task05task3 = () => {
 						<select className={styles.select} value={yourCity} onChange={handleChangeCity} name='City'>
 							<option value='cities'>Wybierz miasto</option>
 							<option value='city01'>Dźwirzyno</option>
-							<option value='city03'>Ustroie Morskie</option>
-							<option value='city04'>Darłówek</option>
-							<option value='city05'>Łeba</option>
-							<option value='city06'>Władysławowo</option>
-							<option value='city07'>Trójmiasto</option>
-							<option value='city08'>Przechlewo</option>
-							<option value='city09'>Człuchów</option>
-							<option value='city10'>Parchowo</option>
-							<option value='city11'>Piławki</option>
-							<option value='city12'>Wola</option>
-							<option value='city13'>Borki</option>
-							<option value='city14'>Wawrzkowizna</option>
-							<option value='city15'>Jaworznik i okolice</option>
-							<option value='city16'>Zakopane</option>
-							<option value='city17'>Ustroń</option>
-							<option value='city18'>Szklarska Poręba</option>
-							<option value='city19'>Dżerba</option>
-							<option value='city20'>Costa Brava</option>
-							<option value='city21'>Włochy/Sycylia</option>
+							<option value='city02'>Ustroie Morskie</option>
+							<option value='city03'>Darłówek</option>
+							<option value='city04'>Łeba</option>
+							<option value='city05'>Władysławowo</option>
+							<option value='city06'>Trójmiasto</option>
+							<option value='city07'>Przechlewo</option>
+							<option value='city08'>Człuchów</option>
+							<option value='city09'>Parchowo</option>
+							<option value='city10'>Piławki</option>
+							<option value='city11'>Wola</option>
+							<option value='city12'>Borki</option>
+							<option value='city13'>Wawrzkowizna</option>
+							<option value='city14'>Jaworznik i okolice</option>
+							<option value='city15'>Zakopane</option>
+							<option value='city16'>Ustroń</option>
+							<option value='city17'>Szklarska Poręba</option>
+							<option value='city18'>Dżerba</option>
+							<option value='city19'>Costa Brava</option>
+							<option value='city20'>Włochy/Sycylia</option>
 						</select>
 					</div>
 					<div className={styles.selects}>
