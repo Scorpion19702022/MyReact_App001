@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import styles from './Task05task3.module.css'
+import Task05Context03 from './Context/Task05Context03'
 
 const Task05task3 = () => {
+	const { yourName, infoName, error, handleChangeYourName, handleClickInfoVacation, handleCleanInputs } =
+		useContext(Task05Context03)
+
 	const resultsInfo = {
 		name: 'Imię:',
 		city: 'Miejscowość:',
@@ -22,7 +26,7 @@ const Task05task3 = () => {
 			<div className={styles.box_inputs}>
 				<div className={styles.inputs}>
 					<label className={styles.label}>Podaj imię:</label>
-					<input className={styles.input} type='text' />
+					<input className={styles.input} type='text' value={yourName} onChange={handleChangeYourName} />
 				</div>
 				<div className={styles.box_selects}>
 					<div className={styles.selects}>
@@ -101,16 +105,20 @@ const Task05task3 = () => {
 					<textarea className={styles.textarea} name='text'></textarea>
 				</div>
 				<div className={styles.box_error}>
-					<p className={styles.error}></p>
+					<p className={styles.error}>{error}</p>
 				</div>
 				<div className={styles.box_btns}>
-					<button className={styles.btn}>Sprawdź</button>
-					<button className={styles.btn}>Wyczyść</button>
+					<button className={styles.btn} onClick={handleClickInfoVacation}>
+						Sprawdź
+					</button>
+					<button className={styles.btn} onClick={handleCleanInputs}>
+						Wyczyść
+					</button>
 				</div>
 			</div>
 			<div className={styles.box_results}>
 				<h3 className={styles.info_result}>
-					{resultsInfo.name} <span className={styles.info_span}></span>
+					{resultsInfo.name} <span className={styles.info_span}>{infoName}</span>
 				</h3>
 				<h3 className={styles.info_result}>
 					{resultsInfo.city} <span className={styles.info_span}></span>
