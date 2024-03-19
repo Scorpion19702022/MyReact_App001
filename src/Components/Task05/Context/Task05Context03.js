@@ -5,7 +5,7 @@ const Task05Context03 = createContext()
 export const ActionTaskContext03 = ({ children }) => {
 	const [yourName, setYourName] = useState('')
 	const [infoName, setInfoName] = useState('')
-	const [yourCity, setYourCity] = useState('cities')
+	const [yourCity, setYourCity] = useState('')
 	const [infoCity, setInfoCity] = useState('')
 	const [person, setPerson] = useState('persons')
 	const [infoPerson, setInfoPerson] = useState('')
@@ -17,19 +17,21 @@ export const ActionTaskContext03 = ({ children }) => {
 	}
 
 	const handleChangeCity = e => {
-		const selectedIndex = e.target.selectedIndex
-		const cityName = e.target.options[selectedIndex].textContent
-		setYourCity(cityName)
+		// const selectedIndex = e.target.selectedIndex
+		// const cityName = e.target.options[selectedIndex].textContent
+		// setYourCity(cityName)
+		setYourCity(e.target.value)
 	}
 
 	const handleChangePerson = e => {
-		const selectedIndex = e.target.selectedIndex
-		const personName = e.target.options[selectedIndex].textContent
-		setPerson(personName)
+		setPerson(e.target.value)
+		// const selectedIndex = e.target.selectedIndex
+		// const personName = e.target.options[selectedIndex].textContent
+		// setPerson(personName)
 	}
 
 	const handleClickInfoVacation = (yourCity, withPerson) => {
-		if (yourName !== '' && yourCity !== 'cities' && withPerson !== 'persons') {
+		if (yourName !== '' && yourCity !== '' && withPerson !== 'persons') {
 			setInfoName(yourName)
 			setInfoCity(yourCity)
 			setInfoPerson(person)
