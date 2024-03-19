@@ -4,8 +4,20 @@ import styles from './Task05task3.module.css'
 import Task05Context03 from './Context/Task05Context03'
 
 const Task05task3 = () => {
-	const { yourName, infoName, error, handleChangeYourName, handleClickInfoVacation, handleCleanInputs } =
-		useContext(Task05Context03)
+	const {
+		yourName,
+		infoName,
+		yourCity,
+		infoCity,
+		person,
+		infoPerson,
+		error,
+		handleChangeYourName,
+		handleChangeCity,
+		handleChangePerson,
+		handleClickInfoVacation,
+		handleCleanInputs,
+	} = useContext(Task05Context03)
 
 	const resultsInfo = {
 		name: 'Imię:',
@@ -19,6 +31,9 @@ const Task05task3 = () => {
 
 	let minDate = new Date().toISOString().slice(0, 10)
 
+	console.log(yourCity)
+	console.log(person)
+
 	return (
 		<div className={styles.wrapper_task3_holidays}>
 			<h1 className={styles.heading_holidays}>Moje wakacje!</h1>
@@ -30,7 +45,7 @@ const Task05task3 = () => {
 				<div className={styles.box_selects}>
 					<div className={styles.selects}>
 						<label className={styles.label}>Wybierz miejsce:</label>
-						<select className={styles.select} name='City'>
+						<select className={styles.select} value={yourCity} onChange={handleChangeCity} name='City'>
 							<option value='cities'>Wybierz miasto</option>
 							<option value='city01'>Dźwirzyno</option>
 							<option value='city03'>Ustroie Morskie</option>
@@ -56,7 +71,7 @@ const Task05task3 = () => {
 					</div>
 					<div className={styles.selects}>
 						<label className={styles.label}>Wybierz osoby:</label>
-						<select className={styles.select} name='person'>
+						<select className={styles.select} value={person} onChange={handleChangePerson} name='person'>
 							<option value='persons'>Z kim byłeś</option>
 							<option value='person01'>sam</option>
 							<option value='person02'>z Beatą</option>
@@ -107,7 +122,7 @@ const Task05task3 = () => {
 					<p className={styles.error}>{error}</p>
 				</div>
 				<div className={styles.box_btns}>
-					<button className={styles.btn} onClick={handleClickInfoVacation}>
+					<button className={styles.btn} onClick={() => handleClickInfoVacation(yourCity, infoPerson)}>
 						Sprawdź
 					</button>
 					<button className={styles.btn} onClick={handleCleanInputs}>
@@ -120,10 +135,10 @@ const Task05task3 = () => {
 					{resultsInfo.name} <span className={styles.info_span}>{infoName}</span>
 				</h3>
 				<h3 className={styles.info_result}>
-					{resultsInfo.city} <span className={styles.info_span}></span>
+					{resultsInfo.city} <span className={styles.info_span}>{infoCity}</span>
 				</h3>
 				<h3 className={styles.info_result}>
-					{resultsInfo.person} <span className={styles.info_span}></span>
+					{resultsInfo.person} <span className={styles.info_span}>{infoPerson}</span>
 				</h3>
 				<h3 className={styles.info_result}>
 					{resultsInfo.date} <span className={styles.info_span}></span>
