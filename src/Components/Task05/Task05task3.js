@@ -54,6 +54,19 @@ const Task05task3 = () => {
 		city21: 'Włochy/Sycylia',
 	}
 
+	const personsMap = {
+		persons: 'z kim byłeś',
+		person01: 'sam',
+		person02: 'z Beatą',
+		person03: 'z Dorotą',
+		person04: 'z Aśką',
+		person05: 'z Rodzicami',
+		person06: 'z Beatą i z Dorotą',
+		person07: 'z Dorotą i z Aśką',
+		person08: 'z Dorotą i z Rodzicami',
+		person09: 'z Beatą i z Dorotą i z Aśką',
+	}
+
 	let minDate = new Date().toISOString().slice(0, 10)
 
 	// console.log(yourCity)
@@ -115,16 +128,16 @@ const Task05task3 = () => {
 					<div className={styles.selects}>
 						<label className={styles.label}>Wybierz osoby:</label>
 						<select className={styles.select} value={person} onChange={handleChangePerson} name='person'>
-							<option value='persons'>Z kim byłeś</option>
-							<option value='person01'>sam</option>
-							<option value='person02'>z Beatą</option>
-							<option value='person03'>z Dorotą</option>
-							<option value='person04'>z Aśką</option>
-							<option value='person05'>z Rodzicami</option>
-							<option value='person06'>z Beatą i z Dorotą</option>
-							<option value='person07'>z Dorotą i z Aśką</option>
-							<option value='person08'>z Dorotą i z Rodzicami</option>
-							<option value='person09'>z Beatą i z Dorotą i z Aśką</option>
+							<option value={personsMap.persons}>Z kim byłeś</option>
+							<option value={personsMap.person01}>sam</option>
+							<option value={personsMap.person02}>z Beatą</option>
+							<option value={personsMap.person03}>z Dorotą</option>
+							<option value={personsMap.person04}>z Aśką</option>
+							<option value={personsMap.person05}>z Rodzicami</option>
+							<option value={personsMap.person06}>z Beatą i z Dorotą</option>
+							<option value={personsMap.person07}>z Dorotą i z Aśką</option>
+							<option value={personsMap.person08}>z Dorotą i z Rodzicami</option>
+							<option value={personsMap.person09}>z Beatą i z Dorotą i z Aśką</option>
 						</select>
 					</div>
 				</div>
