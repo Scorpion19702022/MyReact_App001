@@ -5,11 +5,15 @@ const Task05Context03 = createContext()
 export const ActionTaskContext03 = ({ children }) => {
 	const [yourName, setYourName] = useState('')
 	const [infoName, setInfoName] = useState('')
+
 	const [yourCity, setYourCity] = useState('wybierz miasto')
 	const [infoCity, setInfoCity] = useState('')
+
 	const [person, setPerson] = useState('persons')
 	const [infoPerson, setInfoPerson] = useState('')
+
 	const [date, setDate] = useState('')
+	const [infoDate, setInfoDate] = useState('')
 
 	const [error, setError] = useState('')
 
@@ -35,13 +39,13 @@ export const ActionTaskContext03 = ({ children }) => {
 		setDate(e.target.value)
 	}
 
-	const handleClickInfoVacation = (yourCity, withPerson) => {
-		if (yourName !== '' && yourCity !== 'wybierz miasto' && withPerson !== 'persons') {
+	const handleClickInfoVacation = (yourCity, person) => {
+		if (yourName !== '' && yourCity !== 'wybierz miasto' && person !== 'persons') {
 			setInfoName(yourName)
 			setInfoCity(yourCity)
 			setInfoPerson(person)
 			setError('')
-		} else if (yourName === '') {
+		} else if (yourName === '' || yourCity === 'wybierz miasto' || person === 'person') {
 			setError('wypełnij poprawnie wszystkie pola')
 		}
 	}
@@ -51,6 +55,8 @@ export const ActionTaskContext03 = ({ children }) => {
 		setInfoName('')
 		setYourCity('wybierz miasto')
 		setInfoCity('')
+		setPerson('persons')
+		setInfoPerson('')
 		setError('')
 	}
 
@@ -64,6 +70,7 @@ export const ActionTaskContext03 = ({ children }) => {
 				person,
 				infoPerson,
 				date,
+				infoDate,
 				error,
 				handleChangeYourName,
 				handleChangeCity,

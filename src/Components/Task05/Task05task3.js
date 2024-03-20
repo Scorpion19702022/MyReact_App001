@@ -66,7 +66,8 @@ const Task05task3 = () => {
 		person06: 'z Beatą i z Dorotą',
 		person07: 'z Dorotą i z Aśką',
 		person08: 'z Dorotą i z Rodzicami',
-		person09: 'z Beatą i z Dorotą i z Aśką',
+		person09: 'z Dorotą i Aśką i z Rodzicami',
+		person10: 'z Beatą i z Dorotą i z Aśką',
 	}
 
 	const amoundMap = {
@@ -156,7 +157,8 @@ const Task05task3 = () => {
 							<option value={personsMap.person06}>z Beatą i z Dorotą</option>
 							<option value={personsMap.person07}>z Dorotą i z Aśką</option>
 							<option value={personsMap.person08}>z Dorotą i z Rodzicami</option>
-							<option value={personsMap.person09}>z Beatą i z Dorotą i z Aśką</option>
+							<option value={personsMap.person09}>z Dorotą i z Aśką i z Rodzicami</option>
+							<option value={personsMap.person10}>z Beatą i z Dorotą i z Aśką</option>
 						</select>
 					</div>
 				</div>
@@ -197,7 +199,7 @@ const Task05task3 = () => {
 					<p className={styles.error}>{error}</p>
 				</div>
 				<div className={styles.box_btns}>
-					<button className={styles.btn} onClick={() => handleClickInfoVacation(yourCity)}>
+					<button className={styles.btn} onClick={() => handleClickInfoVacation(yourCity, person)}>
 						Sprawdź
 					</button>
 					<button className={styles.btn} onClick={handleCleanInputs}>
