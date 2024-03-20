@@ -67,6 +67,25 @@ const Task05task3 = () => {
 		person09: 'z Beatą i z Dorotą i z Aśką',
 	}
 
+	const amoundMap = {
+		amound: 'byłem razy',
+		amound01: '1 raz',
+		amound02: '2 razy',
+		amound03: '3 razy',
+		amound04: '4 razy',
+		amound05: '5 razy',
+		amound06: 'więcej niż 5 razy',
+	}
+
+	const ratingMap = {
+		ratings: 'Oceń pobyt',
+		rating01: 1,
+		rating02: 2,
+		rating03: 3,
+		rating04: 4,
+		rating05: 5,
+	}
+
 	let minDate = new Date().toISOString().slice(0, 10)
 
 	// console.log(yourCity)
@@ -149,24 +168,24 @@ const Task05task3 = () => {
 					<div className={styles.box_amound}>
 						<label className={styles.label}>Ilość wizyt:</label>
 						<select className={styles.select} name='amound'>
-							<option value='amound'>byłem razy</option>
-							<option value='amound01'>1 raz</option>
-							<option value='amound02'>2 razy</option>
-							<option value='amound03'>3 razy</option>
-							<option value='amound04'>4 razy</option>
-							<option value='amound05'>5 razy</option>
-							<option value='amound06'>wiele razy</option>
+							<option value={amoundMap.amound}>byłem razy</option>
+							<option value={amoundMap.amound01}>1 raz</option>
+							<option value={amoundMap.amound02}>2 razy</option>
+							<option value={amoundMap.amound03}>3 razy</option>
+							<option value={amoundMap.amound04}>4 razy</option>
+							<option value={amoundMap.amound05}>5 razy</option>
+							<option value={amoundMap.amound06}>wiele razy</option>
 						</select>
 					</div>
 					<div className={styles.box_rating}>
 						<label className={styles.label}>Poziom zadowolenia:</label>
 						<select className={styles.select} name='rating'>
-							<option value='ratings'>Oceń pobyt</option>
-							<option value='rating01'>1</option>
-							<option value='rating02'>2</option>
-							<option value='rating03'>3</option>
-							<option value='rating04'>4</option>
-							<option value='rating05'>5</option>
+							<option value={ratingMap.ratings}>Oceń pobyt</option>
+							<option value={ratingMap.rating01}>1</option>
+							<option value={ratingMap.rating02}>2</option>
+							<option value={ratingMap.rating03}>3</option>
+							<option value={ratingMap.rating04}>4</option>
+							<option value={ratingMap.rating05}>5</option>
 						</select>
 					</div>
 				</div>
