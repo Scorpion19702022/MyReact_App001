@@ -15,12 +15,15 @@ const Task05task3 = () => {
 		infoDate,
 		visits,
 		infoVisits,
+		rating,
+		infoRating,
 		error,
 		handleChangeYourName,
 		handleChangeCity,
 		handleChangePerson,
 		handleChangeDate,
 		handleChangeVisits,
+		hadleChangeRating,
 		handleClickInfoVacation,
 		handleCleanInputs,
 	} = useContext(Task05Context03)
@@ -180,7 +183,7 @@ const Task05task3 = () => {
 					</div>
 					<div className={styles.box_rating}>
 						<label className={styles.label}>Poziom zadowolenia:</label>
-						<select className={styles.select} name='rating'>
+						<select className={styles.select} value={rating} onChange={hadleChangeRating} name='rating'>
 							<option value={ratingMap.ratings}>Oceń pobyt</option>
 							<option value={ratingMap.rating01}>1</option>
 							<option value={ratingMap.rating02}>2</option>
@@ -198,7 +201,10 @@ const Task05task3 = () => {
 					<p className={styles.error}>{error}</p>
 				</div>
 				<div className={styles.box_btns}>
-					<button className={styles.btn} onClick={() => handleClickInfoVacation(yourCity, person, visits)}>
+					<button
+						className={styles.btn}
+						onClick={() => handleClickInfoVacation(yourCity, person, date, visits, rating)}
+					>
 						Sprawdź
 					</button>
 					<button className={styles.btn} onClick={handleCleanInputs}>
@@ -224,7 +230,7 @@ const Task05task3 = () => {
 				</h3>
 
 				<h3 className={styles.info_result}>
-					{resultsInfo.rating} <span className={styles.info_span}></span>
+					{resultsInfo.rating} <span className={styles.info_span}>{infoRating}</span>
 				</h3>
 				<p className={styles.info_result_text}>{resultsInfo.text}</p>
 			</div>

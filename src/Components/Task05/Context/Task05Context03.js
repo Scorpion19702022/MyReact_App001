@@ -17,8 +17,11 @@ export const ActionTaskContext03 = ({ children }) => {
 	const [date, setDate] = useState(minDate)
 	const [infoDate, setInfoDate] = useState('')
 
-	const [visits, setVisits] = useState('byłem razy')
+	const [visits, setVisits] = useState('amound')
 	const [infoVisits, setInfoVisits] = useState('')
+
+	const [rating, setRating] = useState('Oceń pobyt')
+	const [infoRating, setInfoRating] = useState('')
 
 	const [error, setError] = useState('')
 
@@ -48,26 +51,33 @@ export const ActionTaskContext03 = ({ children }) => {
 		setVisits(e.target.value)
 	}
 
-	const handleClickInfoVacation = (yourCity, person, visits) => {
+	const handleChangeRating = e => {
+		setRating(e.target.value)
+	}
+
+	const handleClickInfoVacation = (yourCity, person, visits, rating) => {
 		if (
 			yourName !== '' &&
 			yourCity !== 'wybierz miasto' &&
 			person !== 'persons' &&
 			date !== minDate &&
-			visits !== 'byłem razy'
+			visits !== 'amound' &&
+			rating !== 'Oceń pobyt'
 		) {
 			setInfoName(yourName)
 			setInfoCity(yourCity)
 			setInfoPerson(person)
 			setInfoDate(date)
 			setInfoVisits(visits)
+			setInfoRating(rating)
 			setError('')
 		} else if (
 			yourName === '' ||
 			yourCity === 'wybierz miasto' ||
 			person === 'person' ||
 			date === minDate ||
-			visits === 'byłem razy'
+			visits === 'amound' ||
+			rating === 'Oceń pobyt'
 		) {
 			setError('wypełnij poprawnie wszystkie pola')
 			setInfoDate('nie mogłeś być bo to dzisiaj')
@@ -83,7 +93,7 @@ export const ActionTaskContext03 = ({ children }) => {
 		setInfoPerson('')
 		setDate(minDate)
 		setInfoDate('')
-		setVisits('byłem razy')
+		setVisits('amound')
 		setInfoVisits('')
 		setError('')
 	}
@@ -101,12 +111,15 @@ export const ActionTaskContext03 = ({ children }) => {
 				infoDate,
 				visits,
 				infoVisits,
+				rating,
+				infoRating,
 				error,
 				handleChangeYourName,
 				handleChangeCity,
 				handleChangePerson,
 				handleChangeDate,
 				handleChangeVisits,
+				handleChangeRating,
 				handleClickInfoVacation,
 				handleCleanInputs,
 			}}
