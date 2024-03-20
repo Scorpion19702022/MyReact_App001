@@ -23,7 +23,7 @@ const Task05task3 = () => {
 		handleChangePerson,
 		handleChangeDate,
 		handleChangeVisits,
-		hadleChangeRating,
+		handleChangeRating,
 		handleClickInfoVacation,
 		handleCleanInputs,
 	} = useContext(Task05Context03)
@@ -183,7 +183,7 @@ const Task05task3 = () => {
 					</div>
 					<div className={styles.box_rating}>
 						<label className={styles.label}>Poziom zadowolenia:</label>
-						<select className={styles.select} value={rating} onChange={hadleChangeRating} name='rating'>
+						<select className={styles.select} value={rating} onChange={handleChangeRating} name='rating'>
 							<option value={ratingMap.ratings}>Oceń pobyt</option>
 							<option value={ratingMap.rating01}>1</option>
 							<option value={ratingMap.rating02}>2</option>

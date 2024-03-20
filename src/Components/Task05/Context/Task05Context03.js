@@ -20,7 +20,7 @@ export const ActionTaskContext03 = ({ children }) => {
 	const [visits, setVisits] = useState('amound')
 	const [infoVisits, setInfoVisits] = useState('')
 
-	const [rating, setRating] = useState('Oceń pobyt')
+	const [rating, setRating] = useState('ratings')
 	const [infoRating, setInfoRating] = useState('')
 
 	const [error, setError] = useState('')
@@ -62,7 +62,7 @@ export const ActionTaskContext03 = ({ children }) => {
 			person !== 'persons' &&
 			date !== minDate &&
 			visits !== 'amound' &&
-			rating !== 'Oceń pobyt'
+			rating !== 'ratings'
 		) {
 			setInfoName(yourName)
 			setInfoCity(yourCity)
@@ -77,7 +77,7 @@ export const ActionTaskContext03 = ({ children }) => {
 			person === 'person' ||
 			date === minDate ||
 			visits === 'amound' ||
-			rating === 'Oceń pobyt'
+			rating === 'ratings'
 		) {
 			setError('wypełnij poprawnie wszystkie pola')
 			setInfoDate('nie mogłeś być bo to dzisiaj')
@@ -95,6 +95,8 @@ export const ActionTaskContext03 = ({ children }) => {
 		setInfoDate('')
 		setVisits('amound')
 		setInfoVisits('')
+		setRating('ratings')
+		setInfoRating('')
 		setError('')
 	}
 
