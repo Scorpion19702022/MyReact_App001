@@ -55,7 +55,7 @@ export const ActionTaskContext03 = ({ children }) => {
 		setRating(e.target.value)
 	}
 
-	const handleClickInfoVacation = (yourCity, person, visits, rating) => {
+	const handleClickInfoVacation = (yourCity, person, date, visits, rating) => {
 		if (
 			yourName !== '' &&
 			yourCity !== 'wybierz miasto' &&
