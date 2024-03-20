@@ -23,6 +23,9 @@ export const ActionTaskContext03 = ({ children }) => {
 	const [rating, setRating] = useState('ratings')
 	const [infoRating, setInfoRating] = useState('')
 
+	const [describe, setDescribe] = useState('')
+	const [infoDescribe, setInfoDescribe] = useState('')
+
 	const [error, setError] = useState('')
 
 	const handleChangeYourName = e => {
@@ -55,6 +58,10 @@ export const ActionTaskContext03 = ({ children }) => {
 		setRating(e.target.value)
 	}
 
+	const handleChangeDescribe = e => {
+		setDescribe(e.target.value)
+	}
+
 	const handleClickInfoVacation = (yourCity, person, date, visits, rating) => {
 		if (
 			yourName !== '' &&
@@ -62,7 +69,8 @@ export const ActionTaskContext03 = ({ children }) => {
 			person !== 'persons' &&
 			date !== minDate &&
 			visits !== 'amound' &&
-			rating !== 'ratings'
+			rating !== 'ratings' &&
+			describe !== ''
 		) {
 			setInfoName(yourName)
 			setInfoCity(yourCity)
@@ -70,6 +78,7 @@ export const ActionTaskContext03 = ({ children }) => {
 			setInfoDate(date)
 			setInfoVisits(visits)
 			setInfoRating(rating)
+			setInfoDescribe(describe)
 			setError('')
 		} else if (
 			yourName === '' ||
@@ -77,7 +86,8 @@ export const ActionTaskContext03 = ({ children }) => {
 			person === 'person' ||
 			date === minDate ||
 			visits === 'amound' ||
-			rating === 'ratings'
+			rating === 'ratings' ||
+			describe === ''
 		) {
 			setError('wypełnij poprawnie wszystkie pola')
 			setInfoDate('nie mogłeś być bo to dzisiaj')
@@ -97,6 +107,7 @@ export const ActionTaskContext03 = ({ children }) => {
 		setInfoVisits('')
 		setRating('ratings')
 		setInfoRating('')
+		setDescribe('')
 		setError('')
 	}
 
@@ -115,6 +126,8 @@ export const ActionTaskContext03 = ({ children }) => {
 				infoVisits,
 				rating,
 				infoRating,
+				describe,
+				infoDescribe,
 				error,
 				handleChangeYourName,
 				handleChangeCity,
@@ -122,6 +135,7 @@ export const ActionTaskContext03 = ({ children }) => {
 				handleChangeDate,
 				handleChangeVisits,
 				handleChangeRating,
+				handleChangeDescribe,
 				handleClickInfoVacation,
 				handleCleanInputs,
 			}}

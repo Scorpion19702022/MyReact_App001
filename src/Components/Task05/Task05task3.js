@@ -17,6 +17,8 @@ const Task05task3 = () => {
 		infoVisits,
 		rating,
 		infoRating,
+		describe,
+		infoDescribe,
 		error,
 		handleChangeYourName,
 		handleChangeCity,
@@ -24,6 +26,7 @@ const Task05task3 = () => {
 		handleChangeDate,
 		handleChangeVisits,
 		handleChangeRating,
+		handleChangeDescribe,
 		handleClickInfoVacation,
 		handleCleanInputs,
 	} = useContext(Task05Context03)
@@ -103,6 +106,8 @@ const Task05task3 = () => {
 
 	// const test2 = Object.entries(cityValueMap)
 	// console.log(test2)
+
+	console.log(describe)
 
 	return (
 		<div className={styles.wrapper_task3_holidays}>
@@ -195,7 +200,7 @@ const Task05task3 = () => {
 				</div>
 				<div className={styles.box_text}>
 					<label className={styles.label}>Twój krótki opis:</label>
-					<textarea className={styles.textarea} name='text'></textarea>
+					<textarea className={styles.textarea} value={describe} onChange={handleChangeDescribe} name='text'></textarea>
 				</div>
 				<div className={styles.box_error}>
 					<p className={styles.error}>{error}</p>
