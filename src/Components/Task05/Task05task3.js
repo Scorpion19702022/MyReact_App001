@@ -90,12 +90,7 @@ const Task05task3 = () => {
 		rating05: 5,
 	}
 
-	let minDate = new Date().toISOString().slice(0, 10)
-
-	// console.log(yourCity)
-	// console.log(person)
-
-	console.log(date)
+	// let minDate = new Date().toISOString().slice(0, 10)
 
 	// const test1 = Object.values(cityValueMap)
 	// console.log(test1)
@@ -166,7 +161,7 @@ const Task05task3 = () => {
 				<div className={styles.ratings_and_date_and_amound}>
 					<div className={styles.box_date}>
 						<label className={styles.label}>Data ostatniego pobytu:</label>
-						<input className={styles.date_input} value={date} type='date' max={minDate} onChange={handleChangeDate} />
+						<input className={styles.date_input} value={date} type='date' max={date} onChange={handleChangeDate} />
 					</div>
 					<div className={styles.box_amound}>
 						<label className={styles.label}>Ilość wizyt:</label>

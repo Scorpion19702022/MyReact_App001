@@ -3,6 +3,8 @@ import { createContext, useState } from 'react'
 const Task05Context03 = createContext()
 
 export const ActionTaskContext03 = ({ children }) => {
+	let minDate = new Date().toISOString().slice(0, 10)
+
 	const [yourName, setYourName] = useState('')
 	const [infoName, setInfoName] = useState('')
 
@@ -12,7 +14,7 @@ export const ActionTaskContext03 = ({ children }) => {
 	const [person, setPerson] = useState('persons')
 	const [infoPerson, setInfoPerson] = useState('')
 
-	const [date, setDate] = useState('')
+	const [date, setDate] = useState(minDate)
 	const [infoDate, setInfoDate] = useState('')
 
 	const [error, setError] = useState('')
@@ -40,14 +42,15 @@ export const ActionTaskContext03 = ({ children }) => {
 	}
 
 	const handleClickInfoVacation = (yourCity, person) => {
-		if (yourName !== '' && yourCity !== 'wybierz miasto' && person !== 'persons' && date !== '') {
+		if (yourName !== '' && yourCity !== 'wybierz miasto' && person !== 'persons' && date !== minDate) {
 			setInfoName(yourName)
 			setInfoCity(yourCity)
 			setInfoPerson(person)
 			setInfoDate(date)
 			setError('')
-		} else if (yourName === '' || yourCity === 'wybierz miasto' || person === 'person') {
+		} else if (yourName === '' || yourCity === 'wybierz miasto' || person === 'person' || date === minDate) {
 			setError('wypełnij poprawnie wszystkie pola')
+			setInfoDate('nie mogłeś być bo to dzisiaj')
 		}
 	}
 
@@ -58,7 +61,7 @@ export const ActionTaskContext03 = ({ children }) => {
 		setInfoCity('')
 		setPerson('persons')
 		setInfoPerson('')
-		setDate('')
+		setDate(minDate)
 		setInfoDate('')
 		setError('')
 	}
