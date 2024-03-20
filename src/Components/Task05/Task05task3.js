@@ -13,11 +13,14 @@ const Task05task3 = () => {
 		infoPerson,
 		date,
 		infoDate,
+		visits,
+		infoVisits,
 		error,
 		handleChangeYourName,
 		handleChangeCity,
 		handleChangePerson,
 		handleChangeDate,
+		handleChangeVisits,
 		handleClickInfoVacation,
 		handleCleanInputs,
 	} = useContext(Task05Context03)
@@ -165,7 +168,7 @@ const Task05task3 = () => {
 					</div>
 					<div className={styles.box_amound}>
 						<label className={styles.label}>Ilość wizyt:</label>
-						<select className={styles.select} name='amound'>
+						<select className={styles.select} value={visits} onChange={handleChangeVisits} name='amound'>
 							<option value={amoundMap.amound}>byłem razy</option>
 							<option value={amoundMap.amound01}>1 raz</option>
 							<option value={amoundMap.amound02}>2 razy</option>
@@ -195,7 +198,7 @@ const Task05task3 = () => {
 					<p className={styles.error}>{error}</p>
 				</div>
 				<div className={styles.box_btns}>
-					<button className={styles.btn} onClick={() => handleClickInfoVacation(yourCity, person)}>
+					<button className={styles.btn} onClick={() => handleClickInfoVacation(yourCity, person, visits)}>
 						Sprawdź
 					</button>
 					<button className={styles.btn} onClick={handleCleanInputs}>
@@ -217,7 +220,7 @@ const Task05task3 = () => {
 					{resultsInfo.date} <span className={styles.info_span}>{infoDate}</span>
 				</h3>
 				<h3 className={styles.info_result}>
-					{resultsInfo.visits} <span className={styles.info_span}></span>
+					{resultsInfo.visits} <span className={styles.info_span}>{infoVisits}</span>
 				</h3>
 
 				<h3 className={styles.info_result}>

@@ -17,6 +17,9 @@ export const ActionTaskContext03 = ({ children }) => {
 	const [date, setDate] = useState(minDate)
 	const [infoDate, setInfoDate] = useState('')
 
+	const [visits, setVisits] = useState('byłem razy')
+	const [infoVisits, setInfoVisits] = useState('')
+
 	const [error, setError] = useState('')
 
 	const handleChangeYourName = e => {
@@ -41,14 +44,31 @@ export const ActionTaskContext03 = ({ children }) => {
 		setDate(e.target.value)
 	}
 
-	const handleClickInfoVacation = (yourCity, person) => {
-		if (yourName !== '' && yourCity !== 'wybierz miasto' && person !== 'persons' && date !== minDate) {
+	const handleChangeVisits = e => {
+		setVisits(e.target.value)
+	}
+
+	const handleClickInfoVacation = (yourCity, person, visits) => {
+		if (
+			yourName !== '' &&
+			yourCity !== 'wybierz miasto' &&
+			person !== 'persons' &&
+			date !== minDate &&
+			visits !== 'byłem razy'
+		) {
 			setInfoName(yourName)
 			setInfoCity(yourCity)
 			setInfoPerson(person)
 			setInfoDate(date)
+			setInfoVisits(visits)
 			setError('')
-		} else if (yourName === '' || yourCity === 'wybierz miasto' || person === 'person' || date === minDate) {
+		} else if (
+			yourName === '' ||
+			yourCity === 'wybierz miasto' ||
+			person === 'person' ||
+			date === minDate ||
+			visits === 'byłem razy'
+		) {
 			setError('wypełnij poprawnie wszystkie pola')
 			setInfoDate('nie mogłeś być bo to dzisiaj')
 		}
@@ -63,6 +83,8 @@ export const ActionTaskContext03 = ({ children }) => {
 		setInfoPerson('')
 		setDate(minDate)
 		setInfoDate('')
+		setVisits('byłem razy')
+		setInfoVisits('')
 		setError('')
 	}
 
@@ -77,11 +99,14 @@ export const ActionTaskContext03 = ({ children }) => {
 				infoPerson,
 				date,
 				infoDate,
+				visits,
+				infoVisits,
 				error,
 				handleChangeYourName,
 				handleChangeCity,
 				handleChangePerson,
 				handleChangeDate,
+				handleChangeVisits,
 				handleClickInfoVacation,
 				handleCleanInputs,
 			}}
