@@ -40,10 +40,11 @@ export const ActionTaskContext03 = ({ children }) => {
 	}
 
 	const handleClickInfoVacation = (yourCity, person) => {
-		if (yourName !== '' && yourCity !== 'wybierz miasto' && person !== 'persons') {
+		if (yourName !== '' && yourCity !== 'wybierz miasto' && person !== 'persons' && date !== '') {
 			setInfoName(yourName)
 			setInfoCity(yourCity)
 			setInfoPerson(person)
+			setInfoDate(date)
 			setError('')
 		} else if (yourName === '' || yourCity === 'wybierz miasto' || person === 'person') {
 			setError('wypełnij poprawnie wszystkie pola')
@@ -57,6 +58,8 @@ export const ActionTaskContext03 = ({ children }) => {
 		setInfoCity('')
 		setPerson('persons')
 		setInfoPerson('')
+		setDate('')
+		setInfoDate('')
 		setError('')
 	}
 

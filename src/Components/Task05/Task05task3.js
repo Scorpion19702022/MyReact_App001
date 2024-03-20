@@ -12,6 +12,7 @@ const Task05task3 = () => {
 		person,
 		infoPerson,
 		date,
+		infoDate,
 		error,
 		handleChangeYourName,
 		handleChangeCity,
@@ -66,7 +67,7 @@ const Task05task3 = () => {
 		person06: 'z Beatą i z Dorotą',
 		person07: 'z Dorotą i z Aśką',
 		person08: 'z Dorotą i z Rodzicami',
-		person09: 'z Dorotą i Aśką i z Rodzicami',
+		person09: 'z Dorotą i z Aśką i z Rodzicami',
 		person10: 'z Beatą i z Dorotą i z Aśką',
 	}
 
@@ -165,7 +166,7 @@ const Task05task3 = () => {
 				<div className={styles.ratings_and_date_and_amound}>
 					<div className={styles.box_date}>
 						<label className={styles.label}>Data ostatniego pobytu:</label>
-						<input className={styles.date_input} type='date' max={minDate} onChange={handleChangeDate} />
+						<input className={styles.date_input} value={date} type='date' max={minDate} onChange={handleChangeDate} />
 					</div>
 					<div className={styles.box_amound}>
 						<label className={styles.label}>Ilość wizyt:</label>
@@ -218,7 +219,7 @@ const Task05task3 = () => {
 					{resultsInfo.person} <span className={styles.info_span}>{infoPerson}</span>
 				</h3>
 				<h3 className={styles.info_result}>
-					{resultsInfo.date} <span className={styles.info_span}></span>
+					{resultsInfo.date} <span className={styles.info_span}>{infoDate}</span>
 				</h3>
 				<h3 className={styles.info_result}>
 					{resultsInfo.visits} <span className={styles.info_span}></span>
