@@ -9,6 +9,7 @@ export const ActionTaskContext03 = ({ children }) => {
 	const [infoCity, setInfoCity] = useState('')
 	const [person, setPerson] = useState('persons')
 	const [infoPerson, setInfoPerson] = useState('')
+	const [date, setDate] = useState('')
 
 	const [error, setError] = useState('')
 
@@ -28,6 +29,10 @@ export const ActionTaskContext03 = ({ children }) => {
 		// const selectedIndex = e.target.selectedIndex
 		// const personName = e.target.options[selectedIndex].textContent
 		// setPerson(personName)
+	}
+
+	const handleChangeDate = e => {
+		setDate(e.target.value)
 	}
 
 	const handleClickInfoVacation = (yourCity, withPerson) => {
@@ -58,10 +63,12 @@ export const ActionTaskContext03 = ({ children }) => {
 				infoCity,
 				person,
 				infoPerson,
+				date,
 				error,
 				handleChangeYourName,
 				handleChangeCity,
 				handleChangePerson,
+				handleChangeDate,
 				handleClickInfoVacation,
 				handleCleanInputs,
 			}}

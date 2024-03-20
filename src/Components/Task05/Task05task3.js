@@ -11,10 +11,12 @@ const Task05task3 = () => {
 		infoCity,
 		person,
 		infoPerson,
+		date,
 		error,
 		handleChangeYourName,
 		handleChangeCity,
 		handleChangePerson,
+		handleChangeDate,
 		handleClickInfoVacation,
 		handleCleanInputs,
 	} = useContext(Task05Context03)
@@ -91,9 +93,7 @@ const Task05task3 = () => {
 	// console.log(yourCity)
 	// console.log(person)
 
-	console.log(yourCity)
-
-	console.log(infoCity)
+	console.log(date)
 
 	// const test1 = Object.values(cityValueMap)
 	// console.log(test1)
@@ -163,7 +163,7 @@ const Task05task3 = () => {
 				<div className={styles.ratings_and_date_and_amound}>
 					<div className={styles.box_date}>
 						<label className={styles.label}>Data ostatniego pobytu:</label>
-						<input className={styles.date_input} type='date' max={minDate} />
+						<input className={styles.date_input} type='date' max={minDate} onChange={handleChangeDate} />
 					</div>
 					<div className={styles.box_amound}>
 						<label className={styles.label}>Ilość wizyt:</label>
