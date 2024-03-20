@@ -237,7 +237,9 @@ const Task05task3 = () => {
 				<h3 className={styles.info_result}>
 					{resultsInfo.rating} <span className={styles.info_span}>{infoRating}</span>
 				</h3>
-				<p className={styles.info_result_text}>{resultsInfo.text}</p>
+				<p className={styles.info_result_text}>
+					{resultsInfo.text} {infoDescribe}
+				</p>
 			</div>
 		</div>
 	)
