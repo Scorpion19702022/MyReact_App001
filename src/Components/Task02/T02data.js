@@ -32,7 +32,7 @@ const T02data = () => {
 		{
 			id: 0,
 			name: 'Beata',
-			age: oldYear.getFullYear() - 1971,
+			age: oldYear.getFullYear() - 1980,
 			nation: 'Polska',
 			city: 'Łódź',
 			job: 'nauczycielka',
@@ -42,7 +42,7 @@ const T02data = () => {
 		{
 			id: 1,
 			name: 'Jacek',
-			age: oldYear.getFullYear() - 1970,
+			age: oldYear.getFullYear() - 1979,
 			nation: 'Polska',
 			city: 'Łódź',
 			job: 'grafik/programista',
@@ -82,7 +82,7 @@ const T02data = () => {
 		{
 			id: 5,
 			name: 'Piotr',
-			age: oldYear.getFullYear() - 1979,
+			age: oldYear.getFullYear() - 1981,
 			nation: 'Polska',
 			city: 'Łódź',
 			job: 'grafik',
@@ -102,7 +102,7 @@ const T02data = () => {
 		{
 			id: 7,
 			name: 'Dorota',
-			age: oldYear.getFullYear() - 1972,
+			age: oldYear.getFullYear() - 1982,
 			nation: 'Polska',
 			city: 'Łódź',
 			job: 'księgowa',
@@ -112,7 +112,7 @@ const T02data = () => {
 		{
 			id: 8,
 			name: 'Joanna',
-			age: oldYear.getFullYear() - 1974,
+			age: oldYear.getFullYear() - 1981,
 			nation: 'Polska',
 			city: 'Łódź',
 			job: 'pielęgniarka',
@@ -122,7 +122,7 @@ const T02data = () => {
 		{
 			id: 9,
 			name: 'Artur',
-			age: oldYear.getFullYear() - 1972,
+			age: oldYear.getFullYear() - 1979,
 			nation: 'Polska',
 			city: 'Łódź',
 			job: 'grafik',
@@ -172,7 +172,7 @@ const T02data = () => {
 		{
 			id: 14,
 			name: 'Ola',
-			age: oldYear.getFullYear() - 1977,
+			age: oldYear.getFullYear() - 1983,
 			nation: 'Polska',
 			city: 'Łódź',
 			job: 'plastyczka',
@@ -182,7 +182,7 @@ const T02data = () => {
 		{
 			id: 15,
 			name: 'Konrad',
-			age: oldYear.getFullYear() - 1976,
+			age: oldYear.getFullYear() - 1985,
 			nation: 'Polska',
 			city: 'Łódź',
 			job: 'inżynier',
@@ -202,7 +202,7 @@ const T02data = () => {
 		{
 			id: 17,
 			name: 'Tomek',
-			age: oldYear.getFullYear() - 1973,
+			age: oldYear.getFullYear() - 1978,
 			nation: 'Polska',
 			city: 'Łódź',
 			job: 'handlowiec',
