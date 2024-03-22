@@ -66,10 +66,10 @@ export const ActionTaskContext03 = ({ children }) => {
 
 	const handleChangeDescribe = e => {
 		// setDescribe(e.target.value)
-		if (describe.length < 10) {
+		if (describe.length < 100) {
 			setDescribe(e.target.value)
 		}
-		if (describe.length >= 10) {
+		if (describe.length >= 100) {
 			setError('osiągnięto makszymalną ilość zaków')
 		} else {
 		}
@@ -84,7 +84,7 @@ export const ActionTaskContext03 = ({ children }) => {
 			visits !== 'amound' &&
 			rating !== 'ratings' &&
 			describe !== '' &&
-			describe.length <= 10
+			describe.length <= 100
 		) {
 			setInfoName(yourName)
 			setInfoCity(yourCity)
@@ -105,7 +105,7 @@ export const ActionTaskContext03 = ({ children }) => {
 		) {
 			setError('wypełnij poprawnie wszystkie pola')
 			setInfoDate('nie mogłeś być bo to dzisiaj')
-		} else if (describe.length > 10) {
+		} else if (describe.length > 100) {
 			setError('wpisałeś za dużo znaków')
 		}
 	}
