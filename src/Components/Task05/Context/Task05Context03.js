@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react'
+import { createContext, useState } from 'react'
 
 const Task05Context03 = createContext()
 
@@ -65,7 +65,7 @@ export const ActionTaskContext03 = ({ children }) => {
 	// }, [describe])
 
 	const handleChangeDescribe = e => {
-		setDescribe(e.target.value)
+		// setDescribe(e.target.value)
 		if (describe.length < 10) {
 			setDescribe(e.target.value)
 		}
