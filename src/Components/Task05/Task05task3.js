@@ -199,7 +199,9 @@ const Task05task3 = () => {
 					</div>
 				</div>
 				<div className={styles.box_text}>
-					<label className={styles.label}>Twój krótki opis:</label>
+					<label className={styles.label}>
+						Twój krótki opis: <span>znaków: {describe.length}</span>
+					</label>
 					<textarea className={styles.textarea} value={describe} onChange={handleChangeDescribe} name='text'></textarea>
 				</div>
 				<div className={styles.box_error}>
