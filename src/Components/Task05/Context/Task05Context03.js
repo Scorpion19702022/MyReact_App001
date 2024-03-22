@@ -58,15 +58,15 @@ export const ActionTaskContext03 = ({ children }) => {
 		setRating(e.target.value)
 	}
 
+	// useEffect(() => {
+	// 	if (describe.length <= 10) {
+	// 		setDescribe()
+	// 	}
+	// }, [describe])
+
 	const handleChangeDescribe = e => {
 		setDescribe(e.target.value)
 	}
-
-	useEffect(() => {
-		if (describe.length <= 10) {
-			handleChangeDescribe()
-		}
-	}, [handleChangeDescribe])
 
 	const handleClickInfoVacation = (yourCity, person, date, visits, rating) => {
 		if (
@@ -76,7 +76,8 @@ export const ActionTaskContext03 = ({ children }) => {
 			date !== minDate &&
 			visits !== 'amound' &&
 			rating !== 'ratings' &&
-			describe !== ''
+			describe !== '' &&
+			describe.length <= 10
 		) {
 			setInfoName(yourName)
 			setInfoCity(yourCity)
