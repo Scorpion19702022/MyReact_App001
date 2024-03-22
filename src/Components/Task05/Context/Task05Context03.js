@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 
 const Task05Context03 = createContext()
 
@@ -61,6 +61,12 @@ export const ActionTaskContext03 = ({ children }) => {
 	const handleChangeDescribe = e => {
 		setDescribe(e.target.value)
 	}
+
+	useEffect(() => {
+		if (describe <= 10) {
+			setInfoDescribe(describe)
+		}
+	}, [describe])
 
 	const handleClickInfoVacation = (yourCity, person, date, visits, rating) => {
 		if (
