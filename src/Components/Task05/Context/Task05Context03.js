@@ -63,10 +63,10 @@ export const ActionTaskContext03 = ({ children }) => {
 	}
 
 	useEffect(() => {
-		if (describe <= 10) {
-			setInfoDescribe(describe)
+		if (describe.length <= 10) {
+			handleChangeDescribe()
 		}
-	}, [describe])
+	}, [handleChangeDescribe])
 
 	const handleClickInfoVacation = (yourCity, person, date, visits, rating) => {
 		if (
