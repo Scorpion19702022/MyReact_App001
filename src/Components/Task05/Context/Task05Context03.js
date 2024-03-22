@@ -5,7 +5,7 @@ const Task05Context03 = createContext()
 export const ActionTaskContext03 = ({ children }) => {
 	let minDate = new Date().toISOString().slice(0, 10)
 
-	const [yourName, setYourName] = useState('')
+	const [yourName, setYourName] = useState('Jacek')
 	const [infoName, setInfoName] = useState('')
 
 	const [yourCity, setYourCity] = useState('wybierz miasto')
@@ -111,7 +111,7 @@ export const ActionTaskContext03 = ({ children }) => {
 	}
 
 	const handleCleanInputs = () => {
-		setYourName('')
+		setYourName('Jacek')
 		setInfoName('')
 		setYourCity('wybierz miasto')
 		setInfoCity('')
