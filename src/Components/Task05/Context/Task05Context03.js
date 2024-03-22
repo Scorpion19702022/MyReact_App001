@@ -58,14 +58,10 @@ export const ActionTaskContext03 = ({ children }) => {
 		setRating(e.target.value)
 	}
 
-	// useEffect(() => {
-	// 	if (describe.length <= 10) {
-	// 		setDescribe()
-	// 	}
-	// }, [describe])
-
 	const handleChangeDescribe = e => {
-		setDescribe(e.target.value)
+		if (describe.length <= 10) {
+			setDescribe(e.target.value)
+		}
 	}
 
 	const handleClickInfoVacation = (yourCity, person, date, visits, rating) => {
@@ -98,6 +94,8 @@ export const ActionTaskContext03 = ({ children }) => {
 		) {
 			setError('wypełnij poprawnie wszystkie pola')
 			setInfoDate('nie mogłeś być bo to dzisiaj')
+		} else if (describe.length > 10) {
+			setError('wpisałeś za dużo znaków')
 		}
 	}
 
@@ -115,6 +113,7 @@ export const ActionTaskContext03 = ({ children }) => {
 		setRating('ratings')
 		setInfoRating('')
 		setDescribe('')
+		setInfoDescribe('')
 		setError('')
 	}
 
