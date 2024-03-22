@@ -58,6 +58,12 @@ export const ActionTaskContext03 = ({ children }) => {
 		setRating(e.target.value)
 	}
 
+	useEffect(() => {
+		if (describe.length <= 10) {
+			setDescribe(describe)
+		}
+	}, [describe])
+
 	const handleChangeDescribe = e => {
 		if (describe.length <= 10) {
 			setDescribe(e.target.value)

@@ -107,8 +107,6 @@ const Task05task3 = () => {
 	// const test2 = Object.entries(cityValueMap)
 	// console.log(test2)
 
-	console.log(describe.length)
-
 	return (
 		<div className={styles.wrapper_task3_holidays}>
 			<h1 className={styles.heading_holidays}>Moje wakacje!</h1>
