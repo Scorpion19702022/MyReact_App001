@@ -23,14 +23,23 @@ const Task06country = () => {
 		country16: 'zachodniopomorskie',
 	}
 
-	// const selectCountry = Object.values(countryPoland)
-	const selectCountry = Object.entries(countryPoland)
-
-	console.log(selectCountry)
+	const selectCountry = Object.entries(countryPoland).map(([value, countryName]) => (
+		<option key={value} value={value}>
+			{countryName}
+		</option>
+	))
 
 	return (
 		<div className={styles.wrapper_country}>
 			<h1 className={styles.heading_country}>Województwa w Polsce. Wybierz i przeczytaj opis</h1>
+			<div className={styles.wrapper_contet}>
+				<div className={styles.box_iputs}>
+					<div className={styles.box_input}>
+						<label className={styles.label}>Wybierz województwo:</label>
+						<select className={styles.select}>{selectCountry}</select>
+					</div>
+				</div>
+			</div>
 		</div>
 	)
 }
