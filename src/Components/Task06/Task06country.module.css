@@ -37,30 +37,16 @@
 	--color-dark08: #000000;
 }
 
-.wrapper_task06 {
+.wrapper_country {
 	width: 100%;
-	min-height: 100vh;
-	padding-left: 7.8em;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: var(--color-dark07);
+	margin: 2em 0em;
 }
 
-.box_header {
-	width: 100%;
-	padding: 1em 0em;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	border-bottom: 0.04em solid var(--color-blue03);
-	box-shadow: 0.4em 0em 1em var(--color-blue04);
-}
-
-.header_heading {
+.heading_country {
 	color: var(--color-blue03);
-}
-
-.header_theme {
-	color: var(--color-blue05);
+	padding-bottom: 0.4em;
+	border-bottom: 0.04em solid var(--color-blue03);
 }
