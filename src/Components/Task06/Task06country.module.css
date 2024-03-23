@@ -60,4 +60,19 @@
 	flex-direction: column;
 	align-items: center;
 	background-color: var(--color-dark07);
+	border: 0.04em solid var(--color-blue04);
+	box-shadow: 0.4em 0.4em 1em var(--color-blue05);
+}
+
+.box_inputs {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.box_input {
+	width: 40%;
+	display: flex;
+	flex-direction: column;
 }
