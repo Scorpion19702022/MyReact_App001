@@ -52,7 +52,12 @@
 }
 
 .wrapper_content {
-	width: 100%;
+	width: 75%;
 	height: 600px;
-	background-color: var(--color-dark06);
+	margin-top: 2em;
+	padding: 2em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--color-dark07);
 }
