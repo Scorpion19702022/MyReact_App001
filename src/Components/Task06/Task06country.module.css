@@ -50,3 +50,9 @@
 	padding-bottom: 0.4em;
 	border-bottom: 0.04em solid var(--color-blue03);
 }
+
+.wrapper_content {
+	width: 100%;
+	height: 600px;
+	background-color: var(--color-dark06);
+}
