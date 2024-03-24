@@ -28,7 +28,7 @@ const Task06country = () => {
 	}
 
 	const selectCountry = Object.entries(countryPoland).map(([value, countryName]) => (
-		<option key={value} value={countryName}>
+		<option className={styles.option} key={value} value={countryName}>
 			{countryName}
 		</option>
 	))
@@ -55,6 +55,9 @@ const Task06country = () => {
 				<div className={styles.box_btns}>
 					<button className={styles.btn}>Sprawdź</button>
 					<button className={styles.btn}>Wyczyść</button>
+				</div>
+				<div className={styles.box_error}>
+					<h3 className={styles.info_error}></h3>
 				</div>
 				<Task06result />
 			</div>
