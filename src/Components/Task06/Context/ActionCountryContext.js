@@ -2,7 +2,7 @@ import { createContext, useState } from 'react'
 
 const ActionCountryContext = createContext()
 
-export const ChhoseContext = ({ children }) => {
+export const ChoseContext = ({ children }) => {
 	const [country, setCountry] = useState('wybierz województwo')
 
 	const [capital, setCapital] = useState(false)
@@ -18,4 +18,4 @@ export const ChhoseContext = ({ children }) => {
 	)
 }
 
-export default ChhoseContext
+export default ActionCountryContext

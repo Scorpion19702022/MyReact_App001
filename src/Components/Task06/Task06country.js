@@ -2,10 +2,10 @@ import React, { useContext } from 'react'
 
 import styles from './Task06country.module.css'
 import Task06result from './Task06result'
-import ChhoseContext from './Context/ActionCountryContext'
+import ActionCountryContext from './Context/ActionCountryContext'
 
 const Task06country = () => {
-	const { country, handleChangeCountry } = useContext(ChhoseContext)
+	const { country, handleChangeCountry } = useContext(ActionCountryContext)
 
 	const countryPoland = {
 		countries: 'wybierz województwo',
