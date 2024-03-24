@@ -105,3 +105,58 @@
 	width: 25px;
 	height: 25px;
 }
+
+.box_btns {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 4em;
+}
+
+.btn {
+	position: relative;
+	width: 20%;
+	margin: 0em 1em;
+	padding: 0.8em;
+	background: none;
+	color: var(--color-blue02);
+	border: 0.04em solid var(--color-blue06);
+	cursor: pointer;
+	transition: all 0.6s ease-in-out;
+	overflow: hidden;
+	z-index: 10;
+}
+
+.btn::before {
+	position: absolute;
+	content: '';
+	width: 140%;
+	height: 140%;
+	filter: blur(0.5em);
+	transform: translate(-42%, -155%);
+	background-color: var(--color-blue07);
+	transition: all 0.3s ease-in-out;
+	z-index: -10;
+}
+.btn::after {
+	position: absolute;
+	content: '';
+	width: 140%;
+	height: 140%;
+	filter: blur(0.5em);
+	transform: translate(-57%, 85%);
+	background-color: var(--color-blue07);
+	transition: all 0.2s ease-in-out;
+	z-index: -10;
+}
+
+.btn:hover::before {
+	transform: translate(-42%, 85%);
+}
+.btn:hover::after {
+	transform: translate(-57%, -150%);
+}
+
+.btn:hover {
+	background-color: var(--color-blue07);
+}
