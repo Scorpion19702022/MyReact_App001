@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import styles from './Task06country.module.css'
 import Task06result from './Task06result'
+import ChhoseContext from './Context/ActionCountryContext'
 
 const Task06country = () => {
+	const { country, handleChangeCountry } = useContext(ChhoseContext)
+
 	const countryPoland = {
 		countries: 'wybierz województwo',
 		country01: 'dolnośląskie',
@@ -30,6 +33,8 @@ const Task06country = () => {
 		</option>
 	))
 
+	console.log(country)
+
 	return (
 		<div className={styles.wrapper_country}>
 			<h1 className={styles.heading_country}>Województwa w Polsce. Wybierz i przeczytaj opis</h1>
@@ -37,7 +42,9 @@ const Task06country = () => {
 				<div className={styles.box_inputs}>
 					<div className={styles.box_input}>
 						<label className={styles.label}>Wybierz województwo:</label>
-						<select className={styles.select}>{selectCountry}</select>
+						<select className={styles.select} value={country} onChange={handleChangeCountry}>
+							{selectCountry}
+						</select>
 					</div>
 					<div className={styles.box_check}>
 						<label className={styles.label}>Zaznacz jeżeli chcesz sprawdzić stolicę</label>
