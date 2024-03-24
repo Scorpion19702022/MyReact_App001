@@ -5,7 +5,7 @@ import Task06result from './Task06result'
 import ActionCountryContext from './Context/ActionCountryContext'
 
 const Task06country = () => {
-	const { country, capital, handleChangeCountry, handleChangeCapital, handleClickReset } =
+	const { country, capital, error, handleChangeCountry, handleChangeCapital, handleClickInfo, handleClickReset } =
 		useContext(ActionCountryContext)
 
 	const countryPoland = {
@@ -34,9 +34,6 @@ const Task06country = () => {
 		</option>
 	))
 
-	console.log(country)
-	console.log(capital)
-
 	return (
 		<div className={styles.wrapper_country}>
 			<h1 className={styles.heading_country}>Województwa w Polsce. Wybierz i przeczytaj opis</h1>
@@ -54,13 +51,15 @@ const Task06country = () => {
 					</div>
 				</div>
 				<div className={styles.box_btns}>
-					<button className={styles.btn}>Sprawdź</button>
+					<button className={styles.btn} onClick={handleClickInfo}>
+						Sprawdź
+					</button>
 					<button className={styles.btn} onClick={handleClickReset}>
 						Wyczyść
 					</button>
 				</div>
 				<div className={styles.box_error}>
-					<h3 className={styles.info_error}></h3>
+					<h3 className={styles.info_error}>{error}</h3>
 				</div>
 				<Task06result />
 			</div>

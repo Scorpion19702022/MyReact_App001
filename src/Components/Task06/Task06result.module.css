@@ -60,10 +60,12 @@
 }
 
 .text {
+	font-size: 1.2em;
 	color: var(--color-blue04);
 	font-weight: bold;
 }
 
-.soan {
+.span {
 	color: var(--color-blue02);
+	font-weight: 100;
 }

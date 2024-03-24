@@ -4,19 +4,19 @@ import styles from './Task06result.module.css'
 import ActionCountryContext from './Context/ActionCountryContext'
 
 const Task06result = () => {
-	const {} = useContext(ActionCountryContext)
+	const { infoCountry } = useContext(ActionCountryContext)
 
 	return (
 		<div className={styles.wrapper_result}>
 			<h1 className={styles.heading_country}>
-				Województwo: <span className={styles.span}></span>
+				Województwo: <span className={styles.span}>{infoCountry.country}</span>
 			</h1>
 			<h3 className={styles.capital_info}>
 				{' '}
-				Stolicą województwa <span className={styles.span}></span> jest: <span className={styles.span}></span>
+				Stolicą województwa jest: <span className={styles.span}>{infoCountry.capital}</span>
 			</h3>
 			<p className={styles.text}>
-				Informacja: <span className={styles.span}></span>
+				Informacja: <span className={styles.span}>{infoCountry.info}</span>
 			</p>
 		</div>
 	)
