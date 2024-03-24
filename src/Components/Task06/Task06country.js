@@ -28,7 +28,7 @@ const Task06country = () => {
 	}
 
 	const selectCountry = Object.entries(countryPoland).map(([value, countryName]) => (
-		<option key={value} value={value}>
+		<option key={value} value={countryName}>
 			{countryName}
 		</option>
 	))

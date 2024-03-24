@@ -3,12 +3,13 @@ import { createContext, useState } from 'react'
 const ActionCountryContext = createContext()
 
 export const ChoseContext = ({ children }) => {
-	const [country, setCountry] = useState('wybierz województwo')
+	const [country, setCountry] = useState('countries')
 
 	const [capital, setCapital] = useState(false)
 
 	const handleChangeCountry = e => {
-		setCountry(e.target.value)
+		const selectedCountry = e.target.value
+		setCountry(selectedCountry)
 	}
 
 	return (

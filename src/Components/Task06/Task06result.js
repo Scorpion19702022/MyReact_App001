@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import styles from './Task06result.module.css'
+import ActionCountryContext from './Context/ActionCountryContext'
 
 const Task06result = () => {
+	const { country } = useContext(ActionCountryContext)
+
 	return (
 		<div className={styles.wrapper_result}>
 			<h1 className={styles.capital_info}>
