@@ -15,8 +15,15 @@ export const ChoseContext = ({ children }) => {
 		setCapital(!capital)
 	}
 
+	const handleClickReset = () => {
+		setCountry('wybierz województwo')
+		setCapital(false)
+	}
+
 	return (
-		<ActionCountryContext.Provider value={{ country, capital, handleChangeCountry, handleChangeCapital }}>
+		<ActionCountryContext.Provider
+			value={{ country, capital, handleChangeCountry, handleChangeCapital, handleClickReset }}
+		>
 			{children}
 		</ActionCountryContext.Provider>
 	)
