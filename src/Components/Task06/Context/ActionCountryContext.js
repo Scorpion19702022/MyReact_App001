@@ -3,17 +3,20 @@ import { createContext, useState } from 'react'
 const ActionCountryContext = createContext()
 
 export const ChoseContext = ({ children }) => {
-	const [country, setCountry] = useState('countries')
+	const [country, setCountry] = useState('wybierz województwo')
 
 	const [capital, setCapital] = useState(false)
 
 	const handleChangeCountry = e => {
-		const selectedCountry = e.target.value
-		setCountry(selectedCountry)
+		setCountry(e.target.value)
+	}
+
+	const handleChangeCapital = () => {
+		setCapital(!capital)
 	}
 
 	return (
-		<ActionCountryContext.Provider value={{ country, capital, handleChangeCountry }}>
+		<ActionCountryContext.Provider value={{ country, capital, handleChangeCountry, handleChangeCapital }}>
 			{children}
 		</ActionCountryContext.Provider>
 	)

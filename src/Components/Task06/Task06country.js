@@ -5,7 +5,7 @@ import Task06result from './Task06result'
 import ActionCountryContext from './Context/ActionCountryContext'
 
 const Task06country = () => {
-	const { country, handleChangeCountry } = useContext(ActionCountryContext)
+	const { country, capital, handleChangeCountry, handleChangeCapital } = useContext(ActionCountryContext)
 
 	const countryPoland = {
 		countries: 'wybierz województwo',
@@ -34,6 +34,7 @@ const Task06country = () => {
 	))
 
 	console.log(country)
+	console.log(capital)
 
 	return (
 		<div className={styles.wrapper_country}>
@@ -48,7 +49,7 @@ const Task06country = () => {
 					</div>
 					<div className={styles.box_check}>
 						<label className={styles.label}>Zaznacz jeżeli chcesz sprawdzić stolicę</label>
-						<input className={styles.input} type='checkbox' />
+						<input className={styles.input} type='checkbox' value={capital} onChange={handleChangeCapital} />
 					</div>
 				</div>
 				<div className={styles.box_btns}>

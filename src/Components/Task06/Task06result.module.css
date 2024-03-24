@@ -36,3 +36,34 @@
 	--color-dark07: #111210;
 	--color-dark08: #000000;
 }
+
+.wrapper_result {
+	width: 100%;
+	height: 400px;
+	padding: 2em;
+	background-color: var(--color-dark06);
+	display: flex;
+	flex-direction: column;
+	border: 0.04em solid var(--color-dark03);
+}
+
+.heading_country {
+	font-size: 2.6em;
+	color: var(--color-blue04);
+	margin-bottom: 0.4em;
+}
+
+.capital_info {
+	font-size: 1.8em;
+	color: var(--color-blue04);
+	margin-bottom: 0.4em;
+}
+
+.text {
+	color: var(--color-blue04);
+	font-weight: bold;
+}
+
+.soan {
+	color: var(--color-blue02);
+}
