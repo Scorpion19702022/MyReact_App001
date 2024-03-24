@@ -175,5 +175,6 @@
 }
 
 .info_error {
-	color: var(--color-purple03);
+	color: var(--color-purple02);
+	font-weight: 100;
 }

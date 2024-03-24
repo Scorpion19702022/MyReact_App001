@@ -86,15 +86,17 @@ export const ChoseContext = ({ children }) => {
 				country: 'łódzkie',
 				people: '2 378 483',
 				capital: 'Łódź',
-				info: 'Obejmuje dawne obszary miejskiego łódzkiego, sieradzkiego, znacznej części piotrkowskiego, skierniewickiego, płockiego, kaliskiego, część częstochowskiego, konińskiego,radomskiego.',
+				info: 'Obejmuje dawne obszary miejskiego łódzkiego, sieradzkiego, znacznej części piotrkowskiego, skierniewickiego, płockiego, kaliskiego, część częstochowskiego, konińskiego i radomskiego.',
 			})
 		} else if (country === 'łódzkie' && !capital) {
 			setInfoCountry({
 				country: 'łódzkie',
 				people: '2 378 483',
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
-				info: 'Obejmuje dawne obszary miejskiego łódzkiego, sieradzkiego, znacznej części piotrkowskiego, skierniewickiego, płockiego, kaliskiego, część częstochowskiego, konińskiego,radomskiego.',
+				info: 'Obejmuje dawne obszary miejskiego łódzkiego, sieradzkiego, znacznej części piotrkowskiego, skierniewickiego, płockiego, kaliskiego, część częstochowskiego, konińskiego i radomskiego.',
 			})
+		} else if (country === 'wybierz województwo') {
+			setError('wybierz województwo by uzyskać informacje')
 		}
 	}
 
@@ -104,6 +106,7 @@ export const ChoseContext = ({ children }) => {
 	const handleClickReset = () => {
 		setCountry('wybierz województwo')
 		setCapital(false)
+		setError('')
 		setInfoCountry({
 			country: '',
 			people: '',
