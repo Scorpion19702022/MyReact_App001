@@ -38,6 +38,10 @@ const Task06country = () => {
 						<label className={styles.label}>Wybierz województwo:</label>
 						<select className={styles.select}>{selectCountry}</select>
 					</div>
+					<div className={styles.box_check}>
+						<label className={styles.label}>Zaznacz jeżeli chcesz sprawdzić stolicę</label>
+						<input className={styles.input} type='checkbox' />
+					</div>
 				</div>
 			</div>
 		</div>

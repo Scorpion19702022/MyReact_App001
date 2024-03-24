@@ -93,3 +93,15 @@
 	color: var(--color-blue06);
 	font-size: 1.4em;
 }
+
+.box_check {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.input {
+	margin-top: 1.4em;
+	width: 25px;
+	height: 25px;
+}
