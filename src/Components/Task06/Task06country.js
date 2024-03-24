@@ -1,6 +1,7 @@
 import React from 'react'
 
 import styles from './Task06country.module.css'
+import Task06result from './Task06result'
 
 const Task06country = () => {
 	const countryPoland = {
@@ -47,6 +48,7 @@ const Task06country = () => {
 					<button className={styles.btn}>Sprawdź</button>
 					<button className={styles.btn}>Wyczyść</button>
 				</div>
+				<Task06result />
 			</div>
 		</div>
 	)
