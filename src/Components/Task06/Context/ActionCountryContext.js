@@ -53,6 +53,48 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				info: 'Zostało utworzone na mocy ustawy z dnia 24 lipca 1998 w przybliżeniu z dawnych województw: bydgoskiego, toruńskiego i włocławskiego.',
 			})
+		} else if (country === 'lubelskie' && capital) {
+			setInfoCountry({
+				country: 'lubelskie',
+				people: '2 038 299',
+				capital: 'Lublin',
+				info: 'Obejmuje głównie południową połowę Niziny Południowopodlaskiej, Polesie Zachodnie i Wołyńskie (po Bug) oraz Wyżynę Lubelską, mały obszar Wyżyny Wołyńskiej, większość polskiego Roztocza i skraj Kotliny Sandomierskiej.',
+			})
+		} else if (country === 'lubelskie' && !capital) {
+			setInfoCountry({
+				country: 'lubelskie',
+				people: '2 038 299',
+				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				info: 'Obejmuje głównie południową połowę Niziny Południowopodlaskiej, Polesie Zachodnie i Wołyńskie (po Bug) oraz Wyżynę Lubelską, mały obszar Wyżyny Wołyńskiej, większość polskiego Roztocza i skraj Kotliny Sandomierskiej.',
+			})
+		} else if (country === 'lubuskie' && capital) {
+			setInfoCountry({
+				country: 'lubuskie',
+				people: '977 493',
+				capital: 'Zielona Góra',
+				info: 'Obejmuje większość terytoriów dawnych województw: gorzowskiego i zielonogórskiego oraz niewielkiej części leszczyńskiego.',
+			})
+		} else if (country === 'lubuskie' && !capital) {
+			setInfoCountry({
+				country: 'lubuskie',
+				people: '977 493',
+				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				info: 'Obejmuje większość terytoriów dawnych województw: gorzowskiego i zielonogórskiego oraz niewielkiej części leszczyńskiego.',
+			})
+		} else if (country === 'łódzkie' && capital) {
+			setInfoCountry({
+				country: 'łódzkie',
+				people: '2 378 483',
+				capital: 'Łódź',
+				info: 'Obejmuje dawne obszary miejskiego łódzkiego, sieradzkiego, znacznej części piotrkowskiego, skierniewickiego, płockiego, kaliskiego, część częstochowskiego, konińskiego,radomskiego.',
+			})
+		} else if (country === 'łódzkie' && !capital) {
+			setInfoCountry({
+				country: 'łódzkie',
+				people: '2 378 483',
+				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				info: 'Obejmuje dawne obszary miejskiego łódzkiego, sieradzkiego, znacznej części piotrkowskiego, skierniewickiego, płockiego, kaliskiego, część częstochowskiego, konińskiego,radomskiego.',
+			})
 		}
 	}
 
