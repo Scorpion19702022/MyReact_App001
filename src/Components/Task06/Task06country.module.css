@@ -66,13 +66,30 @@
 
 .box_inputs {
 	width: 100%;
+	margin-bottom: 2em;
 	display: flex;
-	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 }
 
 .box_input {
 	width: 40%;
 	display: flex;
 	flex-direction: column;
+}
+
+.label {
+	color: var(--color-blue03);
+	margin-bottom: 0.4em;
+}
+
+.select {
+	width: 70%;
+	padding: 0.4em;
+	background: none;
+	border: none;
+	border-bottom: 0.04em solid var(--color-blue05);
+	outline: none;
+	color: var(--color-blue06);
+	font-size: 1.4em;
 }
