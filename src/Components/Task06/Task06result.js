@@ -11,10 +11,13 @@ const Task06result = () => {
 			<h1 className={styles.heading_country}>
 				Województwo: <span className={styles.span}>{infoCountry.country}</span>
 			</h1>
-			<h3 className={styles.capital_info}>
+			<h3 className={styles.people_info}>
+				Mieszkańców: <span className={styles.span}>{infoCountry.people}</span>
+			</h3>
+			<h4 className={styles.capital_info}>
 				{' '}
 				Stolicą województwa jest: <span className={styles.span}>{infoCountry.capital}</span>
-			</h3>
+			</h4>
 			<p className={styles.text}>
 				Informacja: <span className={styles.span}>{infoCountry.info}</span>
 			</p>

@@ -11,6 +11,7 @@ export const ChoseContext = ({ children }) => {
 
 	const [infoCountry, setInfoCountry] = useState({
 		country: '',
+		people: '',
 		capital: '',
 		info: '',
 	})
@@ -27,14 +28,30 @@ export const ChoseContext = ({ children }) => {
 		if (country === 'dolnośląskie' && capital) {
 			setInfoCountry({
 				country: 'dolnośląskie',
+				people: '2 883 133',
 				capital: 'Wrocław',
-				info: 'Zostało utworzone w 1999 roku z ziem poprzednich województw wrocławskiego, legnickiego, jeleniogórskiego, wałbrzyskiego i części leszczyńskiego oraz kaliskiego. Województwo to jest położone na południowym zachodzie Polski, obejmuje zachodnią część historycznego Śląska, czyli większość Dolnego Śląska, a także ziemię kłodzką oraz wschodnie Łużyce Górne. Według danych z 30 czerwca 2023 r. województwo zamieszkiwały 2 883 133 osoby',
+				info: 'Zostało utworzone w 1999 roku z ziem poprzednich województw wrocławskiego, legnickiego, jeleniogórskiego, wałbrzyskiego i części leszczyńskiego oraz kaliskiego.',
 			})
 		} else if (country === 'dolnośląskie' && !capital) {
 			setInfoCountry({
 				country: 'dolnośląskie',
+				people: '2 883 133',
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
-				info: 'Zostało utworzone w 1999 roku z ziem poprzednich województw wrocławskiego, legnickiego, jeleniogórskiego, wałbrzyskiego i części leszczyńskiego oraz kaliskiego. Województwo to jest położone na południowym zachodzie Polski, obejmuje zachodnią część historycznego Śląska, czyli większość Dolnego Śląska, a także ziemię kłodzką oraz wschodnie Łużyce Górne. Według danych z 30 czerwca 2023 r. województwo zamieszkiwały 2 883 133 osoby',
+				info: 'Zostało utworzone w 1999 roku z ziem poprzednich województw wrocławskiego, legnickiego, jeleniogórskiego, wałbrzyskiego i części leszczyńskiego oraz kaliskiego.',
+			})
+		} else if (country === 'kujawsko-pomorskie' && capital) {
+			setInfoCountry({
+				country: 'kujawsko-pomorskie',
+				people: '2 001 670',
+				capital: 'Bydgoszcz',
+				info: 'Zostało utworzone na mocy ustawy z dnia 24 lipca 1998 w przybliżeniu z dawnych województw: bydgoskiego, toruńskiego i włocławskiego.',
+			})
+		} else if (country === 'kujawsko-pomorskie' && !capital) {
+			setInfoCountry({
+				country: 'kujawsko-pomorskie',
+				people: '2 001 670',
+				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				info: 'Zostało utworzone na mocy ustawy z dnia 24 lipca 1998 w przybliżeniu z dawnych województw: bydgoskiego, toruńskiego i włocławskiego.',
 			})
 		}
 	}
@@ -47,6 +64,7 @@ export const ChoseContext = ({ children }) => {
 		setCapital(false)
 		setInfoCountry({
 			country: '',
+			people: '',
 			capital: '',
 			info: '',
 		})

@@ -53,8 +53,14 @@
 	margin-bottom: 0.4em;
 }
 
+.people_info {
+	font-size: 2.2em;
+	color: var(--color-blue04);
+	margin-bottom: 0.4em;
+}
+
 .capital_info {
-	font-size: 1.8em;
+	font-size: 1.6em;
 	color: var(--color-blue04);
 	margin-bottom: 0.4em;
 }
