@@ -67,12 +67,6 @@
 	border-bottom: 0.04em dotted var(--color-blue06);
 }
 
-.text {
-	font-size: 1em;
-	color: var(--color-blue04);
-	font-weight: bold;
-}
-
 .span {
 	color: var(--color-blue02);
 	font-weight: 400;

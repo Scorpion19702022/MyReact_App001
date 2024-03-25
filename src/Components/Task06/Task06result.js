@@ -9,7 +9,7 @@ const Task06result = () => {
 	return (
 		<div className={styles.wrapper_result}>
 			<h1 className={styles.heading_country}>
-				Województwo: <span className={styles.span}>{infoCountry.country}</span>
+				Województwo <span className={styles.span}>{infoCountry.country}</span>
 			</h1>
 			<p className={styles.area_info}>
 				Obszar: <span className={styles.span}>{infoCountry.area}</span>
@@ -27,9 +27,6 @@ const Task06result = () => {
 			<p className={styles.peopleCapital_info}>
 				{' '}
 				Mieszkaców w stolicy: <span className={styles.span}>{infoCountry.peopleCapital}</span>
-			</p>
-			<p className={styles.text}>
-				Informacja: <span className={styles.span}>{infoCountry.info}</span>
 			</p>
 		</div>
 	)
