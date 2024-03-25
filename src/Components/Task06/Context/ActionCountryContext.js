@@ -12,6 +12,7 @@ export const ChoseContext = ({ children }) => {
 	const [infoCountry, setInfoCountry] = useState({
 		country: '',
 		people: '',
+		area: '',
 		capital: '',
 		info: '',
 	})
@@ -29,6 +30,7 @@ export const ChoseContext = ({ children }) => {
 			setInfoCountry({
 				country: 'dolnośląskie',
 				people: '2 883 133',
+				area: '',
 				capital: 'Wrocław',
 				info: 'Zostało utworzone w 1999 roku z ziem poprzednich województw wrocławskiego, legnickiego, jeleniogórskiego, wałbrzyskiego i części leszczyńskiego oraz kaliskiego.',
 			})
@@ -37,6 +39,7 @@ export const ChoseContext = ({ children }) => {
 			setInfoCountry({
 				country: 'dolnośląskie',
 				people: '2 883 133',
+				area: '',
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				info: 'Zostało utworzone w 1999 roku z ziem poprzednich województw wrocławskiego, legnickiego, jeleniogórskiego, wałbrzyskiego i części leszczyńskiego oraz kaliskiego.',
 			})
@@ -45,6 +48,7 @@ export const ChoseContext = ({ children }) => {
 			setInfoCountry({
 				country: 'kujawsko-pomorskie',
 				people: '2 001 670',
+				area: '',
 				capital: 'Bydgoszcz',
 				info: 'Zostało utworzone na mocy ustawy z dnia 24 lipca 1998 w przybliżeniu z dawnych województw: bydgoskiego, toruńskiego i włocławskiego.',
 			})
@@ -53,6 +57,7 @@ export const ChoseContext = ({ children }) => {
 			setInfoCountry({
 				country: 'kujawsko-pomorskie',
 				people: '2 001 670',
+				area: '',
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				info: 'Zostało utworzone na mocy ustawy z dnia 24 lipca 1998 w przybliżeniu z dawnych województw: bydgoskiego, toruńskiego i włocławskiego.',
 			})
@@ -61,6 +66,7 @@ export const ChoseContext = ({ children }) => {
 			setInfoCountry({
 				country: 'lubelskie',
 				people: '2 038 299',
+				area: '',
 				capital: 'Lublin',
 				info: 'Obejmuje głównie południową połowę Niziny Południowopodlaskiej, Polesie Zachodnie i Wołyńskie (po Bug) oraz Wyżynę Lubelską, mały obszar Wyżyny Wołyńskiej, większość polskiego Roztocza i skraj Kotliny Sandomierskiej.',
 			})
@@ -69,6 +75,7 @@ export const ChoseContext = ({ children }) => {
 			setInfoCountry({
 				country: 'lubelskie',
 				people: '2 038 299',
+				area: '',
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				info: 'Obejmuje głównie południową połowę Niziny Południowopodlaskiej, Polesie Zachodnie i Wołyńskie (po Bug) oraz Wyżynę Lubelską, mały obszar Wyżyny Wołyńskiej, większość polskiego Roztocza i skraj Kotliny Sandomierskiej.',
 			})
@@ -77,6 +84,7 @@ export const ChoseContext = ({ children }) => {
 			setInfoCountry({
 				country: 'lubuskie',
 				people: '977 493',
+				area: '',
 				capital: 'Zielona Góra',
 				info: 'Obejmuje większość terytoriów dawnych województw: gorzowskiego i zielonogórskiego oraz niewielkiej części leszczyńskiego.',
 			})
@@ -85,6 +93,7 @@ export const ChoseContext = ({ children }) => {
 			setInfoCountry({
 				country: 'lubuskie',
 				people: '977 493',
+				area: '',
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				info: 'Obejmuje większość terytoriów dawnych województw: gorzowskiego i zielonogórskiego oraz niewielkiej części leszczyńskiego.',
 			})
@@ -93,22 +102,35 @@ export const ChoseContext = ({ children }) => {
 			setInfoCountry({
 				country: 'łódzkie',
 				people: '2 378 483',
+				area: '',
 				capital: 'Łódź',
 				info: 'Obejmuje dawne obszary miejskiego łódzkiego, sieradzkiego, znacznej części piotrkowskiego, skierniewickiego, płockiego, kaliskiego, część częstochowskiego, konińskiego i radomskiego.',
 			})
 			setError('')
-		} else if (country === 'łódzkie' && !capital) {
+		} else if (country === 'małopolskie' && !capital) {
 			setInfoCountry({
-				country: 'łódzkie',
-				people: '2 378 483',
-				capital: 'Nie wybrałeś by sprawdzić stolicę',
-				info: 'Obejmuje dawne obszary miejskiego łódzkiego, sieradzkiego, znacznej części piotrkowskiego, skierniewickiego, płockiego, kaliskiego, część częstochowskiego, konińskiego i radomskiego.',
+				country: 'małopolskie',
+				people: '3 430 370',
+				area: '',
+				capital: 'Kraków',
+				info: 'Obejmuje dawne obszary krakowskiego , nowosądeckiego, w znacznej części tarnowskiego, bielskiego, część katowickiego, kieleckiego, krośnieńskiego.',
 			})
 			setError('')
-		} else if (country === 'wybierz województwo') {
-			setError('wybierz województwo by uzyskać informacje')
+		} else if (country === 'małopolskie' && capital) {
+			setInfoCountry({
+				country: 'małopolskie',
+				people: '3 430 370',
+				area: '',
+				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				info: 'Obejmuje dawne obszary krakowskiego , nowosądeckiego, w znacznej części tarnowskiego, bielskiego, część katowickiego, kieleckiego, krośnieńskiego.',
+			})
+			setError('')
 		}
 	}
+
+	// else if (country === 'wybierz województwo') {
+	// 	setError('wybierz województwo by uzyskać informacje')
+	// }
 
 	console.log(infoCountry)
 	console.log(country)
@@ -120,6 +142,7 @@ export const ChoseContext = ({ children }) => {
 		setInfoCountry({
 			country: '',
 			people: '',
+			area: '',
 			capital: '',
 			info: '',
 		})
