@@ -22,7 +22,7 @@ const Task06result = () => {
 			</p>
 			<p className={styles.capital_info}>
 				{' '}
-				Stolicą województwa jest: <span className={styles.span}>{infoCountry.capital}</span>
+				Stolica województwa: <span className={styles.span}>{infoCountry.capital}</span>
 			</p>
 			<p className={styles.peopleCapital_info}>
 				{' '}

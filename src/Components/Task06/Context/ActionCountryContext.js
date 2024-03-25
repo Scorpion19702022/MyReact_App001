@@ -286,6 +286,26 @@ export const ChoseContext = ({ children }) => {
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
 			setError('')
+		} else if (country === 'warmińsko-mazurskie' && capital) {
+			setInfoCountry({
+				country: 'warmińsko-mazurskie',
+				area: '24 173,47 km²',
+				people: '1 362 433',
+				density: '56 os./km²',
+				capital: 'Olsztyn',
+				peopleCapital: '168 212',
+			})
+			setError('')
+		} else if (country === 'warmińsko-mazurskie' && !capital) {
+			setInfoCountry({
+				country: 'warmińsko-mazurskie',
+				area: '24 173,47 km²',
+				people: '1 362 433',
+				density: '56 os./km²',
+				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
+			})
+			setError('')
 		}
 	}
 
