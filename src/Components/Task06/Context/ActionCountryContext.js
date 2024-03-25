@@ -306,6 +306,26 @@ export const ChoseContext = ({ children }) => {
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
 			setError('')
+		} else if (country === 'wielkopolskie' && capital) {
+			setInfoCountry({
+				country: 'wielkopolskie',
+				area: '29 826,51 km²',
+				people: '3 490 364',
+				density: '117 os./km²',
+				capital: 'Poznań',
+				peopleCapital: '541 316',
+			})
+			setError('')
+		} else if (country === 'wielkopolskie' && !capital) {
+			setInfoCountry({
+				country: 'wielkopolskie',
+				area: '29 826,51 km²',
+				people: '3 490 364',
+				density: '117 os./km²',
+				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
+			})
+			setError('')
 		}
 	}
 
