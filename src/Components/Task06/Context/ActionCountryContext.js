@@ -32,6 +32,7 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Wrocław',
 				info: 'Zostało utworzone w 1999 roku z ziem poprzednich województw wrocławskiego, legnickiego, jeleniogórskiego, wałbrzyskiego i części leszczyńskiego oraz kaliskiego.',
 			})
+			setError('')
 		} else if (country === 'dolnośląskie' && !capital) {
 			setInfoCountry({
 				country: 'dolnośląskie',
@@ -39,6 +40,7 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				info: 'Zostało utworzone w 1999 roku z ziem poprzednich województw wrocławskiego, legnickiego, jeleniogórskiego, wałbrzyskiego i części leszczyńskiego oraz kaliskiego.',
 			})
+			setError('')
 		} else if (country === 'kujawsko-pomorskie' && capital) {
 			setInfoCountry({
 				country: 'kujawsko-pomorskie',
@@ -46,6 +48,7 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Bydgoszcz',
 				info: 'Zostało utworzone na mocy ustawy z dnia 24 lipca 1998 w przybliżeniu z dawnych województw: bydgoskiego, toruńskiego i włocławskiego.',
 			})
+			setError('')
 		} else if (country === 'kujawsko-pomorskie' && !capital) {
 			setInfoCountry({
 				country: 'kujawsko-pomorskie',
@@ -53,6 +56,7 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				info: 'Zostało utworzone na mocy ustawy z dnia 24 lipca 1998 w przybliżeniu z dawnych województw: bydgoskiego, toruńskiego i włocławskiego.',
 			})
+			setError('')
 		} else if (country === 'lubelskie' && capital) {
 			setInfoCountry({
 				country: 'lubelskie',
@@ -60,6 +64,7 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Lublin',
 				info: 'Obejmuje głównie południową połowę Niziny Południowopodlaskiej, Polesie Zachodnie i Wołyńskie (po Bug) oraz Wyżynę Lubelską, mały obszar Wyżyny Wołyńskiej, większość polskiego Roztocza i skraj Kotliny Sandomierskiej.',
 			})
+			setError('')
 		} else if (country === 'lubelskie' && !capital) {
 			setInfoCountry({
 				country: 'lubelskie',
@@ -67,6 +72,7 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				info: 'Obejmuje głównie południową połowę Niziny Południowopodlaskiej, Polesie Zachodnie i Wołyńskie (po Bug) oraz Wyżynę Lubelską, mały obszar Wyżyny Wołyńskiej, większość polskiego Roztocza i skraj Kotliny Sandomierskiej.',
 			})
+			setError('')
 		} else if (country === 'lubuskie' && capital) {
 			setInfoCountry({
 				country: 'lubuskie',
@@ -74,6 +80,7 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Zielona Góra',
 				info: 'Obejmuje większość terytoriów dawnych województw: gorzowskiego i zielonogórskiego oraz niewielkiej części leszczyńskiego.',
 			})
+			setError('')
 		} else if (country === 'lubuskie' && !capital) {
 			setInfoCountry({
 				country: 'lubuskie',
@@ -81,6 +88,7 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				info: 'Obejmuje większość terytoriów dawnych województw: gorzowskiego i zielonogórskiego oraz niewielkiej części leszczyńskiego.',
 			})
+			setError('')
 		} else if (country === 'łódzkie' && capital) {
 			setInfoCountry({
 				country: 'łódzkie',
@@ -88,6 +96,7 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Łódź',
 				info: 'Obejmuje dawne obszary miejskiego łódzkiego, sieradzkiego, znacznej części piotrkowskiego, skierniewickiego, płockiego, kaliskiego, część częstochowskiego, konińskiego i radomskiego.',
 			})
+			setError('')
 		} else if (country === 'łódzkie' && !capital) {
 			setInfoCountry({
 				country: 'łódzkie',
@@ -95,6 +104,7 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				info: 'Obejmuje dawne obszary miejskiego łódzkiego, sieradzkiego, znacznej części piotrkowskiego, skierniewickiego, płockiego, kaliskiego, część częstochowskiego, konińskiego i radomskiego.',
 			})
+			setError('')
 		} else if (country === 'wybierz województwo') {
 			setError('wybierz województwo by uzyskać informacje')
 		}
