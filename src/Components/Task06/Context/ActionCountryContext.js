@@ -40,9 +40,9 @@ export const ChoseContext = ({ children }) => {
 		} else if (country === 'dolnośląskie' && !capital) {
 			setInfoCountry({
 				country: 'dolnośląskie',
+				area: '19 946,74 km²',
 				people: '2 883 133',
 				density: '144,54 os./km² ',
-				area: '19 946,74 km²',
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
@@ -50,19 +50,19 @@ export const ChoseContext = ({ children }) => {
 		} else if (country === 'kujawsko-pomorskie' && capital) {
 			setInfoCountry({
 				country: 'kujawsko-pomorskie',
+				area: '17 971,34 km²',
 				people: '2 001 670',
-				density: '',
-				area: '',
+				density: '111 os./km²',
 				capital: 'Bydgoszcz',
-				peopleCapital: '',
+				peopleCapital: '328 370',
 			})
 			setError('')
 		} else if (country === 'kujawsko-pomorskie' && !capital) {
 			setInfoCountry({
 				country: 'kujawsko-pomorskie',
+				area: '17 971,34 km²',
 				people: '2 001 670',
-				density: '',
-				area: '',
+				density: '111 os./km²',
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
@@ -70,19 +70,19 @@ export const ChoseContext = ({ children }) => {
 		} else if (country === 'lubelskie' && capital) {
 			setInfoCountry({
 				country: 'lubelskie',
+				area: '25 122,46 km²',
 				people: '2 038 299',
-				density: '',
-				area: '',
+				density: '81 os./km²',
 				capital: 'Lublin',
-				peopleCapital: '',
+				peopleCapital: '331 243',
 			})
 			setError('')
 		} else if (country === 'lubelskie' && !capital) {
 			setInfoCountry({
 				country: 'lubelskie',
+				area: '25 122,46 km²',
 				people: '2 038 299',
-				density: '',
-				area: '',
+				density: '81 os./km²',
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
@@ -90,19 +90,19 @@ export const ChoseContext = ({ children }) => {
 		} else if (country === 'lubuskie' && capital) {
 			setInfoCountry({
 				country: 'lubuskie',
+				area: '13 987,93 km²',
 				people: '977 493',
-				density: '',
-				area: '',
-				capital: 'Zielona Góra',
-				peopleCapital: '',
+				density: '70 os./km²',
+				capital: 'Gorzów Wielkopolski',
+				peopleCapital: '115 847',
 			})
 			setError('')
 		} else if (country === 'lubuskie' && !capital) {
 			setInfoCountry({
 				country: 'lubuskie',
+				area: '13 987,93 km²',
 				people: '977 493',
-				density: '',
-				area: '',
+				density: '70 os./km²',
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
@@ -110,38 +110,78 @@ export const ChoseContext = ({ children }) => {
 		} else if (country === 'łódzkie' && capital) {
 			setInfoCountry({
 				country: 'łódzkie',
+				area: '18 218,98 km²',
 				people: '2 378 483',
-				density: '',
-				area: '',
+				density: '130,1 os./km²',
 				capital: 'Łódź',
-				peopleCapital: '',
+				peopleCapital: '658 444',
 			})
 			setError('')
 		} else if (country === 'łódzkie' && !capital) {
 			setInfoCountry({
 				country: 'łódzkie',
+				area: '18 218,98 km²',
 				people: '2 378 483',
-				density: '',
-				area: '',
+				density: '130,1 os./km²',
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-		} else if (country === 'małopolskie' && !capital) {
-			setInfoCountry({
-				country: 'małopolskie',
-				people: '3 430 370',
-				density: '',
-				area: '',
-				capital: 'Kraków',
-				peopleCapital: '',
-			})
-			setError('')
 		} else if (country === 'małopolskie' && capital) {
 			setInfoCountry({
 				country: 'małopolskie',
+				area: '15 182,87 km²',
 				people: '3 430 370',
-				density: '',
-				area: '',
+				density: '226 os./km²',
+				capital: 'Kraków',
+				peopleCapital: '804 282',
+			})
+			setError('')
+		} else if (country === 'małopolskie' && !capital) {
+			setInfoCountry({
+				country: 'małopolskie',
+				area: '15 182,87 km²',
+				people: '3 430 370',
+				density: '226 os./km²',
+				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
+			})
+			setError('')
+		} else if (country === 'mazowieckie' && capital) {
+			setInfoCountry({
+				country: 'mazowieckie',
+				area: '35 558,47 km²',
+				people: '5 512 794',
+				density: '155 os./km²',
+				capital: 'Warszawa',
+				peopleCapital: '1 861 975',
+			})
+			setError('')
+		} else if (country === 'mazowieckie' && !capital) {
+			setInfoCountry({
+				country: 'mazowieckie',
+				area: '35 558,47 km²',
+				people: '5 512 794',
+				density: '155 os./km²',
+				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
+			})
+			setError('')
+		} else if (country === 'opolskie' && capital) {
+			setInfoCountry({
+				country: 'opolskie',
+				area: '9 411,87 km²',
+				people: '948 583',
+				density: '101 os./km²',
+				capital: 'Opole',
+				peopleCapital: '126 755',
+			})
+			setError('')
+		} else if (country === 'opolskie' && !capital) {
+			setInfoCountry({
+				country: 'opolskie',
+				area: '9 411,87 km²',
+				people: '948 583',
+				density: '101 os./km²',
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
