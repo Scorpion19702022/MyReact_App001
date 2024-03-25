@@ -55,8 +55,10 @@
 
 .people_info,
 .area_info,
-.capital_info {
+.capital_info,
+.density_info {
 	font-size: 2em;
+	font-weight: 700;
 	color: var(--color-blue04);
 	margin-bottom: 0.4em;
 }

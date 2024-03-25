@@ -11,16 +11,19 @@ const Task06result = () => {
 			<h1 className={styles.heading_country}>
 				Województwo: <span className={styles.span}>{infoCountry.country}</span>
 			</h1>
-			<h3 className={styles.people_info}>
+			<p className={styles.people_info}>
 				Obszar: <span className={styles.span}>{infoCountry.people}</span>
-			</h3>
-			<h3 className={styles.area_info}>
+			</p>
+			<p className={styles.density_info}>
+				Zaludnienie na 1 km: <span className={styles.span}>{infoCountry.density}</span>
+			</p>
+			<p className={styles.area_info}>
 				Mieszkańców: <span className={styles.span}>{infoCountry.area}</span>
-			</h3>
-			<h3 className={styles.capital_info}>
+			</p>
+			<p className={styles.capital_info}>
 				{' '}
 				Stolicą województwa jest: <span className={styles.span}>{infoCountry.capital}</span>
-			</h3>
+			</p>
 			<p className={styles.text}>
 				Informacja: <span className={styles.span}>{infoCountry.info}</span>
 			</p>
