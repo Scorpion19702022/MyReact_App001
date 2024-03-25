@@ -49,6 +49,7 @@
 
 .heading_country {
 	font-size: 2.6em;
+	font-weight: 400;
 	color: var(--color-blue04);
 	margin-bottom: 0.4em;
 }
@@ -56,20 +57,23 @@
 .people_info,
 .area_info,
 .capital_info,
-.density_info {
-	font-size: 2em;
-	font-weight: 700;
+.density_info,
+.peopleCapital_info {
+	font-size: 1.6em;
+	font-weight: 100;
 	color: var(--color-blue04);
 	margin-bottom: 0.4em;
+	padding-bottom: 0.2em;
+	border-bottom: 0.04em dotted var(--color-blue06);
 }
 
 .text {
-	font-size: 1.2em;
+	font-size: 1em;
 	color: var(--color-blue04);
 	font-weight: bold;
 }
 
 .span {
 	color: var(--color-blue02);
-	font-weight: 100;
+	font-weight: 400;
 }

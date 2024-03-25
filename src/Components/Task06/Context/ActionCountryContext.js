@@ -15,6 +15,7 @@ export const ChoseContext = ({ children }) => {
 		density: '',
 		area: '',
 		capital: '',
+		peopleCapital: '',
 		info: '',
 	})
 
@@ -31,9 +32,10 @@ export const ChoseContext = ({ children }) => {
 			setInfoCountry({
 				country: 'dolnośląskie',
 				people: '2 883 133',
-				density: '',
-				area: '',
+				density: '144,54 os./km²',
+				area: '19 946,74 km²',
 				capital: 'Wrocław',
+				peopleCapital: '',
 				info: 'Zostało utworzone w 1999 roku z ziem poprzednich województw wrocławskiego, legnickiego, jeleniogórskiego, wałbrzyskiego i części leszczyńskiego oraz kaliskiego.',
 			})
 			setError('')
@@ -41,9 +43,10 @@ export const ChoseContext = ({ children }) => {
 			setInfoCountry({
 				country: 'dolnośląskie',
 				people: '2 883 133',
-				density: '',
-				area: '',
+				density: '144,54 os./km² ',
+				area: '19 946,74 km²',
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 				info: 'Zostało utworzone w 1999 roku z ziem poprzednich województw wrocławskiego, legnickiego, jeleniogórskiego, wałbrzyskiego i części leszczyńskiego oraz kaliskiego.',
 			})
 			setError('')
@@ -54,6 +57,7 @@ export const ChoseContext = ({ children }) => {
 				density: '',
 				area: '',
 				capital: 'Bydgoszcz',
+				peopleCapital: '',
 				info: 'Zostało utworzone na mocy ustawy z dnia 24 lipca 1998 w przybliżeniu z dawnych województw: bydgoskiego, toruńskiego i włocławskiego.',
 			})
 			setError('')
@@ -64,6 +68,7 @@ export const ChoseContext = ({ children }) => {
 				density: '',
 				area: '',
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 				info: 'Zostało utworzone na mocy ustawy z dnia 24 lipca 1998 w przybliżeniu z dawnych województw: bydgoskiego, toruńskiego i włocławskiego.',
 			})
 			setError('')
@@ -74,6 +79,7 @@ export const ChoseContext = ({ children }) => {
 				density: '',
 				area: '',
 				capital: 'Lublin',
+				peopleCapital: '',
 				info: 'Obejmuje głównie południową połowę Niziny Południowopodlaskiej, Polesie Zachodnie i Wołyńskie (po Bug) oraz Wyżynę Lubelską, mały obszar Wyżyny Wołyńskiej, większość polskiego Roztocza i skraj Kotliny Sandomierskiej.',
 			})
 			setError('')
@@ -84,6 +90,7 @@ export const ChoseContext = ({ children }) => {
 				density: '',
 				area: '',
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 				info: 'Obejmuje głównie południową połowę Niziny Południowopodlaskiej, Polesie Zachodnie i Wołyńskie (po Bug) oraz Wyżynę Lubelską, mały obszar Wyżyny Wołyńskiej, większość polskiego Roztocza i skraj Kotliny Sandomierskiej.',
 			})
 			setError('')
@@ -94,6 +101,7 @@ export const ChoseContext = ({ children }) => {
 				density: '',
 				area: '',
 				capital: 'Zielona Góra',
+				peopleCapital: '',
 				info: 'Obejmuje większość terytoriów dawnych województw: gorzowskiego i zielonogórskiego oraz niewielkiej części leszczyńskiego.',
 			})
 			setError('')
@@ -104,6 +112,7 @@ export const ChoseContext = ({ children }) => {
 				density: '',
 				area: '',
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 				info: 'Obejmuje większość terytoriów dawnych województw: gorzowskiego i zielonogórskiego oraz niewielkiej części leszczyńskiego.',
 			})
 			setError('')
@@ -114,9 +123,20 @@ export const ChoseContext = ({ children }) => {
 				density: '',
 				area: '',
 				capital: 'Łódź',
+				peopleCapital: '',
 				info: 'Obejmuje dawne obszary miejskiego łódzkiego, sieradzkiego, znacznej części piotrkowskiego, skierniewickiego, płockiego, kaliskiego, część częstochowskiego, konińskiego i radomskiego.',
 			})
 			setError('')
+		} else if (country === 'łódzkie' && !capital) {
+			setInfoCountry({
+				country: 'łódzkie',
+				people: '2 378 483',
+				density: '',
+				area: '',
+				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
+				info: 'Obejmuje dawne obszary miejskiego łódzkiego, sieradzkiego, znacznej części piotrkowskiego, skierniewickiego, płockiego, kaliskiego, część częstochowskiego, konińskiego i radomskiego.',
+			})
 		} else if (country === 'małopolskie' && !capital) {
 			setInfoCountry({
 				country: 'małopolskie',
@@ -124,6 +144,7 @@ export const ChoseContext = ({ children }) => {
 				density: '',
 				area: '',
 				capital: 'Kraków',
+				peopleCapital: '',
 				info: 'Obejmuje dawne obszary krakowskiego , nowosądeckiego, w znacznej części tarnowskiego, bielskiego, część katowickiego, kieleckiego, krośnieńskiego.',
 			})
 			setError('')
@@ -134,6 +155,7 @@ export const ChoseContext = ({ children }) => {
 				density: '',
 				area: '',
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 				info: 'Obejmuje dawne obszary krakowskiego , nowosądeckiego, w znacznej części tarnowskiego, bielskiego, część katowickiego, kieleckiego, krośnieńskiego.',
 			})
 			setError('')
@@ -157,6 +179,7 @@ export const ChoseContext = ({ children }) => {
 			density: '',
 			area: '',
 			capital: '',
+			peopleCapital: '',
 			info: '',
 		})
 	}
