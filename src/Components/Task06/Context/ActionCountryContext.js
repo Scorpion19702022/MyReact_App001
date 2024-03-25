@@ -46,7 +46,7 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('')
+			setError('kliknij checkbox by zobaczyć stolicę')
 		} else if (country === 'kujawsko-pomorskie' && capital) {
 			setInfoCountry({
 				country: 'kujawsko-pomorskie',
@@ -66,7 +66,7 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('')
+			setError('kliknij checkbox by zobaczyć stolicę')
 		} else if (country === 'lubelskie' && capital) {
 			setInfoCountry({
 				country: 'lubelskie',
@@ -86,7 +86,7 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('')
+			setError('kliknij checkbox by zobaczyć stolicę')
 		} else if (country === 'lubuskie' && capital) {
 			setInfoCountry({
 				country: 'lubuskie',
@@ -106,7 +106,7 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('')
+			setError('kliknij checkbox by zobaczyć stolicę')
 		} else if (country === 'łódzkie' && capital) {
 			setInfoCountry({
 				country: 'łódzkie',
@@ -126,6 +126,7 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
+			setError('kliknij checkbox by zobaczyć stolicę')
 		} else if (country === 'małopolskie' && capital) {
 			setInfoCountry({
 				country: 'małopolskie',
@@ -145,7 +146,7 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('')
+			setError('kliknij checkbox by zobaczyć stolicę')
 		} else if (country === 'mazowieckie' && capital) {
 			setInfoCountry({
 				country: 'mazowieckie',
@@ -165,7 +166,7 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('')
+			setError('kliknij checkbox by zobaczyć stolicę')
 		} else if (country === 'opolskie' && capital) {
 			setInfoCountry({
 				country: 'opolskie',
@@ -185,7 +186,7 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('')
+			setError('kliknij checkbox by zobaczyć stolicę')
 		} else if (country === 'podkarpackie' && capital) {
 			setInfoCountry({
 				country: 'podkarpackie',
@@ -205,7 +206,7 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('')
+			setError('kliknij checkbox by zobaczyć stolicę')
 		} else if (country === 'podlaskie' && capital) {
 			setInfoCountry({
 				country: 'podlaskie',
@@ -225,7 +226,7 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('')
+			setError('kliknij checkbox by zobaczyć stolicę')
 		} else if (country === 'pomorskie' && capital) {
 			setInfoCountry({
 				country: 'pomorskie',
@@ -245,7 +246,7 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('')
+			setError('kliknij checkbox by zobaczyć stolicę')
 		} else if (country === 'śląskie' && capital) {
 			setInfoCountry({
 				country: 'śląskie',
@@ -265,7 +266,7 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('')
+			setError('kliknij checkbox by zobaczyć stolicę')
 		} else if (country === 'świętokrzyskie' && capital) {
 			setInfoCountry({
 				country: 'świętokrzyskie',
@@ -285,7 +286,7 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('')
+			setError('kliknij checkbox by zobaczyć stolicę')
 		} else if (country === 'warmińsko-mazurskie' && capital) {
 			setInfoCountry({
 				country: 'warmińsko-mazurskie',
@@ -305,7 +306,7 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('')
+			setError('kliknij checkbox by zobaczyć stolicę')
 		} else if (country === 'wielkopolskie' && capital) {
 			setInfoCountry({
 				country: 'wielkopolskie',
@@ -325,7 +326,7 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('')
+			setError('kliknij checkbox by zobaczyć stolicę')
 		} else if (country === 'zachodniopomorskie' && capital) {
 			setInfoCountry({
 				country: 'zachodniopomorskie',
@@ -345,13 +346,11 @@ export const ChoseContext = ({ children }) => {
 				capital: 'Nie wybrałeś by sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('')
+			setError('kliknij checkbox by zobaczyć stolicę')
+		} else if (country === 'wybierz województwo') {
+			setError('wybierz województwo by uzyskać informacje')
 		}
 	}
-
-	// else if (country === 'wybierz województwo') {
-	// 	setError('wybierz województwo by uzyskać informacje')
-	// }
 
 	console.log(infoCountry)
 	console.log(country)
