@@ -326,6 +326,26 @@ export const ChoseContext = ({ children }) => {
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
 			setError('')
+		} else if (country === 'zachodniopomorskie' && capital) {
+			setInfoCountry({
+				country: 'zachodniopomorskie',
+				area: '22 892,48 km²',
+				people: '1 636 293',
+				density: '71 os./km²',
+				capital: 'Szczecin',
+				peopleCapital: '390 278',
+			})
+			setError('')
+		} else if (country === 'zachodniopomorskie' && !capital) {
+			setInfoCountry({
+				country: 'zachodniopomorskie',
+				area: '22 892,48 km²',
+				people: '1 636 293',
+				density: '71 os./km²',
+				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
+			})
+			setError('')
 		}
 	}
 
