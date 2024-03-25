@@ -43,17 +43,17 @@ export const ChoseContext = ({ children }) => {
 				area: '19 946,74 km²',
 				people: '2 883 133',
 				density: '144,54 os./km² ',
-				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				capital: 'Nie wybrałeś aby sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('kliknij checkbox by zobaczyć stolicę')
+			setError('kliknij checkbox aby zobaczyć stolicę')
 		} else if (country === 'kujawsko-pomorskie' && capital) {
 			setInfoCountry({
 				country: 'kujawsko-pomorskie',
 				area: '17 971,34 km²',
 				people: '2 001 670',
 				density: '111 os./km²',
-				capital: 'Bydgoszcz',
+				capital: 'abydgoszcz',
 				peopleCapital: '328 370',
 			})
 			setError('')
@@ -63,10 +63,10 @@ export const ChoseContext = ({ children }) => {
 				area: '17 971,34 km²',
 				people: '2 001 670',
 				density: '111 os./km²',
-				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				capital: 'Nie wybrałeś aby sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('kliknij checkbox by zobaczyć stolicę')
+			setError('kliknij checkbox aby zobaczyć stolicę')
 		} else if (country === 'lubelskie' && capital) {
 			setInfoCountry({
 				country: 'lubelskie',
@@ -83,10 +83,10 @@ export const ChoseContext = ({ children }) => {
 				area: '25 122,46 km²',
 				people: '2 038 299',
 				density: '81 os./km²',
-				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				capital: 'Nie wybrałeś aby sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('kliknij checkbox by zobaczyć stolicę')
+			setError('kliknij checkbox aby zobaczyć stolicę')
 		} else if (country === 'lubuskie' && capital) {
 			setInfoCountry({
 				country: 'lubuskie',
@@ -103,10 +103,10 @@ export const ChoseContext = ({ children }) => {
 				area: '13 987,93 km²',
 				people: '977 493',
 				density: '70 os./km²',
-				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				capital: 'Nie wybrałeś aby sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('kliknij checkbox by zobaczyć stolicę')
+			setError('kliknij checkbox aby zobaczyć stolicę')
 		} else if (country === 'łódzkie' && capital) {
 			setInfoCountry({
 				country: 'łódzkie',
@@ -123,10 +123,10 @@ export const ChoseContext = ({ children }) => {
 				area: '18 218,98 km²',
 				people: '2 378 483',
 				density: '130,1 os./km²',
-				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				capital: 'Nie wybrałeś aby sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('kliknij checkbox by zobaczyć stolicę')
+			setError('kliknij checkbox aby zobaczyć stolicę')
 		} else if (country === 'małopolskie' && capital) {
 			setInfoCountry({
 				country: 'małopolskie',
@@ -143,10 +143,10 @@ export const ChoseContext = ({ children }) => {
 				area: '15 182,87 km²',
 				people: '3 430 370',
 				density: '226 os./km²',
-				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				capital: 'Nie wybrałeś aby sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('kliknij checkbox by zobaczyć stolicę')
+			setError('kliknij checkbox aby zobaczyć stolicę')
 		} else if (country === 'mazowieckie' && capital) {
 			setInfoCountry({
 				country: 'mazowieckie',
@@ -163,10 +163,10 @@ export const ChoseContext = ({ children }) => {
 				area: '35 558,47 km²',
 				people: '5 512 794',
 				density: '155 os./km²',
-				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				capital: 'Nie wybrałeś aby sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('kliknij checkbox by zobaczyć stolicę')
+			setError('kliknij checkbox aby zobaczyć stolicę')
 		} else if (country === 'opolskie' && capital) {
 			setInfoCountry({
 				country: 'opolskie',
@@ -183,10 +183,10 @@ export const ChoseContext = ({ children }) => {
 				area: '9 411,87 km²',
 				people: '948 583',
 				density: '101 os./km²',
-				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				capital: 'Nie wybrałeś aby sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('kliknij checkbox by zobaczyć stolicę')
+			setError('kliknij checkbox aby zobaczyć stolicę')
 		} else if (country === 'podkarpackie' && capital) {
 			setInfoCountry({
 				country: 'podkarpackie',
@@ -203,10 +203,10 @@ export const ChoseContext = ({ children }) => {
 				area: '17 845,76 km²',
 				people: '2 085 932',
 				density: '117 os./km²',
-				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				capital: 'Nie wybrałeś aby sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('kliknij checkbox by zobaczyć stolicę')
+			setError('kliknij checkbox aby zobaczyć stolicę')
 		} else if (country === 'podlaskie' && capital) {
 			setInfoCountry({
 				country: 'podlaskie',
@@ -223,10 +223,10 @@ export const ChoseContext = ({ children }) => {
 				area: '20 187,02 km²',
 				people: '1 148 720',
 				density: '57 os./km²',
-				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				capital: 'Nie wybrałeś aby sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('kliknij checkbox by zobaczyć stolicę')
+			setError('kliknij checkbox aby zobaczyć stolicę')
 		} else if (country === 'pomorskie' && capital) {
 			setInfoCountry({
 				country: 'pomorskie',
@@ -243,10 +243,10 @@ export const ChoseContext = ({ children }) => {
 				area: '18 310,34 km²',
 				people: '2 358 323',
 				density: '129 os./km²',
-				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				capital: 'Nie wybrałeś aby sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('kliknij checkbox by zobaczyć stolicę')
+			setError('kliknij checkbox aby zobaczyć stolicę')
 		} else if (country === 'śląskie' && capital) {
 			setInfoCountry({
 				country: 'śląskie',
@@ -263,10 +263,10 @@ export const ChoseContext = ({ children }) => {
 				area: '12 333,09 km²',
 				people: '4 375 947',
 				density: '354,8 os./km²',
-				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				capital: 'Nie wybrałeś aby sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('kliknij checkbox by zobaczyć stolicę')
+			setError('kliknij checkbox aby zobaczyć stolicę')
 		} else if (country === 'świętokrzyskie' && capital) {
 			setInfoCountry({
 				country: 'świętokrzyskie',
@@ -283,10 +283,10 @@ export const ChoseContext = ({ children }) => {
 				area: '11 710,5 km²',
 				people: '1 187 693',
 				density: '101 os./km²',
-				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				capital: 'Nie wybrałeś aby sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('kliknij checkbox by zobaczyć stolicę')
+			setError('kliknij checkbox aby zobaczyć stolicę')
 		} else if (country === 'warmińsko-mazurskie' && capital) {
 			setInfoCountry({
 				country: 'warmińsko-mazurskie',
@@ -303,10 +303,10 @@ export const ChoseContext = ({ children }) => {
 				area: '24 173,47 km²',
 				people: '1 362 433',
 				density: '56 os./km²',
-				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				capital: 'Nie wybrałeś aby sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('kliknij checkbox by zobaczyć stolicę')
+			setError('kliknij checkbox aby zobaczyć stolicę')
 		} else if (country === 'wielkopolskie' && capital) {
 			setInfoCountry({
 				country: 'wielkopolskie',
@@ -323,10 +323,10 @@ export const ChoseContext = ({ children }) => {
 				area: '29 826,51 km²',
 				people: '3 490 364',
 				density: '117 os./km²',
-				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				capital: 'Nie wybrałeś aby sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('kliknij checkbox by zobaczyć stolicę')
+			setError('kliknij checkbox aby zobaczyć stolicę')
 		} else if (country === 'zachodniopomorskie' && capital) {
 			setInfoCountry({
 				country: 'zachodniopomorskie',
@@ -343,12 +343,12 @@ export const ChoseContext = ({ children }) => {
 				area: '22 892,48 km²',
 				people: '1 636 293',
 				density: '71 os./km²',
-				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				capital: 'Nie wybrałeś aby sprawdzić stolicę',
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
-			setError('kliknij checkbox by zobaczyć stolicę')
+			setError('kliknij checkbox aby zobaczyć stolicę')
 		} else if (country === 'wybierz województwo') {
-			setError('wybierz województwo by uzyskać informacje')
+			setError('wybierz województwo aby uzyskać informacje')
 		}
 	}
 
