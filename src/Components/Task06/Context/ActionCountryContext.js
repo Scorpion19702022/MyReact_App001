@@ -186,6 +186,106 @@ export const ChoseContext = ({ children }) => {
 				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
 			})
 			setError('')
+		} else if (country === 'podkarpackie' && capital) {
+			setInfoCountry({
+				country: 'podkarpackie',
+				area: '17 845,76 km²',
+				people: '2 085 932',
+				density: '117 os./km²',
+				capital: 'Rzeszów',
+				peopleCapital: '197 536',
+			})
+			setError('')
+		} else if (country === 'podkarpackie' && !capital) {
+			setInfoCountry({
+				country: 'podkarpackie',
+				area: '17 845,76 km²',
+				people: '2 085 932',
+				density: '117 os./km²',
+				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
+			})
+			setError('')
+		} else if (country === 'podlaskie' && capital) {
+			setInfoCountry({
+				country: 'podlaskie',
+				area: '20 187,02 km²',
+				people: '1 148 720',
+				density: '57 os./km²',
+				capital: 'Białystok',
+				peopleCapital: '292 600',
+			})
+			setError('')
+		} else if (country === 'podlaskie' && !capital) {
+			setInfoCountry({
+				country: 'podlaskie',
+				area: '20 187,02 km²',
+				people: '1 148 720',
+				density: '57 os./km²',
+				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
+			})
+			setError('')
+		} else if (country === 'pomorskie' && capital) {
+			setInfoCountry({
+				country: 'pomorskie',
+				area: '18 310,34 km²',
+				people: '2 358 323',
+				density: '129 os./km²',
+				capital: 'Gdańsk',
+				peopleCapital: '486 492',
+			})
+			setError('')
+		} else if (country === 'pomorskie' && !capital) {
+			setInfoCountry({
+				country: 'pomorskie',
+				area: '18 310,34 km²',
+				people: '2 358 323',
+				density: '129 os./km²',
+				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
+			})
+			setError('')
+		} else if (country === 'śląskie' && capital) {
+			setInfoCountry({
+				country: 'śląskie',
+				area: '12 333,09 km²',
+				people: '4 375 947',
+				density: '354,8 os./km²',
+				capital: 'Katowice',
+				peopleCapital: '280 190',
+			})
+			setError('')
+		} else if (country === 'śląskie' && !capital) {
+			setInfoCountry({
+				country: 'śląskie',
+				area: '12 333,09 km²',
+				people: '4 375 947',
+				density: '354,8 os./km²',
+				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
+			})
+			setError('')
+		} else if (country === 'świętokrzyskie' && capital) {
+			setInfoCountry({
+				country: 'świętokrzyskie',
+				area: '11 710,5 km²',
+				people: '1 187 693',
+				density: '101 os./km²',
+				capital: 'Kielce',
+				peopleCapital: '183 885',
+			})
+			setError('')
+		} else if (country === 'świętokrzyskie' && !capital) {
+			setInfoCountry({
+				country: 'świętokrzyskie',
+				area: '11 710,5 km²',
+				people: '1 187 693',
+				density: '101 os./km²',
+				capital: 'Nie wybrałeś by sprawdzić stolicę',
+				peopleCapital: 'Ponieważ nie masz wybranej stolicy nie uzyskasz danych',
+			})
+			setError('')
 		}
 	}
 
