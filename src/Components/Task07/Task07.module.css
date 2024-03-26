@@ -71,8 +71,8 @@
 	-webkit-background-clip: text;
 	text-fill-color: transparent;
 	-webkit-text-fill-color: transparent;
-
 	font-size: 6em;
+	text-shadow: 0.4em 0.4em 0.6em var(--color-dark08);
 }
 
 .heading_line {
