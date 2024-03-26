@@ -38,3 +38,50 @@
 	--color-dark07: #111210;
 	--color-dark08: #000000;
 }
+
+.wrapper_task07 {
+	width: 100%;
+	min-height: 100vh;
+	padding-left: 7.8em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--color-dark06);
+}
+
+.box_header {
+	position: relative;
+	width: 100%;
+	height: 240px;
+}
+
+.heading_header {
+	position: absolute;
+	font-family: 'Lobster', sans-serif;
+	left: 5%;
+	top: 5%;
+	z-index: 10;
+	color: var(--color-dark01);
+	font-size: 6em;
+}
+
+.img_header {
+	width: 100%;
+	height: 100%;
+}
+
+.img_bar {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 25% 56%;
+}
+
+.shadow_header {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	background-color: rgba(17, 18, 16, 0.651);
+}
