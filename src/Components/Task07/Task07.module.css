@@ -72,7 +72,18 @@
 	text-fill-color: transparent;
 	-webkit-text-fill-color: transparent;
 	font-size: 6em;
-	text-shadow: 0.4em 0.4em 0.6em var(--color-dark08);
+}
+
+.text_shadow {
+	position: absolute;
+	top: 50%;
+	left: 4%;
+	width: 34%;
+	height: 60px;
+	filter: blur(0.4em);
+	border-radius: 100em;
+	z-index: 5;
+	background-color: var(--color-dark08);
 }
 
 .heading_line {
