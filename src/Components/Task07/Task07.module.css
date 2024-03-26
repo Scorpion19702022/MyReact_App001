@@ -1,0 +1,40 @@
+/* font-family: "Lobster", sans-serif; */
+
+:root {
+	--color-yellow01: #fefde5;
+	--color-yellow02: #fef899;
+	--color-yellow03: #fdf34c;
+	--color-yellow04: #fdee00;
+	--color-yellow05: #cabe00;
+	--color-yellow06: #7e7700;
+	--color-yellow07: #322f00;
+	--color-purple01: #f4e5fa;
+	--color-purple02: #deb2f1;
+	--color-purple03: #b44ce0;
+	--color-purple04: #9400d3;
+	--color-purple05: #670093;
+	--color-purple06: #3b0054;
+	--color-purple07: #1d002a;
+	--color-green01: #e5fae5;
+	--color-green02: #99eb99;
+	--color-green03: #4cdc4c;
+	--color-green04: #00cd00;
+	--color-green05: #00a400;
+	--color-green06: #007b00;
+	--color-green07: #003d00;
+	--color-blue01: #e5fdfd;
+	--color-blue02: #99f8f8;
+	--color-blue03: #4cf3f3;
+	--color-blue04: #00eeee;
+	--color-blue05: #00bebe;
+	--color-blue06: #007777;
+	--color-blue07: #002f2f;
+	--color-dark01: #ebebea;
+	--color-dark02: #b0b1ae;
+	--color-dark03: #757672;
+	--color-dark04: #3b3c36;
+	--color-dark05: #2f302b;
+	--color-dark06: #232420;
+	--color-dark07: #111210;
+	--color-dark08: #000000;
+}
