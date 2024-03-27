@@ -1,4 +1,4 @@
-import { createContext } from 'react'
+import { createContext, useState } from 'react'
 
 import cafe from '../assets/coffee.jpg'
 import tea from '../assets/tea.jpg'
@@ -42,7 +42,17 @@ export const ActionCaffee = ({ children }) => {
 		},
 	]
 
-	return <Task07context.Provider value={{ cafeProducts }}>{children}</Task07context.Provider>
+	const [table, setTable] = useState([])
+
+	const Test = id => {
+		const aaaa = cafeProducts.filter(item => item.id === id)
+		// console.log(aaaa)
+		setTable([table, ...table.push(aaaa)])
+	}
+
+	console.log(table)
+
+	return <Task07context.Provider value={{ cafeProducts, table, Test }}>{children}</Task07context.Provider>
 }
 
 export default Task07context
