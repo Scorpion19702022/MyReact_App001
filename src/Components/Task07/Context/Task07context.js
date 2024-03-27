@@ -46,11 +46,10 @@ export const ActionCaffee = ({ children }) => {
 
 	const Test = id => {
 		const aaaa = cafeProducts.filter(item => item.id === id)
-		// console.log(aaaa)
-		setTable([table, ...table.push(aaaa)])
+		console.log(aaaa)
+		setTable([table.push(aaaa)])
+		// console.log(table)
 	}
-
-	console.log(table)
 
 	return <Task07context.Provider value={{ cafeProducts, table, Test }}>{children}</Task07context.Provider>
 }
