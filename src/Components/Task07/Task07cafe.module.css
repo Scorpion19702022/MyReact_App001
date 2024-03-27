@@ -40,6 +40,7 @@
 .wrapper_cafe {
 	width: 70%;
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .menu_cafe {
