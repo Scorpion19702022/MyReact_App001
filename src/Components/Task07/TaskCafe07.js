@@ -12,8 +12,11 @@ const TaskCafe07 = () => {
 		<div key={item.id} className={styles.menu_cafe}>
 			<h1 className={styles.menu_product}>{item.product}</h1>
 			<img className={styles.menu_img} src={item.img} alt='' />
-			<h3 className={styles.menu_price}>Cena: {item.price}</h3>
-			<button className={styles.menu_btn}>Zamów</button>
+			<h3 className={styles.menu_price}>Cena: {item.price} zł</h3>
+			<div className={styles.box_btns}>
+				<button className={styles.menu_btn}>Zamów</button>
+				<button className={styles.menu_btn}>Cofnij</button>
+			</div>
 		</div>
 	))
 

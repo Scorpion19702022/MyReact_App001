@@ -37,6 +37,16 @@
 	--color-dark06: #232420;
 	--color-dark07: #111210;
 	--color-dark08: #000000;
+
+	--color-coffee01: #f3ece8;
+	--color-coffee02: #dbc6bb;
+	--color-coffee03: #b78d78;
+	--color-coffee04: #9f674b;
+	--color-coffee05: #87421f;
+	--color-coffee06: #6c3418;
+	--color-coffee07: #512712;
+	--color-coffee08: #281309;
+	--color-coffee09: #1b0d06;
 }
 
 .wrapper_task07 {
@@ -46,14 +56,14 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: var(--color-dark04);
+	background-color: var(--color-coffee09);
 }
 
 .box_header {
 	position: relative;
 	width: 100%;
 	height: 220px;
-	border-bottom: 0.4em solid var(--color-yellow05);
+	border-bottom: 0.4em solid var(--color-coffee04);
 	box-shadow: 4em 0em 1.2em var(--color-dark08);
 }
 
@@ -66,7 +76,7 @@
 
 	/** TEXT GRADIENT */
 	color: #cabe00;
-	background-image: -webkit-linear-gradient(0deg, #cabe00 0%, #fef899 50%, #cabe00 100%);
+	background-image: -webkit-linear-gradient(0deg, #9f674b 0%, #fef899 50%, #9f674b 100%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -75,14 +85,14 @@
 
 .text_shadow {
 	position: absolute;
-	top: 50%;
-	left: 4%;
-	width: 34%;
-	height: 60px;
-	filter: blur(0.4em);
+	top: 10%;
+	left: 3%;
+	width: 36%;
+	height: 130px;
+	filter: blur(0.1em);
 	border-radius: 100em;
 	z-index: 5;
-	background-color: var(--color-dark08);
+	background-color: rgba(40, 19, 9, 0.8);
 }
 
 .heading_line {
@@ -92,7 +102,7 @@
 	width: 23.4%;
 	height: 10px;
 	z-index: 10;
-	background-color: var(--color-yellow05);
+	background-color: var(--color-coffee04);
 }
 
 .img_header {
