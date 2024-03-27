@@ -3,8 +3,8 @@ import React from 'react'
 import Bar from './assets/bar.jpg'
 
 import styles from './Task07.module.css'
-import { ActionCaffee } from './Context/Task07cotext'
-import Task07cafe from './task07cafe'
+import { ActionCaffee } from './Context/Task07context'
+import TaskCafe07 from './TaskCafe07'
 
 const Task07 = () => {
 	return (
@@ -19,7 +19,7 @@ const Task07 = () => {
 				<div className={styles.shadow_header}></div>
 			</div>
 			<ActionCaffee>
-				<Task07cafe />
+				<TaskCafe07 />
 			</ActionCaffee>
 		</div>
 	)
