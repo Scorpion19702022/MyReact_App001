@@ -35,6 +35,16 @@
 	--color-dark06: #232420;
 	--color-dark07: #111210;
 	--color-dark08: #000000;
+
+	--color-coffee01: #f3ece8;
+	--color-coffee02: #dbc6bb;
+	--color-coffee03: #b78d78;
+	--color-coffee04: #9f674b;
+	--color-coffee05: #87421f;
+	--color-coffee06: #6c3418;
+	--color-coffee07: #512712;
+	--color-coffee08: #281309;
+	--color-coffee09: #1b0d06;
 }
 
 .wrapper_cafe {
@@ -51,12 +61,20 @@
 	flex-direction: column;
 	justify-content: space-between;
 	margin: 1em;
-	background-color: var(--color-yellow07);
-	border: 0.04em solid var(--color-yellow05);
+	background-color: var(--color-coffee07);
+	border: 0.04em solid var(--color-coffee04);
 }
 
 .menu_img {
 	width: 100%;
 	height: 50%;
 	object-fit: cover;
+}
+
+.menu_product {
+	color: var(--color-coffee02);
+}
+
+.menu_price {
+	color: var(--color-coffee03);
 }
