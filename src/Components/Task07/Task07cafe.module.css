@@ -68,24 +68,24 @@
 
 .menu_img {
 	width: 100%;
-	height: 75%;
+	height: 78%;
 	object-fit: cover;
 }
 
 .menu_product {
 	position: absolute;
-	padding: 0.02em 0.4em;
-	top: 6.1%;
-	left: 5.8%;
+	padding: 0.02em 0.4em 0.2em 0.4em;
+	top: 7%;
+	left: 5.7%;
 	color: var(--color-coffee02);
 	background-color: var(--color-coffee09);
 }
 
 .menu_price {
 	position: absolute;
-	top: 55.6%;
-	right: 5.8%;
-	padding: 0.02em 0.4em;
+	top: 62.4%;
+	right: 5.7%;
+	padding: 0.02em 0.4em 0.1em 0.4em;
 	color: var(--color-coffee03);
 	background-color: var(--color-coffee09);
 }
