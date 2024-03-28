@@ -44,12 +44,12 @@ export const ActionCaffee = ({ children }) => {
 
 	const [table, setTable] = useState([])
 
-	const Test = id => {
-		const aaaa = cafeProducts.filter(item => item.id === id)
-		console.log(aaaa)
-		setTable([table.push(aaaa)])
-		// console.log(table)
+	const Test = prices => {
+		const price = cafeProducts.find(itemPrice => itemPrice.price === prices)
+		console.log(price.price)
+		setTable([...table, price.price])
 	}
+	console.log(table)
 
 	return <Task07context.Provider value={{ cafeProducts, table, Test }}>{children}</Task07context.Provider>
 }
