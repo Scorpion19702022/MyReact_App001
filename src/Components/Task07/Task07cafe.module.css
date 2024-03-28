@@ -56,7 +56,7 @@
 .menu_cafe {
 	position: relative;
 	width: 23%;
-	height: 260px;
+	height: 240px;
 	padding: 1em;
 	display: flex;
 	flex-direction: column;
@@ -75,14 +75,19 @@
 .menu_product {
 	position: absolute;
 	padding: 0.02em 0.4em;
-	top: 6%;
+	top: 6.1%;
 	left: 5.8%;
 	color: var(--color-coffee02);
 	background-color: var(--color-coffee09);
 }
 
 .menu_price {
+	position: absolute;
+	top: 55.6%;
+	right: 5.8%;
+	padding: 0.02em 0.4em;
 	color: var(--color-coffee03);
+	background-color: var(--color-coffee09);
 }
 
 .box_btns {
