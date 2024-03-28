@@ -5,6 +5,12 @@ import tea from '../assets/tea.jpg'
 import water from '../assets/water.jpg'
 import cola from '../assets/cola.jpg'
 import beer from '../assets/beer.jpg'
+import wine from '../assets/wine.jpg'
+import vodka from '../assets/vodka.jpg'
+import whisky from '../assets/whisky.jpg'
+import pie from '../assets/pie.jpg'
+import tost from '../assets/tost.jpg'
+import sandwich from '../assets/sandwich.jpg'
 
 const Task07context = createContext()
 
@@ -39,6 +45,42 @@ export const ActionCaffee = ({ children }) => {
 			product: 'piwo',
 			price: 18,
 			img: beer,
+		},
+		{
+			id: 5,
+			product: 'wino',
+			price: 32,
+			img: wine,
+		},
+		{
+			id: 6,
+			product: 'wódka',
+			price: 50,
+			img: vodka,
+		},
+		{
+			id: 7,
+			product: 'whysky',
+			price: 50,
+			img: whisky,
+		},
+		{
+			id: 8,
+			product: 'ciasto',
+			price: 11,
+			img: pie,
+		},
+		{
+			id: 9,
+			product: 'tosty',
+			price: 10,
+			img: tost,
+		},
+		{
+			id: 10,
+			product: 'kanapka',
+			price: 15,
+			img: sandwich,
 		},
 	]
 
