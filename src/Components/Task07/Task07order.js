@@ -11,7 +11,7 @@ const Task07order = () => {
 			<h1 className={styles.heading_order}>Twoja karta menu</h1>
 			<div className={styles.card_menu}>
 				<h3 className={styles.quanity_menu}>
-					Wielkość zamówienia: <span>{quanity}</span>
+					Wielkość zamówienia: <span className={styles.quanity_span}>{quanity} pozycje</span>
 				</h3>
 			</div>
 		</div>
