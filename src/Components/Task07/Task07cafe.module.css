@@ -112,8 +112,9 @@
 	background-color: var(--color-coffee02);
 	border: 0.04em solid var(--color-coffee09);
 	cursor: pointer;
-	transition: all 0.5s ease-in-out;
+	transition: all 0.3s ease-in-out;
 	z-index: 10;
+	overflow: hidden;
 }
 
 .menu_btn::before {
@@ -123,8 +124,31 @@
 	height: 150%;
 	transform: translate(-130%, -28%);
 	border-radius: 25px;
-	filter: blur(00.2em);
+	filter: blur(00.4em);
 	background-color: var(--color-coffee08);
+	z-index: -10;
+	transition: all 0.1s ease-in-out;
+}
+
+.menu_btn:hover::before {
+	transform: translate(50%, -28%);
+}
+
+.menu_btn::after {
+	position: absolute;
+	content: '';
+	width: 160%;
+	height: 150%;
+	transform: translate(110%, -28%);
+	border-radius: 25px;
+	filter: blur(00.4em);
+	background-color: var(--color-coffee08);
+	z-index: -10;
+	transition: all 0.1s ease-in-out;
+}
+
+.menu_btn:hover::after {
+	transform: translate(-50%, -28%);
 }
 
 .menu_btn:hover {
