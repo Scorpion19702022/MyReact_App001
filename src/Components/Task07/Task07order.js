@@ -13,7 +13,7 @@ const Task07order = () => {
 				<h3 className={styles.quanity_menu}>
 					Wielkość zamówienia:{' '}
 					<span className={styles.quanity_span}>
-						{quanity} {quanity === 0 ? 'pozycji' : 'pozycje'}
+						{quanity} {quanity === 0 || quanity >= 5 ? 'pozycji' : 'pozycje'}
 					</span>
 				</h3>
 			</div>
