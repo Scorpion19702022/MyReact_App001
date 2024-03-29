@@ -49,9 +49,11 @@
 
 .wrapper_cafe {
 	width: 100%;
+	height: 700px;
 	padding: 1em;
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 }
 
 .wrapper_products {
@@ -63,12 +65,12 @@
 .menu_cafe {
 	position: relative;
 	width: 20%;
-	height: 190px;
+	height: 200px;
 	padding: 1em;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	margin: 1em;
+	margin: 0.6em;
 	background-color: var(--color-coffee07);
 	border: 0.04em solid var(--color-coffee04);
 }
@@ -82,16 +84,17 @@
 .menu_product {
 	position: absolute;
 	padding: 0.02em 0.4em 0.2em 0.4em;
-	top: 7%;
-	left: 5.7%;
+	top: 7.8%;
+	left: 6.6%;
+	font-size: 1.2em;
 	color: var(--color-coffee02);
 	background-color: var(--color-coffee09);
 }
 
 .menu_price {
 	position: absolute;
-	top: 62.4%;
-	right: 5.7%;
+	top: 60.7%;
+	right: 6.4%;
 	padding: 0.02em 0.4em 0.1em 0.4em;
 	color: var(--color-coffee03);
 	background-color: var(--color-coffee09);
