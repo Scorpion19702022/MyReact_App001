@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 
 import cafe from '../assets/coffee.jpg'
 import tea from '../assets/tea.jpg'
@@ -87,16 +87,18 @@ export const ActionCaffee = ({ children }) => {
 	const [arrayPrice, setArrayPrice] = useState([])
 	const [quanity, setQuanity] = useState(0)
 
+	useEffect(() => {
+		setQuanity(arrayPrice.length)
+	}, [arrayPrice.length])
+
 	const handlePriceOrder = prices => {
 		const price = cafeProducts.find(itemPrice => itemPrice.price === prices)
 		console.log(price.price)
 		setArrayPrice([...arrayPrice, price.price])
-		setQuanity(arrayPrice.length)
 	}
+	console.log(quanity)
 
 	console.log(arrayPrice)
-
-	console.log(quanity)
 
 	return (
 		<Task07context.Provider value={{ cafeProducts, arrayPrice, quanity, handlePriceOrder }}>
