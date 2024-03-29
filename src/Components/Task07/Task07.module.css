@@ -73,7 +73,7 @@
 	left: 5%;
 	top: 5%;
 	z-index: 10;
-	-webkit-text-stroke: 0.001em var(--color-coffee09);
+	-webkit-text-stroke: 0.001em var(--color-coffee05);
 
 	/** TEXT GRADIENT */
 	color: #cabe00;
