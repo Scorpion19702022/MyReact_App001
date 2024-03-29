@@ -93,7 +93,7 @@
 	filter: blur(0.1em);
 	border-radius: 100em;
 	z-index: 5;
-	background-color: rgba(40, 19, 9, 0.8);
+	background-color: rgba(0, 0, 0, 0.8);
 }
 
 .heading_line {
