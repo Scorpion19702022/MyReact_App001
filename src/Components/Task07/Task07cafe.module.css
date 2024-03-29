@@ -115,6 +115,14 @@
 	transition: all 0.5s ease-in-out;
 }
 
+.menu_btn::before {
+	position: absolute;
+	content: '';
+	width: 160%;
+	height: 150%;
+	background-color: var(--color-coffee08);
+}
+
 .menu_btn:hover {
 	background-color: var(--color-coffee08);
 	color: var(--color-coffee02);
