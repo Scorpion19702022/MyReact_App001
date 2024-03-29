@@ -85,17 +85,23 @@ export const ActionCaffee = ({ children }) => {
 	]
 
 	const [arrayPrice, setArrayPrice] = useState([])
+	const [quanity, setQuanity] = useState(0)
 
 	const handlePriceOrder = prices => {
 		const price = cafeProducts.find(itemPrice => itemPrice.price === prices)
 		console.log(price.price)
 		setArrayPrice([...arrayPrice, price.price])
+		setQuanity(arrayPrice.length)
 	}
 
 	console.log(arrayPrice)
 
+	console.log(quanity)
+
 	return (
-		<Task07context.Provider value={{ cafeProducts, arrayPrice, handlePriceOrder }}>{children}</Task07context.Provider>
+		<Task07context.Provider value={{ cafeProducts, arrayPrice, quanity, handlePriceOrder }}>
+			{children}
+		</Task07context.Provider>
 	)
 }
 
