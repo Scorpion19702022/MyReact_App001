@@ -23,10 +23,8 @@ const TaskCafe07 = () => {
 
 	return (
 		<div className={styles.wrapper_cafe}>
-			{cafeMenu}
-			<div>
-				<Task07order />
-			</div>
+			<div className={styles.wrapper_products}>{cafeMenu}</div>
+			<Task07order />
 		</div>
 	)
 }

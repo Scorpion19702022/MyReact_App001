@@ -48,6 +48,13 @@
 }
 
 .wrapper_cafe {
+	width: 100%;
+	padding: 1em;
+	display: flex;
+	justify-content: space-around;
+}
+
+.wrapper_products {
 	width: 70%;
 	display: flex;
 	flex-wrap: wrap;
@@ -55,8 +62,8 @@
 
 .menu_cafe {
 	position: relative;
-	width: 23%;
-	height: 220px;
+	width: 20%;
+	height: 190px;
 	padding: 1em;
 	display: flex;
 	flex-direction: column;
