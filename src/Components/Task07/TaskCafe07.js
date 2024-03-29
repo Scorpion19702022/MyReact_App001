@@ -2,9 +2,10 @@ import React, { useContext } from 'react'
 
 import styles from './Task07cafe.module.css'
 import Task07context from './Context/Task07context'
+import Task07order from './Task07order'
 
 const TaskCafe07 = () => {
-	const { cafeProducts, arrayPrice, handlePriceOrder } = useContext(Task07context)
+	const { cafeProducts, handlePriceOrder } = useContext(Task07context)
 
 	const cafeMenu = cafeProducts.map(item => (
 		<div key={item.id} className={styles.menu_cafe}>
@@ -20,7 +21,14 @@ const TaskCafe07 = () => {
 		</div>
 	))
 
-	return <div className={styles.wrapper_cafe}>{cafeMenu}</div>
+	return (
+		<div className={styles.wrapper_cafe}>
+			{cafeMenu}
+			<div>
+				<Task07order />
+			</div>
+		</div>
+	)
 }
 
 export default TaskCafe07
