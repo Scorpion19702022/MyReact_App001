@@ -8,14 +8,11 @@ const Task07order = () => {
 
 	const menuOrder = yourProduct.map((item, index) => {
 		return (
-			<ul key={index}>
+			<ul className={styles.order_list} key={index}>
 				<li>{item}</li>
 			</ul>
 		)
 	})
-
-	console.log(menuOrder)
-	// console.log(yourProduct)
 
 	return (
 		<div className={styles.wrapper_order}>
@@ -28,7 +25,7 @@ const Task07order = () => {
 					</span>
 				</h3>
 				<h4 className={styles.your_menu}>Twoje zamówienie:</h4>
-				<div>{menuOrder}</div>
+				<div className={styles.your_order}>{menuOrder}</div>
 			</div>
 		</div>
 	)
