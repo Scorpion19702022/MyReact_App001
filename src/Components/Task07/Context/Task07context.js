@@ -101,7 +101,7 @@ export const ActionCaffee = ({ children }) => {
 		setYourProduct([...yourProduct, product.product])
 	}
 
-	console.log(yourProduct)
+	// console.log(yourProduct)
 
 	return (
 		<Task07context.Provider value={{ cafeProducts, arrayPrice, quanity, yourProduct, handlePriceOrder }}>

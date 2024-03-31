@@ -6,6 +6,17 @@ import Task07context from './Context/Task07context'
 const Task07order = () => {
 	const { quanity, yourProduct } = useContext(Task07context)
 
+	const menuOrder = yourProduct.map((item, index) => {
+		return (
+			<ul key={index}>
+				<li>{item}</li>
+			</ul>
+		)
+	})
+
+	console.log(menuOrder)
+	// console.log(yourProduct)
+
 	return (
 		<div className={styles.wrapper_order}>
 			<h1 className={styles.heading_order}>Twoja karta menu</h1>
@@ -17,7 +28,7 @@ const Task07order = () => {
 					</span>
 				</h3>
 				<h4 className={styles.your_menu}>Twoje zamówienie:</h4>
-				<div></div>
+				<div>{menuOrder}</div>
 			</div>
 		</div>
 	)
