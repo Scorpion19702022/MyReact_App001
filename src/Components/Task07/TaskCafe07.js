@@ -16,7 +16,6 @@ const TaskCafe07 = () => {
 				<button className={styles.menu_btn} onClick={() => handlePriceOrder(item.price, item.product)}>
 					Zamów
 				</button>
-				<button className={styles.menu_btn}>Cofnij</button>
 			</div>
 		</div>
 	))
