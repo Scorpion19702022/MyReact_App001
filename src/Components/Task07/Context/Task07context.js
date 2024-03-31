@@ -86,6 +86,7 @@ export const ActionCaffee = ({ children }) => {
 
 	const [arrayPrice, setArrayPrice] = useState([])
 	const [quanity, setQuanity] = useState(0)
+	const [yourProduct, setYourProduct] = useState([])
 
 	useEffect(() => {
 		setQuanity(arrayPrice.length)
@@ -96,9 +97,6 @@ export const ActionCaffee = ({ children }) => {
 		console.log(price.price)
 		setArrayPrice([...arrayPrice, price.price])
 	}
-	console.log(quanity)
-
-	console.log(arrayPrice)
 
 	return (
 		<Task07context.Provider value={{ cafeProducts, arrayPrice, quanity, handlePriceOrder }}>
