@@ -89,8 +89,8 @@ export const ActionCaffee = ({ children }) => {
 	const [yourProduct, setYourProduct] = useState([])
 
 	useEffect(() => {
-		setQuanity(arrayPrice.length)
-	}, [arrayPrice.length])
+		setQuanity(yourProduct.length)
+	}, [yourProduct.length])
 
 	const handlePriceOrder = (prices, products) => {
 		const price = cafeProducts.find(itemPrice => itemPrice.price === prices)

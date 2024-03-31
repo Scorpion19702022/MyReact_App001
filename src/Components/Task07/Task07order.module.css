@@ -100,6 +100,7 @@
 	list-style-type: none;
 	color: var(--color-coffee01);
 	padding-bottom: 0.4em;
+	margin-bottom: 0.6em;
 	border-bottom: 0.04em dotted var(--color-coffee04);
 }
 
@@ -113,4 +114,10 @@
 	color: var(--color-coffee02);
 	border: 0.04em solid var(--color-coffee02);
 	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.btn_substract:hover {
+	background-color: var(--color-coffee01);
+	color: var(--color-coffee09);
 }
