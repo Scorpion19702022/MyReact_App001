@@ -92,19 +92,33 @@ export const ActionCaffee = ({ children }) => {
 		setQuanity(yourProduct.length)
 	}, [yourProduct.length])
 
+	// const handlePriceOrder = (prices, products) => {
+	// 	const price = cafeProducts.find(itemPrice => itemPrice.price === prices)
+	// 	const product = cafeProducts.find(itemProduct => itemProduct.product === products)
+	// 	// console.log(price.price)
+	// 	// console.log(product.product)
+	// 	setArrayPrice([...arrayPrice, price.price])
+	// 	setYourProduct([...yourProduct, product.product])
+	// }
+
 	const handlePriceOrder = (prices, products) => {
 		const price = cafeProducts.find(itemPrice => itemPrice.price === prices)
 		const product = cafeProducts.find(itemProduct => itemProduct.product === products)
-		// console.log(price.price)
-		// console.log(product.product)
 		setArrayPrice([...arrayPrice, price.price])
-		setYourProduct([...yourProduct, product.product])
+		setYourProduct([...yourProduct, { id: product.id, product: product.product }])
 	}
 
-	// console.log(yourProduct)
+	console.log(yourProduct)
+
+	const handleDeleteOrder = id => {
+		const deleteOrder = yourProduct.filter(item => item.id !== id)
+		setYourProduct(deleteOrder)
+	}
 
 	return (
-		<Task07context.Provider value={{ cafeProducts, arrayPrice, quanity, yourProduct, handlePriceOrder }}>
+		<Task07context.Provider
+			value={{ cafeProducts, arrayPrice, quanity, yourProduct, handlePriceOrder, handleDeleteOrder }}
+		>
 			{children}
 		</Task07context.Provider>
 	)

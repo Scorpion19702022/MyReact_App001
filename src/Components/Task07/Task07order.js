@@ -4,14 +4,16 @@ import styles from './Task07order.module.css'
 import Task07context from './Context/Task07context'
 
 const Task07order = () => {
-	const { quanity, yourProduct } = useContext(Task07context)
+	const { quanity, yourProduct, handleDeleteOrder } = useContext(Task07context)
 
-	const menuOrder = yourProduct.map((item, index) => {
+	const menuOrder = yourProduct.map(item => {
 		return (
-			<ul className={styles.order_lists} key={index}>
+			<ul className={styles.order_lists} key={item.id}>
 				<li className={styles.order_list}>
-					{item}
-					<button className={styles.btn_substract}>-</button>
+					{item.product}
+					<button className={styles.btn_substract} onClick={() => handleDeleteOrder(item.id)}>
+						-
+					</button>
 				</li>
 			</ul>
 		)
