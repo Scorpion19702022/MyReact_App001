@@ -105,7 +105,7 @@ export const ActionCaffee = ({ children }) => {
 		const price = cafeProducts.find(itemPrice => itemPrice.price === prices)
 		const product = cafeProducts.find(itemProduct => itemProduct.product === products)
 		setArrayPrice([...arrayPrice, price.price])
-		setYourProduct([...yourProduct, { id: product.id, product: product.product }])
+		setYourProduct([...yourProduct, { id: product.id, product: product.product, price: product.price }])
 	}
 
 	console.log(yourProduct)
