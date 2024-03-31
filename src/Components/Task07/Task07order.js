@@ -4,7 +4,7 @@ import styles from './Task07order.module.css'
 import Task07context from './Context/Task07context'
 
 const Task07order = () => {
-	const { quanity } = useContext(Task07context)
+	const { quanity, yourProduct } = useContext(Task07context)
 
 	return (
 		<div className={styles.wrapper_order}>

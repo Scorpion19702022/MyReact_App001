@@ -13,7 +13,7 @@ const TaskCafe07 = () => {
 			<img className={styles.menu_img} src={item.img} alt='' />
 			<h3 className={styles.menu_price}>Cena: {item.price} zł</h3>
 			<div className={styles.box_btns}>
-				<button className={styles.menu_btn} onClick={() => handlePriceOrder(item.price)}>
+				<button className={styles.menu_btn} onClick={() => handlePriceOrder(item.price, item.product)}>
 					Zamów
 				</button>
 				<button className={styles.menu_btn}>Cofnij</button>
