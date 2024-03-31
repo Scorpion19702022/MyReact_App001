@@ -8,8 +8,11 @@ const Task07order = () => {
 
 	const menuOrder = yourProduct.map((item, index) => {
 		return (
-			<ul className={styles.order_list} key={index}>
-				<li>{item}</li>
+			<ul className={styles.order_lists} key={index}>
+				<li className={styles.order_list}>
+					{item}
+					<button className={styles.btn_substract}>-</button>
+				</li>
 			</ul>
 		)
 	})
