@@ -12,6 +12,8 @@ import pie from '../assets/pie.jpg'
 import tost from '../assets/tost.jpg'
 import sandwich from '../assets/sandwich.jpg'
 
+import { v4 as uuidv4 } from 'uuid'
+
 const Task07context = createContext()
 
 export const ActionCaffee = ({ children }) => {
@@ -105,7 +107,7 @@ export const ActionCaffee = ({ children }) => {
 		const price = cafeProducts.find(itemPrice => itemPrice.price === prices)
 		const product = cafeProducts.find(itemProduct => itemProduct.product === products)
 		setArrayPrice([...arrayPrice, price.price])
-		setYourProduct([...yourProduct, { id: product.id, product: product.product }])
+		setYourProduct([...yourProduct, { id: uuidv4(), product: product.product }])
 	}
 
 	const handleDeleteOrder = id => {
