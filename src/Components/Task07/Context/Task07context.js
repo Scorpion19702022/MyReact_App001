@@ -98,7 +98,6 @@ export const ActionCaffee = ({ children }) => {
 
 	useEffect(() => {
 		setArrayPrice(yourProduct.map(item => item.price))
-		console.log(arrayPrice)
 	}, [yourProduct])
 
 	useEffect(() => {
@@ -112,10 +111,8 @@ export const ActionCaffee = ({ children }) => {
 		if (product) {
 			setYourProduct([...yourProduct, { id: uuidv4(), product: product.product, price: product.price }])
 			// setArrayPrice(yourProduct.map(item => item.price))
-			console.log([arrayPrice])
 		}
 	}
-	console.log(cost)
 
 	const handleDeleteOrder = id => {
 		const updatedOrders = yourProduct.filter(item => item.id !== id)
