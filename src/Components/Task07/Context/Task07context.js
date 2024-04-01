@@ -11,6 +11,7 @@ import whisky from '../assets/whisky.jpg'
 import pie from '../assets/pie.jpg'
 import tost from '../assets/tost.jpg'
 import sandwich from '../assets/sandwich.jpg'
+import cheese from '../assets/cheese.jpg'
 
 import { v4 as uuidv4 } from 'uuid'
 
@@ -75,7 +76,7 @@ export const ActionCaffee = ({ children }) => {
 		{
 			id: 9,
 			product: 'tosty',
-			price: 10,
+			price: 16,
 			img: tost,
 		},
 		{
@@ -83,6 +84,12 @@ export const ActionCaffee = ({ children }) => {
 			product: 'kanapka',
 			price: 15,
 			img: sandwich,
+		},
+		{
+			id: 11,
+			product: 'przekąska na desce',
+			price: 27,
+			img: cheese,
 		},
 	]
 
