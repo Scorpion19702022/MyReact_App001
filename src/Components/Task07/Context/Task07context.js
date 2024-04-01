@@ -108,6 +108,8 @@ export const ActionCaffee = ({ children }) => {
 		const product = cafeProducts.find(itemProduct => itemProduct.product === products)
 		// setArrayPrice([...arrayPrice, price.price])
 		setYourProduct([...yourProduct, { id: uuidv4(), product: product.product, price: product.price }])
+		setArrayPrice(yourProduct.map(item => item.price))
+		console.log(arrayPrice)
 	}
 
 	const handleDeleteOrder = id => {
