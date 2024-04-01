@@ -117,7 +117,7 @@ export const ActionCaffee = ({ children }) => {
 		if (cost !== 0) {
 			setNoOrder('')
 		} else {
-			setNoOrder('Brak zamówieia')
+			setNoOrder('Brak zamówienia')
 		}
 	}, [cost])
 
@@ -137,9 +137,27 @@ export const ActionCaffee = ({ children }) => {
 		setYourProduct(updatedOrders)
 	}
 
+	const handleDeleteAllOrder = () => {
+		setNoOrder('Brak zamówienia')
+		setArrayPrice([])
+		setCost(0)
+		setQuanity(0)
+		setYourProduct([])
+	}
+
 	return (
 		<Task07context.Provider
-			value={{ cafeProducts, arrayPrice, quanity, yourProduct, handlePriceOrder, handleDeleteOrder, cost, noOrder }}
+			value={{
+				cafeProducts,
+				arrayPrice,
+				quanity,
+				yourProduct,
+				handlePriceOrder,
+				handleDeleteOrder,
+				cost,
+				noOrder,
+				handleDeleteAllOrder,
+			}}
 		>
 			{children}
 		</Task07context.Provider>

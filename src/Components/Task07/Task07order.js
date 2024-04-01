@@ -4,7 +4,7 @@ import styles from './Task07order.module.css'
 import Task07context from './Context/Task07context'
 
 const Task07order = () => {
-	const { quanity, yourProduct, handleDeleteOrder, noOrder, cost } = useContext(Task07context)
+	const { quanity, yourProduct, handleDeleteOrder, noOrder, cost, handleDeleteAllOrder } = useContext(Task07context)
 
 	const menuOrder = yourProduct.map(item => {
 		return (
@@ -38,7 +38,9 @@ const Task07order = () => {
 					Całkowity koszt zamówienia: <span className={styles.span_cost}>{cost}</span> zł
 				</h3>
 			</div>
-			<button className={styles.clean_all_order}>resetuj całe zamówienie</button>
+			<button className={styles.clean_all_order} onClick={handleDeleteAllOrder}>
+				resetuj całe zamówienie
+			</button>
 		</div>
 	)
 }
