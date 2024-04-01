@@ -96,34 +96,30 @@ export const ActionCaffee = ({ children }) => {
 		setQuanity(yourProduct.length)
 	}, [yourProduct.length])
 
-	// const handlePriceOrder = (prices, products) => {
-	// 	const price = cafeProducts.find(itemPrice => itemPrice.price === prices)
-	// 	const product = cafeProducts.find(itemProduct => itemProduct.product === products)
-	// 	// console.log(price.price)
-	// 	// console.log(product.product)
-	// 	setArrayPrice([...arrayPrice, price.price])
-	// 	setYourProduct([...yourProduct, product.product])
-	// }
-
 	useEffect(() => {
 		setArrayPrice(yourProduct.map(item => item.price))
 		console.log(arrayPrice)
-	}, [yourProduct])
+		if (cost !== 0) {
+			setCost(arrayPrice.reduce((a, b) => a + b, 0))
+		}
+	}, [yourProduct, cost])
 
-	useEffect(() => {
-		setCost(arrayPrice.reduce((a, b) => a + b, cost))
-	}, [arrayPrice])
+	// useEffect(() => {
+	// 	setCost(arrayPrice.reduce((a, b) => a + b, cost))
+	// }, [arrayPrice])
 
 	const handlePriceOrder = (prices, products) => {
 		// const price = cafeProducts.find(itemPrice => itemPrice.price === prices)
 		const product = cafeProducts.find(itemProduct => itemProduct.product === products)
 		// setArrayPrice([...arrayPrice, price.price])
-		setYourProduct([...yourProduct, { id: uuidv4(), product: product.product, price: product.price }])
-		// setArrayPrice(yourProduct.map(item => item.price))
-		console.log([arrayPrice])
+		if (product) {
+			setYourProduct([...yourProduct, { id: uuidv4(), product: product.product, price: product.price }])
+			// setArrayPrice(yourProduct.map(item => item.price))
+			console.log([arrayPrice])
+		}
 		// setCost(arrayPrice.reduce((a, b) => a + b, cost))
-		console.log(cost)
 	}
+	console.log(cost)
 
 	const handleDeleteOrder = (id, costs) => {
 		const updatedOrders = yourProduct.filter(item => item.id !== id)
