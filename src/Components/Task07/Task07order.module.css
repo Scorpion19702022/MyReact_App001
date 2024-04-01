@@ -129,16 +129,28 @@
 .box_costs {
 	position: absolute;
 	bottom: 15%;
-	right: 10%;
+	right: 5%;
 }
 
 .cost {
 	font-size: 1.2em;
 	color: var(--color-coffee03);
 	padding-bottom: 0.4em;
+	border-bottom: 0.2em solid var(--color-coffee03);
 }
 
 .span_cost {
 	font-size: 1.6em;
 	color: var(--color-coffee02);
+}
+
+.clean_all_order {
+	position: absolute;
+	bottom: 5%;
+	right: 5%;
+	width: 51%;
+	padding: 0.4em 1em;
+	font-size: 1em;
+	background-color: var(--color-coffee03);
+	border: 0.2em solid var(--color-coffee09);
 }

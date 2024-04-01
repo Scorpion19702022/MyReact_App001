@@ -37,6 +37,7 @@ const Task07order = () => {
 					Całkowity koszt zamówienia: <span className={styles.span_cost}>{cost}</span> zł
 				</h3>
 			</div>
+			<button className={styles.clean_all_order}>resetuj całe zamówienie</button>
 		</div>
 	)
 }
