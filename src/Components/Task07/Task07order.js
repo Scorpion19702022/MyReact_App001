@@ -31,7 +31,7 @@ const Task07order = () => {
 				</h3>
 				<h4 className={styles.your_menu}>Twoje zamówienie:</h4>
 				<div className={styles.your_order}>{menuOrder}</div>
-				<h3>{noOrder}</h3>
+				<h3 className={styles.no_order}>{noOrder}</h3>
 			</div>
 			<div className={styles.box_costs}>
 				<h3 className={styles.cost}>
