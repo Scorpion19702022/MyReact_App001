@@ -99,14 +99,11 @@ export const ActionCaffee = ({ children }) => {
 	useEffect(() => {
 		setArrayPrice(yourProduct.map(item => item.price))
 		console.log(arrayPrice)
-		if (cost !== 0) {
-			setCost(arrayPrice.reduce((a, b) => a + b, 0))
-		}
-	}, [yourProduct, cost])
+	}, [yourProduct])
 
-	// useEffect(() => {
-	// 	setCost(arrayPrice.reduce((a, b) => a + b, cost))
-	// }, [arrayPrice])
+	useEffect(() => {
+		setCost(arrayPrice.reduce((a, b) => a + b, 0))
+	}, [arrayPrice])
 
 	const handlePriceOrder = (prices, products) => {
 		// const price = cafeProducts.find(itemPrice => itemPrice.price === prices)
@@ -117,11 +114,10 @@ export const ActionCaffee = ({ children }) => {
 			// setArrayPrice(yourProduct.map(item => item.price))
 			console.log([arrayPrice])
 		}
-		// setCost(arrayPrice.reduce((a, b) => a + b, cost))
 	}
 	console.log(cost)
 
-	const handleDeleteOrder = (id, costs) => {
+	const handleDeleteOrder = id => {
 		const updatedOrders = yourProduct.filter(item => item.id !== id)
 		setYourProduct(updatedOrders)
 	}

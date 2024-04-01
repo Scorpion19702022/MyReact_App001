@@ -11,7 +11,7 @@ const Task07order = () => {
 			<ul className={styles.order_lists} key={item.id}>
 				<li className={styles.order_list}>
 					{item.product}, {item.price} zł
-					<button className={styles.btn_substract} onClick={() => handleDeleteOrder(item.id, item.price)}>
+					<button className={styles.btn_substract} onClick={() => handleDeleteOrder(item.id)}>
 						-
 					</button>
 				</li>
