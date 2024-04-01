@@ -90,6 +90,8 @@ export const ActionCaffee = ({ children }) => {
 	const [quanity, setQuanity] = useState(0)
 	const [yourProduct, setYourProduct] = useState([])
 
+	const [cost, setCost] = useState(0)
+
 	useEffect(() => {
 		setQuanity(yourProduct.length)
 	}, [yourProduct.length])
@@ -103,23 +105,34 @@ export const ActionCaffee = ({ children }) => {
 	// 	setYourProduct([...yourProduct, product.product])
 	// }
 
+	useEffect(() => {
+		setArrayPrice(yourProduct.map(item => item.price))
+		console.log(arrayPrice)
+	}, [yourProduct])
+
+	useEffect(() => {
+		setCost(arrayPrice.reduce((a, b) => a + b, cost))
+	}, [arrayPrice])
+
 	const handlePriceOrder = (prices, products) => {
 		// const price = cafeProducts.find(itemPrice => itemPrice.price === prices)
 		const product = cafeProducts.find(itemProduct => itemProduct.product === products)
 		// setArrayPrice([...arrayPrice, price.price])
 		setYourProduct([...yourProduct, { id: uuidv4(), product: product.product, price: product.price }])
-		setArrayPrice(yourProduct.map(item => item.price))
-		console.log(arrayPrice)
+		// setArrayPrice(yourProduct.map(item => item.price))
+		console.log([arrayPrice])
+		// setCost(arrayPrice.reduce((a, b) => a + b, cost))
+		console.log(cost)
 	}
 
-	const handleDeleteOrder = id => {
+	const handleDeleteOrder = (id, costs) => {
 		const updatedOrders = yourProduct.filter(item => item.id !== id)
 		setYourProduct(updatedOrders)
 	}
 
 	return (
 		<Task07context.Provider
-			value={{ cafeProducts, arrayPrice, quanity, yourProduct, handlePriceOrder, handleDeleteOrder }}
+			value={{ cafeProducts, arrayPrice, quanity, yourProduct, handlePriceOrder, handleDeleteOrder, cost }}
 		>
 			{children}
 		</Task07context.Provider>

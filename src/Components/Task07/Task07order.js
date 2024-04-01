@@ -4,14 +4,14 @@ import styles from './Task07order.module.css'
 import Task07context from './Context/Task07context'
 
 const Task07order = () => {
-	const { quanity, yourProduct, handleDeleteOrder } = useContext(Task07context)
+	const { quanity, yourProduct, handleDeleteOrder, cost } = useContext(Task07context)
 
 	const menuOrder = yourProduct.map(item => {
 		return (
 			<ul className={styles.order_lists} key={item.id}>
 				<li className={styles.order_list}>
 					{item.product}, {item.price} zł
-					<button className={styles.btn_substract} onClick={() => handleDeleteOrder(item.id)}>
+					<button className={styles.btn_substract} onClick={() => handleDeleteOrder(item.id, item.price)}>
 						-
 					</button>
 				</li>
@@ -31,6 +31,9 @@ const Task07order = () => {
 				</h3>
 				<h4 className={styles.your_menu}>Twoje zamówienie:</h4>
 				<div className={styles.your_order}>{menuOrder}</div>
+			</div>
+			<div>
+				<h2>{cost}</h2>
 			</div>
 		</div>
 	)
