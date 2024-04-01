@@ -101,7 +101,7 @@ export const ActionCaffee = ({ children }) => {
 	}, [yourProduct])
 
 	useEffect(() => {
-		setCost(arrayPrice.reduce((a, b) => a + b, 0))
+		setCost(arrayPrice.reduce((accumulator, currentValue) => accumulator + currentValue, 0))
 	}, [arrayPrice])
 
 	const handlePriceOrder = (prices, products) => {

@@ -32,8 +32,10 @@ const Task07order = () => {
 				<h4 className={styles.your_menu}>Twoje zamówienie:</h4>
 				<div className={styles.your_order}>{menuOrder}</div>
 			</div>
-			<div>
-				<h2>{cost}</h2>
+			<div className={styles.box_costs}>
+				<h3 className={styles.cost}>
+					Całkowity koszt zamówienia: <span className={styles.span_cost}>{cost}</span> zł
+				</h3>
 			</div>
 		</div>
 	)

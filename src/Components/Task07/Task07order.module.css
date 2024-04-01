@@ -48,6 +48,7 @@
 }
 
 .wrapper_order {
+	position: relative;
 	width: 28%;
 	height: 90%;
 	display: flex;
@@ -89,7 +90,7 @@
 .your_order {
 	width: 100%;
 	padding: 0em 1em 1em 0em;
-	max-height: 300px;
+	max-height: 230px;
 	overflow: auto;
 	margin-top: 0.6em;
 	display: flex;
@@ -123,4 +124,21 @@
 .btn_substract:hover {
 	background-color: var(--color-coffee01);
 	color: var(--color-coffee09);
+}
+
+.box_costs {
+	position: absolute;
+	bottom: 15%;
+	right: 10%;
+}
+
+.cost {
+	font-size: 1.2em;
+	color: var(--color-coffee03);
+	padding-bottom: 0.4em;
+}
+
+.span_cost {
+	font-size: 1.6em;
+	color: var(--color-coffee02);
 }
