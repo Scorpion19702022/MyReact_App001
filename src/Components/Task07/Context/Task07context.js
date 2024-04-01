@@ -86,6 +86,8 @@ export const ActionCaffee = ({ children }) => {
 		},
 	]
 
+	const [noOrder, setNoOrder] = useState('Brak zamówienia')
+
 	const [arrayPrice, setArrayPrice] = useState([])
 	const [quanity, setQuanity] = useState(0)
 	const [yourProduct, setYourProduct] = useState([])
@@ -104,6 +106,14 @@ export const ActionCaffee = ({ children }) => {
 		setCost(arrayPrice.reduce((accumulator, currentValue) => accumulator + currentValue, 0))
 	}, [arrayPrice])
 
+	useEffect(() => {
+		if (cost !== 0) {
+			setNoOrder('')
+		} else {
+			setNoOrder('Brak zamówieia')
+		}
+	}, [cost])
+
 	const handlePriceOrder = (prices, products) => {
 		// const price = cafeProducts.find(itemPrice => itemPrice.price === prices)
 		const product = cafeProducts.find(itemProduct => itemProduct.product === products)
@@ -111,6 +121,7 @@ export const ActionCaffee = ({ children }) => {
 		if (product) {
 			setYourProduct([...yourProduct, { id: uuidv4(), product: product.product, price: product.price }])
 			// setArrayPrice(yourProduct.map(item => item.price))
+			// setNoOrder('')
 		}
 	}
 
@@ -121,7 +132,7 @@ export const ActionCaffee = ({ children }) => {
 
 	return (
 		<Task07context.Provider
-			value={{ cafeProducts, arrayPrice, quanity, yourProduct, handlePriceOrder, handleDeleteOrder, cost }}
+			value={{ cafeProducts, arrayPrice, quanity, yourProduct, handlePriceOrder, handleDeleteOrder, cost, noOrder }}
 		>
 			{children}
 		</Task07context.Provider>

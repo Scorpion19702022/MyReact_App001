@@ -4,7 +4,7 @@ import styles from './Task07order.module.css'
 import Task07context from './Context/Task07context'
 
 const Task07order = () => {
-	const { quanity, yourProduct, handleDeleteOrder, cost } = useContext(Task07context)
+	const { quanity, yourProduct, handleDeleteOrder, noOrder, cost } = useContext(Task07context)
 
 	const menuOrder = yourProduct.map(item => {
 		return (
@@ -31,6 +31,7 @@ const Task07order = () => {
 				</h3>
 				<h4 className={styles.your_menu}>Twoje zamówienie:</h4>
 				<div className={styles.your_order}>{menuOrder}</div>
+				<h3>{noOrder}</h3>
 			</div>
 			<div className={styles.box_costs}>
 				<h3 className={styles.cost}>
