@@ -52,19 +52,19 @@ export const ActionCaffee = ({ children }) => {
 		{
 			id: 5,
 			product: 'wino',
-			price: 32,
+			price: 28,
 			img: wine,
 		},
 		{
 			id: 6,
 			product: 'wódka',
-			price: 50,
+			price: 23,
 			img: vodka,
 		},
 		{
 			id: 7,
 			product: 'whysky',
-			price: 50,
+			price: 34,
 			img: whisky,
 		},
 		{
