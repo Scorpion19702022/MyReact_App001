@@ -22,6 +22,7 @@ const Task08inputs = () => {
 						<label className={styles.label}>Data zrobienia</label>
 						<input type='date' value={date} />
 					</div>
+					<button className={styles.btn_add}>Dodaj</button>
 				</div>
 			</div>
 		</div>
