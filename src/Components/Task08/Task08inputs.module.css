@@ -141,4 +141,18 @@
 	font-size: 1.4em;
 	border-radius: 12px;
 	border: 0.04em solid var(--color-yellow05);
+	outline: none;
+}
+
+.btn_add {
+	padding: 0.26em 1em;
+	width: 20%;
+	margin-bottom: 1em;
+	background: none;
+	font-size: 1.2em;
+	border: 0.04em solid var(--color-yellow05);
+	color: var(--color-yellow03);
+	cursor: pointer;
+	z-index: 1;
+	transition: all 0.2s ease-in-out;
 }
