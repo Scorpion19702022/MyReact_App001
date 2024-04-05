@@ -23,7 +23,7 @@ const Task08inputs = () => {
 					<div className={styles.box_date}>
 						<div className={styles.date}>
 							<label className={styles.date_label}>Data zrobienia:</label>
-							<input className={styles.inp_date} type='date' value={date} />
+							<input className={styles.inp_date} type='date' value={date} min={date} />
 						</div>
 					</div>
 					<button className={styles.btn_add}>Dodaj</button>

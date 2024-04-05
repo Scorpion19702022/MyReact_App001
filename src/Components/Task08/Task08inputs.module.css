@@ -133,3 +133,12 @@
 	margin-right: 0.4em;
 	font-size: 1.2em;
 }
+
+.inp_date {
+	padding: 0.4em 4em;
+	background-color: var(--color-purple05);
+	color: var(--color-yellow04);
+	font-size: 1.4em;
+	border-radius: 12px;
+	border: 0.04em solid var(--color-yellow05);
+}
