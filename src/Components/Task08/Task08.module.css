@@ -64,3 +64,12 @@
 	border-bottom: 0.04em solid var(--color-yellow05);
 	box-shadow: 1.4em 0em 1em var(--color-purple07);
 }
+
+.header_heading {
+	font-size: 1.8em;
+	color: var(--color-yellow03);
+}
+
+.header_theme {
+	color: var(--color-yellow05);
+}
