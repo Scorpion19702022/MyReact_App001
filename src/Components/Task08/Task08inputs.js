@@ -10,17 +10,21 @@ const Task08inputs = () => {
 		<div className={styles.wrapper_main}>
 			<div className={styles.box_inputs}>
 				<div className={styles.inputs_todo}>
-					<div className={styles.box_input}>
-						<label className={styles.label}>Wpisz zadanie:</label>
-						<input type='text' />
-					</div>
-					<div className={styles.box_checkbox}>
-						<label className={styles.label}>Priorytet:</label>
-						<input type='checkbox' />
+					<div className={styles.inputs}>
+						<div className={styles.box_input}>
+							<label className={styles.label}>Wpisz zadanie:</label>
+							<input className={styles.inp} type='text' />
+						</div>
+						<div className={styles.box_checkbox}>
+							<label className={styles.check_label}>Priorytet:</label>
+							<input className={styles.check_box} type='checkbox' />
+						</div>
 					</div>
 					<div className={styles.box_date}>
-						<label className={styles.label}>Data zrobienia</label>
-						<input type='date' value={date} />
+						<div className={styles.date}>
+							<label className={styles.date_label}>Data zrobienia:</label>
+							<input className={styles.inp_date} type='date' value={date} />
+						</div>
 					</div>
 					<button className={styles.btn_add}>Dodaj</button>
 				</div>

@@ -57,7 +57,7 @@
 
 .box_inputs {
 	width: 50%;
-	padding: 2em;
+	padding: 1em;
 	margin-top: 1.6em;
 	display: flex;
 	flex-direction: column;
@@ -65,4 +65,71 @@
 	background-color: var(--color-purple07);
 	border: 0.04em solid var(--color-yellow04);
 	box-shadow: 0.8em 0.8em 1.2em var(--color-purple07);
+}
+
+.inputs_todo {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.inputs {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 1.8em 0em;
+}
+
+.box_input {
+	display: flex;
+	flex-direction: column;
+}
+
+.label {
+	color: var(--color-yellow02);
+	margin: 0em 0.4em 0.4em 0em;
+	font-size: 1.2em;
+}
+
+.inp {
+	padding: 0.4em 0em;
+	width: 80%;
+	background: none;
+	border: none;
+	border-bottom: 0.04em solid var(--color-yellow03);
+	color: var(--color-yellow04);
+	outline: none;
+	font-size: 1.8em;
+}
+
+.box_checkbox {
+	width: 20%;
+	display: flex;
+	align-items: center;
+}
+
+.check_label {
+	color: var(--color-yellow02);
+	margin-right: 0.4em;
+	font-size: 1.2em;
+}
+
+.check_box {
+	width: 25px;
+	height: 25px;
+}
+
+.box_date {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2em;
+}
+
+.date_label {
+	color: var(--color-yellow02);
+	margin-right: 0.4em;
+	font-size: 1.2em;
 }
