@@ -1,11 +1,13 @@
-import { createContext } from 'react'
+import { createContext, useState } from 'react'
 
 const Task08context = createContext()
 
 export const ToDoListCotext = ({ children }) => {
-	const test = 'TEST'
+	let currentDate = new Date().toISOString().slice(0, 10)
 
-	return <Task08context.Provider value={{ test }}>{children}</Task08context.Provider>
+	const [date, setDate] = useState(currentDate)
+
+	return <Task08context.Provider value={{ date }}>{children}</Task08context.Provider>
 }
 
 export default Task08context
