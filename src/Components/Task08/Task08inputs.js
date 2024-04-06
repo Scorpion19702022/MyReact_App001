@@ -4,7 +4,10 @@ import styles from './Task08inputs.module.css'
 import Task08context from './Context/Task08context'
 
 const Task08inputs = () => {
-	const { date } = useContext(Task08context)
+	const { inputTask, date, handleChangeInputTask, handleChangeDate } = useContext(Task08context)
+
+	console.log(date)
+	console.log(inputTask)
 
 	return (
 		<div className={styles.wrapper_main}>
@@ -17,7 +20,7 @@ const Task08inputs = () => {
 					<div className={styles.inputs}>
 						<div className={styles.box_input}>
 							<label className={styles.label}>Wpisz zadanie:</label>
-							<input className={styles.inp} type='text' />
+							<input className={styles.inp} type='text' value={inputTask} onChange={handleChangeInputTask} />
 						</div>
 						<div className={styles.box_checkbox}>
 							<label className={styles.check_label}>Priorytet:</label>
@@ -27,7 +30,7 @@ const Task08inputs = () => {
 					<div className={styles.box_date}>
 						<div className={styles.date}>
 							<label className={styles.date_label}>Data zrobienia:</label>
-							<input className={styles.inp_date} type='date' value={date} min={date} />
+							<input className={styles.inp_date} type='date' value={date} min={date} onChange={handleChangeDate} />
 						</div>
 					</div>
 					<button className={styles.btn_add}>Dodaj</button>
