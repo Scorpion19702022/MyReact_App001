@@ -9,7 +9,7 @@ const Task08 = () => {
 		<div className={styles.wrapper_task08}>
 			<div className={styles.header}>
 				<h1 className={styles.header_heading}>Task 08</h1>
-				<h4 className={styles.header_theme}>ToDo list</h4>
+				<h4 className={styles.header_theme}>ToDo List</h4>
 			</div>
 			<ToDoListCotext>
 				<Task08inputs />
