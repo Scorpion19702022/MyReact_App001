@@ -4,10 +4,12 @@ import styles from './Task08inputs.module.css'
 import Task08context from './Context/Task08context'
 
 const Task08inputs = () => {
-	const { inputTask, date, handleChangeInputTask, handleChangeDate } = useContext(Task08context)
+	const { inputTask, priority, date, handleChangeInputTask, handleChangePriority, handleChangeDate } =
+		useContext(Task08context)
 
 	console.log(date)
 	console.log(inputTask)
+	console.log(priority)
 
 	return (
 		<div className={styles.wrapper_main}>
@@ -24,7 +26,7 @@ const Task08inputs = () => {
 						</div>
 						<div className={styles.box_checkbox}>
 							<label className={styles.check_label}>Priorytet:</label>
-							<input className={styles.check_box} type='checkbox' />
+							<input className={styles.check_box} type='checkbox' checked={priority} onChange={handleChangePriority} />
 						</div>
 					</div>
 					<div className={styles.box_date}>
