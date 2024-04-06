@@ -2,6 +2,8 @@ import React, { useContext } from 'react'
 
 import styles from './Task08inputs.module.css'
 import Task08context from './Context/Task08context'
+import Task08do from './Task08do'
+import Task08done from './Task08done'
 
 const Task08inputs = () => {
 	const { inputTask, priority, date, handleChangeInputTask, handleChangePriority, handleChangeDate } =
@@ -41,6 +43,10 @@ const Task08inputs = () => {
 					<h1 className={styles.heading_do_quantity}>Ilość zadań wykonanych</h1>
 					<h2 className={styles.results_quantity}>0</h2>
 				</div>
+			</div>
+			<div className={styles.tasks}>
+				<Task08do />
+				<Task08done />
 			</div>
 		</div>
 	)

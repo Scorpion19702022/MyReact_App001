@@ -211,3 +211,9 @@
 	color: var(--color-yellow04);
 	font-size: 3em;
 }
+
+.tasks {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}

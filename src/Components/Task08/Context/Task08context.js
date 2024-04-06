@@ -15,6 +15,8 @@ export const ToDoListCotext = ({ children }) => {
 		setInputTask(e.target.value)
 	}
 
+	const testTask = 'zadania'
+
 	const handleChangePriority = () => {
 		setPriority(!priority)
 	}
@@ -25,7 +27,7 @@ export const ToDoListCotext = ({ children }) => {
 
 	return (
 		<Task08context.Provider
-			value={{ inputTask, priority, date, handleChangeInputTask, handleChangePriority, handleChangeDate }}
+			value={{ inputTask, priority, date, handleChangeInputTask, handleChangePriority, handleChangeDate, testTask }}
 		>
 			{children}
 		</Task08context.Provider>
