@@ -50,7 +50,19 @@
 .wrapper_task_do {
 	width: 48%;
 	height: 500px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1.2em;
 	background-color: var(--color-purple07);
 	border: 0.04em solid var(--color-yellow04);
 	box-shadow: 0.8em 0.8em 1.2em var(--color-purple07);
+}
+
+.heading_task_do {
+	color: var(--color-purple02);
+	font-weight: 300;
+	padding-bottom: 0.4em;
+	margin-bottom: 1.2em;
+	border-bottom: 0.04em solid var(--color-purple02);
 }
