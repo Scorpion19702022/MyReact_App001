@@ -56,22 +56,20 @@
 }
 
 .box_inputs {
-	width: 50%;
-	padding: 1em;
+	width: 100%;
 	margin-top: 1.6em;
+	display: flex;
+	justify-content: center;
+}
+
+.inputs_todo {
+	width: 50%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background-color: var(--color-purple07);
 	border: 0.04em solid var(--color-yellow04);
 	box-shadow: 0.8em 0.8em 1.2em var(--color-purple07);
-}
-
-.inputs_todo {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 }
 
 .inputs {
@@ -155,7 +153,7 @@
 	color: var(--color-yellow03);
 	cursor: pointer;
 	z-index: 1;
-	transition: all 0.2s ease-in-out;
+	overflow: hidden;
 }
 
 .btn_add::before {
@@ -166,6 +164,7 @@
 	transform: translate(-40%, -150%);
 	background-color: var(--color-purple05);
 	z-index: -1;
+	transition: all 0.4s ease;
 }
 
 .btn_add:hover::before {
@@ -180,6 +179,7 @@
 	transform: translate(-60%, 100%);
 	background-color: var(--color-purple05);
 	z-index: -1;
+	transition: all 0.4s ease;
 }
 
 .btn_add:hover::after {
