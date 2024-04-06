@@ -9,6 +9,10 @@ const Task08inputs = () => {
 	return (
 		<div className={styles.wrapper_main}>
 			<div className={styles.box_inputs}>
+				<div className={styles.do_task_quantity}>
+					<h1 className={styles.heading_do_quantity}>Ilość zadań do wykonania</h1>
+					<h2 className={styles.results_quantity}>0</h2>
+				</div>
 				<div className={styles.inputs_todo}>
 					<div className={styles.inputs}>
 						<div className={styles.box_input}>
@@ -27,6 +31,10 @@ const Task08inputs = () => {
 						</div>
 					</div>
 					<button className={styles.btn_add}>Dodaj</button>
+				</div>
+				<div className={styles.do_task_quantity}>
+					<h1 className={styles.heading_do_quantity}>Ilość zadań wykonanych</h1>
+					<h2 className={styles.results_quantity}>0</h2>
 				</div>
 			</div>
 		</div>
