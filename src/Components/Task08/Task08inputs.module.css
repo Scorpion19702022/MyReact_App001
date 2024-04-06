@@ -145,6 +145,7 @@
 }
 
 .btn_add {
+	position: relative;
 	padding: 0.26em 1em;
 	width: 20%;
 	margin-bottom: 1em;
@@ -155,4 +156,32 @@
 	cursor: pointer;
 	z-index: 1;
 	transition: all 0.2s ease-in-out;
+}
+
+.btn_add::before {
+	position: absolute;
+	content: '';
+	width: 150%;
+	height: 150%;
+	transform: translate(-40%, -150%);
+	background-color: var(--color-purple05);
+	z-index: -1;
+}
+
+.btn_add:hover::before {
+	transform: translate(-40%, -75%);
+}
+
+.btn_add::after {
+	position: absolute;
+	content: '';
+	width: 150%;
+	height: 150%;
+	transform: translate(-60%, 100%);
+	background-color: var(--color-purple05);
+	z-index: -1;
+}
+
+.btn_add:hover::after {
+	transform: translate(-60%, 20%);
 }
