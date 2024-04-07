@@ -69,6 +69,11 @@ export const ToDoListCotext = ({ children }) => {
 		setPriority(false)
 	}
 
+	const handleDeleteTask = id => {
+		const deleteTask = taskDo.filter(item => item.id !== id)
+		setTaskDo(deleteTask)
+	}
+
 	console.log(taskDo)
 
 	return (
@@ -83,6 +88,7 @@ export const ToDoListCotext = ({ children }) => {
 				handleChangePriority,
 				handleChangeDate,
 				handleAddTaskDo,
+				handleDeleteTask,
 			}}
 		>
 			{children}
