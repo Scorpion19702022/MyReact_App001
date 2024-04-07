@@ -49,6 +49,7 @@ export const ToDoListCotext = ({ children }) => {
 					button: true,
 				},
 			])
+			setTaskDoLenght(taskDo.length)
 		} else if (inputTask !== '' && !priority && date !== currentDate) {
 			setTaskDo(prevTaskDo => [
 				...prevTaskDo,
@@ -60,8 +61,6 @@ export const ToDoListCotext = ({ children }) => {
 					button: true,
 				},
 			])
-		}
-		if (taskDo.length !== 1) {
 			setTaskDoLenght(taskDo.length)
 		}
 	}
