@@ -70,22 +70,44 @@
 .task_do_lists {
 	width: 100%;
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 0.8em;
 	padding-bottom: 0.6em;
 	border-bottom: 0.04em dotted var(--color-purple03);
 }
 
+.tasks_do_important {
+	width: 30%;
+}
+
 .heading_important {
 	font-size: 1.2em;
 	color: var(--color-yellow03);
-	margin-right: 1em;
 	font-weight: bold;
 }
 
 .heading_no_important {
 	font-size: 1.2em;
 	color: var(--color-yellow03);
-	margin-right: 1em;
 	font-weight: 100;
+}
+
+.task_do_dates {
+	width: 30%;
+}
+
+.task_do_date {
+	color: var(--color-purple02);
+}
+
+.task_do_btns {
+	width: 40%;
+}
+
+.btn_do {
+	padding: 0.2em 1em;
+	background: none;
+	border: 0.04em solid var(--color-purple03);
+	color: var(--color-purple02);
 }

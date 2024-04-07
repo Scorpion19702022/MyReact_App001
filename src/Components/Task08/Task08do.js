@@ -8,8 +8,12 @@ const Task08do = () => {
 
 	const taskDoList = taskDo.map(item => (
 		<div className={styles.task_do_lists} key={item.id}>
-			<h4 className={item.important ? styles.heading_important : styles.heading_no_important}>{item.task}</h4>
-			<em className={styles.task_do_date}>{item.taskDate}</em>
+			<div className={styles.tasks_do_important}>
+				<h4 className={item.important ? styles.heading_important : styles.heading_no_important}>{item.task}</h4>
+			</div>
+			<div className={styles.task_do_dates}>
+				<em className={styles.task_do_date}>{item.taskDate}</em>
+			</div>
 			<div className={styles.task_do_btns}>
 				{item.button ? <button className={styles.btn_do}>zrobione</button> : null}
 				{item.button ? <button className={styles.btn_do}>usuń</button> : null}
