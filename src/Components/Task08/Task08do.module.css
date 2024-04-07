@@ -121,3 +121,8 @@
 .btn_do:hover {
 	background-color: var(--color-purple04);
 }
+
+.error {
+	font-size: 2em;
+	color: var(--color-yellow04);
+}

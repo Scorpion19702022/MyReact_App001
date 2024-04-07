@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 
 import { v4 as uuidv4 } from 'uuid'
 
@@ -14,6 +14,8 @@ export const ToDoListCotext = ({ children }) => {
 	const [date, setDate] = useState(currentDate)
 
 	const [taskDoLength, setTaskDoLenght] = useState(0)
+
+	const [error, setError] = useState('')
 
 	const [taskDo, setTaskDo] = useState([
 		{
@@ -37,6 +39,10 @@ export const ToDoListCotext = ({ children }) => {
 		setDate(e.target.value)
 	}
 
+	useEffect(() => {
+		setTaskDoLenght(taskDo.length - 1)
+	}, [taskDo.length])
+
 	const handleAddTaskDo = () => {
 		if (inputTask !== '' && priority) {
 			setTaskDo(prevTaskDo => [
@@ -49,7 +55,6 @@ export const ToDoListCotext = ({ children }) => {
 					button: true,
 				},
 			])
-			setTaskDoLenght(taskDo.length)
 		} else if (inputTask !== '' && !priority) {
 			setTaskDo(prevTaskDo => [
 				...prevTaskDo,
@@ -61,13 +66,24 @@ export const ToDoListCotext = ({ children }) => {
 					button: true,
 				},
 			])
-			setTaskDoLenght(taskDo.length)
+		}
+
+		if (inputTask === '') {
+			setError('nie wypełniłeś poprawnie formularza')
+		} else {
+			setError('')
 		}
 
 		setDate(currentDate)
 		setInputTask('')
 		setPriority(false)
 	}
+
+	setTimeout(() => {
+		if (error !== '') {
+			setError('')
+		}
+	}, 3000)
 
 	const handleDeleteTask = id => {
 		const deleteTask = taskDo.filter(item => item.id !== id)
@@ -84,6 +100,7 @@ export const ToDoListCotext = ({ children }) => {
 				date,
 				taskDoLength,
 				taskDo,
+				error,
 				handleChangeInputTask,
 				handleChangePriority,
 				handleChangeDate,
