@@ -36,18 +36,22 @@ export const ToDoListCotext = ({ children }) => {
 
 	const handleAddTaskDo = () => {
 		if (inputTask !== '' && priority && date !== currentDate) {
-			const newTaskDo = {
-				id: uuidv4(),
-				task: inputTask,
-				important: priority,
-				taskDate: date,
-			}
-			setTaskDo(prevTaskDo => [...prevTaskDo, newTaskDo])
+			setTaskDo(prevTaskDo => [
+				...prevTaskDo,
+				{
+					id: uuidv4(),
+					task: inputTask,
+					important: priority,
+					taskDate: date,
+				},
+			])
 			console.log('klik')
 		}
 	}
 
-	console.log(taskDo)
+	if (taskDo.length > 1) {
+		console.log(taskDo.length)
+	}
 
 	return (
 		<Task08context.Provider
