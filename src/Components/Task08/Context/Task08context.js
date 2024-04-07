@@ -63,6 +63,10 @@ export const ToDoListCotext = ({ children }) => {
 			])
 			setTaskDoLenght(taskDo.length)
 		}
+
+		setDate(currentDate)
+		setInputTask('')
+		setPriority(false)
 	}
 
 	console.log(taskDo)
