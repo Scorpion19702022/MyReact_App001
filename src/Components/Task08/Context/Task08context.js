@@ -13,11 +13,13 @@ export const ToDoListCotext = ({ children }) => {
 
 	const [date, setDate] = useState(currentDate)
 
+	const [taskDoLength, setTaskDoLenght] = useState(0)
+
 	const [taskDo, setTaskDo] = useState([
 		{
 			id: uuidv4(),
 			task: '',
-			important: priority,
+			important: false,
 			taskDate: '',
 		},
 	])
@@ -41,17 +43,25 @@ export const ToDoListCotext = ({ children }) => {
 				{
 					id: uuidv4(),
 					task: inputTask,
-					important: priority,
+					important: true,
 					taskDate: date,
 				},
 			])
-			console.log('klik')
+		} else if (inputTask !== '' && !priority && date !== currentDate) {
+			setTaskDo(prevTaskDo => [
+				...prevTaskDo,
+				{
+					id: uuidv4(),
+					task: inputTask,
+					important: false,
+					taskDate: date,
+				},
+			])
 		}
+		setTaskDoLenght(taskDo.length)
 	}
 
-	if (taskDo.length > 1) {
-		console.log(taskDo.length)
-	}
+	console.log(taskDo)
 
 	return (
 		<Task08context.Provider
@@ -59,6 +69,7 @@ export const ToDoListCotext = ({ children }) => {
 				inputTask,
 				priority,
 				date,
+				taskDoLength,
 				taskDo,
 				handleChangeInputTask,
 				handleChangePriority,

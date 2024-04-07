@@ -6,15 +6,23 @@ import Task08do from './Task08do'
 import Task08done from './Task08done'
 
 const Task08inputs = () => {
-	const { inputTask, priority, date, handleChangeInputTask, handleChangePriority, handleChangeDate, handleAddTaskDo } =
-		useContext(Task08context)
+	const {
+		inputTask,
+		priority,
+		date,
+		taskDoLength,
+		handleChangeInputTask,
+		handleChangePriority,
+		handleChangeDate,
+		handleAddTaskDo,
+	} = useContext(Task08context)
 
 	return (
 		<div className={styles.wrapper_main}>
 			<div className={styles.box_inputs}>
 				<div className={styles.do_task_quantity}>
 					<h1 className={styles.heading_do_quantity}>Ilość zadań do wykonania</h1>
-					<h2 className={styles.results_quantity}>0</h2>
+					<h2 className={styles.results_quantity}>{taskDoLength}</h2>
 				</div>
 				<div className={styles.inputs_todo}>
 					<div className={styles.inputs}>
