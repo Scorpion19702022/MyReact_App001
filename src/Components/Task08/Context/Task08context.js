@@ -61,7 +61,9 @@ export const ToDoListCotext = ({ children }) => {
 				},
 			])
 		}
-		setTaskDoLenght(taskDo.length)
+		if (taskDo.length !== 1) {
+			setTaskDoLenght(taskDo.length)
+		}
 	}
 
 	console.log(taskDo)
