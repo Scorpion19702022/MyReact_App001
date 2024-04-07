@@ -21,6 +21,7 @@ export const ToDoListCotext = ({ children }) => {
 			task: '',
 			important: false,
 			taskDate: '',
+			button: false,
 		},
 	])
 
@@ -45,6 +46,7 @@ export const ToDoListCotext = ({ children }) => {
 					task: inputTask,
 					important: true,
 					taskDate: date,
+					button: true,
 				},
 			])
 		} else if (inputTask !== '' && !priority && date !== currentDate) {
@@ -55,6 +57,7 @@ export const ToDoListCotext = ({ children }) => {
 					task: inputTask,
 					important: false,
 					taskDate: date,
+					button: true,
 				},
 			])
 		}
