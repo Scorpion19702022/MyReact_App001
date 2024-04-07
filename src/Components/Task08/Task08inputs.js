@@ -6,12 +6,8 @@ import Task08do from './Task08do'
 import Task08done from './Task08done'
 
 const Task08inputs = () => {
-	const { inputTask, priority, date, handleChangeInputTask, handleChangePriority, handleChangeDate } =
+	const { inputTask, priority, date, handleChangeInputTask, handleChangePriority, handleChangeDate, handleAddTaskDo } =
 		useContext(Task08context)
-
-	console.log(date)
-	console.log(inputTask)
-	console.log(priority)
 
 	return (
 		<div className={styles.wrapper_main}>
@@ -37,7 +33,9 @@ const Task08inputs = () => {
 							<input className={styles.inp_date} type='date' value={date} min={date} onChange={handleChangeDate} />
 						</div>
 					</div>
-					<button className={styles.btn_add}>Dodaj</button>
+					<button className={styles.btn_add} onClick={handleAddTaskDo}>
+						Dodaj
+					</button>
 				</div>
 				<div className={styles.do_task_quantity}>
 					<h1 className={styles.heading_do_quantity}>Ilość zadań wykonanych</h1>

@@ -1,5 +1,7 @@
 import { createContext, useState } from 'react'
 
+import { v4 as uuidv4 } from 'uuid'
+
 const Task08context = createContext()
 
 export const ToDoListCotext = ({ children }) => {
@@ -11,11 +13,18 @@ export const ToDoListCotext = ({ children }) => {
 
 	const [date, setDate] = useState(currentDate)
 
+	const [taskDo, setTaskDo] = useState([
+		{
+			id: uuidv4(),
+			task: '',
+			important: priority,
+			taskDate: '',
+		},
+	])
+
 	const handleChangeInputTask = e => {
 		setInputTask(e.target.value)
 	}
-
-	const testTask = 'zadania'
 
 	const handleChangePriority = () => {
 		setPriority(!priority)
@@ -25,9 +34,33 @@ export const ToDoListCotext = ({ children }) => {
 		setDate(e.target.value)
 	}
 
+	const handleAddTaskDo = () => {
+		if (inputTask !== '' && priority && date !== currentDate) {
+			const newTaskDo = {
+				id: uuidv4(),
+				task: inputTask,
+				important: priority,
+				taskDate: date,
+			}
+			setTaskDo(prevTaskDo => [...prevTaskDo, newTaskDo])
+			console.log('klik')
+		}
+	}
+
+	console.log(taskDo)
+
 	return (
 		<Task08context.Provider
-			value={{ inputTask, priority, date, handleChangeInputTask, handleChangePriority, handleChangeDate, testTask }}
+			value={{
+				inputTask,
+				priority,
+				date,
+				taskDo,
+				handleChangeInputTask,
+				handleChangePriority,
+				handleChangeDate,
+				handleAddTaskDo,
+			}}
 		>
 			{children}
 		</Task08context.Provider>
