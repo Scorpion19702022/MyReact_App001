@@ -53,7 +53,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 1.2em;
+	padding: 1.2em 3em;
 	background-color: var(--color-purple07);
 	border: 0.04em solid var(--color-yellow04);
 	box-shadow: 0.8em 0.8em 1.2em var(--color-purple07);
@@ -65,4 +65,27 @@
 	padding-bottom: 0.4em;
 	margin-bottom: 1.2em;
 	border-bottom: 0.04em solid var(--color-purple02);
+}
+
+.task_do_lists {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.8em;
+	padding-bottom: 0.6em;
+	border-bottom: 0.04em dotted var(--color-purple03);
+}
+
+.heading_important {
+	font-size: 1.2em;
+	color: var(--color-yellow03);
+	margin-right: 1em;
+	font-weight: bold;
+}
+
+.heading_no_important {
+	font-size: 1.2em;
+	color: var(--color-yellow03);
+	margin-right: 1em;
+	font-weight: 100;
 }
