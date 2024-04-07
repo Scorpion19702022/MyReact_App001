@@ -95,6 +95,8 @@
 
 .task_do_dates {
 	width: 30%;
+	display: flex;
+	justify-content: center;
 }
 
 .task_do_date {
@@ -103,11 +105,19 @@
 
 .task_do_btns {
 	width: 40%;
+	display: flex;
+	justify-content: flex-end;
 }
 
 .btn_do {
-	padding: 0.2em 1em;
+	padding: 0.4em 1em;
 	background: none;
 	border: 0.04em solid var(--color-purple03);
 	color: var(--color-purple02);
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.btn_do:hover {
+	background-color: var(--color-purple04);
 }
