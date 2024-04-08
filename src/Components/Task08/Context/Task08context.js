@@ -64,7 +64,6 @@ export const ToDoListCotext = ({ children }) => {
 					button: true,
 				},
 			])
-			taskDo.map(item => item.task).sort()
 		} else if (inputTask !== '' && !priority && taskDo.length <= 6) {
 			setTaskDo(prevTaskDo => [
 				...prevTaskDo,
@@ -76,7 +75,6 @@ export const ToDoListCotext = ({ children }) => {
 					button: true,
 				},
 			])
-			taskDo.map(item => item.task).sort()
 		} else if (taskDo.length > 6) {
 			setInfoTasdDoLength('masz za dużo zadań. Musisz je zrealizować bo możesz nie podołać')
 			setError('')
