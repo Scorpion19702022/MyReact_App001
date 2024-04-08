@@ -29,7 +29,11 @@ export const ToDoListCotext = ({ children }) => {
 	])
 
 	const handleChangeInputTask = e => {
-		setInputTask(e.target.value)
+		if (inputTask.length < 30) {
+			setInputTask(e.target.value)
+		} else {
+			setTaskLength('osiągnąłeś maksymalną ilość znaków')
+		}
 	}
 
 	const handleChangePriority = () => {
@@ -45,8 +49,10 @@ export const ToDoListCotext = ({ children }) => {
 	}, [taskDo.length])
 
 	// useEffect(() => {
-	// 	return () => {}
-	// }, [])
+	// 	if (inputTask.length > 30) {
+	// 		setTaskLength('osiągnąłeś maksymalną ilość znaków')
+	// 	}
+	// }, [inputTask.length])
 
 	const handleAddTaskDo = () => {
 		if (inputTask !== '' && priority && inputTask.length <= 30) {
@@ -79,15 +85,10 @@ export const ToDoListCotext = ({ children }) => {
 			setError('')
 		}
 
-		if (inputTask.length > 30) {
-			setTaskLength('osiągnąłeś maksymalną ilość znaków')
-		} else {
-			setTaskLength('')
-		}
-
 		setDate(currentDate)
 		setInputTask('')
 		setPriority(false)
+		setTaskLength('')
 	}
 
 	setTimeout(() => {
