@@ -17,6 +17,7 @@ export const ToDoListCotext = ({ children }) => {
 
 	const [error, setError] = useState('')
 	const [textLength, setTextLength] = useState('')
+	const [infoTaskDoLength, setInfoTasdDoLength] = useState('')
 
 	const [taskDo, setTaskDo] = useState([
 		{
@@ -46,16 +47,13 @@ export const ToDoListCotext = ({ children }) => {
 
 	useEffect(() => {
 		setTaskDoLenght(taskDo.length - 1)
+		if (taskDo.length <= 6) {
+			setInfoTasdDoLength('')
+		}
 	}, [taskDo.length])
 
-	// useEffect(() => {
-	// 	if (inputTask.length > 30) {
-	// 		setTaskLength('osiągnąłeś maksymalną ilość znaków')
-	// 	}
-	// }, [inputTask.length])
-
 	const handleAddTaskDo = () => {
-		if (inputTask !== '' && priority && inputTask.length <= 30) {
+		if (inputTask !== '' && priority && taskDo.length <= 6) {
 			setTaskDo(prevTaskDo => [
 				...prevTaskDo,
 				{
@@ -66,7 +64,7 @@ export const ToDoListCotext = ({ children }) => {
 					button: true,
 				},
 			])
-		} else if (inputTask !== '' && !priority && inputTask.length <= 30) {
+		} else if (inputTask !== '' && !priority && taskDo.length <= 6) {
 			setTaskDo(prevTaskDo => [
 				...prevTaskDo,
 				{
@@ -77,6 +75,9 @@ export const ToDoListCotext = ({ children }) => {
 					button: true,
 				},
 			])
+		} else if (inputTask !== '' && !priority && taskDo.length > 6) {
+			setInfoTasdDoLength('masz za dużo zadań. Musisz je zrealizować bo możesz nie podołać')
+			setError('')
 		}
 
 		if (inputTask === '') {
@@ -114,6 +115,7 @@ export const ToDoListCotext = ({ children }) => {
 				taskDo,
 				error,
 				textLength,
+				infoTaskDoLength,
 				handleChangeInputTask,
 				handleChangePriority,
 				handleChangeDate,

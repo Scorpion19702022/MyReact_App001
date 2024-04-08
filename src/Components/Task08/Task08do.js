@@ -4,7 +4,7 @@ import styles from './Task08do.module.css'
 import Task08context from './Context/Task08context'
 
 const Task08do = () => {
-	const { taskDo, error, handleDeleteTask } = useContext(Task08context)
+	const { taskDo, error, infoTaskDoLength, handleDeleteTask } = useContext(Task08context)
 
 	const taskDoList = taskDo.map(item => (
 		<div className={styles.task_do_lists} key={item.id}>
@@ -30,6 +30,7 @@ const Task08do = () => {
 			<h1 className={styles.heading_task_do}>Do wykonania:</h1>
 			{taskDoList}
 			<h2 className={styles.error}>{error}</h2>
+			<h2 className={styles.too_tasks}>{infoTaskDoLength}</h2>
 		</div>
 	)
 }

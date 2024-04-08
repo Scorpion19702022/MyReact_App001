@@ -126,3 +126,9 @@
 	font-size: 2em;
 	color: var(--color-yellow04);
 }
+
+.too_tasks {
+	font-size: 1.2em;
+	text-align: center;
+	color: var(--color-purple02);
+}
