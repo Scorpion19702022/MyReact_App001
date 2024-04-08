@@ -16,6 +16,7 @@ export const ToDoListCotext = ({ children }) => {
 	const [taskDoLength, setTaskDoLenght] = useState(0)
 
 	const [error, setError] = useState('')
+	const [taskLength, setTaskLength] = useState('')
 
 	const [taskDo, setTaskDo] = useState([
 		{
@@ -43,8 +44,12 @@ export const ToDoListCotext = ({ children }) => {
 		setTaskDoLenght(taskDo.length - 1)
 	}, [taskDo.length])
 
+	// useEffect(() => {
+	// 	return () => {}
+	// }, [])
+
 	const handleAddTaskDo = () => {
-		if (inputTask !== '' && priority) {
+		if (inputTask !== '' && priority && inputTask.length <= 30) {
 			setTaskDo(prevTaskDo => [
 				...prevTaskDo,
 				{
@@ -55,7 +60,7 @@ export const ToDoListCotext = ({ children }) => {
 					button: true,
 				},
 			])
-		} else if (inputTask !== '' && !priority) {
+		} else if (inputTask !== '' && !priority && inputTask.length <= 30) {
 			setTaskDo(prevTaskDo => [
 				...prevTaskDo,
 				{
@@ -72,6 +77,12 @@ export const ToDoListCotext = ({ children }) => {
 			setError('nie wypełniłeś poprawnie formularza')
 		} else {
 			setError('')
+		}
+
+		if (inputTask.length > 30) {
+			setTaskLength('osiągnąłeś maksymalną ilość znaków')
+		} else {
+			setTaskLength('')
 		}
 
 		setDate(currentDate)
@@ -101,6 +112,7 @@ export const ToDoListCotext = ({ children }) => {
 				taskDoLength,
 				taskDo,
 				error,
+				taskLength,
 				handleChangeInputTask,
 				handleChangePriority,
 				handleChangeDate,
