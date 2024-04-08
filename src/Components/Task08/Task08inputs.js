@@ -11,7 +11,7 @@ const Task08inputs = () => {
 		priority,
 		date,
 		taskDoLength,
-		taskLength,
+		textLength,
 		handleChangeInputTask,
 		handleChangePriority,
 		handleChangeDate,
@@ -30,7 +30,7 @@ const Task08inputs = () => {
 						<div className={styles.box_input}>
 							<label className={styles.label}>Wpisz zadanie:</label>
 							<input className={styles.inp} type='text' value={inputTask} onChange={handleChangeInputTask} />
-							<p className={styles.task_length}>{taskLength}</p>
+							<p className={styles.task_length}>{textLength}</p>
 						</div>
 						<div className={styles.box_checkbox}>
 							<label className={styles.check_label}>Priorytet:</label>

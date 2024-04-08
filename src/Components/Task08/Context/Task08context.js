@@ -16,7 +16,7 @@ export const ToDoListCotext = ({ children }) => {
 	const [taskDoLength, setTaskDoLenght] = useState(0)
 
 	const [error, setError] = useState('')
-	const [taskLength, setTaskLength] = useState('')
+	const [textLength, setTextLength] = useState('')
 
 	const [taskDo, setTaskDo] = useState([
 		{
@@ -32,7 +32,7 @@ export const ToDoListCotext = ({ children }) => {
 		if (inputTask.length < 30) {
 			setInputTask(e.target.value)
 		} else {
-			setTaskLength('osiągnąłeś maksymalną ilość znaków')
+			setTextLength('osiągnąłeś maksymalną ilość znaków')
 		}
 	}
 
@@ -88,7 +88,7 @@ export const ToDoListCotext = ({ children }) => {
 		setDate(currentDate)
 		setInputTask('')
 		setPriority(false)
-		setTaskLength('')
+		setTextLength('')
 	}
 
 	setTimeout(() => {
@@ -113,7 +113,7 @@ export const ToDoListCotext = ({ children }) => {
 				taskDoLength,
 				taskDo,
 				error,
-				taskLength,
+				textLength,
 				handleChangeInputTask,
 				handleChangePriority,
 				handleChangeDate,
