@@ -104,6 +104,11 @@
 	font-size: 1.4em;
 }
 
+.task_length {
+	height: 30px;
+	color: var(--color-yellow04);
+}
+
 .box_checkbox {
 	width: 20%;
 	display: flex;
