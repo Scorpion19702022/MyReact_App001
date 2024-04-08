@@ -106,7 +106,9 @@
 
 .task_length {
 	height: 30px;
-	color: var(--color-yellow04);
+	font-size: 1.2em;
+	color: var(--color-purple02);
+	margin-top: 0.2em;
 }
 
 .box_checkbox {
@@ -218,7 +220,7 @@
 }
 
 .tasks {
-	margin-top: 3em;
+	margin-top: 2em;
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
