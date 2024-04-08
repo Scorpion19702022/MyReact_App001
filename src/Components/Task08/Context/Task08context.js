@@ -75,7 +75,7 @@ export const ToDoListCotext = ({ children }) => {
 					button: true,
 				},
 			])
-		} else if (inputTask !== '' && !priority && taskDo.length > 6) {
+		} else if (taskDo.length > 6) {
 			setInfoTasdDoLength('masz za dużo zadań. Musisz je zrealizować bo możesz nie podołać')
 			setError('')
 		}
