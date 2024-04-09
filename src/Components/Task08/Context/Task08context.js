@@ -110,8 +110,7 @@ export const ToDoListCotext = ({ children }) => {
 	const handleTaskDone = id => {
 		const addToDone = taskDo.filter(item => item.id !== id)
 		setTaskDone(prevState => [...prevState, addToDone])
-		console.log(taskDone)
-		console.log('klik')
+		setTaskDo(addToDone)
 	}
 
 	return (
