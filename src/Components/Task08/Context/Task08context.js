@@ -86,10 +86,12 @@ export const ToDoListCotext = ({ children }) => {
 			setError('')
 		}
 
-		setDate(currentDate)
-		setInputTask('')
-		setPriority(false)
-		setTextLength('')
+		if (taskDo.length !== 7) {
+			setDate(currentDate)
+			setInputTask('')
+			setPriority(false)
+			setTextLength('')
+		}
 	}
 
 	setTimeout(() => {
