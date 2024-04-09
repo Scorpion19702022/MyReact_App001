@@ -19,6 +19,8 @@ export const ToDoListCotext = ({ children }) => {
 	const [textLength, setTextLength] = useState('')
 	const [infoTaskDoLength, setInfoTasdDoLength] = useState('')
 
+	const [taskDone, setTaskDone] = useState([])
+
 	const [taskDo, setTaskDo] = useState([
 		{
 			id: uuidv4(),
@@ -105,6 +107,11 @@ export const ToDoListCotext = ({ children }) => {
 		setTaskDo(deleteTask)
 	}
 
+	const handleTaskDone = id => {
+		const addToDone = taskDo.filter(item => item.id !== id)
+		setTaskDone([...taskDone, addToDone])
+	}
+
 	return (
 		<Task08context.Provider
 			value={{
@@ -116,11 +123,13 @@ export const ToDoListCotext = ({ children }) => {
 				error,
 				textLength,
 				infoTaskDoLength,
+				taskDone,
 				handleChangeInputTask,
 				handleChangePriority,
 				handleChangeDate,
 				handleAddTaskDo,
 				handleDeleteTask,
+				handleTaskDone,
 			}}
 		>
 			{children}
