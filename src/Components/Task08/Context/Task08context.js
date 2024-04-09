@@ -19,7 +19,7 @@ export const ToDoListCotext = ({ children }) => {
 	const [textLength, setTextLength] = useState('')
 	const [infoTaskDoLength, setInfoTasdDoLength] = useState('')
 
-	const [taskDone, setTaskDone] = useState([])
+	const [taskDoneList, setTaskDoneList] = useState([])
 
 	const [taskDo, setTaskDo] = useState([
 		{
@@ -109,7 +109,7 @@ export const ToDoListCotext = ({ children }) => {
 
 	const handleTaskDone = id => {
 		const addToDone = taskDo.filter(item => item.id !== id)
-		setTaskDone(prevState => [...prevState, addToDone])
+		setTaskDoneList(prevState => [...prevState, addToDone])
 		setTaskDo(addToDone)
 	}
 
@@ -124,7 +124,7 @@ export const ToDoListCotext = ({ children }) => {
 				error,
 				textLength,
 				infoTaskDoLength,
-				taskDone,
+				taskDoneList,
 				handleChangeInputTask,
 				handleChangePriority,
 				handleChangeDate,
