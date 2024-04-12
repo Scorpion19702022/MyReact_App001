@@ -7,14 +7,16 @@ const Task08done = () => {
 	const { taskDoneList } = useContext(Task08context)
 
 	const taskDone = taskDoneList.map(item => (
-		<div className={styles.task_do_lists} key={item.id}>
-			<div className={styles.tasks_do_important}>
+		<div className={styles.task_done_lists} key={item.id}>
+			<div className={styles.tasks_done_important}>
 				<h4 className={item.important ? styles.heading_important : styles.heading_no_important}>{item.task}</h4>
 			</div>
-			<div className={styles.task_do_dates}>
-				<em className={styles.task_do_date}>{item.taskDate}</em>
+			<div className={styles.task_done_dates}>
+				<em className={styles.task_done_date}>{item.taskDate}</em>
 			</div>
-			<div className={styles.task_do_btns}>{item.button ? <button className={styles.btn_do}>usuń</button> : null}</div>
+			<div className={styles.task_done_btns}>
+				<button className={styles.btn_done}>usuń</button>
+			</div>
 		</div>
 	))
 
