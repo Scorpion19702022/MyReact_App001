@@ -19,8 +19,6 @@ const Task08inputs = () => {
 		handleAddTaskDo,
 	} = useContext(Task08context)
 
-	console.log(taskDoneList.length)
-
 	return (
 		<div className={styles.wrapper_main}>
 			<div className={styles.box_inputs}>
