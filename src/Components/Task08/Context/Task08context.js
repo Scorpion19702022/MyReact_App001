@@ -110,9 +110,8 @@ export const ToDoListCotext = ({ children }) => {
 	const handleTaskDone = id => {
 		const addToDone = taskDo.filter(item => item.id === id)
 		setTaskDoneList([...taskDoneList, ...addToDone])
-		if (!addToDone) {
-			setTaskDo(prevState => [...prevState, ...addToDone])
-		}
+
+		setTaskDo(...taskDo, ...addToDone)
 		console.log(taskDoneList)
 	}
 	console.log(taskDo)
