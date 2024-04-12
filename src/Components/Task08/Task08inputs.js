@@ -12,11 +12,14 @@ const Task08inputs = () => {
 		date,
 		taskDoLength,
 		textLength,
+		taskDoneList,
 		handleChangeInputTask,
 		handleChangePriority,
 		handleChangeDate,
 		handleAddTaskDo,
 	} = useContext(Task08context)
+
+	console.log(taskDoneList.length)
 
 	return (
 		<div className={styles.wrapper_main}>
@@ -49,7 +52,7 @@ const Task08inputs = () => {
 				</div>
 				<div className={styles.do_task_quantity}>
 					<h1 className={styles.heading_do_quantity}>Ilość zadań wykonanych</h1>
-					<h2 className={styles.results_quantity}>0</h2>
+					<h2 className={styles.results_quantity}>{taskDoneList.length}</h2>
 				</div>
 			</div>
 			<div className={styles.tasks}>

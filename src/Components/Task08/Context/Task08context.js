@@ -114,7 +114,6 @@ export const ToDoListCotext = ({ children }) => {
 		setTaskDo(deleteTask)
 		// console.log(taskDoneList)
 	}
-	console.log(taskDo)
 
 	return (
 		<Task08context.Provider
