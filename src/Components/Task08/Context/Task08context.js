@@ -19,6 +19,7 @@ export const ToDoListCotext = ({ children }) => {
 	const [textLength, setTextLength] = useState('')
 	const [infoTaskDoLength, setInfoTasdDoLength] = useState('')
 
+	const [taskDoList, setTaskDoList] = useState([])
 	const [taskDoneList, setTaskDoneList] = useState([])
 
 	const [taskDo, setTaskDo] = useState([
@@ -48,36 +49,25 @@ export const ToDoListCotext = ({ children }) => {
 	}
 
 	useEffect(() => {
-		setTaskDoLenght(taskDo.length - 1)
-		if (taskDo.length <= 6) {
+		setTaskDoLenght(taskDoList.length)
+		if (taskDoList.length <= 6) {
 			setInfoTasdDoLength('')
 		}
-	}, [taskDo.length])
+	}, [taskDoList.length])
 
 	const handleAddTaskDo = () => {
+		setTaskDo({
+			id: uuidv4(),
+			task: inputTask,
+			important: true,
+			taskDate: date,
+			button: true,
+		})
 		if (inputTask !== '' && priority && taskDo.length <= 6) {
-			setTaskDo(prevTaskDo => [
-				...prevTaskDo,
-				{
-					id: uuidv4(),
-					task: inputTask,
-					important: true,
-					taskDate: date,
-					button: true,
-				},
-			])
+			setTaskDoList(prevTaskDo => [...prevTaskDo, taskDo])
 		} else if (inputTask !== '' && !priority && taskDo.length <= 6) {
-			setTaskDo(prevTaskDo => [
-				...prevTaskDo,
-				{
-					id: uuidv4(),
-					task: inputTask,
-					important: false,
-					taskDate: date,
-					button: true,
-				},
-			])
-		} else if (taskDo.length > 6) {
+			setTaskDoList(prevTaskDo => [...prevTaskDo, taskDo])
+		} else if (taskDoList.length > 6) {
 			setInfoTasdDoLength('masz za dużo zadań. Musisz je zrealizować bo możesz nie podołać')
 			setError('')
 		}
@@ -88,7 +78,7 @@ export const ToDoListCotext = ({ children }) => {
 			setError('')
 		}
 
-		if (taskDo.length !== 7) {
+		if (taskDoList.length !== 7) {
 			setDate(currentDate)
 			setInputTask('')
 			setPriority(false)
@@ -103,15 +93,15 @@ export const ToDoListCotext = ({ children }) => {
 	}, 3000)
 
 	const handleDeleteTask = id => {
-		const deleteTask = taskDo.filter(item => item.id !== id)
-		setTaskDo(deleteTask)
+		const deleteTask = taskDoList.filter(item => item.id !== id)
+		setTaskDoList(deleteTask)
 	}
 
 	const handleTaskDone = id => {
-		const addToDone = taskDo.filter(item => item.id === id)
+		const addToDone = taskDoList.filter(item => item.id === id)
 		setTaskDoneList([...taskDoneList, ...addToDone])
-		const deleteTask = taskDo.filter(item => item.id !== id)
-		setTaskDo(deleteTask)
+		const deleteTask = taskDoList.filter(item => item.id !== id)
+		setTaskDoList(deleteTask)
 		// console.log(taskDoneList)
 	}
 
@@ -122,7 +112,7 @@ export const ToDoListCotext = ({ children }) => {
 				priority,
 				date,
 				taskDoLength,
-				taskDo,
+				taskDoList,
 				error,
 				textLength,
 				infoTaskDoLength,
