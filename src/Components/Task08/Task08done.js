@@ -25,7 +25,7 @@ const Task08done = () => {
 	return (
 		<div className={styles.wrapper_task_done}>
 			<h1 className={styles.heading_task_done}>Wykonane:</h1>
-			{taskDone}
+			<div className={styles.box_tasks_done}>{taskDone}</div>
 		</div>
 	)
 }
