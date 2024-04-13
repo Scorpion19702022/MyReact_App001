@@ -25,6 +25,8 @@ const Task08do = () => {
 		</div>
 	))
 
+	console.log(taskDoList.map(task => task.task).sort())
+
 	return (
 		<div className={styles.wrapper_task_do}>
 			<h1 className={styles.heading_task_do}>Do wykonania:</h1>
