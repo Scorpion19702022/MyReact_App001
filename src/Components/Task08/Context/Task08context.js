@@ -54,16 +54,19 @@ export const ToDoListCotext = ({ children }) => {
 		}
 	}, [taskDoList.length])
 
-	const handleAddTaskDo = () => {
+	useEffect(() => {
 		setTaskDo({
 			id: uuidv4(),
 			task: inputTask,
 			important: true,
 			taskDate: date,
 		})
-		if (inputTask !== '' && priority && taskDo.length <= 6) {
+	}, [date, inputTask])
+
+	const handleAddTaskDo = () => {
+		if (inputTask !== '' && priority && taskDoList.length <= 6) {
 			setTaskDoList(prevTaskDo => [...prevTaskDo, taskDo])
-		} else if (inputTask !== '' && !priority && taskDo.length <= 6) {
+		} else if (inputTask !== '' && !priority && taskDoList.length <= 6) {
 			setTaskDoList(prevTaskDo => [...prevTaskDo, taskDo])
 		} else if (taskDoList.length > 6) {
 			setInfoTasdDoLength('masz za dużo zadań. Musisz je zrealizować bo możesz nie podołać')
@@ -76,7 +79,7 @@ export const ToDoListCotext = ({ children }) => {
 			setError('')
 		}
 
-		if (taskDoList.length !== 7) {
+		if (taskDoList.length !== 6) {
 			setDate(currentDate)
 			setInputTask('')
 			setPriority(false)
