@@ -6,8 +6,6 @@ import Task08context from './Context/Task08context'
 const Task08do = () => {
 	const { taskDoList, error, infoTaskDoLength, handleDeleteTask, handleTaskDone } = useContext(Task08context)
 
-	console.log(taskDoList)
-
 	const taskDoLists = taskDoList.map(item => (
 		<div className={styles.task_do_lists} key={item.id}>
 			<div className={styles.tasks_do_important}>

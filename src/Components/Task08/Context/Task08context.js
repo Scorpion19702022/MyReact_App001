@@ -26,7 +26,7 @@ export const ToDoListCotext = ({ children }) => {
 		{
 			id: uuidv4(),
 			task: '',
-			important: false,
+			important: priority,
 			taskDate: '',
 		},
 	])
@@ -58,10 +58,10 @@ export const ToDoListCotext = ({ children }) => {
 		setTaskDo({
 			id: uuidv4(),
 			task: inputTask,
-			important: true,
+			important: priority,
 			taskDate: date,
 		})
-	}, [date, inputTask])
+	}, [date, inputTask, priority])
 
 	const handleAddTaskDo = () => {
 		if (inputTask !== '' && priority && taskDoList.length <= 6) {
