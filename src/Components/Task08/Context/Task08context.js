@@ -32,7 +32,7 @@ export const ToDoListCotext = ({ children }) => {
 	])
 
 	const handleChangeInputTask = e => {
-		if (inputTask.length <= 10) {
+		if (inputTask.length < 10) {
 			setInputTask(e.target.value)
 		}
 	}
@@ -46,7 +46,7 @@ export const ToDoListCotext = ({ children }) => {
 	}
 
 	useEffect(() => {
-		if (inputTask.length >= 10) {
+		if (inputTask.length === 10) {
 			setTextLength('osiągnąłeś maksymalną ilość znaków')
 		} else {
 			setTextLength('')
