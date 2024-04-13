@@ -63,15 +63,24 @@ export const ToDoListCotext = ({ children }) => {
 		})
 	}, [date, inputTask, priority])
 
-	const handleAddTaskDo = () => {
-		if (inputTask !== '' && priority && taskDoList.length <= 6) {
-			setTaskDoList(prevTaskDo => [...prevTaskDo, taskDo])
-		} else if (inputTask !== '' && !priority && taskDoList.length <= 6) {
-			setTaskDoList(prevTaskDo => [...prevTaskDo, taskDo])
-		} else if (taskDoList.length > 6) {
+	useEffect(() => {
+		if (taskDoList.length >= 6) {
 			setInfoTasdDoLength('masz za dużo zadań. Musisz je zrealizować bo możesz nie podołać')
 			setError('')
 		}
+	}, [taskDoList.length])
+
+	const handleAddTaskDo = () => {
+		if (inputTask !== '' && priority && taskDoList.length < 6) {
+			setTaskDoList(prevTaskDo => [...prevTaskDo, taskDo])
+		} else if (inputTask !== '' && !priority && taskDoList.length < 6) {
+			setTaskDoList(prevTaskDo => [...prevTaskDo, taskDo])
+		}
+
+		// if (taskDoList.length >= 6) {
+		// 	setInfoTasdDoLength('masz za dużo zadań. Musisz je zrealizować bo możesz nie podołać')
+		// 	setError('')
+		// }
 
 		if (inputTask === '') {
 			setError('nie wypełniłeś poprawnie formularza')
