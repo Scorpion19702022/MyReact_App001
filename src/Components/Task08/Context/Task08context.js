@@ -113,7 +113,11 @@ export const ToDoListCotext = ({ children }) => {
 		setTaskDoneList([...taskDoneList, ...addToDone])
 		const deleteTask = taskDoList.filter(item => item.id !== id)
 		setTaskDoList(deleteTask)
-		// console.log(taskDoneList)
+	}
+
+	const handleDeleteTaskDone = id => {
+		const deleteTaskDone = taskDoneList.filter(item => item.id !== id)
+		setTaskDoneList(deleteTaskDone)
 	}
 
 	return (
@@ -134,6 +138,7 @@ export const ToDoListCotext = ({ children }) => {
 				handleAddTaskDo,
 				handleDeleteTask,
 				handleTaskDone,
+				handleDeleteTaskDone,
 			}}
 		>
 			{children}

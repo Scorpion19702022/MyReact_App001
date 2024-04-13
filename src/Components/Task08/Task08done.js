@@ -4,7 +4,7 @@ import styles from './Task08done.module.css'
 import Task08context from './Context/Task08context'
 
 const Task08done = () => {
-	const { taskDoneList } = useContext(Task08context)
+	const { taskDoneList, handleDeleteTaskDone } = useContext(Task08context)
 
 	const taskDone = taskDoneList.map(item => (
 		<div className={styles.task_done_lists} key={item.id}>
@@ -15,7 +15,9 @@ const Task08done = () => {
 				<em className={styles.task_done_date}>{item.taskDate}</em>
 			</div>
 			<div className={styles.task_done_btns}>
-				<button className={styles.btn_done}>usuń</button>
+				<button className={styles.btn_done} onClick={() => handleDeleteTaskDone(item.id)}>
+					usuń
+				</button>
 			</div>
 		</div>
 	))
