@@ -32,10 +32,8 @@ export const ToDoListCotext = ({ children }) => {
 	])
 
 	const handleChangeInputTask = e => {
-		if (inputTask.length < 30) {
+		if (inputTask.length <= 10) {
 			setInputTask(e.target.value)
-		} else {
-			setTextLength('osiągnąłeś maksymalną ilość znaków')
 		}
 	}
 
@@ -46,6 +44,14 @@ export const ToDoListCotext = ({ children }) => {
 	const handleChangeDate = e => {
 		setDate(e.target.value)
 	}
+
+	useEffect(() => {
+		if (inputTask.length >= 10) {
+			setTextLength('osiągnąłeś maksymalną ilość znaków')
+		} else {
+			setTextLength('')
+		}
+	}, [inputTask.length])
 
 	useEffect(() => {
 		setTaskDoLenght(taskDoList.length)
