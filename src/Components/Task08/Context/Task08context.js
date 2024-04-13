@@ -77,11 +77,6 @@ export const ToDoListCotext = ({ children }) => {
 			setTaskDoList(prevTaskDo => [...prevTaskDo, taskDo])
 		}
 
-		// if (taskDoList.length >= 6) {
-		// 	setInfoTasdDoLength('masz za dużo zadań. Musisz je zrealizować bo możesz nie podołać')
-		// 	setError('')
-		// }
-
 		if (inputTask === '') {
 			setError('nie wypełniłeś poprawnie formularza')
 		} else {
