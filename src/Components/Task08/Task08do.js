@@ -25,7 +25,7 @@ const Task08do = () => {
 		</div>
 	))
 
-	console.log(taskDoList.map(task => task.task).sort())
+	// console.log(taskDoList.map(task => task.task).sort())
 
 	return (
 		<div className={styles.wrapper_task_do}>

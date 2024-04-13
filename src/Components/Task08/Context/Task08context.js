@@ -120,6 +120,8 @@ export const ToDoListCotext = ({ children }) => {
 		setTaskDoneList(deleteTaskDone)
 	}
 
+	console.log(taskDoneList.map(item => item.task).sort())
+
 	return (
 		<Task08context.Provider
 			value={{
