@@ -113,6 +113,7 @@ export const ToDoListCotext = ({ children }) => {
 		setTaskDoneList([...taskDoneList, ...addToDone])
 		const deleteTask = taskDoList.filter(item => item.id !== id)
 		setTaskDoList(deleteTask)
+		setTaskDoneList(taskDoneList.filter(item => item.task).sort())
 	}
 
 	const handleDeleteTaskDone = id => {
