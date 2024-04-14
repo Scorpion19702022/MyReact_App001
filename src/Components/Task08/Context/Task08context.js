@@ -76,6 +76,12 @@ export const ToDoListCotext = ({ children }) => {
 		}
 	}, [taskDoList.length])
 
+	// useEffect(() => {
+	// 	taskDoList.sort((a, b) => {
+	// 		return a.task - b.task
+	// 	})
+	// }, [])
+
 	const handleAddTaskDo = () => {
 		if (inputTask !== '' && priority && taskDoList.length < 6) {
 			setTaskDoList(prevTaskDo => [...prevTaskDo, taskDo])
