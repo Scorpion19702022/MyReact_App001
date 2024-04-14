@@ -22,6 +22,9 @@ const Task08done = () => {
 		</div>
 	))
 
+	const test = taskDone
+	console.log(test)
+
 	return (
 		<div className={styles.wrapper_task_done}>
 			<h1 className={styles.heading_task_done}>Wykonane:</h1>
