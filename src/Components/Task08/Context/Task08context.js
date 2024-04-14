@@ -76,6 +76,10 @@ export const ToDoListCotext = ({ children }) => {
 		}
 	}, [taskDoList.length])
 
+	useEffect(() => {
+		taskDoneList.filter(item => item.task).sort()
+	}, [taskDoneList])
+
 	const handleAddTaskDo = () => {
 		if (inputTask !== '' && priority && taskDoList.length < 6) {
 			setTaskDoList(prevTaskDo => [...prevTaskDo, taskDo])
@@ -113,7 +117,6 @@ export const ToDoListCotext = ({ children }) => {
 		setTaskDoneList([...taskDoneList, ...addToDone])
 		const deleteTask = taskDoList.filter(item => item.id !== id)
 		setTaskDoList(deleteTask)
-		setTaskDoneList(taskDoneList.filter(item => item.task).sort())
 	}
 
 	const handleDeleteTaskDone = id => {
