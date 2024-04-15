@@ -73,3 +73,10 @@
 .header_theme {
 	color: var(--color-dark02);
 }
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-top: 2em;
+}
