@@ -13,6 +13,7 @@ import Task05 from '../Components/Task05/Task05'
 import Task06 from '../Components/Task06/Task06'
 import Task07 from '../Components/Task07/Task07'
 import Task08 from '../Components/Task08/Task08'
+import Task09 from '../Components/Task09/Task09'
 
 const App = () => {
 	return (
@@ -29,6 +30,7 @@ const App = () => {
 					<Route path='/Task06' Component={Task06}></Route>
 					<Route path='/Task07' Component={Task07}></Route>
 					<Route path='/Task08' Component={Task08}></Route>
+					<Route path='/Task09' Component={Task09}></Route>
 				</Routes>
 			</section>
 		</Router>

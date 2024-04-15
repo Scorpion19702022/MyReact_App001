@@ -39,6 +39,9 @@ const NavLinks = () => {
 						<li className={styles.link}>
 							<NavLink to='./Task08'>Zadanie 08</NavLink>
 						</li>
+						<li className={styles.link}>
+							<NavLink to='./Task09'>Zadanie 09</NavLink>
+						</li>
 					</ul>
 				</nav>
 			</header>
