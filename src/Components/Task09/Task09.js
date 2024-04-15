@@ -1,6 +1,7 @@
 import React from 'react'
 
 import styles from './Task09.module.css'
+import Task09one from './Task09one'
 
 const Task09 = () => {
 	return (
@@ -8,6 +9,9 @@ const Task09 = () => {
 			<div className={styles.box_header}>
 				<h1 className={styles.header_heading}>Task 09</h1>
 				<h3 className={styles.header_theme}>Zadania z inputami i tablicami</h3>
+			</div>
+			<div className={styles.wrapper}>
+				<Task09one />
 			</div>
 		</div>
 	)
