@@ -133,7 +133,18 @@ export const ToDoListCotext = ({ children }) => {
 		return 0
 	})
 
-	console.log(taskDoList)
+	taskDoneList.sort((a, b) => {
+		const taskA = a.task.toUpperCase()
+		const taskB = b.task.toUpperCase()
+		if (taskA < taskB) {
+			return -1
+		}
+		if (taskA > taskB) {
+			return 1
+		}
+
+		return 0
+	})
 
 	return (
 		<Task08context.Provider
