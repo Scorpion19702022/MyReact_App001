@@ -7,7 +7,7 @@ import Task08inputs from './Task08inputs'
 const Task08 = () => {
 	const users = [
 		{
-			name: 'Jacek',
+			name: 'Zenek',
 			car: {
 				name: 'Toyota',
 				age: 10,
@@ -29,9 +29,9 @@ const Task08 = () => {
 		},
 	]
 
-	//sortuje po wieku samochodu
+	// sortuje po wieku samochodu
 	users.sort((a, b) => {
-		return a.car.age - b.car.age
+		return a.name - b.name
 	})
 
 	console.log(users)
