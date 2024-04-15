@@ -48,7 +48,7 @@ const Task08 = () => {
 		return 0
 	})
 
-	console.log(users)
+	// console.log(users)
 
 	return (
 		<div className={styles.wrapper_task08}>
