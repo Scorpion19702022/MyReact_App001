@@ -102,8 +102,16 @@
 	color: var(--color-yellow02);
 	cursor: pointer;
 	transition: all 0.3s ease-in-out;
+	z-index: 1;
 }
 
-.btn_add:hover ~ .task_one_heading {
-	color: var(--color-blue02);
+.btn_add::before {
+	position: absolute;
+	content: '';
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	transform: translate(135%, 20%);
+	background-color: var(--color-blue03);
+	z-index: -1;
 }
