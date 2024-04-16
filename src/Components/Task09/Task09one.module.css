@@ -58,3 +58,7 @@
 	border: 0.04em solid var(--color-dark02);
 	box-shadow: 0.4em 0.4em 1em var(--color-blue07);
 }
+
+.task_one_heading {
+	color: var(--color-yellow03);
+}
