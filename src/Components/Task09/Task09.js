@@ -9,7 +9,7 @@ const Task09 = () => {
 		<div className={styles.wrapper_task09}>
 			<div className={styles.box_header}>
 				<h1 className={styles.header_heading}>Task 09</h1>
-				<h3 className={styles.header_theme}>Zadania z inputami i tablicami</h3>
+				<h3 className={styles.header_theme}>Zadania z inputami i tablicami i funkcją sort()</h3>
 			</div>
 			<div className={styles.wrapper}>
 				<Task09one />

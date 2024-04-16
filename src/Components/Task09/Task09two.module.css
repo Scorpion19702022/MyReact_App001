@@ -46,3 +46,9 @@
 	--color-coffee08: #281309;
 	--color-coffee09: #1b0d06;
 }
+
+.wrapper_task_two {
+	width: 43%;
+	height: 700px;
+	background-color: var(--color-blue07);
+}

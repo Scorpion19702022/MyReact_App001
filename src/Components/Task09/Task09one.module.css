@@ -46,3 +46,15 @@
 	--color-coffee08: #281309;
 	--color-coffee09: #1b0d06;
 }
+
+.wrapper_task_one {
+	width: 43%;
+	height: 760px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1.2em;
+	background-color: var(--color-blue07);
+	border: 0.04em solid var(--color-dark02);
+	box-shadow: 0.4em 0.4em 1em var(--color-blue07);
+}
