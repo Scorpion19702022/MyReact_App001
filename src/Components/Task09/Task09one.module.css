@@ -92,3 +92,14 @@
 	justify-content: center;
 	margin: 1.4em 0em 0.8em 0em;
 }
+
+.btn_add {
+	position: relative;
+	width: 50%;
+	padding: 0.4em;
+	background-color: var(--color-blue06);
+	border: 0.04em solid var(--color-blue07);
+	color: var(--color-yellow02);
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
