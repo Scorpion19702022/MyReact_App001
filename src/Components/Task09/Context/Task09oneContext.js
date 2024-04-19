@@ -45,12 +45,10 @@ export const Task09oneProvider = ({ children }) => {
 	}, [firstName, lastName, age])
 
 	const handlePersonResult = () => {
-		if (firstName !== '' && lastName !== '' && age !== '') {
+		if (firstName !== '' && lastName !== '' && age !== '' && person.length <= 6) {
 			setPerson(prevPerson => [...prevPerson, data])
 		}
 	}
-
-	console.log(person)
 
 	return (
 		<Task09oneContext.Provider
@@ -58,6 +56,7 @@ export const Task09oneProvider = ({ children }) => {
 				firstName,
 				lastName,
 				age,
+				person,
 				handleChangeFirstName,
 				handleChangeLastName,
 				handleChangeAge,
