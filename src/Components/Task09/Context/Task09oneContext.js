@@ -5,7 +5,7 @@ const Task09oneContext = createContext()
 export const Task09oneProvider = ({ children }) => {
 	const [firstName, setFirstName] = useState('')
 	const [lastName, setLastName] = useState('')
-	const [age, setAge] = useState(null)
+	const [age, setAge] = useState('')
 
 	// const [errorAge, setErrorAge] = useState(null)
 
