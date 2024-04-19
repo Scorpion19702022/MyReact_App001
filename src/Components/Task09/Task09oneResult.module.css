@@ -46,3 +46,16 @@
 	--color-coffee08: #281309;
 	--color-coffee09: #1b0d06;
 }
+
+.wrapper_result {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.quantity {
+	font-size: 1.8em;
+	color: var(--color-blue03);
+	margin-bottom: 0.8em;
+}
