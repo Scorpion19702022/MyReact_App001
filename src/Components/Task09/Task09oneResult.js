@@ -5,7 +5,12 @@ import styles from './Task09oneResult.module.css'
 const Task09oneResult = () => {
 	return (
 		<div className={styles.wrapper_result}>
-			<h2 className={styles.quiaity}>ilość osób:</h2>
+			<h2 className={styles.quiantity}>ilość osób:</h2>
+			<div className={styles.errors}>
+				<p className={styles.error_empty}></p>
+				<p className={styles.error_quantity}></p>
+			</div>
+			<div className={styles.result}></div>
 		</div>
 	)
 }
