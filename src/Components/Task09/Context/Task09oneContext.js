@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
 const Task09oneContext = createContext()
@@ -33,17 +33,20 @@ export const Task09oneProvider = ({ children }) => {
 		setAge(e.target.value)
 	}
 
-	const handlePersonResult = () => {
+	useEffect(() => {
 		setData([
 			{
-				...data,
+				id: uuidv4(),
 				firstName: firstName,
 				lastName: lastName,
 				age: age,
 			},
 		])
+	}, [firstName, lastName, age])
+
+	const handlePersonResult = () => {
 		if (firstName !== '' && lastName !== '' && age !== '') {
-			setPerson([...person, data])
+			setPerson(prevPerson => [...prevPerson, data])
 		}
 	}
 
