@@ -5,7 +5,7 @@ import Task09oneResult from './Task09oneResult'
 import Task09oneContext from './Context/Task09oneContext'
 
 const Task09one = () => {
-	const { firstName, lastName, age, handleChangeFirstName, handleChangeLastName, handleChangeAge } =
+	const { firstName, lastName, age, handleChangeFirstName, handleChangeLastName, handleChangeAge, handlePersonResult } =
 		useContext(Task09oneContext)
 
 	return (
@@ -19,7 +19,9 @@ const Task09one = () => {
 				<label className={styles.label}>Podaj wiel</label>
 				<input className={styles.input} type='number' value={age} onChange={handleChangeAge} />
 				<div className={styles.btns_add}>
-					<button className={styles.btn_add}>Dodaj</button>
+					<button className={styles.btn_add} onClick={handlePersonResult}>
+						Dodaj
+					</button>
 				</div>
 			</div>
 			<Task09oneResult />

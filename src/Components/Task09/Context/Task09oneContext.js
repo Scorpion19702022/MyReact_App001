@@ -1,4 +1,5 @@
 import { createContext, useState } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 
 const Task09oneContext = createContext()
 
@@ -7,7 +8,18 @@ export const Task09oneProvider = ({ children }) => {
 	const [lastName, setLastName] = useState('')
 	const [age, setAge] = useState('')
 
-	// const [errorAge, setErrorAge] = useState(null)
+	const [errorAge, setErrorAge] = useState()
+
+	const [person, setPerson] = useState([])
+
+	const [data, setData] = useState([
+		{
+			id: uuidv4(),
+			firstName: '',
+			lastName: '',
+			age: '',
+		},
+	])
 
 	const handleChangeFirstName = e => {
 		setFirstName(e.target.value)
@@ -21,13 +33,33 @@ export const Task09oneProvider = ({ children }) => {
 		setAge(e.target.value)
 	}
 
-	console.log(firstName)
-	console.log(lastName)
-	console.log(age)
+	const handlePersonResult = () => {
+		setData([
+			{
+				...data,
+				firstName: firstName,
+				lastName: lastName,
+				age: age,
+			},
+		])
+		if (firstName !== '' && lastName !== '' && age !== '') {
+			setPerson([...person, data])
+		}
+	}
+
+	console.log(person)
 
 	return (
 		<Task09oneContext.Provider
-			value={{ firstName, lastName, age, handleChangeFirstName, handleChangeLastName, handleChangeAge }}
+			value={{
+				firstName,
+				lastName,
+				age,
+				handleChangeFirstName,
+				handleChangeLastName,
+				handleChangeAge,
+				handlePersonResult,
+			}}
 		>
 			{children}
 		</Task09oneContext.Provider>
