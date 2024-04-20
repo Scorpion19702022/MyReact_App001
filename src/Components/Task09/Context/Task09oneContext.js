@@ -51,18 +51,24 @@ export const Task09oneProvider = ({ children }) => {
 			setFirstName('')
 			setLastName('')
 			setAge('')
+		} else if (firstName === '' || lastName === '' || age === '') {
+			setError('wypełnij poprawnie wszystkie pola')
 		} else if (age < 18) {
 			setError('Nie masz jeszcze 18 lat. Nie możesz się zapisać na listę')
 		} else if (person.length >= 5) {
 			setError('Osiągnięto maksymalną ilość członków')
+		} else if (person.length === 0) {
+			setError('informacja o stanie listy')
 		}
 	}
 
 	const handleCleanResultList = id => {
 		const cleanList = person.filter(item => item.id !== id)
 		setPerson(cleanList)
-		if (cleanList) {
+		if (cleanList && cleanList.length > 0) {
 			setError('usunięto członka z listy')
+		} else {
+			setError('usunięto wszystkich członków')
 		}
 	}
 
