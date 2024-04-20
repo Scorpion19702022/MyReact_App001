@@ -97,11 +97,11 @@
 }
 
 .person_name {
-	color: var(--color-blue02);
+	color: var(--color-blue01);
 }
 
 .person_age {
-	color: var(--color-blue04);
+	color: var(--color-blue02);
 	font-style: italic;
 }
 
@@ -110,7 +110,7 @@
 	background: none;
 	border: none;
 	font-style: italic;
-	color: var(--color-blue03);
+	color: var(--color-blue05);
 	cursor: pointer;
 	transition: all 0.2s ease-in-out;
 }
