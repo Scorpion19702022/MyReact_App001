@@ -97,15 +97,18 @@
 }
 
 .person_name {
+	width: 30%;
 	color: var(--color-blue01);
 }
 
 .person_age {
+	width: 30%;
 	color: var(--color-blue02);
 	font-style: italic;
 }
 
 .person_btn {
+	width: 40%;
 	padding: 0.2em 1em;
 	background: none;
 	border: none;
