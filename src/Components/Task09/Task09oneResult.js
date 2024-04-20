@@ -4,7 +4,7 @@ import styles from './Task09oneResult.module.css'
 import Task09oneContext from './Context/Task09oneContext'
 
 const Task09oneResult = () => {
-	const { person } = useContext(Task09oneContext)
+	const { person, errorAge } = useContext(Task09oneContext)
 
 	const personList = person.map(item => (
 		<div className={styles.person} key={item.id}>
@@ -24,6 +24,7 @@ const Task09oneResult = () => {
 	return (
 		<div className={styles.wrapper_result}>
 			<h2 className={styles.quantity}>ilość osób: {person.length}</h2>
+			<p className={styles.error_age}>{errorAge}</p>
 			<div className={styles.errors}>
 				<p className={styles.error_empty}></p>
 				<p className={styles.error_quantity}></p>
