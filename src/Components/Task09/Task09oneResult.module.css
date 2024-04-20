@@ -67,9 +67,54 @@
 	border: 0.04em solid var(--color-yellow05);
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	margin-bottom: 1.4em;
 }
 
 .error_text {
 	color: var(--color-yellow03);
+}
+
+.result {
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+}
+
+.person {
+	width: 100%;
+	display: flex;
+}
+
+.person_list {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+	margin-bottom: 0.8em;
+	padding-bottom: 0.6em;
+	border-bottom: 0.04em dotted var(--color-blue05);
+}
+
+.person_name {
+	color: var(--color-blue02);
+}
+
+.person_age {
+	color: var(--color-blue04);
+	font-style: italic;
+}
+
+.person_btn {
+	padding: 0.2em 1em;
+	background: none;
+	border: none;
+	font-style: italic;
+	color: var(--color-blue03);
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.person_btn:hover {
+	color: var(--color-blue01);
 }

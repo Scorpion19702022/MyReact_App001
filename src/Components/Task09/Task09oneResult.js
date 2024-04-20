@@ -12,7 +12,7 @@ const Task09oneResult = () => {
 				<li className={styles.person_name}>
 					{item.lastName} {item.firstName}
 				</li>
-				<li className={styles.person_age}>{item.age}</li>
+				<li className={styles.person_age}>wiek: {item.age}</li>
 				<li className={styles.person_btns}>
 					{' '}
 					<button className={styles.person_btn}>usuń</button>
