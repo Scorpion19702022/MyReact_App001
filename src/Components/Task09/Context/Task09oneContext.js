@@ -8,7 +8,7 @@ export const Task09oneProvider = ({ children }) => {
 	const [lastName, setLastName] = useState('')
 	const [age, setAge] = useState('')
 
-	const [error, setError] = useState('informacja o stanie listy')
+	const [error, setError] = useState('')
 
 	const [person, setPerson] = useState([])
 

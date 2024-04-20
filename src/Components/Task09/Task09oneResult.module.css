@@ -66,13 +66,19 @@
 	padding: 1em;
 	border: 0.04em solid var(--color-yellow05);
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 	margin-bottom: 1.4em;
 }
 
 .error_text {
-	color: var(--color-yellow03);
+	width: 50%;
+	color: var(--color-yellow05);
+}
+
+.span_error {
+	width: 50%;
+	color: var(--color-yellow02);
 }
 
 .result {

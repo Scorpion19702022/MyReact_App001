@@ -27,7 +27,8 @@ const Task09oneResult = () => {
 		<div className={styles.wrapper_result}>
 			<h2 className={styles.quantity}>ilość osób: {person.length}</h2>
 			<div className={styles.errors}>
-				<p className={styles.error_text}>{error}</p>
+				<p className={styles.error_text}>INFORMACJA:</p>
+				<span className={styles.span_error}>{error}</span>
 			</div>
 			<div className={styles.result}>{personList}</div>
 		</div>
