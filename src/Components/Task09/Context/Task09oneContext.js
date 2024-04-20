@@ -8,7 +8,7 @@ export const Task09oneProvider = ({ children }) => {
 	const [lastName, setLastName] = useState('')
 	const [age, setAge] = useState('')
 
-	const [errorAge, setErrorAge] = useState('')
+	const [error, setError] = useState('')
 
 	const [person, setPerson] = useState([])
 
@@ -47,9 +47,14 @@ export const Task09oneProvider = ({ children }) => {
 	const handlePersonResult = () => {
 		if (firstName !== '' && lastName !== '' && age !== '' && person.length < 6 && age >= 18) {
 			setPerson(prevPerson => [...prevPerson, ...data])
+			setError('')
 		} else if (age < 18) {
-			setErrorAge('Nie masz jeszcze 18 lat. Nie możesz się zapisać na listę')
+			setError('Nie masz jeszcze 18 lat. Nie możesz się zapisać na listę')
 		}
+
+		setFirstName('')
+		setLastName('')
+		setAge('')
 	}
 
 	return (
@@ -59,7 +64,7 @@ export const Task09oneProvider = ({ children }) => {
 				lastName,
 				age,
 				person,
-				errorAge,
+				error,
 				handleChangeFirstName,
 				handleChangeLastName,
 				handleChangeAge,
