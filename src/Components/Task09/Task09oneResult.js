@@ -6,7 +6,20 @@ import Task09oneContext from './Context/Task09oneContext'
 const Task09oneResult = () => {
 	const { person } = useContext(Task09oneContext)
 
-	console.log(person)
+	const personList = person.map(item => (
+		<div className={styles.person} key={item.id}>
+			<ul className={styles.person_list}>
+				<li className={styles.person_name}>
+					{item.firstName} {item.lastName}
+				</li>
+				<li className={styles.person_age}>{item.age}</li>
+				<li className={styles.person_btns}>
+					{' '}
+					<button className={styles.person_btn}>usuń</button>
+				</li>
+			</ul>
+		</div>
+	))
 
 	return (
 		<div className={styles.wrapper_result}>
@@ -15,7 +28,7 @@ const Task09oneResult = () => {
 				<p className={styles.error_empty}></p>
 				<p className={styles.error_quantity}></p>
 			</div>
-			<div className={styles.result}></div>
+			<div className={styles.result}>{personList}</div>
 		</div>
 	)
 }
