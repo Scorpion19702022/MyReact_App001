@@ -1,4 +1,3 @@
-import { Firestore } from 'firebase/firestore'
 import { createContext, useEffect, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
@@ -62,6 +61,9 @@ export const Task09oneProvider = ({ children }) => {
 	const handleCleanResultList = id => {
 		const cleanList = person.filter(item => item.id !== id)
 		setPerson(cleanList)
+		if (cleanList) {
+			setError('usunięto członka z listy')
+		}
 	}
 
 	return (
