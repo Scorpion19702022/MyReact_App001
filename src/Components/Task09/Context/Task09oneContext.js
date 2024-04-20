@@ -1,3 +1,4 @@
+import { Firestore } from 'firebase/firestore'
 import { createContext, useEffect, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
@@ -8,7 +9,7 @@ export const Task09oneProvider = ({ children }) => {
 	const [lastName, setLastName] = useState('')
 	const [age, setAge] = useState('')
 
-	const [error, setError] = useState('')
+	const [error, setError] = useState('informacja o stanie listy')
 
 	const [person, setPerson] = useState([])
 
@@ -47,9 +48,11 @@ export const Task09oneProvider = ({ children }) => {
 	const handlePersonResult = () => {
 		if (firstName !== '' && lastName !== '' && age !== '' && person.length < 6 && age >= 18) {
 			setPerson(prevPerson => [...prevPerson, ...data])
-			setError('')
+			setError('dodano prawidłowo')
 		} else if (age < 18) {
 			setError('Nie masz jeszcze 18 lat. Nie możesz się zapisać na listę')
+		} else if (person.length >= 6) {
+			setError('Osiągnięto maksymalną ilość członków')
 		}
 
 		setFirstName('')
