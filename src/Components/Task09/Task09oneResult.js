@@ -4,7 +4,7 @@ import styles from './Task09oneResult.module.css'
 import Task09oneContext from './Context/Task09oneContext'
 
 const Task09oneResult = () => {
-	const { person, error } = useContext(Task09oneContext)
+	const { person, error, handleCleanResultList } = useContext(Task09oneContext)
 
 	const personList = person.map(item => (
 		<div className={styles.person} key={item.id}>
@@ -15,7 +15,9 @@ const Task09oneResult = () => {
 				<li className={styles.person_age}>wiek: {item.age}</li>
 				<li className={styles.person_btns}>
 					{' '}
-					<button className={styles.person_btn}>usuń</button>
+					<button className={styles.person_btn} onClick={() => handleCleanResultList(item.id)}>
+						usuń
+					</button>
 				</li>
 			</ul>
 		</div>

@@ -59,6 +59,11 @@ export const Task09oneProvider = ({ children }) => {
 		}
 	}
 
+	const handleCleanResultList = id => {
+		const cleanList = person.filter(item => item.id !== id)
+		setPerson(cleanList)
+	}
+
 	return (
 		<Task09oneContext.Provider
 			value={{
@@ -71,6 +76,7 @@ export const Task09oneProvider = ({ children }) => {
 				handleChangeLastName,
 				handleChangeAge,
 				handlePersonResult,
+				handleCleanResultList,
 			}}
 		>
 			{children}
