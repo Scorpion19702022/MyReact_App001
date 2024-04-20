@@ -46,18 +46,17 @@ export const Task09oneProvider = ({ children }) => {
 	}, [firstName, lastName, age])
 
 	const handlePersonResult = () => {
-		if (firstName !== '' && lastName !== '' && age !== '' && person.length < 6 && age >= 18) {
+		if (firstName !== '' && lastName !== '' && age !== '' && person.length < 5 && age >= 18) {
 			setPerson(prevPerson => [...prevPerson, ...data])
 			setError('dodano prawidłowo')
+			setFirstName('')
+			setLastName('')
+			setAge('')
 		} else if (age < 18) {
 			setError('Nie masz jeszcze 18 lat. Nie możesz się zapisać na listę')
-		} else if (person.length >= 6) {
+		} else if (person.length >= 5) {
 			setError('Osiągnięto maksymalną ilość członków')
 		}
-
-		setFirstName('')
-		setLastName('')
-		setAge('')
 	}
 
 	return (
