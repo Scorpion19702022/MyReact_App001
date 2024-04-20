@@ -16,7 +16,7 @@ const Task09one = () => {
 				<input className={styles.input} type='text' value={firstName} onChange={handleChangeFirstName} />
 				<label className={styles.label}>Podaj nazwisko</label>
 				<input className={styles.input} type='text' value={lastName} onChange={handleChangeLastName} />
-				<label className={styles.label}>Podaj wiek</label>
+				<label className={styles.label}>Podaj datę urodzenia</label>
 				<input className={styles.input} type='number' value={age} onChange={handleChangeAge} />
 				<div className={styles.btns_add}>
 					<button className={styles.btn_add} onClick={handlePersonResult}>

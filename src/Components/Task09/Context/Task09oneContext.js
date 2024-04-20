@@ -12,6 +12,8 @@ export const Task09oneProvider = ({ children }) => {
 
 	const [person, setPerson] = useState([])
 
+	const year = new Date().getFullYear()
+
 	const [data, setData] = useState([
 		{
 			id: uuidv4(),
@@ -39,13 +41,13 @@ export const Task09oneProvider = ({ children }) => {
 				id: uuidv4(),
 				firstName: firstName,
 				lastName: lastName,
-				age: age,
+				age: year - age,
 			},
 		])
 	}, [firstName, lastName, age])
 
 	const handlePersonResult = () => {
-		if (firstName !== '' && lastName !== '' && age !== '' && person.length < 5 && age >= 18) {
+		if (firstName !== '' && lastName !== '' && age !== '' && person.length < 5 && age >= 1930 && age > year - 18) {
 			setPerson(prevPerson => [...prevPerson, ...data])
 			setError('dodano prawidłowo')
 			setFirstName('')
@@ -53,7 +55,7 @@ export const Task09oneProvider = ({ children }) => {
 			setAge('')
 		} else if (firstName === '' || lastName === '' || age === '') {
 			setError('wypełnij poprawnie wszystkie pola')
-		} else if (age < 18) {
+		} else if (age < year - 18) {
 			setError('Nie masz jeszcze 18 lat. Nie możesz się zapisać na listę')
 		} else if (person.length >= 5) {
 			setError('Osiągnięto maksymalną ilość członków')
