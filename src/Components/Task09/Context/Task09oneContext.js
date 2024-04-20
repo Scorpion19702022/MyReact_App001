@@ -72,6 +72,18 @@ export const Task09oneProvider = ({ children }) => {
 		}
 	}
 
+	person.sort((a, b) => {
+		const nameA = a.lastName
+		const nameB = b.lastName
+		if (nameA < nameB) {
+			return -1
+		}
+		if (nameA > nameB) {
+			return 1
+		}
+		return 0
+	})
+
 	return (
 		<Task09oneContext.Provider
 			value={{
