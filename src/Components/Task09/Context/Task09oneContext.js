@@ -63,7 +63,7 @@ export const Task09oneProvider = ({ children }) => {
 		} else if (firstName === '' || lastName === '' || age === '') {
 			setError('wypełnij poprawnie wszystkie pola')
 		} else if (age < year - 100) {
-			setError('Niemożliwe!!! Masz poad 100 lat?')
+			setError(`Niemożliwe!!! Naprawdę masz ${year - age} lat?`)
 		} else if (age >= year - 18) {
 			setError('Nie masz jeszcze 18 lat. Nie możesz się zapisać na listę')
 		} else if (person.length >= 5) {
