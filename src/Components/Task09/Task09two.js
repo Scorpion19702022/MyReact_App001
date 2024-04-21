@@ -1,6 +1,7 @@
 import React from 'react'
 
 import styles from './Task09two.module.css'
+import Task09twoResult from './Task09twoResult'
 
 const Task09two = () => {
 	return (
@@ -15,6 +16,7 @@ const Task09two = () => {
 					<button className={styles.btn}>Dodaj</button>
 				</div>
 			</div>
+			<Task09twoResult />
 		</div>
 	)
 }
