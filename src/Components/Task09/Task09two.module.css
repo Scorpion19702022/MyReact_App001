@@ -49,6 +49,40 @@
 
 .wrapper_task_two {
 	width: 43%;
-	height: 700px;
+	height: 760px;
 	background-color: var(--color-blue07);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1em;
+}
+
+.task_two_heading {
+	font-size: 1.6em;
+	color: var(--color-yellow03);
+	margin-bottom: 1em;
+}
+
+.box_inputs {
+	width: 90%;
+	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1em;
+	background-color: rgba(0, 119, 119, 0.3);
+}
+
+.label {
+	margin: 0.8em 0em 0.2em 0em;
+	font-size: 1.2em;
+	color: var(--color-blue02);
+}
+
+.input {
+	padding: 0.4em;
+	font-size: 1.6em;
+	background: none;
+	border: none;
+	border-bottom: 0.04em solid var(--color-blue05);
+	color: var(--color-blue01);
 }

@@ -15,8 +15,8 @@ const Task09 = () => {
 			<div className={styles.wrapper}>
 				<Task09oneProvider>
 					<Task09one />
-					<Task09two />
 				</Task09oneProvider>
+				<Task09two />
 			</div>
 		</div>
 	)
