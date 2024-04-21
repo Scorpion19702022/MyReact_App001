@@ -24,13 +24,17 @@ export const Task09oneProvider = ({ children }) => {
 	])
 
 	const handleChangeFirstName = e => {
-		if (!/\D/.test(e.target.value)) {
+		// Sprawdzamy, czy wprowadzony tekst zawiera tylko litery
+		if (/^[A-Za-z]+$/.test(e.target.value) || e.target.value === '') {
 			setFirstName(e.target.value)
 		}
 	}
 
 	const handleChangeLastName = e => {
-		setLastName(e.target.value)
+		// Sprawdzamy, czy wprowadzony tekst zawiera tylko litery
+		if (/^[A-Za-z]+$/.test(e.target.value) || e.target.value === '') {
+			setLastName(e.target.value)
+		}
 	}
 
 	const handleChangeAge = e => {
@@ -46,7 +50,7 @@ export const Task09oneProvider = ({ children }) => {
 				age: year - age,
 			},
 		])
-	}, [firstName, lastName, age])
+	}, [firstName, lastName, age, year])
 
 	const handlePersonResult = () => {
 		if (
