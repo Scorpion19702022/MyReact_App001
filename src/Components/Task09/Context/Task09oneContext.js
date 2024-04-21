@@ -38,9 +38,7 @@ export const Task09oneProvider = ({ children }) => {
 	}
 
 	const handleChangeAge = e => {
-		if (age < year) {
-			setAge(e.target.value)
-		}
+		setAge(e.target.value)
 	}
 
 	useEffect(() => {
@@ -111,6 +109,7 @@ export const Task09oneProvider = ({ children }) => {
 				age,
 				person,
 				error,
+				year,
 				handleChangeFirstName,
 				handleChangeLastName,
 				handleChangeAge,
