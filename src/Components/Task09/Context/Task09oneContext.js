@@ -24,7 +24,9 @@ export const Task09oneProvider = ({ children }) => {
 	])
 
 	const handleChangeFirstName = e => {
-		setFirstName(e.target.value)
+		if (!/\D/.test(e.target.value)) {
+			setFirstName(e.target.value)
+		}
 	}
 
 	const handleChangeLastName = e => {
