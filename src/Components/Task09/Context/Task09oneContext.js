@@ -25,14 +25,14 @@ export const Task09oneProvider = ({ children }) => {
 
 	const handleChangeFirstName = e => {
 		// Sprawdzamy, czy wprowadzony tekst zawiera tylko litery
-		if (/^[A-Za-z]+$/.test(e.target.value) || e.target.value === '') {
+		if (/^[A-Za-z]/.test(e.target.value) || e.target.value === '') {
 			setFirstName(e.target.value)
 		}
 	}
 
 	const handleChangeLastName = e => {
 		// Sprawdzamy, czy wprowadzony tekst zawiera tylko litery
-		if (/^[A-Za-z]+$/.test(e.target.value) || e.target.value === '') {
+		if (/^[A-Za-z]/.test(e.target.value) || e.target.value === '') {
 			setLastName(e.target.value)
 		}
 	}

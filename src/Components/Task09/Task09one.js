@@ -16,8 +16,6 @@ const Task09one = () => {
 		handlePersonResult,
 	} = useContext(Task09oneContext)
 
-	console.log(year)
-
 	return (
 		<div className={styles.wrapper_task_one}>
 			<h1 className={styles.task_one_heading}>Zadanie pierwsze</h1>
@@ -26,7 +24,7 @@ const Task09one = () => {
 				<input className={styles.input} type='text' value={firstName} onChange={handleChangeFirstName} />
 				<label className={styles.label}>Podaj nazwisko</label>
 				<input className={styles.input} type='text' value={lastName} onChange={handleChangeLastName} />
-				<label className={styles.label}>Podaj datę urodzenia</label>
+				<label className={styles.label}>Podaj rok urodzenia</label>
 				<input
 					className={styles.input}
 					type='number'
