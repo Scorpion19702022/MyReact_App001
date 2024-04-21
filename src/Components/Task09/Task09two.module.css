@@ -96,10 +96,42 @@
 }
 
 .btn {
+	position: relative;
 	padding: 0.3em 2em;
 	font-size: 1.2em;
 	background: none;
 	border: 0.04em solid var(--color-blue03);
-	color: var(--color-blue03);
+	color: var(--color-blue02);
 	cursor: pointer;
+	z-index: 1;
+}
+
+.btn::before {
+	position: absolute;
+	content: '';
+	width: 150%;
+	height: 150%;
+	background-color: var(--color-blue06);
+	transform: translate(-130%, -30%);
+	border-radius: 50px;
+	filter: blur(0.4em);
+	z-index: -1;
+	transition: all 0.3s ease-in-out;
+}
+
+.btn::before {
+	position: absolute;
+	content: '';
+	width: 150%;
+	height: 150%;
+	background-color: var(--color-blue06);
+	transform: translate(-130%, -30%);
+	border-radius: 50px;
+	filter: blur(0.4em);
+	z-index: -1;
+	transition: all 0.3s ease-in-out;
+}
+
+.btn:hover::before {
+	transform: translate(60%, -30%);
 }
