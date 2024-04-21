@@ -104,6 +104,8 @@
 	color: var(--color-blue02);
 	cursor: pointer;
 	z-index: 1;
+	overflow: hidden;
+	transition: all 0.2s ease-in-out;
 }
 
 .btn::before {
@@ -137,4 +139,8 @@
 }
 .btn:hover::after {
 	transform: translate(-160%, -30%);
+}
+
+.btn:hover {
+	background-color: #002f2f;
 }
