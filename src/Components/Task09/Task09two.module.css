@@ -85,4 +85,21 @@
 	border: none;
 	border-bottom: 0.04em solid var(--color-blue05);
 	color: var(--color-blue01);
+	outline: none;
+}
+
+.box_btns {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin: 1em 0em;
+}
+
+.btn {
+	padding: 0.3em 2em;
+	font-size: 1.2em;
+	background: none;
+	border: 0.04em solid var(--color-blue03);
+	color: var(--color-blue03);
+	cursor: pointer;
 }
