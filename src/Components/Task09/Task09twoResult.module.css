@@ -73,3 +73,20 @@
 	font-size: 1.2em;
 	color: var(--color-purple01);
 }
+
+.btns_sort {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 1em;
+}
+
+.btn_sort {
+	position: relative;
+	padding: 0.6em 0.8em;
+	background: none;
+	border: 0.04em solid var(--color-blue02);
+	color: var(--color-blue02);
+	z-index: 1;
+	cursor: pointer;
+}

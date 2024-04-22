@@ -29,6 +29,10 @@ const Task09twoResult = () => {
 				<p className={styles.info}>INFORMACJA:</p>
 				<p className={styles.info}>{info}</p>
 			</div>
+			<div className={styles.btns_sort}>
+				<button className={styles.btn_sort}>sortuj od najstarszego</button>
+				<button className={styles.btn_sort}>sortuj od najmłodszego</button>
+			</div>
 			<div className={styles.box_result}>{resultsCarInfo}</div>
 		</div>
 	)
