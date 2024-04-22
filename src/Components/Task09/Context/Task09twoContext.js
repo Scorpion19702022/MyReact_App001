@@ -12,6 +12,8 @@ export const Task09twoProvider = ({ children }) => {
 
 	const [carInfo, setCarInfo] = useState([])
 
+	const [info, setInfo] = useState('')
+
 	const [carTable, setCarTable] = useState([
 		{
 			id: uuidv4(),
@@ -41,14 +43,14 @@ export const Task09twoProvider = ({ children }) => {
 	const handleCarInfo = () => {
 		if (car !== '' && carYear !== '' && carYear >= year - 10 && carInfo.length <= 6) {
 			setCarInfo(prevState => [...prevState, ...carTable])
-			console.log('test')
+			setInfo('dodano poprawnie')
 		}
 	}
 
-	console.log(carInfo)
-
 	return (
-		<Task09twoContext.Provider value={{ car, carYear, year, handleChangeCar, handleChangeCarYear, handleCarInfo }}>
+		<Task09twoContext.Provider
+			value={{ car, carYear, year, carInfo, info, handleChangeCar, handleChangeCarYear, handleCarInfo }}
+		>
 			{children}
 		</Task09twoContext.Provider>
 	)
