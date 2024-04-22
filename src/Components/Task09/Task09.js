@@ -4,6 +4,7 @@ import styles from './Task09.module.css'
 import Task09one from './Task09one'
 import Task09two from './Task09two'
 import { Task09oneProvider } from './Context/Task09oneContext'
+import { Task09twoProvider } from './Context/Task09twoContext'
 
 const Task09 = () => {
 	return (
@@ -16,7 +17,9 @@ const Task09 = () => {
 				<Task09oneProvider>
 					<Task09one />
 				</Task09oneProvider>
-				<Task09two />
+				<Task09twoProvider>
+					<Task09two />
+				</Task09twoProvider>
 			</div>
 		</div>
 	)
