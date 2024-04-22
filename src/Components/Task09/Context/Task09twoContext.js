@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 
 import { v4 as uuidv4 } from 'uuid'
 
@@ -27,6 +27,18 @@ export const Task09twoProvider = ({ children }) => {
 	const handleChangeCarYear = e => {
 		setCarYear(e.target.value)
 	}
+
+	useEffect(() => {
+		setCarTable([
+			{
+				id: uuidv4(),
+				carName: car,
+				carAge: year - carYear,
+			},
+		])
+	}, [car, carYear, year])
+
+	console.log(carTable)
 
 	return (
 		<Task09twoContext.Provider value={{ car, carYear, year, handleChangeCar, handleChangeCarYear }}>
