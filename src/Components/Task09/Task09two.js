@@ -5,14 +5,16 @@ import Task09twoResult from './Task09twoResult'
 import Task09twoContext from './Context/Task09twoContext'
 
 const Task09two = () => {
-	const { car, yearCar } = useContext(Task09twoContext)
+	const { car, yearCar, handleChangeCar } = useContext(Task09twoContext)
+
+	console.log(car)
 
 	return (
 		<div className={styles.wrapper_task_two}>
 			<h1 className={styles.task_two_heading}>Zadanie drugie</h1>
 			<div className={styles.box_inputs}>
 				<label className={styles.label}>wpisz markę samochodu:</label>
-				<input className={styles.input} type='text' value={car} />
+				<input className={styles.input} type='text' value={car} onChange={handleChangeCar} />
 				<label className={styles.label}>Podaj rok produkcji:</label>
 				<input className={styles.input} type='number' value={yearCar} />
 				<div className={styles.box_btns}>

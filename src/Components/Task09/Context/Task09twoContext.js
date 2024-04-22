@@ -20,7 +20,13 @@ export const Task09twoProvider = ({ children }) => {
 		},
 	])
 
-	return <Task09twoContext.Provider value={{ car, carYear }}>{children}</Task09twoContext.Provider>
+	const handleChangeCar = e => {
+		if (/^[A-Za-z]/.test(e.target.value)) {
+			setCar(e.target.value)
+		}
+	}
+
+	return <Task09twoContext.Provider value={{ car, carYear, handleChangeCar }}>{children}</Task09twoContext.Provider>
 }
 
 export default Task09twoContext
