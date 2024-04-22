@@ -21,12 +21,18 @@ export const Task09twoProvider = ({ children }) => {
 	])
 
 	const handleChangeCar = e => {
-		if (/^[A-Za-z]/.test(e.target.value)) {
-			setCar(e.target.value)
-		}
+		setCar(e.target.value)
 	}
 
-	return <Task09twoContext.Provider value={{ car, carYear, handleChangeCar }}>{children}</Task09twoContext.Provider>
+	const handleChangeCarYear = e => {
+		setCarYear(e.target.value)
+	}
+
+	return (
+		<Task09twoContext.Provider value={{ car, carYear, year, handleChangeCar, handleChangeCarYear }}>
+			{children}
+		</Task09twoContext.Provider>
+	)
 }
 
 export default Task09twoContext
