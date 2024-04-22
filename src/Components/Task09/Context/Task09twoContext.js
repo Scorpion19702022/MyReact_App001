@@ -8,7 +8,7 @@ export const Task09twoProvider = ({ children }) => {
 
 	const year = new Date().getFullYear()
 
-	return <Task09twoContext.Provider value={{}}>{children}</Task09twoContext.Provider>
+	return <Task09twoContext.Provider value={{ car, carYear }}>{children}</Task09twoContext.Provider>
 }
 
 export default Task09twoContext
