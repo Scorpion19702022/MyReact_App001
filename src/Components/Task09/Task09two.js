@@ -5,7 +5,7 @@ import Task09twoResult from './Task09twoResult'
 import Task09twoContext from './Context/Task09twoContext'
 
 const Task09two = () => {
-	const { car, yearCar, year, handleChangeCar, handleChangeCarYear } = useContext(Task09twoContext)
+	const { car, yearCar, year, handleChangeCar, handleChangeCarYear, handleCarInfo } = useContext(Task09twoContext)
 
 	return (
 		<div className={styles.wrapper_task_two}>
@@ -16,7 +16,9 @@ const Task09two = () => {
 				<label className={styles.label}>Podaj rok produkcji:</label>
 				<input className={styles.input} type='number' max={year} value={yearCar} onChange={handleChangeCarYear} />
 				<div className={styles.box_btns}>
-					<button className={styles.btn}>Dodaj</button>
+					<button className={styles.btn} onClick={handleCarInfo}>
+						Dodaj
+					</button>
 				</div>
 			</div>
 			<Task09twoResult />

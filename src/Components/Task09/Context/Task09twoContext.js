@@ -38,10 +38,17 @@ export const Task09twoProvider = ({ children }) => {
 		])
 	}, [car, carYear, year])
 
-	console.log(carTable)
+	const handleCarInfo = () => {
+		if (car !== '' && carYear !== '' && carYear >= year - 10 && carInfo.length <= 6) {
+			setCarInfo(prevState => [...prevState, ...carTable])
+			console.log('test')
+		}
+	}
+
+	console.log(carInfo)
 
 	return (
-		<Task09twoContext.Provider value={{ car, carYear, year, handleChangeCar, handleChangeCarYear }}>
+		<Task09twoContext.Provider value={{ car, carYear, year, handleChangeCar, handleChangeCarYear, handleCarInfo }}>
 			{children}
 		</Task09twoContext.Provider>
 	)
