@@ -9,8 +9,12 @@ const Task09twoResult = () => {
 	const resultsCarInfo = carInfo.map(item => (
 		<div className={styles.box_result} key={item.id}>
 			<ul className={styles.result_lists}>
-				<li>{item.carName}</li>
-				<li>{item.carAge}</li>
+				<li className={styles.car}>
+					Marka: <span className={styles.car_name}>{item.carName}</span>
+				</li>
+				<li className={styles.year}>
+					Wiek: <span className={styles.car_age}>{item.carAge}</span>
+				</li>
 				<li>
 					<button>usuń</button>
 				</li>
