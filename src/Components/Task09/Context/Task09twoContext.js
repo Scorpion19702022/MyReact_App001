@@ -58,9 +58,9 @@ export const Task09twoProvider = ({ children }) => {
 	const handleDeleteCar = id => {
 		const deleteCar = carInfo.filter(item => item.id !== id)
 		setCarInfo(deleteCar)
-		if (deleteCar && carInfo.length !== 0) {
+		if (deleteCar && deleteCar.length > 0) {
 			setInfo(`usunięto prawidłowo`)
-		} else if (deleteCar && carInfo.length === 0) {
+		} else {
 			setInfo(`usunięto wszystkie samochody z listy`)
 		}
 	}
