@@ -15,8 +15,8 @@ const Task09twoResult = () => {
 				<li className={styles.year}>
 					Wiek: <span className={styles.car_age}>{item.carAge}</span>
 				</li>
-				<li>
-					<button>usuń</button>
+				<li className={styles.btns_list}>
+					<button className={styles.btn_list}>usuń</button>
 				</li>
 			</ul>
 		</div>
@@ -33,7 +33,7 @@ const Task09twoResult = () => {
 				<button className={styles.btn_sort}>sortuj od najstarszego</button>
 				<button className={styles.btn_sort}>sortuj od najmłodszego</button>
 			</div>
-			<div className={styles.box_result}>{resultsCarInfo}</div>
+			<div className={styles.box_results}>{resultsCarInfo}</div>
 		</div>
 	)
 }

@@ -124,3 +124,23 @@
 .btn_sort:hover::after {
 	transform: translate(-180%, -30%);
 }
+
+.box_results {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.box_result {
+	display: flex;
+}
+
+.result_lists {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+	margin-bottom: 0.2em;
+	padding-bottom: 0.2em;
+	border-bottom: 0.04em dotted var(--color-blue02);
+}
