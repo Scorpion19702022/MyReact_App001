@@ -56,21 +56,21 @@
 }
 
 .heading_list {
-	font-size: 1.8em;
+	font-size: 1.4em;
 	color: var(--color-blue03);
 }
 
 .box_info {
 	width: 100%;
-	padding: 1em;
+	padding: 0.6em 1em;
 	display: flex;
 	justify-content: space-between;
 	border: 0.04em solid var(--color-purple02);
-	margin: 1em 0em;
+	margin: 0.8em 0em;
 }
 
 .info {
-	font-size: 1.2em;
+	font-size: 1em;
 	color: var(--color-purple01);
 }
 
@@ -89,6 +89,7 @@
 	color: var(--color-blue02);
 	z-index: 1;
 	cursor: pointer;
+	overflow: hidden;
 	transition: all 0.3s ease-in-out;
 }
 
@@ -97,6 +98,29 @@
 	content: '';
 	width: 150%;
 	height: 150%;
+	filter: blur(0.8em);
 	transform: translate(-120%, -30%);
-	background-color: #00bebe;
+	background-color: rgba(0, 190, 190, 0.4);
+	border-radius: 50px;
+	transition: all 0.3s ease-in-out;
+}
+
+.btn_sort::after {
+	position: absolute;
+	content: '';
+	width: 150%;
+	height: 150%;
+	filter: blur(0.8em);
+	transform: translate(20%, -30%);
+	background-color: rgba(0, 190, 190, 0.4);
+	border-radius: 50px;
+	transition: all 0.3s ease-in-out;
+}
+
+.btn_sort:hover::before {
+	transform: translate(80%, -30%);
+}
+
+.btn_sort:hover::after {
+	transform: translate(-180%, -30%);
 }
