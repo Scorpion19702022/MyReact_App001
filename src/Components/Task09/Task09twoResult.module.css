@@ -147,6 +147,7 @@
 
 .car,
 .year {
+	width: 30%;
 	font-size: 1.2em;
 	color: var(--color-blue04);
 }
@@ -155,6 +156,10 @@
 .car_age {
 	color: var(--color-blue01);
 }
+
+/* .btns_list {
+	width: 30%;
+} */
 
 .btn_list {
 	color: var(--color-blue01);

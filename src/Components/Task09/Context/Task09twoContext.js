@@ -34,7 +34,7 @@ export const Task09twoProvider = ({ children }) => {
 		setCarTable([
 			{
 				id: uuidv4(),
-				carName: car,
+				carName: car.toUpperCase(),
 				carAge: year - carYear,
 			},
 		])
@@ -71,6 +71,7 @@ export const Task09twoProvider = ({ children }) => {
 		})
 
 		setCarInfo(prevState => [...prevState])
+		setInfo('posortowano od najmłodszego')
 	}
 
 	const handleSortFromOld = () => {
@@ -79,6 +80,7 @@ export const Task09twoProvider = ({ children }) => {
 		})
 
 		setCarInfo(prevState => [...prevState])
+		setInfo('posortowano od najstarszego')
 	}
 
 	return (
