@@ -73,6 +73,14 @@ export const Task09twoProvider = ({ children }) => {
 		setCarInfo(prevState => [...prevState])
 	}
 
+	const handleSortFromOld = () => {
+		carInfo.sort((a, b) => {
+			return b.carAge - a.carAge
+		})
+
+		setCarInfo(prevState => [...prevState])
+	}
+
 	return (
 		<Task09twoContext.Provider
 			value={{
