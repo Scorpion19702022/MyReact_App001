@@ -65,6 +65,16 @@ export const Task09twoProvider = ({ children }) => {
 		}
 	}
 
+	const handleSortFromYoung = () => {
+		carInfo.sort((a, b) => {
+			return a.carAge - b.carAge
+		})
+	}
+
+	carInfo.sort((a, b) => {
+		return a.carAge - b.carAge
+	})
+
 	return (
 		<Task09twoContext.Provider
 			value={{
@@ -77,6 +87,7 @@ export const Task09twoProvider = ({ children }) => {
 				handleChangeCarYear,
 				handleCarInfo,
 				handleDeleteCar,
+				handleSortFromYoung,
 			}}
 		>
 			{children}
