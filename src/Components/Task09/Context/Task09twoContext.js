@@ -44,6 +44,8 @@ export const Task09twoProvider = ({ children }) => {
 		if (car !== '' && carYear !== '' && carYear >= year - 10 && carYear <= year && carInfo.length < 6) {
 			setCarInfo(prevState => [...prevState, ...carTable])
 			setInfo('dodano poprawnie')
+			setCar('')
+			setCarYear('')
 		} else if (carYear > year) {
 			setInfo(`dodanie do listy niemożliwe. nie ma jeszcze ${carYear} roku`)
 		} else if (carYear < year - 10) {
