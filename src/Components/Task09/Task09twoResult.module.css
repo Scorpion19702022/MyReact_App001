@@ -144,3 +144,27 @@
 	padding-bottom: 0.2em;
 	border-bottom: 0.04em dotted var(--color-blue02);
 }
+
+.car,
+.year {
+	font-size: 1.2em;
+	color: var(--color-blue04);
+}
+
+.car_name,
+.car_age {
+	color: var(--color-blue01);
+}
+
+.btn_list {
+	color: var(--color-blue01);
+	background: none;
+	border: none;
+	font-style: italic;
+	cursor: pointer;
+	transition: color 0.2s ease-in-out;
+}
+
+.btn_list:hover {
+	color: var(--color-blue03);
+}
