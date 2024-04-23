@@ -4,7 +4,7 @@ import styles from './Task09twoResult.module.css'
 import Task09twoContext from './Context/Task09twoContext'
 
 const Task09twoResult = () => {
-	const { carInfo, info } = useContext(Task09twoContext)
+	const { carInfo, info, handleDeleteCar } = useContext(Task09twoContext)
 
 	const resultsCarInfo = carInfo.map(item => (
 		<div className={styles.box_result} key={item.id}>
@@ -16,7 +16,9 @@ const Task09twoResult = () => {
 					Wiek: <span className={styles.car_age}>{item.carAge}</span>
 				</li>
 				<li className={styles.btns_list}>
-					<button className={styles.btn_list}>usuń</button>
+					<button className={styles.btn_list} onClick={() => handleDeleteCar(item.id)}>
+						usuń
+					</button>
 				</li>
 			</ul>
 		</div>

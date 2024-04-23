@@ -55,9 +55,29 @@ export const Task09twoProvider = ({ children }) => {
 		}
 	}
 
+	const handleDeleteCar = id => {
+		const deleteCar = carInfo.filter(item => item.id !== id)
+		setCarInfo(deleteCar)
+		if (deleteCar && carInfo.length !== 0) {
+			setInfo(`usunięto prawidłowo`)
+		} else if (deleteCar && carInfo.length === 0) {
+			setInfo(`usunięto wszystkie samochody z listy`)
+		}
+	}
+
 	return (
 		<Task09twoContext.Provider
-			value={{ car, carYear, year, carInfo, info, handleChangeCar, handleChangeCarYear, handleCarInfo }}
+			value={{
+				car,
+				carYear,
+				year,
+				carInfo,
+				info,
+				handleChangeCar,
+				handleChangeCarYear,
+				handleCarInfo,
+				handleDeleteCar,
+			}}
 		>
 			{children}
 		</Task09twoContext.Provider>
