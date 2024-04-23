@@ -4,7 +4,7 @@ import styles from './Task09twoResult.module.css'
 import Task09twoContext from './Context/Task09twoContext'
 
 const Task09twoResult = () => {
-	const { carInfo, info, handleDeleteCar, handleSortFromYoung } = useContext(Task09twoContext)
+	const { carInfo, info, handleDeleteCar, handleSortFromYoung, handleSortFromOld } = useContext(Task09twoContext)
 
 	const resultsCarInfo = carInfo.map(item => (
 		<div className={styles.box_result} key={item.id}>
@@ -32,7 +32,9 @@ const Task09twoResult = () => {
 				<p className={styles.info}>{info}</p>
 			</div>
 			<div className={styles.btns_sort}>
-				<button className={styles.btn_sort}>sortuj od najstarszego</button>
+				<button className={styles.btn_sort} onClick={handleSortFromOld}>
+					sortuj od najstarszego
+				</button>
 				<button className={styles.btn_sort} onClick={handleSortFromYoung}>
 					sortuj od najmłodszego
 				</button>
